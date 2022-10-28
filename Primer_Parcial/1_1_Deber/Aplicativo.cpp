@@ -23,5 +23,6 @@ int main(int arg, char** argv){
 	objDatos->ingresar(*objDatos);
 	objDatos->calcularEdad(*objDatos);
 	objDatos->imprimir(*objDatos);
+	system("pause");
 	return 0;
 }
