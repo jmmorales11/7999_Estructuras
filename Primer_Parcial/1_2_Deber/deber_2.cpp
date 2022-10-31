@@ -4,8 +4,8 @@
 #include <conio.h>
 using namespace std;
 int exponente(int base, int exponent);
-int funcion_atoi(char *str,tamaño)
 char *ingresarDatosEnteros(char const *msj);
+char *str_cpy(char *cadena1 ,char *cadena2);//copia la cadena dos en la cadena uno 
 
 //Funcion pow
 int exponente(int base, int exponent){
@@ -22,45 +22,41 @@ int exponente(int base, int exponent){
 //Funcion atoi
 int funcion_atoi(char *str,size_t len){
 	int i;
-  int res;
-  int signo;
-
-  i = 0;
-  res = 0;
-  signo = 1;
-  while(str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-  {
-    i++;
-  }
-  if(str[i] == '-')
-  {
-    sign = -1;
-    i++;
-  }
-  else if(str[i] == '+')
-  {
-    signo = 1;
-    i++;
-  }
-
-  int j = i-1;
-  i = len;
-  while (str[i] < '0' || str[i] > '9') {
-      i--;
-  }
-  int num_final = i;
-
-  while(i > j)
-  {
-    if (str[i] >= '0' && str[i] <= '9') {
-      res += exponente(10, num_final-i) * (str[i] - '0');
+	int res;
+	int signo;
+	i = 0;
+	res = 0;
+	signo = 1;
+	while(str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	{
+		i++;
+	}
+	if(str[i] == '-')
+	{
+		signo = -1;
+    	i++;
+	}
+	else if(str[i] == '+')
+	{
+    	signo = 1;
+    	i++;
+	}
+	int j = i-1;
+	i = len;
+	while (str[i] < '0' || str[i] > '9') {
+    	i--;
+	}
+	int num_final = i;
+	while(i > j)
+	{
+    	if (str[i] >= '0' && str[i] <= '9') {
+		res += exponente(10, num_final-i) * (str[i] - '0');
     } else {
-      num_final--;
+		num_final--;
     }
-
-    i--;
-  }
-  return(res * signo);
+    	i--;
+	}	
+	return(res * signo);
 }
 //Funcion ingreso de datos
 char *ingresarDatosEnteros(char const *msj){
@@ -77,6 +73,50 @@ char *ingresarDatosEnteros(char const *msj){
 	dato[i]='\0';
 	return dato;
 }
+char *str_cpy(char *cadena1 ,char *cadena2){
+	if(cadena1 == NULL) return NULL;
+	int i=0;
+	while (cadena2[i] !='\0')
+	{
+		cadena1[i]=cadena2[i];
+		i++;
+	}
+	cadena1[i]='\0';
+	return cadena1;
+}
+
+double (char *s)
+{
+    int count=0;
+    int i;
+    for(i=0; i<=strlen(s)-1; i++)
+    {
+
+        if(s[i]=='.')
+        {
+            count++;
+        }
+        if(count==2)
+        {
+            return -1;
+        }
+
+        if( !((s[i]>=48 && s[i]<=57)|| (s[i]=='.')) )
+        {
+		return -1;
+        }
+
+    }
+
+    if(count==0)
+    {
+        return -1;
+    }
+
+    double d;
+    sscanf(s,"%lf",&d);
+    return d;
+}
 
 template<typename T>
 class Datos{
@@ -85,7 +125,7 @@ class Datos{
 		T getData() const;
 	private:
 		T data;
-}
+};
 template<typename T>
 	void Datos<T>::setData(T d){
 		this->data=d;
@@ -100,6 +140,7 @@ int main(int argc, char** argv) {
 	Datos<float> flotante;
 	Datos<char> caracter;
 	Datos<double> real;
+	
 	
 	return 0;
 }
