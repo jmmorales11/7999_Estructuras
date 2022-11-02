@@ -124,7 +124,7 @@ DatosPersonales DatosPersonales::ingresar(DatosPersonales objIngresar)
 	string apellido;
 	int aActual;
 	int aNacimiento;
-   cout<<"Ingrese el año actual"<<endl;
+   cout<<"Ingrese el aÃ±o actual"<<endl;
    cin>>aActual;
    this->setAnoActual(aActual);
    cout<<"Ingrese su numero de cedula"<<endl;
@@ -136,7 +136,7 @@ DatosPersonales DatosPersonales::ingresar(DatosPersonales objIngresar)
    cout<<"Ingrese su apellido"<<endl;
    cin>>apellido;
    this->setApellido(apellido);
-   cout<<"Ingrese el año de nacimiento"<<endl;
+   cout<<"Ingrese el aÃ±o de nacimiento"<<endl;
    cin>>aNacimiento;
    this->setAnoNacimiento(aNacimiento);
    return *this;

@@ -19,10 +19,10 @@ int main(int argc, char** argv) {
 	float valor;
 	double d;
 	char dato;
-	num=*ingresarDatosEnteros("Ingrese el valor entero");
-	valor= *ingresoflotantes("Ingrese el valor flotante");
-	d=*ingresoDoubles("Ingrese el valor double");
-	dato=*ingresocaracteres("Ingrese el caracter");
+	num=*ingresarDatosEnteros("\nIngrese el valor entero");
+	valor= *ingresoflotantes("\nIngrese el valor flotante");
+	d=*ingresoDoubles("\nIngrese el valor double");
+	dato=*ingresocaracteres("\nIngrese el caracter");
 
 	return 0;
 }

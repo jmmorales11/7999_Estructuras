@@ -6,7 +6,9 @@
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{81F67774-FDA0-41B0-ABEE-31B437A81DC3}" Loaded="No" Name="Ingresar" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Ingresar.oom"/>
 		<Model Expanded="Yes" ID="{81F67774-FDA0-41B0-ABEE-31B437A81DC3}" Loaded="No" Name="Ingresar" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Ingresar.oom"/>
-		<Model Expanded="Yes" ID="{81F67774-FDA0-41B0-ABEE-31B437A81DC3}" Name="Ingresar" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Ingresar.oom"/>
+		<Model Expanded="Yes" ID="{81F67774-FDA0-41B0-ABEE-31B437A81DC3}" Loaded="No" Name="Ingresar" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Ingresar.oom"/>
+		<Model Expanded="Yes" ID="{81F67774-FDA0-41B0-ABEE-31B437A81DC3}" Loaded="No" Name="Ingresar" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Ingresar.oom"/>
+		<Model Expanded="Yes" ID="{2B3C4D53-4D4E-4349-A74C-C807BC31287E}" Name="Class Diagram_1" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../1_3_1deber/Sobrecarga.oom"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
