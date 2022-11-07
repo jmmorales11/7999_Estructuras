@@ -1,3 +1,12 @@
+
+/***********************************************************************
+ * UFA-ESPE
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+ * Modificacion: jueves, 27 de octubre de 2022 21:17:59
+ * Purpose: Implementation of the class DatosPersonales
+ *Nivel: Tercero           NRC:7999
+ ***********************************************************************/
+
 /**
  * @file Sobrecarga.h
  * @author Marley Morales , Camilo Orrico (jmmorales11@espe.edu.ec, corrico@espe.edu.ec)
@@ -14,21 +23,62 @@
 class Sobrecarga
 {
 public:
-/**
- * @brief 
- *  
- * 
- * @return int 
- */
+   /**
+    * @brief Obtener A
+    * 
+    * @return int 
+    */
    int getA(void);
+   /**
+    * @brief Ingresar A
+    * 
+    * @param newA 
+    */
    void setA(int newA);
+   /**
+    * @brief Constructor
+    * 
+    * @param a 
+    * @param b 
+    */
    Sobrecarga(int a, int b);
+   /**
+    * @brief Destructor
+    * 
+    */
    ~Sobrecarga();
+   /**
+    * @brief Imprimir datos
+    * 
+    * @param obj 
+    */
    void imprimir(Sobrecarga obj);
+   /**
+    * @brief Obtener b
+    * 
+    * @return int 
+    */
    int getB(void);
+   /**
+    * @brief Ingresar b
+    * 
+    * @param newB 
+    */
    void setB(int newB);
+   /**
+    * @brief Sobrecarga del operador %
+    * 
+    * @param opr 
+    * @return Sobrecarga 
+    */
    	Sobrecarga operator % (const Sobrecarga opr);
-	Sobrecarga operator != (const Sobrecarga opr);
+	/**
+	 * @brief Sobrecarga del operador !=
+	 * 
+	 * @param opr 
+	 * @return Sobrecarga 
+	 */
+   Sobrecarga operator != (const Sobrecarga opr);
 
 protected:
 private:
