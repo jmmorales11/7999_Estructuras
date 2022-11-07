@@ -5,10 +5,8 @@
 using namespace std;
 
 int exponente(int base, int exponent);
-<<<<<<< HEAD
-char *ingresarDatosEnteros(char const *msj);
-char *str_cpy(char *cadena1 ,char *cadena2);//copia la cadena dos en la cadena uno 
-=======
+
+
 int funcion_atoi(char *str,size_t len);
 double funcion_strtod(char *s);
 char *ingresarDatosEnteros(char const *msj);
@@ -16,7 +14,7 @@ char *str_cpy(char *cadena1 ,char *cadena2);//copia la cadena dos en la cadena u
 char *ingresocaracteres(char *msj);
 char *ingresoflotantes(char *msj);
 char *ingresoDoubles(char *msj);
->>>>>>> e6c3ba4655e2727379be12ad693154b7b3359d1f
+
 
 //Funcion pow
 int exponente(int base, int exponent){
@@ -30,7 +28,7 @@ int exponente(int base, int exponent){
     return result;
   }
 }
-//Funcion atoi
+//Funcion atoi combierte a entero
 int funcion_atoi(char *str,size_t len){
 	int i;
 	int res;
@@ -69,75 +67,8 @@ int funcion_atoi(char *str,size_t len){
 	}	
 	return(res * signo);
 }
-//Funcion ingreso de datos
-char *ingresarDatosEnteros(char const *msj){
-	char*dato=new char[10];
-	char c;
-	int i=0;
-	printf("%\n",msj);
-	while((c=getch())!=13){
-		if(c>='0'&&c<='9'){
-			printf("%c",c);
-			dato[i++]=c;
-		}
-	}	 
-	dato[i]='\0';
-	return dato;
-}
-<<<<<<< HEAD
-=======
-char *ingresoflotantes(char *msj)
-{
-    char *dato=new char[8];
-	char c;
-	int i=0;
-	printf("%s\n",msj);
-	while ((c=getch())!=13){
-		if ((c>='0'&&c<='9') || c=='.'){
-			if (i<=8){
-				printf("%c",c);
-			    dato[i++]=c;
-			}
-			
-		}
-	}
-	dato[i]='\0';//fin del while
-	return dato;
-}
-char *ingresoDoubles(char *msj)
-{
-    char *dato=new char[15];
-	char c;
-	int i=0;
-	printf("%s\n",msj);
-	while ((c=getch())!=13){
-		if ((c>='0'&&c<='9') || c=='.'){
-			if (i<=15){
-				printf("%c",c);
-			    dato[i++]=c;
-			}
-			
-		}
-	}
-	dato[i]='\0';//fin del while
-	return dato;
-}
-char *ingresocaracteres(char *msj)
-{
-    char *dato=new char[8];
-	char c;
-	int i=0;
-	printf("%s\n",msj);
-	while ((c=getch())!=13){
-		if (isalpha(c)!=0){
-			printf("%c",c);
-			dato[i++]=c;
-		}
-	}
-	dato[i]='\0';//fin del while
-	return dato;
-}
->>>>>>> e6c3ba4655e2727379be12ad693154b7b3359d1f
+
+
 char *str_cpy(char *cadena1 ,char *cadena2){
 	if(cadena1 == NULL) return NULL;
 	int i=0;
@@ -150,11 +81,7 @@ char *str_cpy(char *cadena1 ,char *cadena2){
 	return cadena1;
 }
 
-<<<<<<< HEAD
-double (char *s)
-=======
 double funcion_strtod(char *s)
->>>>>>> e6c3ba4655e2727379be12ad693154b7b3359d1f
 {
     int count=0;
     int i;
@@ -174,17 +101,93 @@ double funcion_strtod(char *s)
         {
 		return -1;
         }
-
     }
 
     if(count==0)
     {
         return -1;
     }
-
     double d;
     sscanf(s,"%lf",&d);
     return d;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+char *ingresoflotantes(char *msj)
+{
+    char *dato=new char[10];
+	char c;
+	int	sum=0;
+	int i=0;
+	printf("%s\n",msj);
+	while (((c=getch())!=13)&& sum<=1){
+		if ((c>='0'&&c<='9') || c=='.'){
+			printf("%c",c);
+			dato[i++]=c;
+			if (c=='.'){
+				sum++;
+				if (sum>=2){
+					putchar(8);
+					putchar(32);
+					putchar(8);	
+					sum--;	
+				}	
+			}
+		}else if(c==8){
+			dato[i]=0;
+			i--;
+			putchar(8);
+			putchar(32);
+			putchar(8);
+		}	
+	}
+	dato[i]='\0';//fin del while
+	return dato;
+}
+
+char *ingresocaracteres(char *msj)
+{
+    char *dato=new char[10];
+	char c;
+	int i=0;
+	printf("%s\n",msj);
+	while ((c=getch())!=13){
+		if(c>='a'&& c<='z'){
+			printf("%c",c);
+			dato[i++]=c;
+		}else if(c==8){
+			dato[i]=0;
+			i--;
+			putchar(8);
+			putchar(32);
+			putchar(8);
+		}
+		
+	}
+	dato[i]='\0';//fin del while
+	return dato;
+}
+////clase 
+char *ingresarDatosEnteros(char const *msj){
+	char *dato=new char[10];
+	char c;
+	int i=0;
+	printf("%s\n",msj);
+	while((c=getch())!=13){
+		if(c>='0'&& c<='9'){
+			printf("%c",c);
+			dato[i++]=c;
+		}else if(c==8){
+			dato[i]=0;
+			i--;
+			putchar(8);
+			putchar(32);
+			putchar(8);
+		}
+		
+	}
+	dato[i]='\0';
+	return dato;
 }
 
 template<typename T>
@@ -203,7 +206,7 @@ template<typename T>
 	T Datos<T>::getData()const{
 		return this->data;
 	}
-		
+
 int main(int argc, char** argv) {
 	Datos<int> entero;
 	Datos<float> flotante;
@@ -216,19 +219,17 @@ int main(int argc, char** argv) {
 	str_cpy(datoEntero,ingresarDatosEnteros("\n Ingrese el valor entero"));
 	valorEntero=funcion_atoi(datoEntero,strlen(datoEntero));
 	entero.setData(valorEntero);
-	str_cpy(datoReal,ingresoDoubles("\n Ingrese el valor real"));
+	str_cpy(datoReal,ingresoflotantes("\n Ingrese el valor real"));
 	valorReal=funcion_strtod(datoReal);
 	real.setData(valorReal);
 	str_cpy(datoCaracter,ingresocaracteres("\n Ingrese el valor caracter"));
 	caracter.setData(datoCaracter);
 	
-<<<<<<< HEAD
-	
-=======
+
 	cout<<"\n Numero de tipo int: "<<entero.getData();
 	cout<<"\n Numero de tipo double: "<<real.getData();
 	cout<<"\n Numero de tipo caracter: "<<caracter.getData()<<"\n";
 	system("pause");
->>>>>>> e6c3ba4655e2727379be12ad693154b7b3359d1f
+
 	return 0;
 }

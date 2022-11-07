@@ -4,12 +4,18 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{3DECA41D-489A-450C-9523-ADE6AA677F4B}" Loaded="No" Name="Proceso" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Proceso.oom"/>
+		<Model Expanded="Yes" ID="{C3AFB380-548C-490A-B583-ADA578844616}" Loaded="No" Name="Class Diagram_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Proceso.oom"/>
 		<Model Expanded="Yes" ID="{02066C1B-E3B9-4AD7-812B-6713DC229648}" Loaded="No" Name="Proceso2" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../Repositorio/7999_Estructuras/Primer_Parcial/Deber1/DatosPersonales.oom"/>
 		<Model Expanded="Yes" ID="{F0A97378-18E1-460E-8211-BB67B126EC9C}" Loaded="No" Name="Class Diagram_2" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../Repositorio/7999_Estructuras/Primer_Parcial/Deber1_1/DatosPersonales1.oom"/>
 		<Model Expanded="Yes" ID="{F0A97378-18E1-460E-8211-BB67B126EC9C}" Loaded="No" Name="Class Diagram_2" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../Repositorio/7999_Estructuras/Primer_Parcial/Deber1_1/DatosPersonales1.oom"/>
 		<Model Expanded="Yes" ID="{F0A97378-18E1-460E-8211-BB67B126EC9C}" Loaded="No" Name="Class Diagram_2" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../Repositorio/7999_Estructuras/Primer_Parcial/1_1_Deber/DatosPersonales1.oom"/>
-		<Model Expanded="Yes" ID="{F0A97378-18E1-460E-8211-BB67B126EC9C}" Name="Class Diagram_2" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../Repositorio/7999_Estructuras/Primer_Parcial/1_1_Deber/DatosPersonales1.oom"/>
+		<Model Expanded="Yes" ID="{F0A97378-18E1-460E-8211-BB67B126EC9C}" Loaded="No" Name="Class Diagram_2" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../Repositorio/7999_Estructuras/Primer_Parcial/1_1_Deber/DatosPersonales1.oom"/>
+		<Model Expanded="Yes" ID="{394CAAB5-38EF-44FC-AA06-E7A52871DF1C}" Loaded="No" Name="Class Diagram_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../1_4_Deber/Amortizacion.oom"/>
+		<Model Expanded="Yes" ID="{394CAAB5-38EF-44FC-AA06-E7A52871DF1C}" Loaded="No" Name="Class Diagram_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../1_4_Deber/Amortizacion.oom"/>
+		<Model Expanded="Yes" ID="{394CAAB5-38EF-44FC-AA06-E7A52871DF1C}" Loaded="No" Name="Class Diagram_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../1_4_Deber/Amortizacion.oom"/>
+		<Model Expanded="Yes" ID="{394CAAB5-38EF-44FC-AA06-E7A52871DF1C}" Loaded="No" Name="Class Diagram_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../1_4_Deber/Amortizacion.oom"/>
+		<Model Expanded="Yes" ID="{394CAAB5-38EF-44FC-AA06-E7A52871DF1C}" Loaded="No" Name="Class Diagram_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../1_4_41DEBER/1_Modelado/Amortizacion.oom"/>
+		<Model Expanded="Yes" ID="{394CAAB5-38EF-44FC-AA06-E7A52871DF1C}" Name="Class Diagram_1" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="../1_4_41DEBER/1_Modelado/Amortizacion.oom"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
