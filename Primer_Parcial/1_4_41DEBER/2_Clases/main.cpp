@@ -7,12 +7,8 @@
  ***********************************************************************/
 #include <iostream>
 #include <stdlib.h>
-#include <conio.h>
 #include <stdio.h>
-#include <string.h>
 #include <ctype.h>
-#include <iostream>
-#include <stdio.h>
 #include <string.h>
 #include <conio.h>
 #include "Amortizacion.cpp"

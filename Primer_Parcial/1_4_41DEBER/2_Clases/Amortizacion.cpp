@@ -8,7 +8,7 @@
 #include "Amortizacion.h"
 #include "Amortizacion.h"
 #include "validar.cpp"
-//#include <clocale>
+#include <clocale>
 
 
 float Amortizacion::getCPrestamo(void)
@@ -188,7 +188,7 @@ float Amortizacion::CalcularSaaldo(Amortizacion obj)
 
 Amortizacion Amortizacion::ingresar(void)
 {
- 
+	setlocale(LC_CTYPE,"Spanish");
 	int anio,mes,dia, interes,meses;
 	float prestamo;
 	char datoEntero[10],datoReal[10];
@@ -251,22 +251,35 @@ Amortizacion Amortizacion::ingresar(void)
 
 void Amortizacion::diaPago(Amortizacion obj)
 {
-	int dia, mes, anio;
+	int dia, mes, anio, diaactual;
 	dia=obj.getDia();
 	mes=obj.getMes();
 	anio=obj.getAnio();
+	
+	int lunes=1, martes=2,miercoles=3,jueves=4,viernes=5,sabado=6,domingo=7;
+	if((mes==1 || mes==3||mes==5 || mes==7||mes==8||mes==10||mes==12)){
+		if(dia>0&& dia<30){
+			dia+=30;
+			if(dia>30){
+				dia-=29;
+			}
+		}else if (dia >30){
+			dia-=29;
+		}
+	}
+		
 	if (mes==12){
 		anio=obj.getAnio()+1;
 		mes-= obj.getMes();
 		mes++;
 	}else if(mes<=12){
 		mes++;
-		 
 	}
-	this->setDia(dia);
+	
+		this->setDia(dia);
 		this->setMes(mes);
 		this->setAnio(anio);
-	
+		
 }
 
 
