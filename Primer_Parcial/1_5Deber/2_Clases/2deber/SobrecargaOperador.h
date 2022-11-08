@@ -1,10 +1,10 @@
 /***********************************************************************
- * Module:  SobrecargaOperador.h
- * Author:  Jeimy
- * Modified: martes, 8 de noviembre de 2022 16:39:44
- * Purpose: Declaration of the class SobrecargaOperador
+ * UFA-ESPE
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+ * Modificacion: Martes, 08 de nombre de 2022 21:17:59
+ * Purpose: Areas de las figuras
+ *Nivel: Tercero           NRC:7999
  ***********************************************************************/
-
 #if !defined(__Class_Diagram_1_SobrecargaOperador_h)
 #define __Class_Diagram_1_SobrecargaOperador_h
 

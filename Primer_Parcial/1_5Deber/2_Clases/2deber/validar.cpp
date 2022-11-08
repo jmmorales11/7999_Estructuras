@@ -1,3 +1,10 @@
+/***********************************************************************
+ * UFA-ESPE
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+ * Modificacion: Martes, 08 de nombre de 2022 21:17:59
+ * Purpose: Areas de las figuras
+ *Nivel: Tercero           NRC:7999
+ ***********************************************************************/
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
