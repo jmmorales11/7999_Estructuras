@@ -8,8 +8,9 @@
 #include "Amortizacion.h"
 #include "Amortizacion.h"
 #include "validar.cpp"
+#include "ValidarFecha.cpp"
 #include <clocale>
-
+using namespace std;
 
 float Amortizacion::getCPrestamo(void)
 {
@@ -251,21 +252,23 @@ Amortizacion Amortizacion::ingresar(void)
 
 void Amortizacion::diaPago(Amortizacion obj)
 {
-	int dia, mes, anio, diaactual;
+	
+	int dia, mes, anio, diaactual,	diaSemana=0;
 	dia=obj.getDia();
 	mes=obj.getMes();
 	anio=obj.getAnio();
-	
-	int lunes=1, martes=2,miercoles=3,jueves=4,viernes=5,sabado=6,domingo=7;
-	if((mes==1 || mes==3||mes==5 || mes==7||mes==8||mes==10||mes==12)){
-		if(dia>0&& dia<30){
-			dia+=30;
-			if(dia>30){
-				dia-=29;
-			}
-		}else if (dia >30){
-			dia-=29;
-		}
+
+	ValidarFecha *objFecha= new ValidarFecha(dia,mes,anio);
+	objFecha->setDia(dia);
+	objFecha->setMes(mes);
+	objFecha->setAnio(anio);
+	diaSemana=objFecha->calcularFecha(*objFecha);
+	cout<<"DIAAA semana :  "<<diaSemana<<endl;
+	if(	diaSemana==0){
+		dia++;
+	}
+	if(diaSemana==6){
+		dia+=2;
 	}
 		
 	if (mes==12){
