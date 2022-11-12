@@ -25,6 +25,7 @@ void Matriz::ingresarMatriz(int **matriz, int filas, int columnas)
 {
    int i,j;
    char datoEntero[10];
+   Matriz funcion;
 	cout<<"\nIngrese los valores para la matriz"<<endl;
 	for(i=0;i<filas;i++){
 		for(j=0;j<columnas;j++){
@@ -34,6 +35,7 @@ void Matriz::ingresarMatriz(int **matriz, int filas, int columnas)
 			//cin>>*(*(matriz+i)+j);
 		}
 	}
+	
 }
 
 void Matriz::sumaMatriz(int **matriz1, int filas, int columnas, int **matriz2)
@@ -50,6 +52,7 @@ void Matriz::multiplicarMatriz(int **matrizA, int **matrizB, int fA, int cA, int
 {
    //misno columnas A= Filas B 
 	//Matriz resultante filas A con Columnas B
+	Matriz funcion;
 	cout<<"\nLa multiplicacion de las matrices es \n "<<endl;
 	int **resultado = new int*[fA];
 	for(int i=0;i<fA;i++){
@@ -65,6 +68,7 @@ void Matriz::multiplicarMatriz(int **matrizA, int **matrizB, int fA, int cA, int
 		}
 		cout<<endl;
 	}
+	funcion.imprimirMatriz(resultado  ,fA,cB);
 }
 
 void Matriz::imprimirMatriz(int **matriz, int filas, int columnas)
