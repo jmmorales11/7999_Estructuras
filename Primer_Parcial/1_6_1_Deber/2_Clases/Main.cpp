@@ -21,15 +21,16 @@ int main(int argc, char** argv){
 	char datoEntero[10];
 	Matriz funcion;
 	do{
-		cout<<"Operaciones de las matrices"<<endl;
+		cout<<"\nDinamica\nOperaciones de las matrices"<<endl;
 		cout<<"[1] MULTIPLICACION \n[2] SUMA\n[3]Salir"<<endl;
-		cin>>seleccionar;
+		str_cpy(datoEntero,ingresarDatosEnteros("\nSeleccione:  "));
+		seleccionar=funcion_atoi(datoEntero,strlen(datoEntero));
 		if(seleccionar ==3){
 			return 0;
 		}		
 	}while(seleccionar>2 || seleccionar<1);
 	/////////////////////////////////////////////////////////////////////////////////////////
-	cout<<"Ingreso de la primera matriz"<<endl;
+	cout<<"\nIngreso de la primera matriz"<<endl;
 	str_cpy(datoEntero,ingresarDatosEnteros("\nDigite el numero de filas : "));
 	f=funcion_atoi(datoEntero,strlen(datoEntero));
 	str_cpy(datoEntero,ingresarDatosEnteros("\nDigite el numero de columnas : "));
