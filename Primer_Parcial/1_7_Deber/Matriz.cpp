@@ -35,11 +35,11 @@ void Matriz<T>::ingresarMatriz(T **matriz, int filas, int columnas)
 	Matriz m;
    char datoEntero[10];
 	cout<<"\nIngrese los valores para la matriz"<<endl;
-	for(int i=0;i<m.getFilas();i++){
-		for(int j=0;j<m.getColumnas();j++){
-			cout<<"\nDigite un numero: ["<<i<<" "<<j<<"]"<<":  ";
+	for(m.getFilas()==0;m.getFilas()<m.getFilas();m.getFilas()+1){
+		for(m.getColumnas()==0;m.getColumnas()<m.getColumnas();m.getColumnas()+1){
+			cout<<"\nDigite un numero: ["<<m.getColumnas()<<" "<<m.getColumnas()<<"]"<<":  ";
 			str_cpy(datoEntero,ingresarDatosEnteros(" "));
-			*(*(matriz+i)+j)=funcion_atoi(datoEntero,strlen(datoEntero));
+			(*(*matriz+m.getFilas())+m.getColumnas())==funcion_atoi(datoEntero,strlen(datoEntero));
 			//cin>>*(*(matriz+i)+j);
 		}
 	}
@@ -64,7 +64,7 @@ T Matriz<T>::sumaMatriz(T **matriz1, T **matriz2, T **matrizResultado, int filas
 		return *(*(matriz1+m.getFilas())+m.getColumnas()) += *(*(matriz2+m.getFilas())+m.getColumnas());
 	else{
 		if(m.getFilas()>-1){
-			m.setColumnas(m.getColumnas())--;
+			m.getColumnas()-1;
 			if(m.getColumnas()>=-1)
 				*(*(matrizResultado+m.getFilas())+m.getColumnas()) += *(*(matriz1+m.getFilas())+m.getColumnas()) += *(*(matriz2+m.getFilas())+m.getColumnas());
 			else
@@ -72,4 +72,5 @@ T Matriz<T>::sumaMatriz(T **matriz1, T **matriz2, T **matrizResultado, int filas
 			
 	}
 }
+	
 }
