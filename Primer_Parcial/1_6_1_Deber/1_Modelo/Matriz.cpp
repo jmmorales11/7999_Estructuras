@@ -75,5 +75,25 @@ void Matriz::imprimirMatriz(int matriz[][TAM1] ,int filas,int columnas){
 		}
 		cout<<"\n";
 	}
+}
+
+int Matriz::sumaRecursivaMatrices(int mat1[][TAM1], int mat2[][TAM1], int f, int c){
+	cout<<"Primero  "<<mat1[f][c]+mat2[f][c]<<endl;
+	if((f==0)&&(c==0)){
+		
+		return mat1[f][c]+mat2[f][c];
+	}else{
+		if(f>-1){
+			//cout<<mat1[f][c]+mat2[f][c]<<endl;
+			c--;
+			if(c>=-1){
+				//cout<<mat1[f][c+1]+mat2[f][c+1]<<endl;
+				return mat1[f][c+1]+mat2[f][c+1]+sumaRecursivaMatrices(mat1, mat2, f, c);
+			}else
+			//cout<<"aqui          "<<sumaRecursivaMatrices(mat1, mat2, f-1, 2)<<endl;
+				return sumaRecursivaMatrices(mat1, mat2, f-1, 2);
+		}
+	}
 	
+	//return;
 }

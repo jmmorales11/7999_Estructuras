@@ -1,0 +1,252 @@
+\hypertarget{class_matriz}{}\doxysection{Matriz\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_matriz}\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_matriz_ace0807d0b465f8e04f7558f34b6a9fa3}{set\+Matriz}} (T m)
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{class_matriz}{Matriz}} object Modificar los datos de la matriz. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_matriz_a14d4e3c546cd520985d67d7fd559de80}{get\+Matriz}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_matriz}{Matriz}} object Visualizar los datos de la matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_ab5c63b2266b4a18614ad827022175ca4}{set\+Filas}} (T f)
+\begin{DoxyCompactList}\small\item\em Set the Filas object editar el numero de filas para la matriz. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_matriz_a31851c6b5b45c61aa4926c1181efbae1}{get\+Filas}} () const
+\begin{DoxyCompactList}\small\item\em Get the Filas object Mostrar el numero de filas de la matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_a3e5a16948800184f6bf041cb30cdf41e}{set\+Columnas}} (T c)
+\begin{DoxyCompactList}\small\item\em Set the Columnas object Modificar el numero de columnas de la \mbox{\hyperlink{class_matriz}{Matriz}}. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_matriz_a57fad396fa19031d2019dee9f734e56c}{get\+Columnas}} () const
+\begin{DoxyCompactList}\small\item\em Get the Columnas object Mostrar las columnas de la matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_a17d29d58f5b452217374274d4c4d7177}{set\+Dato}} (T m)
+\begin{DoxyCompactList}\small\item\em Set the Dato object Modificar el dato. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_matriz_ae78951082598a7f15c2324c05715c9ba}{get\+Dato}} ()
+\begin{DoxyCompactList}\small\item\em Get the Dato object mostrar dato. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_afbaf449e1502a38f807406fa6154489f}{ingresar\+Matriz}} (T $\ast$$\ast$m, T f, T c)
+\begin{DoxyCompactList}\small\item\em Ingreso de datos para la matriz mediante punteros. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_a6cf21165d138865306ed6611c01f9bae}{suma\+Matriz}} (T $\ast$$\ast$m1, T f, T c, T $\ast$$\ast$m2)
+\begin{DoxyCompactList}\small\item\em Suma dos matrices y guarda el resultado en memoria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_a89a7a4f620b2f940dcffd56362234b85}{multiplicar\+Matriz}} (T $\ast$$\ast$matrizA, T $\ast$$\ast$matrizB, T $\ast$$\ast$resultado, T $\ast$$\ast$resultado1, T fA, T cA, T fB, T cB)
+\begin{DoxyCompactList}\small\item\em Multiplicacion de dos matrices y las devuelve en una tercera matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_ae501b85fb0d874c973fd8f09986f47e0}{imprimir\+Matriz}} (T $\ast$$\ast$m, T f, T c)
+\begin{DoxyCompactList}\small\item\em Imprime la matriz guardada en memoria. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matriz_a1511ee1d484d27c9e0173fd5c27f6945}\label{class_matriz_a1511ee1d484d27c9e0173fd5c27f6945}} 
+T {\bfseries suma\+Matriz\+Recursiva} (T $\ast$$\ast$matriz1, T $\ast$$\ast$matriz2, T $\ast$$\ast$resultado, T f, T, \mbox{\hyperlink{class_matriz}{Matriz}} funcion)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matriz_a57fad396fa19031d2019dee9f734e56c}\label{class_matriz_a57fad396fa19031d2019dee9f734e56c}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!getColumnas@{getColumnas}}
+\index{getColumnas@{getColumnas}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getColumnas()}{getColumnas()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::get\+Columnas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Columnas object Mostrar las columnas de la matriz. 
+
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matriz_ae78951082598a7f15c2324c05715c9ba}\label{class_matriz_ae78951082598a7f15c2324c05715c9ba}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!getDato@{getDato}}
+\index{getDato@{getDato}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getDato()}{getDato()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::get\+Dato (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Dato object mostrar dato. 
+
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matriz_a31851c6b5b45c61aa4926c1181efbae1}\label{class_matriz_a31851c6b5b45c61aa4926c1181efbae1}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!getFilas@{getFilas}}
+\index{getFilas@{getFilas}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getFilas()}{getFilas()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::get\+Filas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Filas object Mostrar el numero de filas de la matriz. 
+
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matriz_a14d4e3c546cd520985d67d7fd559de80}\label{class_matriz_a14d4e3c546cd520985d67d7fd559de80}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!getMatriz@{getMatriz}}
+\index{getMatriz@{getMatriz}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getMatriz()}{getMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::get\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{class_matriz}{Matriz}} object Visualizar los datos de la matriz. 
+
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_matriz_ae501b85fb0d874c973fd8f09986f47e0}\label{class_matriz_ae501b85fb0d874c973fd8f09986f47e0}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!imprimirMatriz@{imprimirMatriz}}
+\index{imprimirMatriz@{imprimirMatriz}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{imprimirMatriz()}{imprimirMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::imprimir\+Matriz (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{m,  }\item[{T}]{f,  }\item[{T}]{c }\end{DoxyParamCaption})}
+
+
+
+Imprime la matriz guardada en memoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em f} & \\
+\hline
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matriz_afbaf449e1502a38f807406fa6154489f}\label{class_matriz_afbaf449e1502a38f807406fa6154489f}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!ingresarMatriz@{ingresarMatriz}}
+\index{ingresarMatriz@{ingresarMatriz}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ingresarMatriz()}{ingresarMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::ingresar\+Matriz (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{m,  }\item[{T}]{f,  }\item[{T}]{c }\end{DoxyParamCaption})}
+
+
+
+Ingreso de datos para la matriz mediante punteros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em f} & \\
+\hline
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matriz_a89a7a4f620b2f940dcffd56362234b85}\label{class_matriz_a89a7a4f620b2f940dcffd56362234b85}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!multiplicarMatriz@{multiplicarMatriz}}
+\index{multiplicarMatriz@{multiplicarMatriz}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{multiplicarMatriz()}{multiplicarMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::multiplicar\+Matriz (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{matrizA,  }\item[{T $\ast$$\ast$}]{matrizB,  }\item[{T $\ast$$\ast$}]{resultado,  }\item[{T $\ast$$\ast$}]{resultado1,  }\item[{T}]{fA,  }\item[{T}]{cA,  }\item[{T}]{fB,  }\item[{T}]{cB }\end{DoxyParamCaption})}
+
+
+
+Multiplicacion de dos matrices y las devuelve en una tercera matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrizA} & \\
+\hline
+{\em matrizB} & \\
+\hline
+{\em resultado} & \\
+\hline
+{\em resultado1} & \\
+\hline
+{\em fA} & \\
+\hline
+{\em cA} & \\
+\hline
+{\em fB} & \\
+\hline
+{\em cB} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matriz_a3e5a16948800184f6bf041cb30cdf41e}\label{class_matriz_a3e5a16948800184f6bf041cb30cdf41e}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!setColumnas@{setColumnas}}
+\index{setColumnas@{setColumnas}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setColumnas()}{setColumnas()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::set\+Columnas (\begin{DoxyParamCaption}\item[{T}]{c }\end{DoxyParamCaption})}
+
+
+
+Set the Columnas object Modificar el numero de columnas de la \mbox{\hyperlink{class_matriz}{Matriz}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matriz_a17d29d58f5b452217374274d4c4d7177}\label{class_matriz_a17d29d58f5b452217374274d4c4d7177}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!setDato@{setDato}}
+\index{setDato@{setDato}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setDato()}{setDato()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::set\+Dato (\begin{DoxyParamCaption}\item[{T}]{m }\end{DoxyParamCaption})}
+
+
+
+Set the Dato object Modificar el dato. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matriz_ab5c63b2266b4a18614ad827022175ca4}\label{class_matriz_ab5c63b2266b4a18614ad827022175ca4}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!setFilas@{setFilas}}
+\index{setFilas@{setFilas}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setFilas()}{setFilas()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::set\+Filas (\begin{DoxyParamCaption}\item[{T}]{f }\end{DoxyParamCaption})}
+
+
+
+Set the Filas object editar el numero de filas para la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matriz_ace0807d0b465f8e04f7558f34b6a9fa3}\label{class_matriz_ace0807d0b465f8e04f7558f34b6a9fa3}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!setMatriz@{setMatriz}}
+\index{setMatriz@{setMatriz}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setMatriz()}{setMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::set\+Matriz (\begin{DoxyParamCaption}\item[{T}]{m }\end{DoxyParamCaption})}
+
+
+
+Set the \mbox{\hyperlink{class_matriz}{Matriz}} object Modificar los datos de la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_matriz_a6cf21165d138865306ed6611c01f9bae}\label{class_matriz_a6cf21165d138865306ed6611c01f9bae}} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!sumaMatriz@{sumaMatriz}}
+\index{sumaMatriz@{sumaMatriz}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sumaMatriz()}{sumaMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::suma\+Matriz (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{m1,  }\item[{T}]{f,  }\item[{T}]{c,  }\item[{T $\ast$$\ast$}]{m2 }\end{DoxyParamCaption})}
+
+
+
+Suma dos matrices y guarda el resultado en memoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & \\
+\hline
+{\em f} & \\
+\hline
+{\em c} & \\
+\hline
+{\em m2} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_matriz_8h}{Matriz.\+h}}\end{DoxyCompactItemize}

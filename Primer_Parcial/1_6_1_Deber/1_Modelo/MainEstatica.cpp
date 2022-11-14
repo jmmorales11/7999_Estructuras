@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#define TAM 5
-#define TAM1 5
+#define TAM 3
+#define TAM1 3
 #include "Matriz.cpp"
 using namespace std;
 
@@ -51,7 +51,7 @@ int main(int argc, char argv){
 		break;
 		case 2:
 			if(f==f1 && c==c1){
-				funcion.sumaMatriz(matriz1,f,c,matriz2);
+				funcion.sumaRecursivaMatrices(matriz1,matriz2,f,c);
 				funcion.imprimirMatriz(matriz1 ,f,c);
 			}else{
 				system("cls");

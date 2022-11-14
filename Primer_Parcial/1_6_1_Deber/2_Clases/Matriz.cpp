@@ -82,3 +82,30 @@ void Matriz::imprimirMatriz(int **matriz, int filas, int columnas)
 		cout<<"\n";
 	}
 }
+
+int Matriz::sumaRecursivaMatrices(int **matriz1, int **matriz2, int f, int c, Matriz funcion){
+	//cout<<"Recursiva"<<endl;
+	cout<<"Primero    ["<<f<<", "<<c<<"] "<<**matriz1 +**matriz2<<endl;
+	//**matriz1=**matriz1+ **matriz2;
+	if((f==0)&&(c==0)){
+		**matriz1=**matriz1+ **matriz2;
+		return **matriz1+ **matriz2;
+	}else{
+		if(f>-1){
+			//cout<<"segundo "<<**matriz1+ **matriz2<<endl;
+			c=c-1;
+			f=f-1;
+			if(c>=-1){
+				cout<<"AQUI"<<endl;
+				**matriz1=**matriz1 + **matriz2;
+				cout<<"AQUI"<<endl;
+				//cout<<mat1[f][c+1]+mat2[f][c+1]<<endl;
+				return **matriz1+ **matriz2+funcion.sumaRecursivaMatrices(matriz1, matriz2, f, c,funcion);
+			}else
+			//cout<<"aqui          "<<sumaRecursivaMatrices(mat1, mat2, f-1, 2)<<endl;
+				return sumaRecursivaMatrices(matriz1, matriz2, f, c,funcion);
+		}
+	}
+	
+	//return;
+}
