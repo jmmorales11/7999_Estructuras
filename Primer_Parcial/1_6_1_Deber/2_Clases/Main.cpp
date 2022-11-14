@@ -1,7 +1,7 @@
 /***********************************************************************
  * UFA-ESPE
  * Autores:  Jeimy Marley Morales Sosa
- * Modificacion: Martes, 10 de noviembre 
+ * Modificacion: Martes, 14 de noviembre 
  * Purpose: Operaciones con Matrices
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
@@ -68,7 +68,9 @@ int main(int argc, char** argv){
 		break;
 		case 2:
 			if(f==f1 && c==c1){
-				funcion.sumaMatriz(matriz1,f,c,matriz2);
+				//funcion.sumaMatriz(matriz1,f,c,matriz2);
+				cout<<"SUMA RECURSIVA"<<endl;
+				cout<<"Resultado"<<	funcion.sumaRecursivaMatrices(matriz1,matriz2,f,c,funcion);
 				funcion.imprimirMatriz(matriz1 ,f,c);
 			}else{
 				system("cls");

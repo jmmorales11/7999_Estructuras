@@ -19,6 +19,7 @@ public:
    void sumaMatriz(int matriz1[][TAM1] ,int filas,int columnas,int matriz2[][TAM1]);
    void multiplicarMatriz(int matriz[][TAM1],int matriz1[][TAM1],int fA, int cA, int fB,int cB);
    void imprimirMatriz(int matriz[][TAM1] ,int filas,int columnas);
+   int sumaRecursivaMatrices(int mat1[][TAM1], int mat2[][TAM1], int f, int c);
 
 protected:
 private:

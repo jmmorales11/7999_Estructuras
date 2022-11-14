@@ -5,16 +5,20 @@ class Matriz{
 	public:
 		void setMatriz(T m);
 		T getMatriz() ;
-		void setFilas(int f);
-		int getFilas() const;
-		void setColumnas(int c);
-		int getColumnas() const;
-		void ingresarMatriz(T **m, int f, int c);
-   		T sumaMatriz(T **m1, T **m2 , T **r, int f, int c);
-  	 	T multiplicarMatriz(T **m1, T **m2 , int f, int c);
-	   void imprimirMatriz(T **m , int f, int c);
+		void setFilas(T f);
+		T getFilas() const;
+		void setColumnas(T c);
+		T getColumnas() const;
+		void setDato(T m);
+		T getDato() ;
+		void ingresarMatriz(T **m, T f, T c);
+   		void sumaMatriz(T **m1 , T f, T c, T **m2);
+  	 	void multiplicarMatriz(T **matrizA, T **matrizB,T **resultado, T fA, T cA, T fB, T cB);
+	   	void imprimirMatriz(T **m , T f, T c);
+	   	T sumaMatrizRecursiva(T **matriz1, T **matriz2, T f, T, Matriz funcion);
 	private:
 		T **matriz;
-		int filas;
-		int columnas;
+		T filas;
+		T columnas;
+		T dato;
 };
