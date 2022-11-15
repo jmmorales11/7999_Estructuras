@@ -30,7 +30,7 @@ int main(int argc, char** argv){
 		if(seleccionar.getDato() ==0){
 			return 0;
 		}		
-	}while(seleccionar.getDato()>2 || seleccionar.getDato()<1);
+	}while(seleccionar.getDato()>5 || seleccionar.getDato()<1);
 	/////////////////////////////////////////////////////////////////////////////////////////
 	cout<<"Ingreso de la primera matriz"<<endl;
 	str_cpy(datoEntero,ingresarDatosEnteros("\nDigite el numero de filas : "));
@@ -103,14 +103,16 @@ int main(int argc, char** argv){
 			for (i=0;i<f1.getFilas();i++){
 			resultado2[i] =new int[MAX];
 			}
-			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas(), c.getColumnas(), funcion);
-			funcion.imprimirMatriz(matriz1 ,f.getFilas(),c.getColumnas());
+			i=0;
+			int j=0;
+			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas()-1, c.getColumnas()-1, funcion, i, j);
+			funcion.imprimirMatriz(resultado2 ,f.getFilas(),c.getColumnas());
 			free(matriz1);
 			free(matriz2);
 			free(resultado2);
 		break;
-		case 4:
-			break;
+/*		case 4:
+			break;*/
 	}
 	
 	

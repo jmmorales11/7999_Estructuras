@@ -76,27 +76,40 @@ void Matriz<T>::imprimirMatriz(T **matriz, T filas, T columnas)
 
 }
 template<typename T>
-T Matriz<T>::sumaMatrizRecursiva(T **matriz1, T **matriz2,T **resultado, T f, T c,Matriz funcion){
+T Matriz<T>::sumaMatrizRecursiva(T **matriz1, T **matriz2,T **resultado, T f, T c,Matriz funcion, T i, T j){
 	//cout<<"\nTEMPLATESUMA\n "<<endl;
-	cout<<"Primero    ["<<f<<", "<<c<<"] "<<**matriz1 +**matriz2<<endl;
 	//**matriz1=**matriz1+ **matriz2;
-	if((f==0)&&(c==0)){
-		**resultado=**matriz1+ **matriz2;
-		return **matriz1+ **matriz2;
+	if((f==i)&&(c==j)){
+		cout<<"Entrada\n";
+		/*cout<<i<<"i\n";
+		cout<<j<<"j\n";*/		
+		cout<<"Letra["<<i<<" "<<j<<"]"<<*(*(matriz1+i)+j) +*(*(matriz2+i)+j)<<endl;
+		*(*(resultado+i)+j)=*(*(matriz1+i)+j)+ *(*(matriz2+i)+j);
+		return *(*(matriz1+i)+j)+ *(*(matriz2+i)+j);
 	}else{
-		if(f>-1){
+		
+		if(f>-1){	
+			cout<<"entrada 2\n";
 			//cout<<"segundo "<<**matriz1+ **matriz2<<endl;
+			j++;
 			c=c-1;
-			if(c>=-1){
-				cout<<"AQUI"<<endl;
-				*(*(resultado+f)+c)=**matriz1 + **matriz2;
-				cout<<"AQUI"<<endl;
-				//cout<<mat1[f][c+1]+mat2[f][c+1]<<endl;
-				return **matriz1+ **matriz2+funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado, f, c,funcion);
+			if(c>=-1){	
+				cout<<"entrada 3\n";
+				cout<<"["<<i<<" "<<j-1<<"]"<<*(*(matriz1+i)+(j-1)) +*(*(matriz2+i)+(j-1))<<endl;
+				*(*(resultado+i)+(j-1))=*(*(matriz1+i)+(j-1)) + *(*(matriz2+i)+(j-1));
+
+				i++;								
+				
+				return *(*(matriz1+i)+j-1) + *(*(matriz2+i)+j-1)+funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado, f, c,funcion,i,j);
+				
 			}else
+			cout<<"entrada 4\n";
 			//cout<<"aqui          "<<sumaRecursivaMatrices(mat1, mat2, f-1, 2)<<endl;
-				return sumaMatrizRecursiva(matriz1, matriz2,resultado, f-1, c,funcion);
+				
+				return sumaMatrizRecursiva(matriz1, matriz2,resultado, f-1, c-1,funcion,i,j);
+			
 		}
+		
 	}
 
 }

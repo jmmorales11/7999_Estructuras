@@ -22,7 +22,7 @@ class Matriz{
    		void sumaMatriz(T **m1 , T f, T c, T **m2);
   	 	void multiplicarMatriz(T **matrizA, T **matrizB,T **resultado,T **resultado1, T fA, T cA, T fB, T cB);
 	   	void imprimirMatriz(T **m , T f, T c);
-	   	T sumaMatrizRecursiva(T **matriz1, T **matriz2,T **resultado, T f, T, Matriz funcion);
+	   	T sumaMatrizRecursiva(T **matriz1, T **matriz2,T **resultado, T f, T, Matriz funcion, T i, T j);
 	private:
 		T **matriz;
 		T filas;
