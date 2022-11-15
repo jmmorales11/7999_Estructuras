@@ -18,12 +18,12 @@ int main(int argc, char** argv){
 	Matriz <int>f1;
 	Matriz <int>c1;
 	Matriz <int>seleccionar;
-	int i,opc;
+	int i,j,opc;
 	int **matriz1 ,**matriz2, **resultado,**resultado1,**resultado2 ;
 	char datoEntero[10];
 	Matriz<int> funcion;
 	do{
-		cout<<"**************OPERACIONES DE LAS MATRICES************** "<<endl;
+		cout<<"**************OPERACIONES DE LAS MATRICES**************A"<<endl;
 		cout<<"\t[1] MULTIPLICACION\n\t[2] SUMA\n\t[0]Salir\nSeleccione: ";
 		cin>>opc;
 		seleccionar.setDato(opc);
@@ -104,15 +104,27 @@ int main(int argc, char** argv){
 			resultado2[i] =new int[MAX];
 			}
 			i=0;
-			int j=0;
+			j=0;
 			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas()-1, c.getColumnas()-1, funcion, i, j);
 			funcion.imprimirMatriz(resultado2 ,f.getFilas(),c.getColumnas());
 			free(matriz1);
 			free(matriz2);
 			free(resultado2);
-		break;
-/*		case 4:
-			break;*/
+			break;
+		case 4:
+			int suma = 0;
+    		int pri = 0;
+    		int seg = 0;
+			resultado2 = new  int*[MAX];
+			for (i=0;i<f1.getFilas();i++){
+			resultado2[i] =new int[MAX];
+			}
+			funcion.multiplicacion(matriz1, matriz2,resultado2, f.getFilas(), c.getColumnas(), c1.getColumnas(),suma,  pri, seg, 0, 0, 0, funcion);
+			funcion.imprimirMatriz(resultado2 ,f.getFilas(),c.getColumnas());
+			free(matriz1);
+			free(matriz2);
+			free(resultado2);
+			break;
 	}
 	
 	

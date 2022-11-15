@@ -156,3 +156,23 @@ void Matriz<T>::sumaMatriz(T **matriz1, T filas, T columnas, T **matriz2)
 		}
 	}
 }
+
+template<typename T>
+void Matriz<T>::multiplicacion(T **a,T **b, T **res, T f, T c, T c1,T suma, T pri, T seg, T i, T k, T j, Matriz funcion) {
+	 if (k == c1) {
+        (*(*(res + i) + j)) = suma;
+        j++;
+        k = 0;
+        suma = 0;
+        if (j == c) {
+            i++;
+            j = 0;
+        }
+    }
+    if (i == f) return;
+    pri = *(*(a + i) + k);
+    seg = *(*(b + k) + j);
+    suma += pri * seg;
+    k++;
+    funcion.multiplicacion(a, b, res, f, c, c1, suma, pri, seg, i, k, j,funcion);
+}
