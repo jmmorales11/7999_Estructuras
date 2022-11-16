@@ -103,8 +103,6 @@ int main(int argc, char** argv){
 			for (i=0;i<f1.getFilas();i++){
 			resultado2[i] =new int[MAX];
 			}
-			i=0;
-			j=0;
 			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas()-1, c.getColumnas()-1, funcion);
 			funcion.imprimirMatriz(resultado2 ,f.getFilas(),c.getColumnas());
 			free(matriz1);
