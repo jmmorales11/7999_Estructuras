@@ -76,43 +76,24 @@ void Matriz<T>::imprimirMatriz(T **matriz, T filas, T columnas)
 
 }
 template<typename T>
-T Matriz<T>::sumaMatrizRecursiva(T **matriz1, T **matriz2,T **resultado, T f, T c,Matriz funcion, T i, T j){
-	//cout<<"\nTEMPLATESUMA\n "<<endl;
-	//**matriz1=**matriz1+ **matriz2;
-	cout<<"ij"<<i<<j<<endl;
-	cout<<"fc"<<f<<c<<endl;
-	j++;
-	cout<<i<<j<<endl;
-	if((f==i)&&(c==j)){
-		cout<<"Entrada\n";
-		/*cout<<i<<"i\n";
-		cout<<j<<"j\n";*/		
-		//cout<<"Letra["<<i<<" "<<j<<"]"<<*(*(matriz1+i)+j) +*(*(matriz2+i)+j)<<endl;
-		*(*(resultado+i)+j)=*(*(matriz1+i)+j)+ *(*(matriz2+i)+j);
-		return *(*(matriz1+i)+j)+ *(*(matriz2+i)+j);
+
+T Matriz<T>::sumaMatrizRecursiva(T **matriz1, T **matriz2,T **resultado, T f, T c,Matriz funcion){
+	
+	if((f==0)&&(c==0)){//caso base solo se va a terminar cuando 0 0
+		*(*(resultado+f)+c)=*(*(matriz1+f)+c) + *(*(matriz2+f)+c);
+		return *(*(resultado+f)+c);
 	}else{
-		
-		if(f>-1){	
-			cout<<"entrada 2\n";
-			//cout<<"segundo "<<**matriz1+ **matriz2<<endl;
-		//	j++;
+
+			
+		if((f>=0)&&(c>=0)){	
+			*(*(resultado+f)+c)=*(*(matriz1+f)+c) + *(*(matriz2+f)+(c));
 			c--;
-		//	cout<<"FILAS Y COLUMNAS"<<f<<" "<<c<<endl;
-			if(c>=-1){	
-				cout<<"entrada 3\n";
-		//		cout<<"["<<i<<" "<<j<<"]"<<*(*(matriz1+i)+(j)) +*(*(matriz2+i)+(j))<<endl;
-				*(*(resultado+i)+j)=*(*(matriz1+i)+j) + *(*(matriz2+i)+j);
-				i++;					
-				return *(*(matriz1+i)+j) + *(*(matriz2+i)+j)+funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado, f, c,funcion,i,j);
+			return funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado, f, c,funcion);
 				
-			}else
-			
-			cout<<"entrada 4\n";
-			
-				
-				return sumaMatrizRecursiva(matriz1, matriz2,resultado, f-1, c,funcion,i,j);
-			
-		}
+		}	
+		c=sizeof(matriz1[0])/sizeof(matriz1[0][0]);
+		f--;
+		return funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado, f, c,funcion);
 		
 	}
 
@@ -129,20 +110,14 @@ void Matriz<T>::multiplicarMatriz(T **matrizA, T **matrizB,T **resultado ,T **re
 
 	for (int i=0; i<fA;i++){
 		for(int j=0; j<cB;j++ ){
-		//	*(*(resultado+i)+j)=0;
-		//cout<<"Ingresa j"<<endl;
 			suma=0;
 			
 			for( k=0; k<cA;k++){
-				//cout<<"Ingresa k"<<endl;
-				//cout<<"["<<i<<k<<"]  ["<<i<<k<<"]  ["<<k<<j<<"] "<<endl;
-				//cout<<(*(*(matrizA+i)+k))<<"    "<<(*(*(matrizA+i)+k))<<"    "<<(*(*(matrizB+k)+j))<<"Resultado multiplicacion "<<((*(*(matrizA+i)+k)) * (*(*(matrizB+k)+j)))<<endl;
 				(*(*(resultado+i)+k))= ((*(*(matrizA+i)+k)) * (*(*(matrizB+k)+j)));
 				suma=suma+(*(*(resultado+i)+k));
-				//cout<<"  "<< suma<<endl;
+			
 				*(*(resultado1+i)+j)=suma;//memoria	
 			}	
-			//*(*(resultado+i)+j)=suma+(*(*(resultado+i)+k));
 			cout<<suma<<" | ";
 			
 		}printf("\n");
@@ -162,9 +137,9 @@ void Matriz<T>::sumaMatriz(T **matriz1, T filas, T columnas, T **matriz2)
 }
 
 template<typename T>
-void Matriz<T>::multiplicacion(T **a,T **b, T **res, T f, T c, T c1,T suma, T pri, T seg, T i, T k, T j, Matriz funcion) {
+void Matriz<T>::multiplicacion(T **matrizA,T **matrizB, T **matrizResultado, T f, T c, T c1,T suma, T primero, T segundo, T i, T k, T j, Matriz funcion) {
 	 if (k == c1) {
-        (*(*(res + i) + j)) = suma;
+        (*(*(matrizResultado + i) + j)) = suma;
         j++;
         k = 0;
         suma = 0;
@@ -174,9 +149,9 @@ void Matriz<T>::multiplicacion(T **a,T **b, T **res, T f, T c, T c1,T suma, T pr
         }
     }
     if (i == f) return;
-    pri = *(*(a + i) + k);
-    seg = *(*(b + k) + j);
-    suma += pri * seg;
+    primero = *(*(matrizA + i) + k);
+    segundo = *(*(matrizB + k) + j);
+    suma += primero * segundo;
     k++;
-    funcion.multiplicacion(a, b, res, f, c, c1, suma, pri, seg, i, k, j,funcion);
+    funcion.multiplicacion(matrizA, matrizB, matrizResultado, f, c, c1, suma, primero, segundo, i, k, j,funcion);
 }
