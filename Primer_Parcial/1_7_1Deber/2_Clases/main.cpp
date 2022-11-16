@@ -24,7 +24,7 @@ int main(int argc, char** argv){
 	Matriz<int> funcion;
 	do{
 		cout<<"**************OPERACIONES DE LAS MATRICES**************A"<<endl;
-		cout<<"\t[1] MULTIPLICACION\n\t[2] SUMA\n\t[0]Salir\nSeleccione: ";
+		cout<<"\t[1] MULTIPLICACION\n\t[2] SUMA\n\t[3] SUMA RECURSIVA\n\t[4] MULTIPLICACION RECURSIVA\n\t[0]Salir\nSeleccione: ";
 		cin>>opc;
 		seleccionar.setDato(opc);
 		if(seleccionar.getDato() ==0){
@@ -105,7 +105,7 @@ int main(int argc, char** argv){
 			}
 			i=0;
 			j=0;
-			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas()-1, c.getColumnas()-1, funcion, i, j);
+			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas()-1, c.getColumnas()-1, funcion);
 			funcion.imprimirMatriz(resultado2 ,f.getFilas(),c.getColumnas());
 			free(matriz1);
 			free(matriz2);
