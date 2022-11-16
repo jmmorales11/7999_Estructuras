@@ -104,8 +104,8 @@ int main(int argc, char** argv){
 			resultado2[i] =new int[MAX];
 			}
 			i=0;
-			j=0;
-			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas()-1, c.getColumnas()-1, funcion, i, j);
+			j=-1;
+			funcion.sumaMatrizRecursiva(matriz1, matriz2,resultado2,  f.getFilas()-1, c.getColumnas()-2, funcion, i, j);
 			funcion.imprimirMatriz(resultado2 ,f.getFilas(),c.getColumnas());
 			free(matriz1);
 			free(matriz2);
