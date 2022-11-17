@@ -1,6 +1,6 @@
 /***********************************************************************
  * UFA-ESPE
- * Autores:  Jeimy Marley Morales Sosa
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme
  * Modificacion: Martes, 14 de noviembre 
  * Purpose: Operaciones con Matrices
  *Nivel: Tercero           NRC:7999
