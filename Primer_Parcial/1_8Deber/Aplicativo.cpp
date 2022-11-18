@@ -60,14 +60,14 @@ int main() {
 				system("PAUSE");
 				break;
 			case 5:
-				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cantidad de datos que desea introducir:  "));
-				cantidad=funcion_atoi(datoEntero,strlen(datoEntero));
+				char respuesta;
 				do{
-					str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el numero que esea introducir a la lista: "));
-					num=funcion_atoi(datoEntero,strlen(datoEntero));
-					lst.insertarCola(num);
-					contador++;
-				}while (contador<cantidad);
+					str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el numero que desea introducir a la lista: "));
+				num=funcion_atoi(datoEntero,strlen(datoEntero));
+				lst.insertarCola(num);
+				cout<<"\nDesea ingresar otro numero: (s/n)\n";
+				cin>>respuesta;
+				}while (respuesta=='s'||respuesta=='S');
 				cout<<endl;
 				system("PAUSE");
 				break;

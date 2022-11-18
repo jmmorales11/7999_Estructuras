@@ -92,27 +92,19 @@ void Lista::imprimirCola(Lista lis,int tam){//Camilo
 
 void Lista::insertarCola(int num){//Camilo
 	Nodo *nuevo=new Nodo(num);
-	if (listaVacia()){
-		
-		this->actual->siguiente=nuevo;
-	}
-	else{
-		this->primero=nuevo;
-	}
-	this->actual=nuevo;
-/*	Nodo *nuevo=new Nodo(num);
-	int comienzo;
-	do{
-		if (listaVacia()){
+	
+	nuevo->siguiente=NULL;
+	if(listaVacia()){
 		this->primero=nuevo;
 	}
 	else{
-		this->siguiente->actual=nuevo;
+		Nodo *aux= this->primero;
+		while(aux->siguiente !=NULL){
+			aux=aux->siguiente;
+		}
+		aux->siguiente=nuevo;
 	}
-	this->siguiente=nuevo;
-		num--;
-	}while(num!=comienzo);
-*/	
+	
 }
 
 void Lista::buscarElemento(int pos){
