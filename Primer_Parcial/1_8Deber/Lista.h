@@ -13,9 +13,9 @@ class Lista{
 		Lista();
 		void insertar(int val);
 		void mostrarLista();
-		void buscar();//encontrar primera ocurrencia
-		void eliminar();
-		void imprimirCola();//Camilo
-		void insertarCola();//Camilo
+		void buscar(int elementoBuscar);//encontrar primera ocurrencia
+		void eliminar(int elemento);
+		void imprimirCola();
+		void insertarCola();
 		
 };
