@@ -63,7 +63,9 @@ int main() {
 				
 				break;
 			case 6:
-				lst.imprimirCola();
+				lst.mostrarLista();
+				lst.imprimirCola(lst,cantidad);
+				cout<<endl;
 				system("PAUSE");
 				break;
 			case 0:

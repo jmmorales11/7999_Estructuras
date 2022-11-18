@@ -76,21 +76,49 @@ void Lista::buscar(int elementoBuscar){
 	
 }
 
-void Lista::imprimirCola(){//Camilo
-	Nodo *tmp=this->primero;
-	Nodo *anterior;
-	
-	do{
-		tmp=tmp->siguiente;
-		cout<<"aqui"<<endl;
-	}while(tmp !=NULL);
-/*	while(tmp==NUL){
-		cout<<tmp->valor<<"-->";
-		tmp=tmp->siguiente;
-	}*/
-	cout<<"NULL";
+void Lista::imprimirCola(Lista lis,int tam){//Camilo
+	Nodo *actual;
+	actual = this->primero;
+	cout<<"\nNULL-->";
+	int cont=0;
+	Lista list;
+	while(cont<tam){
+		lis.buscarElemento(tam);
+		tam= tam-1;;
+		//cout<<"TAM "<<tam<<" AQUI"<<endl;
+	}
+	cout<<actual->valor<<" ";
 }
 
-void Lista::insertarCola(){//Camilo
+void Lista::insertarCola(int num){//Camilo
+/*	Nodo *nuevo=new Nodo(num);
+	int comienzo;
+	do{
+		if (listaVacia()){
+		this->primero=nuevo;
+	}
+	else{
+		this->siguiente->actual=nuevo;
+	}
+	this->siguiente=nuevo;
+		num--;
+	}while(num!=comienzo);
+*/	
+}
+
+void Lista::buscarElemento(int pos){
+	Nodo *actual;
+	bool afirmar=false;
+	actual = this->primero;
+	int cont=0;
+	while(actual !=NULL  ){
+		
+		if(cont==pos){
+			afirmar=true;
+			cout<<actual->valor<<" --> ";
+		}
+		cont++;
+		actual=actual->siguiente;	
+	}
 	
 }

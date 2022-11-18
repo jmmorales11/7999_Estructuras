@@ -15,7 +15,7 @@ class Lista{
 		void mostrarLista();
 		void buscar(int elementoBuscar);//encontrar primera ocurrencia
 		void eliminar(int elemento);
-		void imprimirCola();
-		void insertarCola();
-		
+		void imprimirCola(Lista lis,int tam);
+		void insertarCola(int num);
+		void buscarElemento(int pos);		
 };
