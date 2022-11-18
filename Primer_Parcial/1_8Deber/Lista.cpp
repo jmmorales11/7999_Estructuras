@@ -91,6 +91,15 @@ void Lista::imprimirCola(Lista lis,int tam){//Camilo
 }
 
 void Lista::insertarCola(int num){//Camilo
+	Nodo *nuevo=new Nodo(num);
+	if (listaVacia()){
+		
+		this->actual->siguiente=nuevo;
+	}
+	else{
+		this->primero=nuevo;
+	}
+	this->actual=nuevo;
 /*	Nodo *nuevo=new Nodo(num);
 	int comienzo;
 	do{
