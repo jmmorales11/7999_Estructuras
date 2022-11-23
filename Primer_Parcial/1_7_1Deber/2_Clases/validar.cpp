@@ -5,7 +5,7 @@
  * Purpose: Areas de las figuras
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
-#include <iostream>
+
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>

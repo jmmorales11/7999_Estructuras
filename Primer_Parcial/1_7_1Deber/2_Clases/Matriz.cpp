@@ -61,6 +61,22 @@ void Matriz<T>::ingresarMatriz(T **matriz, T filas, T columnas)
 	}
 }
 template<typename T>
+void Matriz<T>::ingresarMatrizRecursiva(T **matriz,T **matriz1 ,T filas, T columnas)
+{
+   char datoEntero[10];
+	cout<<"\nIngrese los valores para la matriz"<<endl;
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<columnas;j++){
+			do{
+			cout<<"\nDigite un numero: ["<<i<<" "<<j<<"]"<<":  ";
+			str_cpy(datoEntero,ingresarDatosEnteros(" "));
+			*(*(matriz+i)+j)=funcion_atoi(datoEntero,strlen(datoEntero));
+			*(*(matriz1+i)+j)=*(*(matriz+i)+j);
+			}while (*(*(matriz+i)+j)==NULL);
+		}
+	}
+}
+template<typename T>
 void Matriz<T>::imprimirMatriz(T **matriz, T filas, T columnas)
 {
 //	cout<<"\nTEMPLATE\n "<<endl;
@@ -137,8 +153,8 @@ void Matriz<T>::sumaMatriz(T **matriz1, T filas, T columnas, T **matriz2)
 }
 
 template<typename T>
-void Matriz<T>::multiplicacion(T **matrizA,T **matrizB, T **matrizResultado, T f, T c, T c1,T suma, T primero, T segundo, T i, T k, T j, Matriz funcion) {
-	 if (k == c1) {
+void Matriz<T>::multiplicacion( T **matrizA,T **matrizB, T **matrizResultado, T f, T c, T suma, T i, T k, T j, Matriz funcion) {
+	if (k == c) {
         (*(*(matrizResultado + i) + j)) = suma;
         j++;
         k = 0;
@@ -149,9 +165,13 @@ void Matriz<T>::multiplicacion(T **matrizA,T **matrizB, T **matrizResultado, T f
         }
     }
     if (i == f) return;
-    primero = *(*(matrizA + i) + k);
-    segundo = *(*(matrizB + k) + j);
-    suma += primero * segundo;
+    suma += *(*(matrizA + i) + k) * *(*(matrizB + k) + j);
+    cout<<suma<<endl;
     k++;
-    funcion.multiplicacion(matrizA, matrizB, matrizResultado, f, c, c1, suma, primero, segundo, i, k, j,funcion);
+    funcion.multiplicacion(matrizA, matrizB, matrizResultado, f, c,  suma, i, k, j,funcion);
+}
+
+template<typename T>
+void Matriz<T>::multiplicacionNveces(Matriz funcion, T valor){
+	   // funcion.multiplicacion(matrizA, matrizB, matrizResultado, f, c, c1, suma, primero, segundo, i, k, j,funcion);
 }
