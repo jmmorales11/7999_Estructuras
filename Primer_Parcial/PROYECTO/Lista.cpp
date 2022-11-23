@@ -137,9 +137,11 @@ void Lista::ingresarobjeto(Lista lis){
 	float sueldo, prestamo; 
 	trabajadorInformacion *obj= new trabajadorInformacion(sueldo,dias,nHorascompletas,nHoras50,prestamo);
 	obj->ingresarInformacion(*obj);
-	lis.insertar(obj->getSueldoBase());
+	obj->mostrarInformacion(*obj);
+	//lis.insertar(obj->getSueldoBase());
 	lis.insertar(obj->getHorasExtras100());
 	lis.insertar(obj->getPrestamo());
+	lis.mostrarLista();
 	
 	
 }

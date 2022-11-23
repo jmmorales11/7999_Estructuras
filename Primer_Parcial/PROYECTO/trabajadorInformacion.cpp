@@ -91,23 +91,23 @@ trabajadorInformacion::~trabajadorInformacion()
 trabajadorInformacion trabajadorInformacion::ingresarInformacion(trabajadorInformacion obj)
 {
    	char datoEntero[10],datoReal[20];
-   	str_cpy(datoReal,ingresoflotantes("\nIngrese el valor real: "));
+   	str_cpy(datoReal,ingresoflotantes("\nIngrese el sueldo del trabajador: "));
 	this->setSueldoBase(funcion_strtod(datoReal));
 	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el total de dias trabajados: "));
-	this->setSueldoBase(funcion_atoi(datoEntero,strlen(datoEntero)));
+	this->setDiasTrabajados(funcion_atoi(datoEntero,strlen(datoEntero)));
 	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese las horas al 100%: "));
-	this->setSueldoBase(funcion_atoi(datoEntero,strlen(datoEntero)));
+	this->setHorasExtras100(funcion_atoi(datoEntero,strlen(datoEntero)));
 	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese las horas al 50%: "));
-	this->setSueldoBase(funcion_atoi(datoEntero,strlen(datoEntero)));
+	this->setHorasExtras50(funcion_atoi(datoEntero,strlen(datoEntero)));
 	str_cpy(datoReal,ingresoflotantes("\nIngrese la cantidad del prestamo:  "));
-	this->setSueldoBase(funcion_strtod(datoReal));
+	this->setPrestamo(funcion_strtod(datoReal));
 	return *this;
 }
 
 
 void trabajadorInformacion::mostrarInformacion(trabajadorInformacion obj)
 {
-   cout<<"Numero de horas Extras 100%\t\t"<<obj.getHorasExtras100()<<endl;
+   cout<<"\nNumero de horas Extras 100%\t\t"<<obj.getHorasExtras100()<<endl;
    cout<<"Numero de horas Extras 50%\t\t"<<obj.getHorasExtras50()<<endl;
    cout<<"Dias trabajados\t\t"<<obj.getDiasTrabajados()<<endl;
    cout<<"Prestamo\t\t"<< obj.getPrestamo()<<endl;
