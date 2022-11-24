@@ -30,7 +30,7 @@ void Lista::mostrarLista(){
 		cout<<tmp->valor<<"-->";
 		tmp=tmp->siguiente;
 	}
-	cout<<"NULL";
+	cout<<"NULL\n";
 }
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
