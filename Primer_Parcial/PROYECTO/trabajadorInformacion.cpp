@@ -120,17 +120,17 @@ void trabajadorInformacion::mostrarInformacion(trabajadorInformacion obj)
    
 }
 
-float calcularHorasExtras100(trabajadorInformacion t){
+float trabajadorInformacion::calcularHorasExtras100(trabajadorInformacion t){
 	return (t.getSueldoBase()/240)*2*t.getHorasExtras100();
 }
 
-float calcularHorasExtras50(trabajadorInformacion t){
+float trabajadorInformacion::calcularHorasExtras50(trabajadorInformacion t){
 	return (t.getSueldoBase()/240)*1.5*t.getHorasExtras50();
 }
 
-float aporteIess(trabajadorInformacion t){
+float trabajadorInformacion::aporteIess(trabajadorInformacion t){
 	return t.getSueldoBase()*iess;
 }
-float totalIngresos(trabajadorInformacion t){
+float trabajadorInformacion::totalIngresos(trabajadorInformacion t){
 	return t.getSueldoBase()+t.calcularHorasExtras100(t)+t.calcularHorasExtras50(t);
 }
