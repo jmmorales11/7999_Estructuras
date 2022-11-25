@@ -7,13 +7,16 @@
  ***********************************************************************/
 #pragma once
 #include <time.h>
+#include "trabajadorInformacion.cpp"
 class Nodo{
 	private:
-		int valor;
+		float a,f;
+		int b ,c,d;
+		trabajadorInformacion *obj = new trabajadorInformacion(a,b,c,d,f);
 		Nodo *siguiente;
 	public:
-		Nodo(int val, Nodo *sig=NULL){
-			this->valor=val;
+		Nodo(trabajadorInformacion obj1, Nodo *sig=NULL){
+			
 			this->siguiente=sig;
 		}
 	friend class Lista;

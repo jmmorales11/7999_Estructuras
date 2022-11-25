@@ -1,5 +1,6 @@
 
 #include "ListaCircularDoble.h"
+#include "minimomultiplo.h"
 using namespace std;
 ListaCircularDoble::ListaCircularDoble(){
 	this->primero=NULL;
@@ -26,7 +27,7 @@ void ListaCircularDoble::mostrarLista(){
 	int posicion=1;
 	if(this->primero !=NULL){
 		do{
-			cout<<posicion<<"-> "<<aux->valor<<"\n";
+			cout<</*posicion<<"-> "<<*/aux->valor<<" -->";
 			aux = aux->siguiente;
 			posicion++;
 		}while(aux!=this->primero);
@@ -95,4 +96,41 @@ bool afirmar=false;
 	if(!afirmar){
 		cout<<"Elemento no encontrado\n";
 	}
+}
+
+int ListaCircularDoble::maximoDivisor(ListaCircularDoble lis){
+	long int  mcd=0;
+	Nodo *num1;
+	Nodo *num2;
+	num1=this->primero;
+	num2=this->primero->siguiente;
+//	num2=num2->siguiente;
+	do{
+		num2->valor=MaxCDiv(num1->valor, num2->valor);
+	//	cout<<"VALOR despues "<<num2->valor<<endl;
+		mcd=num2->valor;
+		num1=num1->siguiente;
+		num2=num2->siguiente;	
+		
+	}while (num2 !=this->primero);
+	return mcd;
+}
+int ListaCircularDoble::minimoMultiplo(ListaCircularDoble lis){
+	long int  mcm1=0;
+	Nodo *num1;
+	Nodo *num2;
+	num1=this->primero;
+	num2=this->primero->siguiente;
+//	num2=num2->siguiente;
+	do{
+		
+		
+		num2->valor=mcm(num1->valor, num2->valor);
+	//	cout<<"VALOR despues "<<num2->valor<<endl;
+		mcm1=num2->valor;
+		num1=num1->siguiente;
+		num2=num2->siguiente;	
+		
+	}while (num2 !=this->primero);
+	return mcm1;
 }

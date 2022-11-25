@@ -24,7 +24,6 @@ int main() {
 	lst.mostrarLista();
 	mcm=lst1.minimoMultiplo(lst1);
 	cout<<"\nMinimoComo un multiiplo: "<<mcm<<endl;
-	cout<<endl;
 	//lst1.mostrarLista();
 	mcd=lst2.maximoDivisor(lst2);
 	cout<<"\nMaximo como un divisor : "<<mcd<<endl;

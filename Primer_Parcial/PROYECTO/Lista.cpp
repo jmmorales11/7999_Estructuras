@@ -6,15 +6,15 @@
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
 #include "Lista.h"
-#include "trabajadorInformacion.cpp"
+
 using namespace std;
 Lista::Lista(){
 	this->primero=NULL;
 	this->actual=NULL;
 }
 
-void Lista::insertar(int val){
-	Nodo *nuevo=new Nodo(val);
+void Lista::insertar(trabajadorInformacion obj){
+	Nodo *nuevo=new Nodo(obj);
 	if (listaVacia()){
 		this->primero=nuevo;
 	}
@@ -27,7 +27,7 @@ void Lista::insertar(int val){
 void Lista::mostrarLista(){
 	Nodo *tmp=this->primero;
 	while(tmp){
-		cout<<tmp->valor<<"-->";
+		cout<<tmp->obj.mostrarInformacion(tmp->obj)<<"-->";
 		tmp=tmp->siguiente;
 	}
 	cout<<"NULL\n";
