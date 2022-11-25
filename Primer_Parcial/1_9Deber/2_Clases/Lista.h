@@ -24,5 +24,8 @@ class Lista{
 		void eliminar(int elemento);
 		void imprimirCola(Lista lis,int tam);
 		void insertarCola(int num);
-		void buscarElemento(int pos);		
+		void buscarElemento(int pos);
+		int minimoMultiplo(Lista lis);
+		int maximoDivisor(Lista lis);
+		Lista copiarLista(Lista  lis);		
 };
