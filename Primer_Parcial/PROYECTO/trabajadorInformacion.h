@@ -25,7 +25,10 @@ public:
    ~trabajadorInformacion();
    trabajadorInformacion ingresarInformacion(trabajadorInformacion obj);
    void mostrarInformacion(trabajadorInformacion obj);
-
+   float calcularHorasExtras100(trabajadorInformacion);
+   float calcularHorasExtras50(trabajadorInformacion t);
+   float aporteIess(trabajadorInformacion t);
+   float totalIngresos(trabajadorInformacion t);
 protected:
 private:
    float sueldoBase;
