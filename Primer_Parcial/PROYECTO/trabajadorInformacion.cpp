@@ -7,7 +7,7 @@
 
 #include "trabajadorInformacion.h"
 #include "validar.h"
-#define iess 9.45
+#define iess 0.0945
 float trabajadorInformacion::getSueldoBase(void)
 {
    return sueldoBase;
@@ -90,7 +90,9 @@ trabajadorInformacion::~trabajadorInformacion()
 
 trabajadorInformacion trabajadorInformacion::ingresarInformacion(trabajadorInformacion obj)
 {
-   	char datoEntero[10],datoReal[20];
+   	char datoEntero[10],datoReal[20],datoCaracter[20];
+   	//str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre del trabajador: "));
+   	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula del trabajador: "));
    	str_cpy(datoReal,ingresoflotantes("\nIngrese el sueldo del trabajador: "));
 	this->setSueldoBase(funcion_strtod(datoReal));
 	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el total de dias trabajados: "));
@@ -109,15 +111,18 @@ void trabajadorInformacion::mostrarInformacion(trabajadorInformacion obj)
 {
    cout<<"\n> Informativo";	
    cout<<"\nNumero de horas Extras 100%\t\t"<<obj.getHorasExtras100()<<endl;
-   cout<<"Numero de horas Extras 50%\t\t"<<obj.getHorasExtras50()<<endl;
-   cout<<"Dias trabajados\t\t"<<obj.getDiasTrabajados()<<endl;
-   cout<<"Prestamo\t\t"<< obj.getPrestamo()<<endl;
-   cout<<"Sueldo base\t\t"<<obj.getSueldoBase()<<endl;
+   cout<<"Numero de horas Extras 50%   \t\t"<<obj.getHorasExtras50()<<endl;
+   cout<<"Dias trabajados              \t\t"<<obj.getDiasTrabajados()<<endl;
+   cout<<"Prestamo                     \t\t"<<obj.getPrestamo()<<endl;
+   cout<<"Sueldo base                  \t\t"<<obj.getSueldoBase()<<endl;
    cout<<"\n> Ingreso";
-   cout<<"Sueldo Ganado\t\t"<<obj.getSueldoBase()<<endl;
-   cout<<"Valor HE 100%\t\t"<<obj.calcularHorasExtras100(obj)<<endl;
-   cout<<"Valor HE 50%\t\t"<<obj.calcularHorasExtras50(obj)<<endl;
-   
+   cout<<"\nSueldo Ganado              \t\t"<<obj.getSueldoBase()<<endl;
+   cout<<"Valor HE 100%                \t\t"<<obj.calcularHorasExtras100(obj)<<endl;
+   cout<<"Valor HE 50%                 \t\t"<<obj.calcularHorasExtras50(obj)<<endl;
+   cout<<"               \t\tTotal'Ingreso'  "<<obj.totalIngresos(obj)<<endl;
+   cout<<"\n>Egreso";
+   cout<<"\nAporte IESS                   \t\t"<<obj.aporteIess(obj)<<endl;
+   cout<<"               \t\t Total'Egreso'  "<<obj.aporteIess(obj)<<endl;
 }
 
 float trabajadorInformacion::calcularHorasExtras100(trabajadorInformacion t){
@@ -129,7 +134,7 @@ float trabajadorInformacion::calcularHorasExtras50(trabajadorInformacion t){
 }
 
 float trabajadorInformacion::aporteIess(trabajadorInformacion t){
-	return t.getSueldoBase()*iess;
+	return t.totalIngresos(t)*iess;
 }
 float trabajadorInformacion::totalIngresos(trabajadorInformacion t){
 	return t.getSueldoBase()+t.calcularHorasExtras100(t)+t.calcularHorasExtras50(t);
