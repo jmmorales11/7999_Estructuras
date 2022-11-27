@@ -13,7 +13,7 @@ Lista::Lista(){
 	this->actual=NULL;
 }
 
-void Lista::insertar(trabajadorInformacion obj){
+void Lista::insertar(trabajadorInformacion *obj){
 	Nodo *nuevo=new Nodo(obj);
 	if (listaVacia()){
 		this->primero=nuevo;
@@ -27,11 +27,12 @@ void Lista::insertar(trabajadorInformacion obj){
 void Lista::mostrarLista(){
 	Nodo *tmp=this->primero;
 	while(tmp){
-		cout<<tmp->obj.mostrarInformacion(tmp->obj)<<"-->";
+		cout<<tmp->obtenerInformacion()->mostrarInformacion();
 		tmp=tmp->siguiente;
 	}
 	cout<<"NULL\n";
 }
+/*
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
@@ -146,4 +147,4 @@ void Lista::ingresarobjeto(Lista lis){
 	
 }
 
-
+*/

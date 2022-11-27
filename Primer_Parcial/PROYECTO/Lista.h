@@ -18,12 +18,12 @@ class Lista{
 		}
 	public:
 		Lista();
-		void insertar(trabajadorInformacion obj);
+		void insertar(trabajadorInformacion *obj);
 		void mostrarLista();
-		void buscar(trabajadorInformacion obj);//encontrar primera ocurrencia
-		void eliminar(trabajadorInformacion obj);
+		void buscar(trabajadorInformacion *obj);//encontrar primera ocurrencia
+		void eliminar(trabajadorInformacion *obj);
 		void imprimirCola(Lista lis,int tam);
-		void insertarCola(trabajadorInformacion obj);
-		void buscarElemento(trabajadorInformacion obj);
+		void insertarCola(trabajadorInformacion *obj);
+		void buscarElemento(trabajadorInformacion *obj);
 		
 };

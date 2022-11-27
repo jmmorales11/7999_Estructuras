@@ -3,7 +3,6 @@
 #include "validar.h"
 using namespace std;
 int main() {
-	
 	Lista lst;
 	Lista lst1;
 	Lista lst2;

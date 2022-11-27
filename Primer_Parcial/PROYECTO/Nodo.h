@@ -10,14 +10,19 @@
 #include "trabajadorInformacion.cpp"
 class Nodo{
 	private:
-		float a,f;
-		int b ,c,d;
-		trabajadorInformacion *obj = new trabajadorInformacion(a,b,c,d,f);
+		trabajadorInformacion *Obj;
 		Nodo *siguiente;
 	public:
-		Nodo(trabajadorInformacion obj1, Nodo *sig=NULL){
-			
+		Nodo(trabajadorInformacion *obj, Nodo *sig=NULL){
+			Obj=obj;
 			this->siguiente=sig;
 		}
+		void setInformacion(trabajadorInformacion *obj){
+			Obj=obj;
+		}
+		trabajadorInformacion *obtenerInformacion(){
+			return Obj;
+		}
+		
 	friend class Lista;
 };
