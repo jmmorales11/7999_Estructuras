@@ -7,7 +7,7 @@
  ***********************************************************************/
 
 #include "Nodo.h"
-#include <iostream>
+
 using namespace std;
 class ListaCircularDoble{
 	private:
@@ -21,5 +21,7 @@ class ListaCircularDoble{
 		void insertar(int val);
 		void mostrarLista();
 		void buscar(int elementoBuscar);//encontrar primera ocurrencia
-		void eliminar(int elemento);		
+		void eliminar(int elemento);
+		int maximoDivisor(ListaCircularDoble lis);
+		int minimoMultiplo(ListaCircularDoble lis);	
 };
