@@ -8,6 +8,35 @@
 #include "trabajadorInformacion.h"
 #include "validar.h"
 #define iess 0.0945
+#define interes 0.02
+int trabajadorInformacion::getMeses(){
+	return meses;
+}
+
+void trabajadorInformacion::setMeses(int newMeses){
+	meses=newMeses;
+}
+
+char* trabajadorInformacion::getNombre()
+{
+	return nombre;
+}
+
+void trabajadorInformacion::setNombre(char* newNombre)
+{
+	nombre = newNombre;
+}
+
+int trabajadorInformacion::getId()
+{
+	return id;
+}
+
+void trabajadorInformacion::setId(int newId)
+{
+	id = newId;
+}
+
 float trabajadorInformacion::getSueldoBase(void)
 {
    return sueldoBase;
@@ -90,10 +119,13 @@ trabajadorInformacion::~trabajadorInformacion()
 
 trabajadorInformacion trabajadorInformacion::ingresarInformacion(trabajadorInformacion obj)
 {
+	char opc;
    	char datoEntero[10],datoReal[20],datoCaracter[20];
-   	//str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre del trabajador: "));
-   	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula del trabajador: "));
-   	str_cpy(datoReal,ingresoflotantes("\nIngrese el sueldo del trabajador: "));
+   	str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre del trabajador: "));
+   	this->setNombre(datoCaracter);
+	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula del trabajador: "));
+   	this->setId(funcion_atoi(datoEntero,strlen(datoEntero)));
+	str_cpy(datoReal,ingresoflotantes("\nIngrese el sueldo del trabajador: "));
 	this->setSueldoBase(funcion_strtod(datoReal));
 	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el total de dias trabajados: "));
 	this->setDiasTrabajados(funcion_atoi(datoEntero,strlen(datoEntero)));
@@ -101,8 +133,17 @@ trabajadorInformacion trabajadorInformacion::ingresarInformacion(trabajadorInfor
 	this->setHorasExtras100(funcion_atoi(datoEntero,strlen(datoEntero)));
 	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese las horas al 50%: "));
 	this->setHorasExtras50(funcion_atoi(datoEntero,strlen(datoEntero)));
-	str_cpy(datoReal,ingresoflotantes("\nIngrese la cantidad del prestamo:  \n"));
-	this->setPrestamo(funcion_strtod(datoReal));
+	cout<<"Quiere un prestamo s/n";
+	cin>>opc;
+	if(opc=='s'||opc=='S'){
+		str_cpy(datoReal,ingresoflotantes("\nIngrese la cantidad del prestamo:  \n"));
+		this->setPrestamo(funcion_strtod(datoReal));
+		str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el plazo de meses para pagar: "));
+		this->setMeses(funcion_atoi(datoEntero,strlen(datoEntero)));
+	}else{
+		this->setPrestamo(0.0);
+	}	
+	
 	return *this;
 }
 
@@ -122,7 +163,12 @@ void trabajadorInformacion::mostrarInformacion(trabajadorInformacion obj)
    cout<<"               \t\tTotal'Ingreso'  "<<obj.totalIngresos(obj)<<endl;
    cout<<"\n>Egreso";
    cout<<"\nAporte IESS                   \t\t"<<obj.aporteIess(obj)<<endl;
-   cout<<"               \t\t Total'Egreso'  "<<obj.aporteIess(obj)<<endl;
+   cout<<"\nPrestamo                      \t\t"<<obj.calcularCuota(obj)<<endl;
+   cout<<"               \t\t Total'Egreso'  "<<obj.totalEgresos(obj)<<endl;
+   cout<<"      \t\t Total empleado'"<<obj.getNombre()<<"'  "<<obj.totalGanancia(obj)<<endl;
+   cout<<"\n------------------------------------------------------"<<endl;
+   cout<<"             \t\t Recibi Conforme CI "<<obj.getId()<<endl;
+   
 }
 
 float trabajadorInformacion::calcularHorasExtras100(trabajadorInformacion t){
@@ -136,6 +182,19 @@ float trabajadorInformacion::calcularHorasExtras50(trabajadorInformacion t){
 float trabajadorInformacion::aporteIess(trabajadorInformacion t){
 	return t.totalIngresos(t)*iess;
 }
+
 float trabajadorInformacion::totalIngresos(trabajadorInformacion t){
 	return t.getSueldoBase()+t.calcularHorasExtras100(t)+t.calcularHorasExtras50(t);
+}
+
+float trabajadorInformacion::totalEgresos(trabajadorInformacion t){
+	return t.calcularCuota(t)+t.aporteIess(t);
+}
+
+float trabajadorInformacion::totalGanancia(trabajadorInformacion t){
+	return t.totalIngresos(t)-t.totalEgresos(t);
+}
+
+float trabajadorInformacion::calcularCuota(trabajadorInformacion t){
+	return (t.getPrestamo()/t.getMeses()*interes)+t.getPrestamo()/t.getMeses();
 }

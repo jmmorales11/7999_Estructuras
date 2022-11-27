@@ -10,5 +10,4 @@ int main(int arg, char** argv){
 	system("cls");
 	mostrarLogo();
 	lst->ingresarobjeto(*lst);
-	
 }

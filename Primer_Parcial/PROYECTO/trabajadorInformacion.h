@@ -11,6 +11,12 @@
 class trabajadorInformacion
 {
 public:
+   int getMeses();
+   void setMeses(int newMeses);
+   char* getNombre(void);
+   void setNombre(char* newNombre);
+   int getId(void);
+   void setId(int newId);
    float getSueldoBase(void);
    void setSueldoBase(float newSueldoBase);
    int getDiasTrabajados(void);
@@ -29,14 +35,19 @@ public:
    float calcularHorasExtras50(trabajadorInformacion t);
    float aporteIess(trabajadorInformacion t);
    float totalIngresos(trabajadorInformacion t);
+   float totalEgresos(trabajadorInformacion t);
+   float totalGanancia(trabajadorInformacion t);
+   float calcularCuota(trabajadorInformacion t);
 protected:
 private:
+   char* nombre;
+   int id;
    float sueldoBase;
    int diasTrabajados;
    int horasExtras100;
    int horasExtras50;
    float prestamo;
-
+   int meses;
 
 };
 

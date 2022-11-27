@@ -151,7 +151,7 @@ char *ingresoflotantes(char const *msj)
 	return dato;
 }
 
-char *ingresocaracteres(char *msj)
+char *ingresocaracteres(char const *msj)
 {
     char *dato=new char[10];
 	char c;
