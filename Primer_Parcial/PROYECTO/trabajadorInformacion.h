@@ -5,9 +5,6 @@
  * Purpose: Declaration of the class trabajadorInformacion
  ***********************************************************************/
 
-#if !defined(__Class_Diagram_1_trabajadorInformacion_h)
-#define __Class_Diagram_1_trabajadorInformacion_h
-
 class trabajadorInformacion
 {
 public:
