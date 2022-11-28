@@ -32,8 +32,23 @@ string Lista::toString(){
 	}
 	return s.str();
 }
-void buscarObj(informacion i){
+void Lista::buscarObj(int i){
+	bool afirmar=false;
+	Nodo *actual;
+	actual = this->primero;
+	while(actual !=NULL){
 	
+		if((actual->obtenerInformacion()->getId())==i){
+			afirmar=true;
+		}
+		actual=actual->siguiente;	
+			
+	}
+	if(afirmar==true){
+		actual->obtenerInformacion()->toString();
+	}else{
+		cout<<"\nNo se ha encontrado la cedula"<<endl;
+	}
 }
 /*
 void Lista::mostrarLista(){

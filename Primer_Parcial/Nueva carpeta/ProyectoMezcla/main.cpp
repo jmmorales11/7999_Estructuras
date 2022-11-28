@@ -5,7 +5,7 @@
 ///SIRVE
 using namespace std;
 int main(int arg, char** argv){
-	int cedula,h100,h50,n,opc;
+	int cedula,h100,h50,num,opc;
 	char datoEntero[10];
 	informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
 	Lista *lis=new Lista();
@@ -30,7 +30,7 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
-				obj->informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+				obj;
 				obj->ingresarInformacion(obj);
 				lis->insertar(obj);
 				break;
@@ -39,6 +39,11 @@ int main(int arg, char** argv){
 				system("PAUSE");
 				break;
 			case 3:
+				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula buscar:  "));
+				num=funcion_atoi(datoEntero,strlen(datoEntero));
+				cout<<endl;
+				lis->buscarObj(num);
+				system("PAUSE");
 				break;
 			case 0:
 				system("cls");
