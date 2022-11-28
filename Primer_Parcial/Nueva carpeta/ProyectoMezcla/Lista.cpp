@@ -32,6 +32,27 @@ string Lista::toString(){
 	}
 	return s.str();
 }
+void Lista::buscarObj(int cedula){
+	bool afirmar=false;
+	Nodo *actual =this->primero;
+	int cont=0, veces=0;
+	while(actual!=NULL ){
+		cout<<"Aqui"<<endl;
+		cont++;
+		if(actual->obtenerInformacion()->getId()==cedula){
+			afirmar=true;
+			cout<<actual->obtenerInformacion()->toString()<<endl;
+			break;
+		}
+		actual=actual->siguiente;	
+	}
+	if(afirmar==true){
+		printf("Persona encontrada\n");	
+	}
+	else {
+		cout<<"El elemento No se encuentra en la lista"<<endl;
+	}
+}
 /*
 void Lista::mostrarLista(){
 	Nodo *tmp=this->primero;
@@ -40,7 +61,8 @@ void Lista::mostrarLista(){
 		tmp=tmp->siguiente;
 	}
 	cout<<"NULL";
-}
+
+
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
@@ -92,7 +114,7 @@ void Lista::buscar(int elementoBuscar){
 	
 	
 }
-
+/*
 void Lista::imprimirCola(Lista lis,int tam){//Camilo
 	Nodo *actual;
 	actual = this->primero;
