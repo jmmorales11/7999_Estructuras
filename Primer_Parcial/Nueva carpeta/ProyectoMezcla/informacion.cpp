@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  informacion.cpp
  * Author:  Jeimy
- * Modified: sábado, 26 de noviembre de 2022 21:20:09
+ * Modified: sÃ¡bado, 26 de noviembre de 2022 21:20:09
  * Purpose: Implementation of the class informacion
  ***********************************************************************/
  ///SIRVE
@@ -213,7 +213,7 @@ informacion informacion::ingresarInformacion(informacion *obj)
 	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese las horas al 50%: "));
 	obj->setHoras50(funcion_atoi(datoEntero,strlen(datoEntero)));
 
-	cout<<"\nQuiere un prestamo s/n";
+	cout<<"\nQuiere un prestamo s/n: ";
 	cin>>opc;
 	if(opc=='s'||opc=='S'){
 		str_cpy(datoReal,ingresoflotantes("\nIngrese la cantidad del prestamo:  \n"));
@@ -279,7 +279,7 @@ string informacion::toString(){
     s<<"\n	>> Egreso"<<endl;
     s<<"Aporte IESS                  \t\t"<<IESS<<endl;
     s<<"Prestamo                     \t\t"<<vprestamoMensual <<endl;
-    s<<"\n               Total Egreso\t\t"<<totalEgresos<<endl;
+    s<<"\n                  Total Egreso   "<<totalEgresos<<endl;
     s<<"\n_________________________________________________"<<endl;
     s<<"\n Total del Empleado  "<<nombre<<"\t"<<totalEntrega<<endl;
 	/*

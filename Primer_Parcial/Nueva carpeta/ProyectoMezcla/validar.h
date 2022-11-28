@@ -158,7 +158,7 @@ char *ingresocaracteres(char const *msj)
 	int i=0;
 	printf("%s",msj);
 	while ((c=getch())!=13){
-		if((c>='a'&& c<='z')||(c>='A'&&c<='Z')){
+		if((c>='a'&& c<='z')||(c>='A'&&c<='Z')||c==' '){
 			printf("%c",c);
 			dato[i++]=c;
 		}else if(c==8){

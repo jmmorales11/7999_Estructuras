@@ -32,6 +32,9 @@ string Lista::toString(){
 	}
 	return s.str();
 }
+void buscarObj(informacion i){
+	
+}
 /*
 void Lista::mostrarLista(){
 	Nodo *tmp=this->primero;
