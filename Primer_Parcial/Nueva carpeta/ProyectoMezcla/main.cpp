@@ -4,18 +4,23 @@
 #include "Lista.cpp"
 ///SIRVE
 using namespace std;
+
 int main(int arg, char** argv){
 	int cedula,h100,h50,num,opc;
+
 	char datoEntero[10];
-	informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	//informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
 	Lista *lis=new Lista();
 	//informacion *obj1=new informacion("Camilo",1754146676,144.0,12,12,1200.0,300.0,120.0,120.0,45.0,12);
 	//informacion *obj2=new informacion("Camilo",1754146676,144.0,12,12,1200.0,300.0,120.0,120.0,45.0,12);
 	
 	
 	//cout<<"Aquie"<<endl;
-	
+	informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	informacion *obj1=new informacion("CAMILO",123456789,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	informacion *obj2=new informacion("Kike",234567891,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
 	do{
+		
 		system("cls");
         cout << "-----------------------MENU-----------------------" << endl
              << endl; 
@@ -30,19 +35,23 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
-				obj;
-				obj->ingresarInformacion(obj);
 				lis->insertar(obj);
+				lis->insertar(obj1);
+				lis->insertar(obj2);
+				system("PAUSE");
+				//return main();
 				break;
 			case 2:
 				cout<<lis->toString()<<endl;
 				system("PAUSE");
 				break;
 			case 3:
+
 				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula buscar:  "));
-				num=funcion_atoi(datoEntero,strlen(datoEntero));
+				cedula=funcion_atoi(datoEntero,strlen(datoEntero));
 				cout<<endl;
-				lis->buscarObj(num);
+				lis->buscarObj(cedula);
+
 				system("PAUSE");
 				break;
 			case 0:

@@ -47,6 +47,7 @@ public:
    virtual string toString();
    informacion(string nom,int cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados, float totalI,float totalE, float totalPago);
    ~informacion();
+ //  informacion();
    informacion ingresarInformacion(informacion *obj);
    float totalIngresos(informacion *t);
    float calcularHorasExtras100(informacion *t);

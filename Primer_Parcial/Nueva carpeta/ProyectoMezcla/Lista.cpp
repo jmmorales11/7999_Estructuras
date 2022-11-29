@@ -32,22 +32,27 @@ string Lista::toString(){
 	}
 	return s.str();
 }
-void Lista::buscarObj(int i){
+
+void Lista::buscarObj(int cedula){
 	bool afirmar=false;
-	Nodo *actual;
-	actual = this->primero;
-	while(actual !=NULL){
-	
-		if((actual->obtenerInformacion()->getId())==i){
+	Nodo *actual =this->primero;
+	int cont=0, veces=0;
+	while(actual!=NULL ){
+		cout<<"Aqui"<<endl;
+		cont++;
+		if(actual->obtenerInformacion()->getId()==cedula){
 			afirmar=true;
+			cout<<actual->obtenerInformacion()->toString()<<endl;
+			break;
 		}
 		actual=actual->siguiente;	
-			
 	}
 	if(afirmar==true){
-		actual->obtenerInformacion()->toString();
-	}else{
-		cout<<"\nNo se ha encontrado la cedula"<<endl;
+		printf("Persona encontrada\n");	
+	}
+	else {
+		cout<<"El elemento No se encuentra en la lista"<<endl;
+
 	}
 }
 /*
@@ -58,7 +63,8 @@ void Lista::mostrarLista(){
 		tmp=tmp->siguiente;
 	}
 	cout<<"NULL";
-}
+
+
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
@@ -110,7 +116,7 @@ void Lista::buscar(int elementoBuscar){
 	
 	
 }
-
+/*
 void Lista::imprimirCola(Lista lis,int tam){//Camilo
 	Nodo *actual;
 	actual = this->primero;
