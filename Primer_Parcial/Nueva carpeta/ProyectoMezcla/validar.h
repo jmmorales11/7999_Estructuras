@@ -224,6 +224,7 @@ char *ingresarDatosEnterosId(char const *msj){
 	dato[i]='\0';
 	return dato;
 }
+/*
 template<typename T>
 class Datos{
 	public:

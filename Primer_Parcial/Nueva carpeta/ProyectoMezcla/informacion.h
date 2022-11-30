@@ -9,7 +9,7 @@
 #if !defined(__proyecto_informacion_h)
 #define __proyecto_informacion_h
 
-#include <string>
+#include "Datos.cpp"
 using namespace std;
 
 
