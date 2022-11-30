@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
+#include <cstring>
 using namespace std;
 
 int exponente(int base, int exponent);
@@ -20,7 +21,7 @@ char *ingresarDatosEnteros(char const *msj);
 char *str_cpy(char *cadena1 ,char *cadena2);//copia la cadena dos en la cadena uno 
 char *ingresocaracteres(char *msj);
 char *ingresoflotantes(char const *msj);
-
+char *ingresarDatosEnterosId(char const *msj);
 
 //Funcion pow
 int exponente(int base, int exponent){
@@ -196,6 +197,33 @@ char *ingresarDatosEnteros(char const *msj){
 	return dato;
 }
 
+char *ingresarDatosEnterosId(char const *msj){
+	char *dato=new char[10];
+	char c;
+	int i=0,longitud=0;
+	printf("%s",msj);
+	longitud = strlen(dato);
+	while((c=getch())!=13){
+		if(c>='0'&& c<='9'&&longitud<=10){
+			
+			
+				printf("%c",c);
+				dato[i++]=c;
+			
+			printf("%c",c);
+			dato[i++]=c;
+		}else if(c==8){
+			dato[i]=0;
+			i--;
+			putchar(8);
+			putchar(32);
+			putchar(8);
+		}
+		
+	}
+	dato[i]='\0';
+	return dato;
+}
 template<typename T>
 class Datos{
 	public:

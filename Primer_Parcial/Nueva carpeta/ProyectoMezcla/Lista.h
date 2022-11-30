@@ -22,7 +22,9 @@ class Lista{
 		void insertar(informacion *obj);
 		void mostrarLista();
 		void buscar(int elementoBuscar);//encontrar primera ocurrencia
+
 		void buscarObj(int cedula);
+
 		void eliminar(int elemento);
 		void imprimirCola(Lista lis,int tam);
 		void insertarCola(int num);

@@ -4,9 +4,10 @@
 #include "Lista.cpp"
 ///SIRVE
 using namespace std;
-int main()
-{
-	int cedula,h100,h50,n,opc;
+
+int main(int arg, char** argv){
+	int cedula,h100,h50,num,opc;
+
 	char datoEntero[10];
 	//informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
 	Lista *lis=new Lista();
@@ -34,8 +35,6 @@ int main()
 		switch(opc)
 		{
 			case 1:
-				//obj->informacion();
-				//obj->ingresarInformacion(obj);
 				lis->insertar(obj);
 				lis->insertar(obj1);
 				lis->insertar(obj2);
@@ -47,9 +46,12 @@ int main()
 				system("PAUSE");
 				break;
 			case 3:
-				cout<<"Ingrese el cedula a buscar: ";
-				cin>>cedula;
+
+				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula buscar:  "));
+				cedula=funcion_atoi(datoEntero,strlen(datoEntero));
+				cout<<endl;
 				lis->buscarObj(cedula);
+
 				system("PAUSE");
 				break;
 			case 0:

@@ -194,14 +194,19 @@ informacion::~informacion()
    // TODO : implement
 }
 informacion informacion::ingresarInformacion(informacion *obj)
-{	int meses;
+{	int meses,id,longitud;
 	char opc;
    	char datoEntero[10],datoReal[20],datoCaracter[20];
    	str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre del trabajador: "));
    	this->setNombre(datoCaracter);
+	do
+	{
+		str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula del trabajador: "));
+		id = funcion_atoi(datoEntero,strlen(datoEntero));
+		longitud = strlen(datoEntero);
+	} while(longitud!=10);
 	
-	str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula del trabajador: "));
-   	this->setId(funcion_atoi(datoEntero,strlen(datoEntero)));
+   	this->setId(id);
 	
 	str_cpy(datoReal,ingresoflotantes("\nIngrese el sueldo del trabajador: "));
 	this->setSueldoBase(funcion_strtod(datoReal));
