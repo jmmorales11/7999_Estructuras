@@ -8,13 +8,13 @@
 #include "Datos.h"
 #include "validar.h"
 
-std::string Datos::getNombre(void)
+string Datos::getNombre(void)
 {
    return nombre;
 }
 
 
-void Datos::setNombre(std::string newNombre)
+void Datos::setNombre(string newNombre)
 {
    nombre = newNombre;
 }
@@ -92,7 +92,7 @@ void Datos::setPrestamo(float newPrestamo)
 }
 
 
-Datos::Datos(std::string nom, float ID, int suel, int diasT, int h100, int h50, float pres)
+Datos::Datos(string nom, float ID, int suel, int diasT, int h100, int h50, float pres)
 {
    this->nombre=nom;
    this->sueldo=suel;
@@ -113,7 +113,7 @@ Datos Datos::ingresarDatos(Datos *obj)
 {	int longitud;
    char datoEntero[10],datoReal[20],datoCaracter[30];
    	str_cpy(datoCaracter,ingresocaracteres("\nOIngrese el nombre del trabajador: "));
-   	this->setNombre(datoCaracter);
+   	obj->setNombre(datoCaracter);
 	do
 	{
 		str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula del trabajador: "));

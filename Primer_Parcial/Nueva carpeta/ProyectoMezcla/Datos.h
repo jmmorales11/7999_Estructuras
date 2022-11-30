@@ -8,11 +8,12 @@
 #if !defined(__Class_Diagram_1_Datos_h)
 #define __Class_Diagram_1_Datos_h
 #include <string>
+using namespace std;
 class Datos
 {
 public:
-   std::string getNombre(void);
-   void setNombre(std::string newNombre);
+   string getNombre(void);
+   void setNombre(string newNombre);
    int getId(void);
    void setId(int newId);
    float getSueldo(void);
@@ -25,7 +26,7 @@ public:
    void setHoras50(int newHoras50);
    float getPrestamo(void);
    void setPrestamo(float newPrestamo);
-   Datos(std::string nom, float ID, int suel, int diasT, int h100, int h50, float pres);
+   Datos(string nom, float ID, int suel, int diasT, int h100, int h50, float pres);
    ~Datos();
    Datos ingresarDatos(Datos *obj);
 

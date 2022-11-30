@@ -13,6 +13,11 @@ int main(int arg, char** argv){
 	Lista *lis=new Lista();
 
 	
+	
+	//cout<<"Aquie"<<endl;
+	informacion *obj;
+	//informacion *obj1=new informacion("CAMILO",1234567890,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	//informacion *obj2=new informacion("Kike",1245678912,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0)
 	do{
 		informacion *obj;
 		system("cls");
@@ -30,6 +35,19 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
+				do
+				{
+					obj = new informacion();
+					obj->ingresarInformacion(obj);
+					if(lis->buscarObj(obj->getId())==true){
+						confirmar=true;
+						cout<<"\nLa cedula que ingreso ya existe ";	
+					}else{
+						confirmar=false;
+					}
+				}while(confirmar!=false);
+				//lis->buscarObj(cedula);
+				lis->insertar(obj);
 				system("PAUSE");
 				//return main();
 				break;
