@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nodo_0',['Nodo',['../class_nodo.html',1,'']]]
+  ['lista_0',['Lista',['../class_lista.html',1,'']]]
 ];

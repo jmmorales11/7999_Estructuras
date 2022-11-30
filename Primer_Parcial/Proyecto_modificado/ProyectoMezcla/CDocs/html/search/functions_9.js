@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['obtenerinformacion_0',['obtenerInformacion',['../class_nodo.html#a696480ab12dc487d6798886532b50069',1,'Nodo']]]
+  ['nodo_0',['Nodo',['../class_nodo.html#a0a8776510bc52f647fd355722291b887',1,'Nodo']]]
 ];
