@@ -117,7 +117,7 @@ Datos1::~Datos1()
 Datos1 Datos1::ingresarDatos(Datos1 *obj)
 {	int longitud,dias;
    char datoEntero[10],datoReal[20],datoCaracter[30];
-   	str_cpy(datoCaracter,ingresocaracteres("\nOIngrese el nombre del trabajador: "));
+   	str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre del trabajador: "));
    	obj->setNombre(datoCaracter);
 	do
 	{
