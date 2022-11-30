@@ -38,7 +38,6 @@ void Lista::buscarObj(int cedula){
 	Nodo *actual =this->primero;
 	int cont=0, veces=0;
 	while(actual!=NULL ){
-		cout<<"Aqui"<<endl;
 		cont++;
 		if(actual->obtenerInformacion()->getId()==cedula){
 			afirmar=true;
@@ -55,15 +54,6 @@ void Lista::buscarObj(int cedula){
 
 	}
 }
-/*
-void Lista::mostrarLista(){
-	Nodo *tmp=this->primero;
-	while(tmp){
-		cout<<tmp->valor<<"-->";
-		tmp=tmp->siguiente;
-	}
-	cout<<"NULL";
-
 
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
@@ -71,7 +61,7 @@ void Lista::eliminar(int elemento){
 		Nodo *anterior =NULL;
 		aux_borrar=this->primero;
 		//recorrer la lista
-		while (aux_borrar !=NULL && aux_borrar->valor !=elemento){
+		while (aux_borrar !=NULL && aux_borrar->obtenerInformacion()->getId() !=elemento){
 			anterior=aux_borrar;
 			aux_borrar=aux_borrar->siguiente;
 		}
@@ -85,8 +75,39 @@ void Lista::eliminar(int elemento){
 			anterior->siguiente=aux_borrar->siguiente;
 			delete aux_borrar;
 		}
-	//}
 }
+/*
+void Lista::eliminar(int cedula){
+	bool afirmar=false;
+	Nodo *actual =this->primero;
+	int cont=0, veces=0;
+	while(actual!=NULL ){
+		cont++;
+		if(actual->obtenerInformacion()->getId()==cedula){
+			afirmar=true;
+			delete actual;
+		}
+		actual=actual->siguiente;	
+	}
+	if(afirmar==true){
+		printf("Persona eliminada\n");	
+	}
+	else {
+		cout<<"El elemento No se encuentra en la lista"<<endl;
+
+	}
+}*/
+/*
+void Lista::mostrarLista(){
+	Nodo *tmp=this->primero;
+	while(tmp){
+		cout<<tmp->valor<<"-->";
+		tmp=tmp->siguiente;
+	}
+	cout<<"NULL";
+
+
+
 
 void Lista::buscar(int elementoBuscar){
 	bool afirmar=false;

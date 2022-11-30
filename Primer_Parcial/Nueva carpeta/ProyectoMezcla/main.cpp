@@ -7,7 +7,7 @@ using namespace std;
 
 int main(int arg, char** argv){
 	int cedula,h100,h50,num,opc;
-
+	bool confirmar;
 	char datoEntero[10];
 	//informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
 	Lista *lis=new Lista();
@@ -17,8 +17,8 @@ int main(int arg, char** argv){
 	
 	//cout<<"Aquie"<<endl;
 	informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
-	informacion *obj1=new informacion("CAMILO",123456789,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
-	informacion *obj2=new informacion("Kike",234567891,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	informacion *obj1=new informacion("CAMILO",1234567890,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	informacion *obj2=new informacion("Kike",1245678912,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
 	do{
 		
 		system("cls");
@@ -27,7 +27,8 @@ int main(int arg, char** argv){
         cout << "\t[1]  Ingresar " << endl;
         cout << "\t[2]  Mostrar " << endl;
         cout << "\t[3]  Buscar " << endl;
-        cout << "\t[0]  Salir" << endl;
+        cout << "\t[4]  Eliminar " << endl;
+		cout << "\t[0]  Salir" << endl;
         cout << " " << endl;
         str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 		opc=funcion_atoi(datoEntero,strlen(datoEntero));
@@ -35,9 +36,18 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
-				lis->insertar(obj);
+				/*do
+				{
+					obj->ingresarInformacion(obj);
+					lis->insertar(obj);
+					if(buscarObj(lis->->getId())==true){
+						
+					}
+				}while(comfirmar=!false);*/
+				//lis->buscarObj(cedula);
+				
 				lis->insertar(obj1);
-				lis->insertar(obj2);
+				//lis->insertar(obj2);
 				system("PAUSE");
 				//return main();
 				break;
@@ -47,11 +57,18 @@ int main(int arg, char** argv){
 				break;
 			case 3:
 
-				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula buscar:  "));
+				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula a buscar:  "));
 				cedula=funcion_atoi(datoEntero,strlen(datoEntero));
 				cout<<endl;
 				lis->buscarObj(cedula);
 
+				system("PAUSE");
+				break;
+			case 4:
+				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula a eliminar:  "));
+				cedula=funcion_atoi(datoEntero,strlen(datoEntero));
+				cout<<endl;
+				lis->eliminar(cedula);
 				system("PAUSE");
 				break;
 			case 0:
@@ -61,7 +78,7 @@ int main(int arg, char** argv){
             	exit(0);
 				break;
 		}
-	}while(opc != 1 || opc != 2||opc != 0 );
+	}while(opc != 1 || opc != 2||opc != 3||opc != 4||opc != 0 );
 	return 0;
 	
 	
