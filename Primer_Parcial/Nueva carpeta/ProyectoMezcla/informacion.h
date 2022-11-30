@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  informacion.h
  * Author:  Jeimy
- * Modified: s·bado, 26 de noviembre de 2022 21:20:09
+ * Modified: s√°bado, 26 de noviembre de 2022 21:20:09
  * Purpose: Declaration of the class informacion
  ***********************************************************************/
  ///SIRVE
@@ -46,6 +46,7 @@ public:
    virtual void setDiasTrabajados(int newDiasTrabajados);
    virtual string toString();
    informacion(string nom,int cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados, float totalI,float totalE, float totalPago);
+   informacion();  
    ~informacion();
  //  informacion();
    informacion ingresarInformacion(informacion *obj);

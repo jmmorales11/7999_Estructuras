@@ -16,9 +16,9 @@ int main(int arg, char** argv){
 	
 	
 	//cout<<"Aquie"<<endl;
-	informacion *obj=new informacion("Jeimy",1754146676,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
-	informacion *obj1=new informacion("CAMILO",1234567890,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
-	informacion *obj2=new informacion("Kike",1245678912,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	informacion *obj;
+	//informacion *obj1=new informacion("CAMILO",1234567890,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
+	//informacion *obj2=new informacion("Kike",1245678912,144.0,0,12,1200.0,300.0,120.0,120.0,45.0,12,13,12.0,12.0);
 	do{
 		
 		system("cls");
@@ -36,17 +36,20 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
-				/*do
+				do
 				{
+					obj = new informacion();
 					obj->ingresarInformacion(obj);
-					lis->insertar(obj);
-					if(buscarObj(lis->->getId())==true){
-						
+					if(lis->buscarObj(obj->getId())==true){
+						confirmar=true;
+						cout<<"\nLa cedula que ingreso ya existe ";	
+					}else{
+						confirmar=false;
 					}
-				}while(comfirmar=!false);*/
+				}while(confirmar!=false);
 				//lis->buscarObj(cedula);
-				
-				lis->insertar(obj1);
+				lis->insertar(obj);
+				//lis->insertar(obj1);
 				//lis->insertar(obj2);
 				system("PAUSE");
 				//return main();

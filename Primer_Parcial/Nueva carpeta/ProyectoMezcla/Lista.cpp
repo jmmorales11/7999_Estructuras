@@ -33,7 +33,7 @@ string Lista::toString(){
 	return s.str();
 }
 
-void Lista::buscarObj(int cedula){
+bool Lista::buscarObj(int cedula){
 	bool afirmar=false;
 	Nodo *actual =this->primero;
 	int cont=0, veces=0;
@@ -46,16 +46,15 @@ void Lista::buscarObj(int cedula){
 		}
 		actual=actual->siguiente;	
 	}
-<<<<<<< HEAD
-=======
+
 	if(afirmar==true){
 		printf("Persona encontrada\n");	
+		return true;
 	}
 	else {
-		cout<<"El elemento No se encuentra en la lista"<<endl;
-
+		//cout<<"El elemento No se encuentra en la lista"<<endl;
+		return false;
 	}
->>>>>>> 6b5ab7b61162f297c804651c4eaef6833983ee2f
 }
 
 void Lista::eliminar(int elemento){
