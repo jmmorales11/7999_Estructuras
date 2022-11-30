@@ -46,6 +46,8 @@ void Lista::buscarObj(int cedula){
 		}
 		actual=actual->siguiente;	
 	}
+<<<<<<< HEAD
+=======
 	if(afirmar==true){
 		printf("Persona encontrada\n");	
 	}
@@ -53,6 +55,7 @@ void Lista::buscarObj(int cedula){
 		cout<<"El elemento No se encuentra en la lista"<<endl;
 
 	}
+>>>>>>> 6b5ab7b61162f297c804651c4eaef6833983ee2f
 }
 
 void Lista::eliminar(int elemento){
