@@ -1,8 +1,9 @@
 /***********************************************************************
- * Module:  Datos.h
- * Author:  Jeimy
- * Modified: miércoles, 30 de noviembre de 2022 1:05:29
- * Purpose: Declaration of the class Datos
+ * UFA-ESPE
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+ * Modificacion: Miercoles, 30 de nombiebre de 2022 21:17:59
+ * Purpose: ROL DE PAGO
+ *Nivel: Tercero           NRC:7999
  ***********************************************************************/
 
 #if !defined(__Class_Diagram_1_Datos_h)
