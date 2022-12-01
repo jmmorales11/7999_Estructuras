@@ -1,3 +1,11 @@
+/***********************************************************************
+ * UFA-ESPE
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+ * Modificacion: Miercoles, 30 de nombiebre de 2022 21:17:59
+ * Purpose: ROL DE PAGO
+ *Nivel: Tercero           NRC:7999
+ ***********************************************************************/
+
 #include <iostream>
 #include <ctime>
 #include <stdlib.h>

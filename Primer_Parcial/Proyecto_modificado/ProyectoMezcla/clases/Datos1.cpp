@@ -1,8 +1,9 @@
 /***********************************************************************
- * Module:  Datos.cpp
- * Author:  Jeimy
- * Modified: miércoles, 30 de noviembre de 2022 1:05:29
- * Purpose: Implementation of the class Datos
+ * UFA-ESPE
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+ * Modificacion: Miercoles, 30 de nombiebre de 2022 21:17:59
+ * Purpose: ROL DE PAGO
+ *Nivel: Tercero           NRC:7999
  ***********************************************************************/
 
 #include "Datos1.h"
@@ -117,7 +118,7 @@ Datos1::~Datos1()
 Datos1 Datos1::ingresarDatos(Datos1 *obj)
 {	int longitud,dias;
    char datoEntero[10],datoReal[20],datoCaracter[30];
-   	str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre del trabajador: "));
+   	str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre y apellido del trabajador: "));
    	obj->setNombre(datoCaracter);
 	do
 	{

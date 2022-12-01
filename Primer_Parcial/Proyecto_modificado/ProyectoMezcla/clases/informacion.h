@@ -1,8 +1,9 @@
 /***********************************************************************
- * Module:  informacion.h
- * Author:  Jeimy
- * Modified: sábado, 26 de noviembre de 2022 21:20:09
- * Purpose: Declaration of the class informacion
+ * UFA-ESPE
+ * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+ * Modificacion: Miercoles, 30 de nombiebre de 2022 21:17:59
+ * Purpose: ROL DE PAGO
+ *Nivel: Tercero           NRC:7999
  ***********************************************************************/
  ///SIRVE
 
