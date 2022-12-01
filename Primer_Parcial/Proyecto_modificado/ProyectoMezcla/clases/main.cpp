@@ -6,9 +6,9 @@
 using namespace std;
 
 int main(int arg, char** argv){
-	int cedula,h100,h50,num,opc;
+	int cedula,h100,h50,num,opc,cantidad;
 	bool confirmar;
-	char datoEntero[10];
+	char datoEntero[10], respuesta,datoCaracter[10];
 
 	Lista *lis=new Lista();
 	informacion *obj;
@@ -18,9 +18,11 @@ int main(int arg, char** argv){
         cout << "-----------------------MENU-----------------------" << endl
              << endl; 
         cout << "\t[1]  Ingresar " << endl;
-        cout << "\t[2]  Mostrar " << endl;
-        cout << "\t[3]  Buscar " << endl;
-        cout << "\t[4]  Eliminar " << endl;
+        cout << "\t[2]  Ingresar por cola " << endl;
+        cout << "\t[3]  Mostrar " << endl;
+        //cout << "\t[4]  Mostrar por cola " << endl;
+        cout << "\t[4]  Buscar " << endl;
+        cout << "\t[5]  Eliminar " << endl;
 		cout << "\t[0]  Salir" << endl;
         cout << " " << endl;
         str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
@@ -44,10 +46,31 @@ int main(int arg, char** argv){
 				system("PAUSE");
 				break;
 			case 2:
-				cout<<lis->toString()<<endl;
+				do
+				{
+					obj = new informacion();
+					obj->ingresarInformacion(obj);
+					if(lis->buscarObj(obj->getId())==true){
+						confirmar=true;
+						cout<<"\nLa cedula que ingreso ya existe ";	
+					}else{
+						confirmar=false;
+					}
+				}while(confirmar!=false);
+				lis->insertarCola(obj);
+				cout<<endl;
 				system("PAUSE");
 				break;
 			case 3:
+				cout<<lis->toString()<<endl;
+				system("PAUSE");
+				
+				break;
+			case 6:
+				lis->imprimirCola(*lis,cantidad);
+				cout<<endl;
+				break;
+			case 4:
 
 				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula a buscar:  "));
 				cedula=funcion_atoi(datoEntero,strlen(datoEntero));
@@ -56,7 +79,7 @@ int main(int arg, char** argv){
 
 				system("PAUSE");
 				break;
-			case 4:
+			case 5:
 				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula a eliminar:  "));
 				cedula=funcion_atoi(datoEntero,strlen(datoEntero));
 				cout<<endl;
@@ -70,7 +93,7 @@ int main(int arg, char** argv){
             	exit(0);
 				break;
 		}
-	}while(opc != 1 || opc != 2||opc != 3||opc != 4||opc != 0 );
+	}while(opc != 1 || opc != 2||opc != 3||opc != 4||opc != 5||opc != 6||opc != 0 );
 	return 0;
 	
 	
