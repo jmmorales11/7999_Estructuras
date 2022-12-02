@@ -22,7 +22,96 @@ char *str_cpy(char *cadena1 ,char *cadena2);//copia la cadena dos en la cadena u
 char *ingresocaracteres(char *msj);
 char *ingresoflotantes(char const *msj);
 char *ingresarDatosEnterosId(char const *msj);
+int ingresarCedula(char cedula[11]);
+bool extraer(char cedula[]);
+void borrar(char a[]);
 
+void borrar(char a[]){
+	for(int i=0; i<11;i++){
+		if (a[i] == '\n')
+			a[i] = '\0';
+	}
+}
+
+bool extraer(char cedula[]){
+	int v[10], num, limite, vec[10], suma, ultimo, ultimon;
+	limite = strlen(cedula);
+	if (limite==10)
+	{
+		for (int i=0;i<10;i++)
+		{
+			num = cedula[i]-48;
+  			v[i] = num; 
+    	}
+    	
+	}
+	if (v[0] == 1 || v[0] == 2){
+		if (v[2] > 0 && v[2] < 6 ){
+	
+			for (int i=0; i<9; i+=2){
+				vec[i] = v[i] *2;
+				if (vec[i] >= 10)
+					vec[i] -= 9; 
+			}
+		
+			for (int i=1; i<9; i+=2){
+				vec[i] = v[i];
+				
+			}
+			
+			suma= 0;
+			for(int i=0; i<10; i++){
+				suma = suma + vec[i];
+			}
+			
+			if (suma == 10)
+				ultimo = 0;
+			else if(suma >10 && suma<20)
+				ultimo = 20;
+			else if (suma >20 && suma<30)
+				ultimo = 30;
+			else if (suma >30 && suma<40)
+				ultimo = 40;
+			else cout << "\nCedula Incorrecta";
+			
+			
+			ultimon = ultimo - suma;
+			
+			if (ultimon == v[9]){
+				cout << "\nCedula VERIFICADA\n";
+				return true;
+			}
+				
+			else{
+				cout <<"\nCedula NO VERIFICADA\n";	
+				return false;
+			}
+				
+			
+		}   
+		
+		else
+			cout << "\nCedula incorrecta";  	
+	
+   }
+    
+
+}
+
+int ingresarCedula(char cedula[11]){
+	int longitud;
+	bool confirmar;
+	do{
+	do{
+		str_cpy(cedula,ingresarDatosEnteros("\nIngrese la cedula: "));	
+		longitud = strlen(cedula);
+		borrar(cedula);
+		confirmar=extraer(cedula);
+	} while(longitud!=10);
+	}while(confirmar !=true);
+	
+	return funcion_atoi(cedula,strlen(cedula));	
+}
 //Funcion pow
 int exponente(int base, int exponent){
 	if (exponent == 0) {
