@@ -25,7 +25,16 @@ void informacion::setNombre(string newNombre)
    nombre = newNombre;
 }
 
+string informacion::getApellido(void)
+{
+   return apellido;
+}
 
+
+void informacion::setApellido(string newApellido)
+{
+   apellido = newApellido;
+}
 
 int informacion::getId(void)
 {
@@ -183,8 +192,8 @@ void informacion::setTotalEntrega(float newTotalEntrega)
 
 
 
-informacion::informacion(string nom, int cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados,float totalI,float totalE, float totalPago):
-nombre(nom),id(cedula),sueldoBase(salario),horas100(h100),horas50(h50),prestamo(pres),vhoras100(vh100),vhoras50(vh50),vprestamoMensual(vPrestamo),IESS(vIess),diasTrabajados(dTrabajados),totalIngreso(totalI),totalEgresos(totalE),totalEntrega(totalPago)
+informacion::informacion(string nom, string apell,int cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados,float totalI,float totalE, float totalPago):
+nombre(nom),apellido(apell),id(cedula),sueldoBase(salario),horas100(h100),horas50(h50),prestamo(pres),vhoras100(vh100),vhoras50(vh50),vprestamoMensual(vPrestamo),IESS(vIess),diasTrabajados(dTrabajados),totalIngreso(totalI),totalEgresos(totalE),totalEntrega(totalPago)
 {
 
 
@@ -201,9 +210,10 @@ informacion::~informacion()
 informacion informacion::ingresarInformacion(informacion *obj)
 {	int meses,id,longitud;
 	char opc;
-	Datos1 *obj1 = new Datos1("Yo",1754146676,450.0,12,12,12,120.0);
+	Datos1 *obj1 = new Datos1("Yo","Ap",1754146676,450.0,12,12,12,120.0);
    	char datoEntero[10],datoReal[20],datoCaracter[20];
    	obj1->ingresarDatos(obj1);
+   	this->setApellido(obj1->getApellido());
    	this->setNombre(obj1->getNombre());
    	this->setId(obj1->getId());
    	this->setSueldoBase(obj1->getSueldo());
@@ -261,7 +271,7 @@ string informacion::toString(){
 	stringstream s;	
 	s<<"\n-----------------------------------------------------"<<endl;
 	s<<"Fecha"<<mostrarLogo()<<endl;
-	s<<"\nNombre                     \t\t"<<nombre<<endl;
+	s<<"\nApellido y nombre          \t\t"<<apellido<<" "<<nombre<<endl;
 	s<<"cedula                       \t\t"<<id<<endl;
 	s<<"\n	>> Informativo";	
 	

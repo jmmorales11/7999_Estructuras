@@ -17,11 +17,17 @@ int main(int arg, char** argv){
 	int cedula,h100,h50,num,opc,cantidad;
 	bool confirmar;
 	char datoEntero[10], respuesta,datoCaracter[10];
+	string a;
 
 	Lista *lis=new Lista();
-	informacion *obj;
+	informacion *obj= new informacion("Morales","Jeimy",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
 	do{
-		informacion *obj;
+		informacion *obj1= new informacion("Marley","Morales",1754146678,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		informacion *obj2= new informacion("Camilo","ORRICO",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		informacion *obj3= new informacion("Julian","MACAS",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		informacion *obj= new informacion("Jualiana","Morales",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		
+		//informacion *obj;
 		system("cls");
         cout << "-----------------------MENU-----------------------" << endl
              << endl; 
@@ -31,6 +37,9 @@ int main(int arg, char** argv){
         //cout << "\t[4]  Mostrar por cola " << endl;
         cout << "\t[4]  Buscar " << endl;
         cout << "\t[5]  Eliminar " << endl;
+        cout << "\t[6]  Buscar  Apellidos" << endl;
+        cout << "\t[7]  Eliminar  Apellidos" << endl;
+        cout << "\t[8]  Eliminar repetidos  Apellidos" << endl;
 		cout << "\t[0]  Salir" << endl;
         cout << " " << endl;
         str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
@@ -39,6 +48,11 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
+				lis->insertar(obj2);
+				lis->insertar(obj1);
+				lis->insertar(obj);
+				lis->insertar(obj3);
+				/*
 				do
 				{
 					obj = new informacion();
@@ -50,7 +64,7 @@ int main(int arg, char** argv){
 						confirmar=false;
 					}
 				}while(confirmar!=false);
-				lis->insertar(obj);
+				lis->insertar(obj);*/
 				system("PAUSE");
 				break;
 			case 2:
@@ -74,10 +88,7 @@ int main(int arg, char** argv){
 				system("PAUSE");
 				
 				break;
-			case 6:
-				lis->imprimirCola(*lis,cantidad);
-				cout<<endl;
-				break;
+			
 			case 4:
 
 				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula a buscar:  "));
@@ -94,6 +105,23 @@ int main(int arg, char** argv){
 				lis->eliminar(cedula);
 				system("PAUSE");
 				break;
+			case 6:
+				cin>> a;
+				//lis->eliminarApellidos(a);
+				lis->buscarApellido(a);
+				system("PAUSE");
+				break;
+			case 7:
+				cin>> a;
+				//lis->eliminarApellidos(a);
+				lis->eliminarApell(a);
+				system("PAUSE");
+				break;
+			case 8:
+				cin>> a;
+				lis->apellidosEliminar(a);
+				system("PAUSE");
+				break;
 			case 0:
 				system("cls");
             	cout << "Gracias por utilizar este programa." << endl;
@@ -101,11 +129,6 @@ int main(int arg, char** argv){
             	exit(0);
 				break;
 		}
-	}while(opc != 1 || opc != 2||opc != 3||opc != 4||opc != 5||opc != 6||opc != 0 );
+	}while(opc!= 1 || opc != 2||opc != 3||opc != 4||opc != 5||opc != 6 ||opc != 7||opc != 8||opc != 0 );
 	return 0;
-	
-	
-	
-	
-
 }

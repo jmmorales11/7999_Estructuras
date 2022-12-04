@@ -119,7 +119,12 @@ Datos1 Datos1::ingresarDatos(Datos1 *obj)
    char datoEntero[11],datoReal[20],datoCaracter[30];
    	str_cpy(datoCaracter,ingresocaracteres("\nOIngrese el nombre del trabajador: "));
    	obj->setNombre(datoCaracter);
-	id =ingresarCedula(datoEntero);
+	do
+	{
+		str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula del trabajador: "));
+		id = funcion_atoi(datoEntero,strlen(datoEntero));
+		longitud = strlen(datoEntero);
+	} while(longitud!=10);
 	
    	this->setId(id);
 	

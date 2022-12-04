@@ -95,6 +95,42 @@ bool afirmar=false;
 		cout<<"Elemento no encontrado\n";
 	}
 }
+
+void ListaCircularDoble::eliminarApellido(string elementoBuscar){
+bool afirmar=false;
+	Nodo *actual;
+	actual = this->primero;
+	Nodo *antes;
+	antes =  NULL;
+	int cont=0;
+	do{
+		cont++;
+		if(actual->obtenerInformacion()->getNombre()==elementoBuscar){
+			delete actual;
+			if(actual==this->primero){
+				this->primero = this->primero->siguiente;
+				this->primero->anterior = this->ultimo;
+				this->ultimo->siguiente = this->primero;
+			}else if(actual==this->ultimo){
+				this->ultimo = antes;
+				this->ultimo->siguiente=this->primero;
+				this->primero->anterior=this->ultimo;
+			}else{
+				antes->siguiente = actual->siguiente;
+				actual->siguiente->anterior = antes;
+			}
+			cout<<"\nElemento eliminado\n";
+			afirmar = true;
+		}
+		antes=actual;
+		actual=actual->siguiente;
+		
+	}while(actual !=this->primero);
+	if(!afirmar){
+		cout<<"Elemento no encontrado\n";
+	}
+}
+
 ///////////////////////////////////////////////////////////////////////////
 /*void ListaCircularDoble::mostrarLista(){
 	Nodo *aux = this->primero;

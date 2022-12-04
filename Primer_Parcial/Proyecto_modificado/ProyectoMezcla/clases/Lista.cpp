@@ -7,6 +7,7 @@
  ***********************************************************************/
  ///SIRVE
 #include "Lista.h"
+#include "Letra.cpp"
 using namespace std;
 Lista::Lista(){
 	this->primero=NULL;
@@ -79,6 +80,95 @@ void Lista::eliminar(int elemento){
 			delete aux_borrar;
 		}
 }
+
+void Lista::eliminarApellidos(char elemento){
+	//if (!=NULL){
+		Nodo *aux_borrar;
+		Nodo *anterior =NULL;
+		aux_borrar=this->primero;
+		//recorrer la lista
+		while (aux_borrar !=NULL ){
+			cout<<"Aqui"<<endl;
+			if(aux_borrar != NULL && letraPrimera( aux_borrar->obtenerInformacion()->getNombre())==elemento){
+				cout<<"Encontrado"<<endl;
+				if (anterior==NULL){
+					primero=primero->siguiente;
+					delete aux_borrar;
+					cout<<"Borrar"<<endl;
+				}else{
+					anterior->siguiente=aux_borrar->siguiente;
+					delete aux_borrar;
+					cout<<"Borrar 2"<<endl;
+				}	
+			}else{
+				anterior=aux_borrar;
+				aux_borrar=aux_borrar->siguiente;
+				cout<<"Nada"<<endl;
+			}
+						
+		}
+		//No existe el elemento
+		if(aux_borrar==NULL){
+			cout<<"\nEl elemento no ha sido encontrado"<<endl;
+		}
+}
+bool Lista::eliminarApell(string elemento){
+	//
+	Nodo *aux_borrar;
+		Nodo *anterior =NULL;
+		aux_borrar=this->primero;
+		//recorrer la lista
+		while (aux_borrar !=NULL && aux_borrar->obtenerInformacion()->getApellido() !=elemento){
+			anterior=aux_borrar;
+			aux_borrar=aux_borrar->siguiente;
+		}
+		//No existe el elemento
+		if(aux_borrar==NULL){
+			return false;
+			cout<<"\nEl elemento no ha sido encontrado"<<endl;
+		}else if (anterior==NULL){
+
+			primero=primero->siguiente;
+			delete aux_borrar;
+		}else{
+
+			anterior->siguiente=aux_borrar->siguiente;
+			delete aux_borrar;
+		}
+}
+void Lista::buscarApellido(string apellido){
+	//
+	bool afirmar=false;
+	Nodo *actual =this->primero;
+	int cont=0, veces=0;
+	while(actual!=NULL ){
+		
+		if(actual->obtenerInformacion()->getApellido()==apellido){
+			afirmar=true;
+			cont++;
+			cout<<actual->obtenerInformacion()->toString()<<endl;
+			break;
+		}
+		actual=actual->siguiente;	
+	}
+
+	if(afirmar==true){
+		printf("Persona encontrada\n");	
+	//	return true;
+	}
+	else {
+		//cout<<"El elemento No se encuentra en la lista"<<endl;
+	//	return false;
+	}
+
+}
+void Lista::apellidosEliminar(string elemento){
+	bool confirmar;
+	do{
+		confirmar=this->eliminarApell(elemento);
+	}while(confirmar==true);
+}
+
 void Lista::imprimirCola(Lista lis,int tam){//Camilo
 	Nodo *actual;
 	actual = this->primero;

@@ -21,5 +21,6 @@ class ListaCircularDoble{
 		void insertar(informacion *obj);
 		bool buscarObj(int cedula);//encontrar primera ocurrencia
 		void eliminar(int elemento);
+		void eliminarApellido(string elementoBuscar);
 		string toString();		
 };

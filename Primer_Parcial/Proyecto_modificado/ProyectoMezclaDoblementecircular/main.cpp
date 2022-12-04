@@ -17,10 +17,15 @@ int main(int arg, char** argv){
 	int cedula,h100,h50,num,opc,cont=1;
 	bool confirmar;
 	char datoEntero[10];
+	string apellido;
 
 	ListaCircularDoble *lis=new ListaCircularDoble();
 	informacion *obj;
 	do{
+		informacion *obj1= new informacion("Morales",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		informacion *obj2= new informacion("Orrico",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		informacion *obj3= new informacion("Morales",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		
 		informacion *obj;
 		system("cls");
         cout << "-----------------------MENU-----------------------" << endl
@@ -29,6 +34,7 @@ int main(int arg, char** argv){
         cout << "\t[2]  Mostrar " << endl;
         cout << "\t[3]  Buscar " << endl;
         cout << "\t[4]  Eliminar " << endl;
+        cout << "\t[5]  Eliminar Apellido " << endl;
 		cout << "\t[0]  Salir" << endl;
         cout << " " << endl;
         str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
@@ -37,6 +43,10 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
+				lis->insertar(obj1);
+				lis->insertar(obj2);
+				lis->insertar(obj3);
+				/*
 				do
 				{	
 					obj = new informacion();
@@ -55,6 +65,7 @@ int main(int arg, char** argv){
 					
 				}while(confirmar!=false);
 				lis->insertar(obj);
+				*/
 				system("PAUSE");
 				break;
 			case 2:
@@ -80,6 +91,12 @@ int main(int arg, char** argv){
 				lis->eliminar(cedula);
 				system("PAUSE");
 				break;
+			case 5:
+				cin>>apellido;
+				cout<<endl;
+				lis->eliminarApellido(apellido);
+				system("PAUSE");
+				break;
 			case 0:
 				system("cls");
             	cout << "Gracias por utilizar este programa." << endl;
@@ -87,7 +104,7 @@ int main(int arg, char** argv){
             	exit(0);
 				break;
 		}
-	}while(opc != 1 || opc != 2||opc != 3||opc != 4||opc != 0 );
+	}while(opc != 1 || opc != 2||opc != 3||opc != 4||opc != 5 || opc != 0);
 	return 0;
 	
 	
