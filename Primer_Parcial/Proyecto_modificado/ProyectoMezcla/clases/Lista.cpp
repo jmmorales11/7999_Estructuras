@@ -8,6 +8,7 @@
  ///SIRVE
 #include "Lista.h"
 #include "Letra.cpp"
+#include "Archivos.cpp"
 using namespace std;
 Lista::Lista(){
 	this->primero=NULL;
@@ -24,17 +25,110 @@ void Lista::insertar(informacion *obj){
 	}
 	this->actual=nuevo;
 }
+void Lista::Cargar(){
+	ifstream archivo;
+	string apellido,nombre,id;
+	int horas100,horas50,diasTrabajados,prestamo,sueldoBase;
+	float vhoras100,vhoras50,totalIngreso,IESS,vprestamoMensual,totalEgresos,totalEntrega;
+	
+	archivo.open("Rol_PagoAux.txt",ios::in);
+	if(archivo.fail()){
+		cout<<"No se puede abrir el archivo";
+		
+	}
+	while (!archivo.eof()){
+		informacion *obj=new informacion("Morales","Jeimy","1754146676",12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+	
+		archivo>>apellido>>nombre>>id>>totalEntrega>>horas100>>horas50>>diasTrabajados>>prestamo>>sueldoBase>>vhoras100>>vhoras50>>totalIngreso>>IESS>>vprestamoMensual>>totalEgresos;
+	//	archivo1<<apellido<<nombre<<id<<totalEntrega<<horas100<<horas50<<diasTrabajados<<prestamo<<sueldoBase<<vhoras100<<vhoras50<<<totalIngreso<<IESS<<vprestamoMensual <<totalEgresos<<"\n";
+
+		obj->setApellido(apellido);
+		obj->setNombre(nombre);
+		obj->setId(id);
+		obj->setHoras100(horas100);
+		obj->setHoras50(horas50);
+		obj->setDiasTrabajados(diasTrabajados);
+		obj->setPrestamo(prestamo);
+		obj->setSueldoBase(sueldoBase);
+		obj->setVhoras100(vhoras100);
+		obj->setVhoras50(vhoras50);
+		obj->setIESS(IESS);
+		obj->setVprestamoMensual(vprestamoMensual);
+		obj->setTotalEntrega(totalEntrega);
+		obj->setTotalIngreso(totalIngreso);
+		obj->setTotalEgreso(totalEgresos);
+		Nodo *nuevo=new Nodo(obj);
+		if (!archivo.eof()){
+			
+			if (listaVacia()){
+			this->primero=nuevo;
+		}
+		else{
+			this->actual->siguiente=nuevo;
+		}
+			this->actual=nuevo;
+		}
+	}
+	archivo.close();
+	}
+
 string Lista::toString(){
 	stringstream s;
 	Nodo *p=this-> primero;
+	p->obtenerInformacion()->actualizar();
 	while (p!=NULL){
 		s<<p->obtenerInformacion()->toString()<<endl;
 		p=p->siguiente;
 	}
 	return s.str();
 }
+int Lista::buscarProvincia(string cedula){
+	string auxcedula;
+	bool afirmar=false;
+	Nodo *actual =this->primero;
+	int cont=0, veces=0;
+	while(actual!=NULL ){
+		auxcedula=letraPrimera(actual->obtenerInformacion()->getId());
+		if(auxcedula==cedula){
+			//cout<<"Cedularepetida"<< cont;	
+			afirmar=true;
+			cont++;
+		}
+		actual=actual->siguiente;	
+	}
+	if(afirmar==true){
+		//printf("Cedularepetida", cont);	
+		return cont;
+	}
+	else {
+		//cout<<"El elemento No se encuentra en la lista"<<endl;
+		return cont;
+	}	
+}
 
-bool Lista::buscarObj(int cedula){
+bool Lista::contarProvincia(){
+	string auxP, com;
+	int i=01;
+	bool afirmar=false;
+	Nodo *actual =this->primero;
+	int cont=0, veces=0;
+	while(i<=24){
+		while(actual!=NULL ){
+			this->buscarProvincia(numeros(i));
+			cout<<auxP;
+			provincias(letraPrimera(actual->obtenerInformacion()->getId()));
+			cont++;
+		actual=actual->siguiente;
+		i++;
+	}
+		
+	}
+	
+		
+}
+
+
+bool Lista::buscarObj(string cedula){
 	bool afirmar=false;
 	Nodo *actual =this->primero;
 	int cont=0, veces=0;
@@ -59,7 +153,7 @@ bool Lista::buscarObj(int cedula){
 
 }
 
-void Lista::eliminar(int elemento){
+void Lista::eliminar(string elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
 		Nodo *anterior =NULL;
@@ -81,37 +175,6 @@ void Lista::eliminar(int elemento){
 		}
 }
 
-void Lista::eliminarApellidos(char elemento){
-	//if (!=NULL){
-		Nodo *aux_borrar;
-		Nodo *anterior =NULL;
-		aux_borrar=this->primero;
-		//recorrer la lista
-		while (aux_borrar !=NULL ){
-			cout<<"Aqui"<<endl;
-			if(aux_borrar != NULL && letraPrimera( aux_borrar->obtenerInformacion()->getNombre())==elemento){
-				cout<<"Encontrado"<<endl;
-				if (anterior==NULL){
-					primero=primero->siguiente;
-					delete aux_borrar;
-					cout<<"Borrar"<<endl;
-				}else{
-					anterior->siguiente=aux_borrar->siguiente;
-					delete aux_borrar;
-					cout<<"Borrar 2"<<endl;
-				}	
-			}else{
-				anterior=aux_borrar;
-				aux_borrar=aux_borrar->siguiente;
-				cout<<"Nada"<<endl;
-			}
-						
-		}
-		//No existe el elemento
-		if(aux_borrar==NULL){
-			cout<<"\nEl elemento no ha sido encontrado"<<endl;
-		}
-}
 bool Lista::eliminarApell(string elemento){
 	//
 	Nodo *aux_borrar;

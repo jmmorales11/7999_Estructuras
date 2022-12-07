@@ -10,7 +10,8 @@
 #include "informacion.h"
 #include <sstream>
 #include <iomanip>
-#include "Logo.cpp"
+#include <fstream>
+//#include "Logo.cpp"
 #define iess 0.0945
 #define interes 0.02
 
@@ -36,13 +37,13 @@ void informacion::setApellido(string newApellido)
    apellido = newApellido;
 }
 
-int informacion::getId(void)
+string informacion::getId(void)
 {
    return id;
 }
 
 
-void informacion::setId(int newId)
+void informacion::setId(string newId)
 {
    id = newId;
 }
@@ -192,7 +193,7 @@ void informacion::setTotalEntrega(float newTotalEntrega)
 
 
 
-informacion::informacion(string nom, string apell,int cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados,float totalI,float totalE, float totalPago):
+informacion::informacion(string nom, string apell,string cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados,float totalI,float totalE, float totalPago):
 nombre(nom),apellido(apell),id(cedula),sueldoBase(salario),horas100(h100),horas50(h50),prestamo(pres),vhoras100(vh100),vhoras50(vh50),vprestamoMensual(vPrestamo),IESS(vIess),diasTrabajados(dTrabajados),totalIngreso(totalI),totalEgresos(totalE),totalEntrega(totalPago)
 {
 
@@ -210,7 +211,7 @@ informacion::~informacion()
 informacion informacion::ingresarInformacion(informacion *obj)
 {	int meses,id,longitud;
 	char opc;
-	Datos1 *obj1 = new Datos1("Yo","Ap",1754146676,450.0,12,12,12,120.0);
+	Datos1 *obj1 = new Datos1("Yo","Ap","1754146676",450.0,12,12,12,120.0);
    	char datoEntero[10],datoReal[20],datoCaracter[20];
    	obj1->ingresarDatos(obj1);
    	this->setApellido(obj1->getApellido());
@@ -266,11 +267,24 @@ float informacion::totalGanancia(informacion *t){
 	return t->getTotalIngreso()-t->getTotalEgreso();
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
-
+void informacion::actualizar(){
+	ofstream archivo;
+   ofstream archivo1;
+	archivo.open("Rol_Pago.txt",ios::out);//abriendo archivo
+	archivo1.open("Rol_PagoAux.txt",ios::out);
+	if(archivo1.fail()){
+		cout<<"No se pudo abrir el archivo";
+		exit(1);	
+	}
+	archivo1<<"";
+	archivo<<"";
+	archivo1.close();
+	archivo.close();
+}
 string informacion::toString(){
 	stringstream s;	
 	s<<"\n-----------------------------------------------------"<<endl;
-	s<<"Fecha"<<mostrarLogo()<<endl;
+//	s<<"Fecha"<<mostrarLogo()<<endl;
 	s<<"\nApellido y nombre          \t\t"<<apellido<<" "<<nombre<<endl;
 	s<<"cedula                       \t\t"<<id<<endl;
 	s<<"\n	>> Informativo";	
@@ -292,5 +306,55 @@ string informacion::toString(){
     s<<"\n_________________________________________________"<<endl;
     s<<"\n Total del Empleado  "<<nombre<<"\t"<<fixed<<setprecision(2)<<totalEntrega<<endl;
    s<<"\n-----------------------------------------------------\n\n"<<endl;
+   /////////////////////////////////////////////////////////////////////////////////
+   ofstream archivo;
+   ofstream archivo1;
+	archivo.open("Rol_Pago.txt",ios::out| ios::app);//abriendo archivo
+	archivo1.open("Rol_PagoAux.txt",ios::out| ios::app);
+	if(archivo.fail()){
+		cout<<"No se pudo abrir el archivo";
+		exit(1);	
+	}
+	archivo<<"\n-----------------------------------------------------"<<endl;
+//	s<<"Fecha"<<mostrarLogo()<<endl;
+	archivo<<"\nApellido y nombre          \t\t"<<apellido<<" "<<nombre<<endl;
+	archivo<<"cedula                       \t\t"<<id<<endl;
+	archivo<<"\n	>> Informativo";	
+	
+    archivo<<"\nNumero de horas Extras 100%\t\t"<<horas100<<endl;
+    archivo<<"Numero de horas Extras 50%   \t\t"<<horas50<<endl;
+    archivo<<"Dias trabajados              \t\t"<<diasTrabajados<<endl;
+    archivo<<"Prestamo                     \t\t"<<prestamo<<endl;
+    archivo<<"Sueldo base                  \t\t"<<sueldoBase<<endl;
+    archivo<<"\n	>> Ingreso";
+    archivo<<"\nSueldo Ganado              \t\t"<<fixed<<setprecision(2)<<sueldoBase<<endl;
+    archivo<<"Valor HE 100%                \t\t"<<vhoras100<<endl;
+    archivo<<"Valor HE 50%                 \t\t"<<vhoras50<<endl;
+    archivo<<"\n             		Total Ingreso  "<<fixed<<setprecision(2)<<totalIngreso<<endl;
+    archivo<<"\n	>> Egreso"<<endl;
+    archivo<<"Aporte IESS                  \t\t"<<IESS<<endl;
+    archivo<<"Prestamo                     \t\t"<<vprestamoMensual <<endl;
+    archivo<<"\n                        Total Egreso  "<<fixed<<setprecision(2)<<totalEgresos<<endl;
+    archivo<<"\n_________________________________________________"<<endl;
+    archivo<<"\n Total del Empleado  "<<nombre<<"\t"<<fixed<<setprecision(2)<<totalEntrega<<endl;
+	archivo<<"\n-----------------------------------------------------\n\n"<<endl;
+	archivo1<<apellido<<" "<<nombre<<" "<<id<<" "<<totalEntrega<<" "<<horas100<<" "<<horas50<<" "<<diasTrabajados<<" "<<prestamo<<" "<<sueldoBase<<" "<<vhoras100<<" "<<vhoras50<<" "<<totalIngreso<<" "<<IESS<<" "<<vprestamoMensual <<" "<<totalEgresos<<"\n";
+	archivo1.close();
+	archivo.close();
    return s.str();
+}
+
+void informacion::leerArchivo(){
+	ifstream archivo;
+	
+	archivo.open("Rol_PagoAux.txt",ios::in);
+	if(archivo.fail()){
+		cout<<"No se puede abrir el archivo";
+		exit(1);
+	}
+	while (!archivo.eof()){
+		archivo>>apellido>>nombre>>horas100>>horas50>>diasTrabajados>>prestamo>>sueldoBase;
+		
+	}
+	archivo.close();
 }

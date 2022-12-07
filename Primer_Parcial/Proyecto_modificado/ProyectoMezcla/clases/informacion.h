@@ -11,6 +11,7 @@
 #define __proyecto_informacion_h
 
 #include "Datos1.cpp"
+
 using namespace std;
 
 
@@ -21,8 +22,8 @@ public:
    virtual void setNombre(string newNombre);
    string getApellido(void);
    virtual void setApellido(string newApellido);
-   virtual int getId(void);
-   virtual void setId(int newId);
+   virtual string getId(void);
+   virtual void setId(string newId);
    virtual float getSueldoBase(void);
    virtual void setSueldoBase(float newSueldoBase);
    virtual int getHoras100(void);
@@ -48,7 +49,7 @@ public:
    virtual int getDiasTrabajados(void);
    virtual void setDiasTrabajados(int newDiasTrabajados);
    virtual string toString();
-   informacion(string nom,string apell,int cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados, float totalI,float totalE, float totalPago);
+   informacion(string nom,string apell,string cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados, float totalI,float totalE, float totalPago);
    informacion();  
    ~informacion();
  //  informacion();
@@ -60,12 +61,14 @@ public:
    float calcularCuota(informacion *t, int meses);
    float totalEgreso(informacion *t);
    float totalGanancia(informacion *t);
+   void leerArchivo();
+   void actualizar();
 
 protected:
 private:
    std::string nombre;
    std::string apellido;
-   int id;
+   std::string  id;
    float sueldoBase;
    int horas100;
    int horas50;

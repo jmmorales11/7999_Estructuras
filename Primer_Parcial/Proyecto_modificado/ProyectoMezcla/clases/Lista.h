@@ -21,10 +21,10 @@ class Lista{
 		Lista();
 		void insertar(informacion *obj);
 		void mostrarLista();
-		void buscar(int elementoBuscar);//encontrar primera ocurrencia
-		bool buscarObj(int cedula);
+		void buscar(string elementoBuscar);//encontrar primera ocurrencia
+		bool buscarObj(string cedula);
 		void eliminarApellidos(char elemento);
-		void eliminar(int elemento);
+		void eliminar(string elemento);
 		void imprimirCola(Lista lis,int tam);
 		void insertarCola(informacion *obj);
 		void buscarElemento(int pos);
@@ -35,4 +35,7 @@ class Lista{
 		bool eliminarApell(string elemento);
 		void apellidosEliminar(string elemento);
 		void buscarApellido(string apellido);
+		void Cargar();
+		int buscarProvincia(string cedula);
+		bool contarProvincia();
 };
