@@ -6,7 +6,7 @@
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
 
-#include <iostream>
+
 #include <ctime>
 #include <stdlib.h>
 #include "Lista.cpp"
@@ -14,20 +14,22 @@
 using namespace std;
 
 int main(int arg, char** argv){
-	int cedula,h100,h50,num,opc,cantidad;
+	int h100,h50,num,opc,cantidad;
 	bool confirmar;
 	char datoEntero[10], respuesta,datoCaracter[10];
-	string a;
+	string cedula,a,aux;
 
 	Lista *lis=new Lista();
-	informacion *obj= new informacion("Morales","Jeimy",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+	informacion *obj= new informacion("--","--","--",0,0,0,0,0,0,0,0,0,0,0,0);
+	lis->Cargar();
 	do{
-		informacion *obj1= new informacion("Marley","Morales",1754146678,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		
+/*		informacion *obj1= new informacion("Marley","Morales",1754146678,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
 		informacion *obj2= new informacion("Camilo","ORRICO",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
 		informacion *obj3= new informacion("Julian","MACAS",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
 		informacion *obj= new informacion("Jualiana","Morales",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-		
-		//informacion *obj;
+*/		
+		informacion *obj;
 		system("cls");
         cout << "-----------------------MENU-----------------------" << endl
              << endl; 
@@ -37,7 +39,7 @@ int main(int arg, char** argv){
         //cout << "\t[4]  Mostrar por cola " << endl;
         cout << "\t[4]  Buscar " << endl;
         cout << "\t[5]  Eliminar " << endl;
-        cout << "\t[6]  Buscar  Apellidos" << endl;
+        cout << "\t[6]  Buscar  Provincias" << endl;
         cout << "\t[7]  Eliminar  Apellidos" << endl;
         cout << "\t[8]  Eliminar repetidos  Apellidos" << endl;
 		cout << "\t[0]  Salir" << endl;
@@ -48,11 +50,12 @@ int main(int arg, char** argv){
 		switch(opc)
 		{
 			case 1:
+					/*
 				lis->insertar(obj2);
 				lis->insertar(obj1);
 				lis->insertar(obj);
 				lis->insertar(obj3);
-				/*
+			*/
 				do
 				{
 					obj = new informacion();
@@ -64,7 +67,7 @@ int main(int arg, char** argv){
 						confirmar=false;
 					}
 				}while(confirmar!=false);
-				lis->insertar(obj);*/
+				lis->insertar(obj);
 				system("PAUSE");
 				break;
 			case 2:
@@ -106,20 +109,23 @@ int main(int arg, char** argv){
 				system("PAUSE");
 				break;
 			case 6:
-				cin>> a;
-				//lis->eliminarApellidos(a);
-				lis->buscarApellido(a);
+			//	aux=ingresarDatosEnteros("\nIngrese el apellido del trabajador: ");
+			//	cin>>aux;
+				lis->contarProvincia();
+				cout<<endl;
 				system("PAUSE");
 				break;
 			case 7:
-				cin>> a;
-				//lis->eliminarApellidos(a);
-				lis->eliminarApell(a);
+				str_cpy(datoCaracter,ingresocaracteres("\nIngrese el apellido del trabajador: "));
+				lis->buscarApellido(datoCaracter);
+				cout<<endl;
+				lis->eliminarApell(datoCaracter);
 				system("PAUSE");
 				break;
 			case 8:
-				cin>> a;
-				lis->apellidosEliminar(a);
+				str_cpy(datoCaracter,ingresocaracteres("\nIngrese el apellido del trabajador: "));
+				lis->apellidosEliminar(datoCaracter);
+				cout<<endl;
 				system("PAUSE");
 				break;
 			case 0:

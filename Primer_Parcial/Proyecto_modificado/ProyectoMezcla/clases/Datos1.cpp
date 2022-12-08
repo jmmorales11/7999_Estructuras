@@ -31,13 +31,13 @@ void Datos1::setApellido(string newApellido)
    apellido = newApellido;
 }
 
-int Datos1::getId(void)
+string Datos1::getId(void)
 {
    return id;
 }
 
 
-void Datos1::setId(int newId)
+void Datos1::setId(string newId)
 {
    id = newId;
 }
@@ -103,7 +103,7 @@ void Datos1::setPrestamo(float newPrestamo)
 }
 
 
-Datos1::Datos1(string nom,string apell, float ID, int suel, int diasT, int h100, int h50, float pres)
+Datos1::Datos1(string nom,string apell, string ID, int suel, int diasT, int h100, int h50, float pres)
 {
    this->nombre=nom;
    this->apellido=apell;
@@ -129,7 +129,7 @@ Datos1::~Datos1()
 Datos1 Datos1::ingresarDatos(Datos1 *obj)
 {	int longitud,dias;
    char datoEntero[10],datoReal[20],datoCaracter[30];
-   str_cpy(datoCaracter,ingresocaracteres("\nIngrese el apellido del trabajador: "));
+   	str_cpy(datoCaracter,ingresocaracteres("\nIngrese el apellido del trabajador: "));
    	obj->setApellido(datoCaracter);
    	str_cpy(datoCaracter,ingresocaracteres("\nIngrese el nombre del trabajador: "));
    	obj->setNombre(datoCaracter);
