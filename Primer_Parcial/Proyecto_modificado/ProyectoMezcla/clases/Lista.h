@@ -21,7 +21,9 @@ class Lista{
 		Lista();
 		void insertar(informacion *obj);
 		void mostrarLista();
-		void buscar(string elementoBuscar);//encontrar primera ocurrencia
+		void provincias();
+		string cifras(informacion *obj);
+		bool buscar(string elementoBuscar);//encontrar primera ocurrencia
 		bool buscarObj(string cedula);
 		void eliminarApellidos(char elemento);
 		void eliminar(string elemento);

@@ -25,6 +25,170 @@ void Lista::insertar(informacion *obj){
 	}
 	this->actual=nuevo;
 }
+bool Lista::buscar(string elementoBuscar){
+	bool afirmar=false;
+	Nodo *actual;
+	actual = this->primero;
+	int cont=0, veces=0;
+	while(actual !=NULL){
+		cont++;
+		if(cifras(actual->obtenerInformacion())==elementoBuscar){
+			afirmar=true;
+			veces++;
+		}
+		actual=actual->siguiente;
+		
+	}
+	if(afirmar==true){
+		if(veces==1){
+			cout<<"Se encontro "<<veces<<" una persona de ";
+			return true;	
+		}else{
+			cout<<"Se encontro "<<veces<<" personas de ";
+			return true;	
+		}	
+	}
+	else {
+		return false;
+	}
+	
+	
+}
+void Lista::provincias(){
+	if(buscar("01")==true)
+	{
+		cout<<"Azuay ";
+		cout<<"\n";	
+	}
+	if(buscar("02")==true)
+	{
+		cout<<"Bolivar ";
+		cout<<"\n";	
+	}
+	if(buscar("03")==true)
+	{
+		cout<<"Caniar ";
+		cout<<"\n";	
+	}
+	if(buscar("04")==true)
+	{
+		cout<<"Carchi ";
+		cout<<"\n";	
+	}
+	if(buscar("05")==true)
+	{
+		cout<<"Cotopaxi ";
+		cout<<"\n";	
+	}
+	if(buscar("06")==true)
+	{
+		cout<<"Chimborazo ";
+		cout<<"\n";	
+	}
+	if(buscar("07")==true)
+	{
+		cout<<"El Oro ";
+		cout<<"\n";	
+	}
+	if(buscar("08")==true)
+	{
+		cout<<"Esmeraldas ";
+		cout<<"\n";	
+	}
+	if(buscar("09")==true)
+	{
+		cout<<"Guayas ";
+		cout<<"\n";	
+	}
+	if(buscar("10")==true)
+	{
+		cout<<"Loja ";
+		cout<<"\n";	
+	}
+	if(buscar("11")==true)
+	{
+		cout<<"Guayas ";
+		cout<<"\n";	
+	}
+	if(buscar("12")==true)
+	{
+		cout<<"Los Rios ";
+		cout<<"\n";	
+	}
+	if(buscar("13")==true)
+	{
+		cout<<"Manabi ";
+		cout<<"\n";	
+	}
+	if(buscar("14")==true)
+	{
+		cout<<"Morona Santiago ";
+		cout<<"\n";	
+	}
+	if(buscar("15")==true)
+	{
+		cout<<"Napo ";
+		cout<<"\n";	
+	}
+	if(buscar("16")==true)
+	{
+		cout<<"Pastaza ";
+		cout<<"\n";	
+	}
+	if(buscar("17")==true)
+	{
+		cout<<"Pichincha ";
+		cout<<"\n";	
+	}
+	if(buscar("18")==true)
+	{
+		cout<<"Tungurahua ";
+		cout<<"\n";	
+	}
+	if(buscar("19")==true)
+	{
+		cout<<"Zamora Chinchipe ";
+		cout<<"\n";	
+	}
+	if(buscar("20")==true)
+	{
+		cout<<"Galapagos ";
+		cout<<"\n";	
+	}
+	if(buscar("21")==true)
+	{
+		cout<<"Sucumbios ";
+		cout<<"\n";	
+	}
+	if(buscar("22")==true)
+	{
+		cout<<"Orrellana ";
+		cout<<"\n";	
+	}
+	if(buscar("23")==true)
+	{
+		cout<<"Santo Domingo de los Tsachilas ";
+		cout<<"\n";	
+	}
+	if(buscar("24")==true)
+	{
+		cout<<"Santa Elena ";
+		cout<<"\n";	
+	}
+}
+string Lista::cifras(informacion *obj){
+	int n, i=0, cifra[10];
+	n = obj->getId();
+	while(n>0){
+		cifra[i] = n%10;
+		n = n/10;
+		i++;
+	}
+//	if(n==0){
+	//	return str_cpy("0",to_string(cifra[i-1]));
+//	}else
+		return to_string(cifra[i-1]*10+cifra[i-2]);
+}
 void Lista::Cargar(){
 	ifstream archivo;
 	string apellido,nombre,id;

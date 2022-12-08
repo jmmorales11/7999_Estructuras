@@ -163,3 +163,36 @@ _________________________________________________
 -----------------------------------------------------
 
 
+
+-----------------------------------------------------
+
+Apellido y nombre          		Sosa Javier
+cedula                       		1721400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Javier	326.83
+
+-----------------------------------------------------
+
+
