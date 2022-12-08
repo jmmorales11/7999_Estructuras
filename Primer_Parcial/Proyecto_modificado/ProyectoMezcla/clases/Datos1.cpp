@@ -31,13 +31,13 @@ void Datos1::setApellido(string newApellido)
    apellido = newApellido;
 }
 
-string Datos1::getId(void)
+int Datos1::getId(void)
 {
    return id;
 }
 
 
-void Datos1::setId(string newId)
+void Datos1::setId(int newId)
 {
    id = newId;
 }
@@ -103,7 +103,7 @@ void Datos1::setPrestamo(float newPrestamo)
 }
 
 
-Datos1::Datos1(string nom,string apell, string ID, int suel, int diasT, int h100, int h50, float pres)
+Datos1::Datos1(string nom,string apell, int ID, int suel, int diasT, int h100, int h50, float pres)
 {
    this->nombre=nom;
    this->apellido=apell;

@@ -23,7 +23,7 @@ char *str_cpy(char *cadena1 ,char *cadena2);//copia la cadena dos en la cadena u
 char *ingresocaracteres(char *msj);
 char *ingresoflotantes(char const *msj);
 char *ingresarDatosEnterosId(char const *msj);
-char* ingresarCedula(char cedula[11]);
+int ingresarCedula(char cedula[11]);
 bool extraer(char cedula[]);
 void borrar(char a[]);
 void provincias (string cod);
@@ -56,8 +56,13 @@ void provincias(string cod){
 	if(cod=="23")cout<<" Santo Domingo de los Tsachilas"<<endl;
 	if(cod=="24")cout<<" Santa Elena"<<endl;
 }
+/*
 char* numeros(int num){
 	char numero[2];
+	if(num==0) {
+		numero[0]='0';
+		numero[1]='0';
+	}
 	if(num==1) {
 		numero[0]='0';
 		numero[1]='1';
@@ -93,8 +98,66 @@ char* numeros(int num){
 		numero[0]='0';
 		numero[1]='9';
 	}
+	if(num==10) {
+		numero[0]='1';
+		numero[1]='0';
+	}
+	if(num==11) {
+		numero[0]='1';
+		numero[1]='1';
+	}
+	if(num==12) {
+		numero[0]='1';
+		numero[1]='2';
+	}
+	if(num==13) {
+		numero[0]='1';
+		numero[1]='3';
+	}
+	if(num==14) {
+		numero[0]='1';
+		numero[1]='4';
+	}
+	if(num==15) {
+		numero[0]='1';
+		numero[1]='5';
+	}
+	if(num==16) {
+		numero[0]='1';
+		numero[1]='6';
+	}
+	if(num==17) {
+		numero[0]='1';
+		numero[1]='7';
+	}
+	if(num==18) {
+		numero[0]='1';
+		numero[1]='8';
+	}
+	if(num==19) {
+		numero[0]='1';
+		numero[1]='9';
+	}if(num==20) {
+		numero[0]='2';
+		numero[1]='0';
+	}if(num==21) {
+		numero[0]='2';
+		numero[1]='1';
+	}
+	if(num==22) {
+		numero[0]='2';
+		numero[1]='2';
+	}
+	if(num==23) {
+		numero[0]='2';
+		numero[1]='3';
+	}
+	if(num==24) {
+		numero[0]='2';
+		numero[1]='4';
+	}
 	return numero;
-}
+}**/
 std::string enteroACadena(int entero)
 {
     std::string numeroComoCadena = "";
@@ -178,19 +241,19 @@ bool extraer(char cedula[]){
 
 }
 
-char* ingresarCedula(char cedula[11]){
+int ingresarCedula(char cedula[11]){
 	int longitud;
 	bool confirmar;
-	do{
+	//do{
 	do{
 		str_cpy(cedula,ingresarDatosEnteros("\nIngrese la cedula: "));	
 		longitud = strlen(cedula);
-		borrar(cedula);
-		confirmar=extraer(cedula);
+	//	borrar(cedula);
+	//	confirmar=extraer(cedula);
 	} while(longitud!=10);
-	}while(confirmar !=true);
+	//}while(confirmar !=true);
 	
-	return cedula;	
+	return funcion_atoi(cedula,strlen(cedula));	
 }
 //Funcion pow
 int exponente(int base, int exponent){

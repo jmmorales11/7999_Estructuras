@@ -17,8 +17,8 @@ public:
    void setNombre(string newNombre);
    string getApellido(void);
    void setApellido(string newApellido);
-   string getId(void);
-   void setId(string newId);
+   int getId(void);
+   void setId(int newId);
    float getSueldo(void);
    void setSueldo(float newSueldo);
    int getDiasTrabajados(void);
@@ -29,7 +29,7 @@ public:
    void setHoras50(int newHoras50);
    float getPrestamo(void);
    void setPrestamo(float newPrestamo);
-   Datos1(string nom,string apell, string ID, int suel, int diasT, int h100, int h50, float pres);
+   Datos1(string nom,string apell, int ID, int suel, int diasT, int h100, int h50, float pres);
  	Datos1();
    ~Datos1();
    Datos1 ingresarDatos(Datos1 *obj);
@@ -38,7 +38,7 @@ protected:
 private:
    std::string nombre;
    std::string apellido;
-   std::string id;
+   int id;
    float sueldo;
    int diasTrabajados;
    int horas100;
