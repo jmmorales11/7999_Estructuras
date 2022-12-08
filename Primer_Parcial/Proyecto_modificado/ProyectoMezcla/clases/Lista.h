@@ -24,9 +24,9 @@ class Lista{
 		void provincias();
 		string cifras(informacion *obj);
 		bool buscar(string elementoBuscar);//encontrar primera ocurrencia
-		bool buscarObj(string cedula);
+		bool buscarObj(int cedula);
 		void eliminarApellidos(char elemento);
-		void eliminar(string elemento);
+		void eliminar(int elemento);
 		void imprimirCola(Lista lis,int tam);
 		void insertarCola(informacion *obj);
 		void buscarElemento(int pos);
