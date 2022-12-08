@@ -111,7 +111,7 @@ int main(int arg, char** argv){
 			case 6:
 			//	aux=ingresarDatosEnteros("\nIngrese el apellido del trabajador: ");
 			//	cin>>aux;
-				lis->contarProvincia();
+				lis->provincias();
 				cout<<endl;
 				system("PAUSE");
 				break;

@@ -191,8 +191,8 @@ string Lista::cifras(informacion *obj){
 }
 void Lista::Cargar(){
 	ifstream archivo;
-	string apellido,nombre,id;
-	int horas100,horas50,diasTrabajados,prestamo,sueldoBase;
+	string apellido,nombre;
+	int horas100,horas50,diasTrabajados,prestamo,sueldoBase, id;
 	float vhoras100,vhoras50,totalIngreso,IESS,vprestamoMensual,totalEgresos,totalEntrega;
 	
 	archivo.open("Rol_PagoAux.txt",ios::in);
@@ -201,7 +201,7 @@ void Lista::Cargar(){
 		
 	}
 	while (!archivo.eof()){
-		informacion *obj=new informacion("Morales","Jeimy","1754146676",12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+		informacion *obj=new informacion("Morales","Jeimy",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
 	
 		archivo>>apellido>>nombre>>id>>totalEntrega>>horas100>>horas50>>diasTrabajados>>prestamo>>sueldoBase>>vhoras100>>vhoras50>>totalIngreso>>IESS>>vprestamoMensual>>totalEgresos;
 	//	archivo1<<apellido<<nombre<<id<<totalEntrega<<horas100<<horas50<<diasTrabajados<<prestamo<<sueldoBase<<vhoras100<<vhoras50<<<totalIngreso<<IESS<<vprestamoMensual <<totalEgresos<<"\n";
@@ -246,6 +246,7 @@ string Lista::toString(){
 	}
 	return s.str();
 }
+/*
 int Lista::buscarProvincia(char* cedula){
 	
 	char* auxcedula;
@@ -262,7 +263,7 @@ int Lista::buscarProvincia(char* cedula){
 		actual=actual->siguiente;	
 	}
 	return cont;	
-}
+}*/
 
 void Lista::contarProvincia(){
 	string auxP;
