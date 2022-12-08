@@ -438,6 +438,35 @@ void Lista::buscarElemento(int pos){
 	}
 	
 }
+bool Lista::buscar(string elementoBuscar){
+	bool afirmar=false;
+	Nodo *actual;
+	actual = this->primero;
+	int cont=0, veces=0;
+	while(actual !=NULL){
+		cont++;
+		if(cifras(actual->obtenerInformacion())==elementoBuscar){
+			afirmar=true;
+			veces++;
+		}
+		actual=actual->siguiente;
+		
+	}
+	if(afirmar==true){
+		if(veces==1){
+			cout<<"Se encontro "<<veces<<" una persona de ";
+			return true;	
+		}else{
+			cout<<"Se encontro "<<veces<<" personas de ";
+			return true;	
+		}	
+	}
+	else {
+		return false;
+	}
+	
+	
+}
 /*
 void Lista::eliminar(int cedula){
 	bool afirmar=false;
