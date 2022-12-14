@@ -20,7 +20,7 @@ int main(int arg, char** argv){
 	string cedula,a,aux;
 
 	Lista *lis=new Lista();
-	informacion *obj= new informacion("--","--","--",0,0,0,0,0,0,0,0,0,0,0,0);
+	informacion *obj= new informacion("--","--",0,0,0,0,0,0,0,0,0,0,0,0,0);
 	lis->Cargar();
 	do{
 		

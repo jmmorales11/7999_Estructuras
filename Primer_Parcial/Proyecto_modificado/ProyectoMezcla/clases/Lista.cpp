@@ -264,7 +264,7 @@ int Lista::buscarProvincia(char* cedula){
 	}
 	return cont;	
 }*/
-
+/*
 void Lista::contarProvincia(){
 	string auxP;
 	int i=0, valor;
@@ -284,10 +284,10 @@ void Lista::contarProvincia(){
 	}
 	
 		
-}
+}*/
 
 
-bool Lista::buscarObj(string cedula){
+bool Lista::buscarObj(int cedula){
 	bool afirmar=false;
 	Nodo *actual =this->primero;
 	int cont=0, veces=0;
@@ -312,7 +312,7 @@ bool Lista::buscarObj(string cedula){
 
 }
 
-void Lista::eliminar(string elemento){
+void Lista::eliminar(int elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
 		Nodo *anterior =NULL;
