@@ -19,8 +19,10 @@ class informacion
 public:
    string getNombre(void);
    virtual void setNombre(string newNombre);
-   virtual int getId(void);
-   virtual void setId(int newId);
+   string getApellido(void);
+   virtual void setApellido(string newApellido);
+   virtual string getId(void);
+   virtual void setId(string newId);
    virtual float getSueldoBase(void);
    virtual void setSueldoBase(float newSueldoBase);
    virtual int getHoras100(void);
@@ -46,7 +48,7 @@ public:
    virtual int getDiasTrabajados(void);
    virtual void setDiasTrabajados(int newDiasTrabajados);
    virtual string toString();
-   informacion(string nom,int cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados, float totalI,float totalE, float totalPago);
+   informacion(string nom,string apell,string cedula, float salario, int h100, int h50, float pres, float vh100, float vh50, float vPrestamo, float vIess, int dTrabajados, float totalI,float totalE, float totalPago);
    informacion();  
    ~informacion();
  //  informacion();
@@ -62,7 +64,8 @@ public:
 protected:
 private:
    std::string nombre;
-   int id;
+   std::string apellido;
+   std::string  id;
    float sueldoBase;
    int horas100;
    int horas50;

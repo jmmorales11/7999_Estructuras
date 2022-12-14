@@ -91,10 +91,11 @@ bool extraer(char cedula[]){
 		}   
 		
 		else
-			cout << "\nCedula incorrecta";  	
+			cout << "\nCedula incorrecta";  
+			return false;	
 	
    }
-    
+    return false;
 
 }
 
