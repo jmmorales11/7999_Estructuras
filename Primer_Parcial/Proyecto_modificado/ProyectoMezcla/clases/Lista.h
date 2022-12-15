@@ -23,7 +23,6 @@ class Lista{
 		void mostrarLista();
 		void provincias();
 		string cifras(informacion *obj);
-		bool buscar(string elementoBuscar);//encontrar primera ocurrencia
 		bool buscarObj(int cedula);
 		void eliminarApellidos(char elemento);
 		void eliminar(int elemento);
@@ -40,4 +39,5 @@ class Lista{
 		void Cargar();
 		int buscarProvincia(char* cedula);
 		void contarProvincia();
+		bool buscar(string elementoBuscar);
 };

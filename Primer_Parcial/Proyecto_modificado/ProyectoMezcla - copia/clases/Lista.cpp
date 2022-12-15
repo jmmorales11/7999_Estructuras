@@ -7,7 +7,6 @@
  ***********************************************************************/
  ///SIRVE
 #include "Lista.h"
-#include "Letra.cpp"
 #include "Archivos.cpp"
 using namespace std;
 Lista::Lista(){
@@ -82,42 +81,70 @@ string Lista::toString(){
 	}
 	return s.str();
 }
-int Lista::buscarProvincia(char* cedula){
+int Lista::buscarProvincia(string codigo){
 	
 	char* auxcedula;
 	Nodo *actual =this->primero;
-	int cont=0, veces=0;
-	while(actual!=NULL ){
-		auxcedula=letraPrimera(actual->obtenerInformacion()->getId());
-		auxcedula=letraPrimera(auxcedula);
-		cout<<auxcedula<<endl;
-		if(auxcedula==cedula){
-			cout<<"Cedularepetida"<< cont;	
+	int cont=0;
+	string numero;
+	while(actual !=NULL){
+		
+		numero=letraPrimera(actual->obtenerInformacion()->getId());
+		cout<<"Objeto  "<<numero<<endl;
+		cout<<"Codigo "<<codigo<<endl;
+		if(numero==codigo){
 			cont++;
 		}
-		actual=actual->siguiente;	
-	}
-	return cont;	
+		actual=actual->siguiente;
+	}	
+    return cont;
 }
 
 void Lista::contarProvincia(){
-	string auxP;
-	int i=0, valor;
-	char* com;
-	Nodo *actual =this->primero;
-	int cont=0, veces=0;
-	while(i<=24){
-		com=numeros(i);
-		cout<<com<<"   AQUI"<<endl;
-		valor=this->buscarProvincia(com);
-		if (valor>=1){
-			cout<< " La provincia "<< com<< "Se repite "<<valor;
-		}else{
-			cout<<"";
+	Nodo *actual= this->primero;
+	string num, cod;
+	int cont,i=0;
+	while(i<25){
+		i++;
+		cont=0;
+		while(actual !=NULL){
+			num=numeros(i);
+			cod=letraPrimera(actual->obtenerInformacion()->getId());
+			if(cod==num){
+				cont++;
+			}
+			actual=actual->siguiente;
 		}
-		i++;	
+		if(cont>=1){
+			cout<<"----------------------------------------------"<<endl;
+			cout<<"El codigo de la provincia de ";
+			provincias(i);
+			cout<<" se repite "<< cont<<" veces "<<endl;
+			cout<<"----------------------------------------------"<<endl;
+		}
+		
+		actual=this->primero;		
 	}
 	
+	
+/*	
+	
+	
+	
+	
+	
+	for(int i=0;i<25;i++){
+		cont=0;
+		num=numeros(i);
+		cont=this->buscarProvincia(num);
+		if(cont>0){
+			provincias(i);
+			cout<<" se repite "<<cont<<endl;
+		}else{
+			
+		}
+		
+	}	*/
 		
 }
 

@@ -7,7 +7,7 @@
  ***********************************************************************/
 
 
-#include <ctime>
+
 #include <stdlib.h>
 #include "Lista.cpp"
 ///SIRVE
@@ -110,7 +110,6 @@ int main(int arg, char** argv){
 				break;
 			case 6:
 				lis->provincias();
-			
 				cout<<endl;
 				system("PAUSE");
 				break;

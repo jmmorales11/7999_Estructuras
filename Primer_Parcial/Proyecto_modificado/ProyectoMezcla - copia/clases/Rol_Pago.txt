@@ -1,32 +1,32 @@
 
 -----------------------------------------------------
 
-Apellido y nombre          		Carlos Mora
-cedula                       		1715960603
+Apellido y nombre          		Salazar Oscar
+cedula                       		0121400693
 
 	>> Informativo
-Numero de horas Extras 100%		23
-Numero de horas Extras 50%   		12
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
 Dias trabajados              		3
 Prestamo                     		0
-Sueldo base                  		1200
+Sueldo base                  		350
 
 	>> Ingreso
-Sueldo Ganado              		1200.00
-Valor HE 100%                		230.00
-Valor HE 50%                 		90.00
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
 
-             		Total Ingreso  1520.00
+             		Total Ingreso  360.94
 
 	>> Egreso
-Aporte IESS                  		143.64
+Aporte IESS                  		34.11
 Prestamo                     		0.00
 
-                        Total Egreso  143.64
+                        Total Egreso  34.11
 
 _________________________________________________
 
- Total del Empleado  Mora	1376.36
+ Total del Empleado  Oscar	326.83
 
 -----------------------------------------------------
 
@@ -34,32 +34,32 @@ _________________________________________________
 
 -----------------------------------------------------
 
-Apellido y nombre          		Carlos Mora
-cedula                       		1715960603
+Apellido y nombre          		Salazar Oscar
+cedula                       		0221400693
 
 	>> Informativo
-Numero de horas Extras 100%		23
-Numero de horas Extras 50%   		12
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
 Dias trabajados              		3
 Prestamo                     		0
-Sueldo base                  		1200
+Sueldo base                  		350
 
 	>> Ingreso
-Sueldo Ganado              		1200.00
-Valor HE 100%                		230.00
-Valor HE 50%                 		90.00
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
 
-             		Total Ingreso  1520.00
+             		Total Ingreso  360.94
 
 	>> Egreso
-Aporte IESS                  		143.64
+Aporte IESS                  		34.11
 Prestamo                     		0.00
 
-                        Total Egreso  143.64
+                        Total Egreso  34.11
 
 _________________________________________________
 
- Total del Empleado  Mora	1376.36
+ Total del Empleado  Oscar	326.83
 
 -----------------------------------------------------
 
@@ -67,32 +67,32 @@ _________________________________________________
 
 -----------------------------------------------------
 
-Apellido y nombre          		Carlos Mora
-cedula                       		1215960603
+Apellido y nombre          		Salazar Oscar
+cedula                       		0321400693
 
 	>> Informativo
-Numero de horas Extras 100%		23
-Numero de horas Extras 50%   		12
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
 Dias trabajados              		3
 Prestamo                     		0
-Sueldo base                  		1200
+Sueldo base                  		350
 
 	>> Ingreso
-Sueldo Ganado              		1200.00
-Valor HE 100%                		230.00
-Valor HE 50%                 		90.00
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
 
-             		Total Ingreso  1520.00
+             		Total Ingreso  360.94
 
 	>> Egreso
-Aporte IESS                  		143.64
+Aporte IESS                  		34.11
 Prestamo                     		0.00
 
-                        Total Egreso  143.64
+                        Total Egreso  34.11
 
 _________________________________________________
 
- Total del Empleado  Mora	1376.36
+ Total del Empleado  Oscar	326.83
 
 -----------------------------------------------------
 
@@ -100,32 +100,32 @@ _________________________________________________
 
 -----------------------------------------------------
 
-Apellido y nombre          		Morales Jeimy
-cedula                       		1754146676
+Apellido y nombre          		Salazar Oscar
+cedula                       		0421400693
 
 	>> Informativo
-Numero de horas Extras 100%		12
-Numero de horas Extras 50%   		12
-Dias trabajados              		12
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
 Prestamo                     		0
-Sueldo base                  		450
+Sueldo base                  		350
 
 	>> Ingreso
-Sueldo Ganado              		450.00
-Valor HE 100%                		45.00
-Valor HE 50%                 		33.75
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
 
-             		Total Ingreso  528.75
+             		Total Ingreso  360.94
 
 	>> Egreso
-Aporte IESS                  		49.97
+Aporte IESS                  		34.11
 Prestamo                     		0.00
 
-                        Total Egreso  49.97
+                        Total Egreso  34.11
 
 _________________________________________________
 
- Total del Empleado  Jeimy	478.78
+ Total del Empleado  Oscar	326.83
 
 -----------------------------------------------------
 
@@ -133,7 +133,403 @@ _________________________________________________
 
 -----------------------------------------------------
 
-Apellido y nombre          		Sosa Javier
+Apellido y nombre          		Salazar Oscar
+cedula                       		0521400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		0621400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		0721400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		0821400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		0921400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1021400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1121400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1221400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1321400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1421400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1521400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1621400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
 cedula                       		1721400693
 
 	>> Informativo
@@ -158,7 +554,238 @@ Prestamo                     		0.00
 
 _________________________________________________
 
- Total del Empleado  Javier	326.83
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1821400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		1921400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		2021400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		2121400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		2221400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		2321400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
+
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+
+Apellido y nombre          		Salazar Oscar
+cedula                       		2421400693
+
+	>> Informativo
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
+Dias trabajados              		3
+Prestamo                     		0
+Sueldo base                  		350
+
+	>> Ingreso
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
+
+             		Total Ingreso  360.94
+
+	>> Egreso
+Aporte IESS                  		34.11
+Prestamo                     		0.00
+
+                        Total Egreso  34.11
+
+_________________________________________________
+
+ Total del Empleado  Oscar	326.83
 
 -----------------------------------------------------
 

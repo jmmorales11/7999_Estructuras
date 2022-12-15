@@ -81,8 +81,50 @@ string Lista::toString(){
 	}
 	return s.str();
 }
+string Lista::cifras(informacion *obj){
+	int n, i=0, cifra[10];
+	n = obj->getId();
+	while(n>0){
+		cifra[i] = n%10;
+		n = n/10;
+		i++;
+	}
+//	if(n==0){
+	//	return str_cpy("0",to_string(cifra[i-1]));
+//	}else
+		return to_string(cifra[i-1]*10+cifra[i-2]);
+}
 
 
+bool Lista::buscar(string elementoBuscar){
+	bool afirmar=false;
+	Nodo *actual;
+	actual = this->primero;
+	int cont=0, veces=0;
+	while(actual !=NULL){
+		cont++;
+		if(cifras(actual->obtenerInformacion())==elementoBuscar){
+			afirmar=true;
+			veces++;
+		}
+		actual=actual->siguiente;
+		
+	}
+	if(afirmar==true){
+		if(veces==1){
+			cout<<"Se encontro "<<veces<<" una persona de ";
+			return true;	
+		}else{
+			cout<<"Se encontro "<<veces<<" personas de ";
+			return true;	
+		}	
+	}
+	else {
+		return false;
+	}
+	
+	
+}
 
 void Lista::provincias(){
 	if(buscar("01")==true)
@@ -273,11 +315,6 @@ bool Lista::buscarObj(int cedula){
 }
 
 
-
-
-
-
-
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
@@ -324,6 +361,9 @@ bool Lista::eliminarApell(string elemento){
 			delete aux_borrar;
 		}
 }
+
+
+
 void Lista::buscarApellido(string apellido){
 	//
 	bool afirmar=false;
@@ -404,6 +444,8 @@ void Lista::buscarElemento(int pos){
 	}
 	
 }
+
+
 /*
 void Lista::eliminar(int cedula){
 	bool afirmar=false;
