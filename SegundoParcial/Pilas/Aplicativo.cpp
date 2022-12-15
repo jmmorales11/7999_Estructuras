@@ -17,6 +17,7 @@ int main() {
         cout << "-----------------------MENU-----------------------" << endl
              << endl; 
         cout << "\t[1]  Ingresar los elemntos de la lista " << endl;
+        
         str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 		opc=funcion_atoi(datoEntero,strlen(datoEntero));
 		cout<<endl;
@@ -32,6 +33,15 @@ int main() {
 					contador++;
 				}while (contador<cantidad);
 				cout<<endl;
+				system("PAUSE");
+				break;
+			case 2:
+				pila.mostrar();
+				cout<<endl;
+				system("PAUSE");
+				break;
+			case 3:
+				pila.pop();
 				system("PAUSE");
 				break;
 			case 0:

@@ -20,4 +20,5 @@ class Pila{
 		Pila();
 		void push(int dato);
 		void pop();		
+		void mostrar();
 };
