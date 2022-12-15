@@ -11,7 +11,21 @@ Lista::Lista(){
 	this->primero=NULL;
 	this->actual=NULL;
 }
-
+void Lista::insertarCola(int num){//Camilo
+	Nodo *nuevo=new Nodo(num);
+	
+	nuevo->siguiente=NULL;
+	if(listaVacia()){
+		this->primero=nuevo;
+	}
+	else{
+		Nodo *aux= this->primero;
+		while(aux->siguiente !=NULL){
+			aux=aux->siguiente;
+		}
+		aux->siguiente=nuevo;
+	}	
+}
 void Lista::insertar(int val){
 	Nodo *nuevo=new Nodo(val);
 	if (listaVacia()){
@@ -23,6 +37,16 @@ void Lista::insertar(int val){
 	this->actual=nuevo;
 }
 
+void Lista::insertarCabeza(int val){
+	Nodo *nuevo=new Nodo(val);
+	if (listaVacia()){
+		nuevo=this->siguiente
+	}
+	else{
+		this->actual->siguiente=nuevo;
+	}
+	this->actual=nuevo;
+}
 void Lista::mostrarLista(){
 	Nodo *tmp=this->primero;
 	while(tmp){
@@ -97,22 +121,7 @@ void Lista::imprimirCola(Lista lis,int tam){//Camilo
 	cout<<actual->valor<<" ";
 }
 
-void Lista::insertarCola(int num){//Camilo
-	Nodo *nuevo=new Nodo(num);
-	
-	nuevo->siguiente=NULL;
-	if(listaVacia()){
-		this->primero=nuevo;
-	}
-	else{
-		Nodo *aux= this->primero;
-		while(aux->siguiente !=NULL){
-			aux=aux->siguiente;
-		}
-		aux->siguiente=nuevo;
-	}
-	
-}
+
 
 void Lista::buscarElemento(int pos){
 	Nodo *actual;

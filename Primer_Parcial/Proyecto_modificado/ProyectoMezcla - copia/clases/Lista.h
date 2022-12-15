@@ -36,6 +36,6 @@ class Lista{
 		void apellidosEliminar(string elemento);
 		void buscarApellido(string apellido);
 		void Cargar();
-		int buscarProvincia(char* cedula);
+		int buscarProvincia(string cedula);
 		void contarProvincia();
 };

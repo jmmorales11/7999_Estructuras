@@ -7,17 +7,17 @@
  ***********************************************************************/
 
 
-#include <ctime>
+
 #include <stdlib.h>
 #include "Lista.cpp"
 ///SIRVE
 using namespace std;
 
 int main(int arg, char** argv){
-	int h100,h50,num,opc,cantidad;
+	int h100,h50,num,opc,cantidad,cedula;
 	bool confirmar;
 	char datoEntero[10], respuesta,datoCaracter[10];
-	string cedula,a,aux;
+	string a,aux;
 
 	Lista *lis=new Lista();
 	informacion *obj= new informacion("--","--",0,0,0,0,0,0,0,0,0,0,0,0,0);
@@ -109,8 +109,6 @@ int main(int arg, char** argv){
 				system("PAUSE");
 				break;
 			case 6:
-			//	aux=ingresarDatosEnteros("\nIngrese el apellido del trabajador: ");
-			//	cin>>aux;
 				lis->provincias();
 				cout<<endl;
 				system("PAUSE");

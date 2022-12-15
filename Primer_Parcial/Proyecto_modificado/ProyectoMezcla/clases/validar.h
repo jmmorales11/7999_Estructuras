@@ -26,39 +26,39 @@ char *ingresarDatosEnterosId(char const *msj);
 int ingresarCedula(char cedula[11]);
 bool extraer(char cedula[]);
 void borrar(char a[]);
-void provincias (string cod);
-char* numeros(int num);
+void provincias (int cod);
+char numeros(int num);
 std::string enteroACadena(int entero);
 
-void provincias(string cod){
-	if(cod=="01")cout<<" Azuay"<<endl;
-	if(cod=="02")cout<<" Bolivar"<<endl;
-	if(cod=="03")cout<<" Cañar"<<endl;
-	if(cod=="04")cout<<" Carchi"<<endl;
-	if(cod=="05")cout<<" Cotopaxi"<<endl;
-	if(cod=="06")cout<<" Chimborazo"<<endl;
-	if(cod=="07")cout<<" El Oro"<<endl;
-	if(cod=="08")cout<<" Esmeraldas"<<endl;
-	if(cod=="09")cout<<" Guayas"<<endl;
-	if(cod=="10")cout<<" Imbabura"<<endl;
-	if(cod=="11")cout<<" Loja"<<endl;
-	if(cod=="12")cout<<" Los Rios"<<endl;
-	if(cod=="13")cout<<" Manabi"<<endl;
-	if(cod=="14")cout<<" Morona Santiago"<<endl;
-	if(cod=="15")cout<<" Napo"<<endl;
-	if(cod=="16")cout<<" Pastaza"<<endl;
-	if(cod=="17")cout<<" Pichincha"<<endl;
-	if(cod=="18")cout<<" Tungurahua"<<endl;
-	if(cod=="19")cout<<" Zamora Chinchipe"<<endl;
-	if(cod=="20")cout<<" Galapagos"<<endl;
-	if(cod=="21")cout<<" Sucumbios"<<endl;
-	if(cod=="22")cout<<" Orellana"<<endl;
-	if(cod=="23")cout<<" Santo Domingo de los Tsachilas"<<endl;
-	if(cod=="24")cout<<" Santa Elena"<<endl;
+void provincias(int cod){
+	if(cod==1)cout<<" Azuay"<<endl;
+	if(cod==2)cout<<" Bolivar"<<endl;
+	if(cod==3)cout<<" Cañar"<<endl;
+	if(cod==4)cout<<" Carchi"<<endl;
+	if(cod==5)cout<<" Cotopaxi"<<endl;
+	if(cod==6)cout<<" Chimborazo"<<endl;
+	if(cod==7)cout<<" El Oro"<<endl;
+	if(cod==8)cout<<" Esmeraldas"<<endl;
+	if(cod==9)cout<<" Guayas"<<endl;
+	if(cod==10)cout<<" Imbabura"<<endl;
+	if(cod==11)cout<<" Loja"<<endl;
+	if(cod==12)cout<<" Los Rios"<<endl;
+	if(cod==13)cout<<" Manabi"<<endl;
+	if(cod==14)cout<<" Morona Santiago"<<endl;
+	if(cod==15)cout<<" Napo"<<endl;
+	if(cod==16)cout<<" Pastaza"<<endl;
+	if(cod==17)cout<<" Pichincha"<<endl;
+	if(cod==18)cout<<" Tungurahua"<<endl;
+	if(cod==19)cout<<" Zamora Chinchipe"<<endl;
+	if(cod==20)cout<<" Galapagos"<<endl;
+	if(cod==21)cout<<" Sucumbios"<<endl;
+	if(cod==22)cout<<" Orellana"<<endl;
+	if(cod==23)cout<<" Santo Domingo de los Tsachilas"<<endl;
+	if(cod==24)cout<<" Santa Elena"<<endl;
 }
-/*
-char* numeros(int num){
-	char numero[2];
+
+char numeros(int num){
+	char* numero;
 	if(num==0) {
 		numero[0]='0';
 		numero[1]='0';
@@ -156,8 +156,8 @@ char* numeros(int num){
 		numero[0]='2';
 		numero[1]='4';
 	}
-	return numero;
-}**/
+	return numero[2];
+}
 std::string enteroACadena(int entero)
 {
     std::string numeroComoCadena = "";

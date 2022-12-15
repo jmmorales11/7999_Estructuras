@@ -1,32 +1,32 @@
 
 -----------------------------------------------------
 
-Apellido y nombre          		Carlos Mora
-cedula                       		1715960603
+Apellido y nombre          		Sosa Javier
+cedula                       		1721400693
 
 	>> Informativo
-Numero de horas Extras 100%		23
-Numero de horas Extras 50%   		12
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
 Dias trabajados              		3
 Prestamo                     		0
-Sueldo base                  		1200
+Sueldo base                  		350
 
 	>> Ingreso
-Sueldo Ganado              		1200.00
-Valor HE 100%                		230.00
-Valor HE 50%                 		90.00
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
 
-             		Total Ingreso  1520.00
+             		Total Ingreso  360.94
 
 	>> Egreso
-Aporte IESS                  		143.64
+Aporte IESS                  		34.11
 Prestamo                     		0.00
 
-                        Total Egreso  143.64
+                        Total Egreso  34.11
 
 _________________________________________________
 
- Total del Empleado  Mora	1376.36
+ Total del Empleado  Javier	326.83
 
 -----------------------------------------------------
 
@@ -34,32 +34,32 @@ _________________________________________________
 
 -----------------------------------------------------
 
-Apellido y nombre          		Carlos Mora
-cedula                       		1715960603
+Apellido y nombre          		Sosa Javier
+cedula                       		1721400693
 
 	>> Informativo
-Numero de horas Extras 100%		23
-Numero de horas Extras 50%   		12
+Numero de horas Extras 100%		3
+Numero de horas Extras 50%   		1
 Dias trabajados              		3
 Prestamo                     		0
-Sueldo base                  		1200
+Sueldo base                  		350
 
 	>> Ingreso
-Sueldo Ganado              		1200.00
-Valor HE 100%                		230.00
-Valor HE 50%                 		90.00
+Sueldo Ganado              		350.00
+Valor HE 100%                		8.75
+Valor HE 50%                 		2.19
 
-             		Total Ingreso  1520.00
+             		Total Ingreso  360.94
 
 	>> Egreso
-Aporte IESS                  		143.64
+Aporte IESS                  		34.11
 Prestamo                     		0.00
 
-                        Total Egreso  143.64
+                        Total Egreso  34.11
 
 _________________________________________________
 
- Total del Empleado  Mora	1376.36
+ Total del Empleado  Javier	326.83
 
 -----------------------------------------------------
 
@@ -67,40 +67,7 @@ _________________________________________________
 
 -----------------------------------------------------
 
-Apellido y nombre          		Carlos Mora
-cedula                       		1215960603
-
-	>> Informativo
-Numero de horas Extras 100%		23
-Numero de horas Extras 50%   		12
-Dias trabajados              		3
-Prestamo                     		0
-Sueldo base                  		1200
-
-	>> Ingreso
-Sueldo Ganado              		1200.00
-Valor HE 100%                		230.00
-Valor HE 50%                 		90.00
-
-             		Total Ingreso  1520.00
-
-	>> Egreso
-Aporte IESS                  		143.64
-Prestamo                     		0.00
-
-                        Total Egreso  143.64
-
-_________________________________________________
-
- Total del Empleado  Mora	1376.36
-
------------------------------------------------------
-
-
-
------------------------------------------------------
-
-Apellido y nombre          		Morales Jeimy
+Apellido y nombre          		Morales marley
 cedula                       		1754146676
 
 	>> Informativo
@@ -108,90 +75,24 @@ Numero de horas Extras 100%		12
 Numero de horas Extras 50%   		12
 Dias trabajados              		12
 Prestamo                     		0
-Sueldo base                  		450
+Sueldo base                  		120.9
 
 	>> Ingreso
-Sueldo Ganado              		450.00
-Valor HE 100%                		45.00
-Valor HE 50%                 		33.75
+Sueldo Ganado              		120.90
+Valor HE 100%                		12.09
+Valor HE 50%                 		9.07
 
-             		Total Ingreso  528.75
+             		Total Ingreso  142.06
 
 	>> Egreso
-Aporte IESS                  		49.97
+Aporte IESS                  		13.42
 Prestamo                     		0.00
 
-                        Total Egreso  49.97
+                        Total Egreso  13.42
 
 _________________________________________________
 
- Total del Empleado  Jeimy	478.78
-
------------------------------------------------------
-
-
-
------------------------------------------------------
-
-Apellido y nombre          		Sosa Javier
-cedula                       		1721400693
-
-	>> Informativo
-Numero de horas Extras 100%		3
-Numero de horas Extras 50%   		1
-Dias trabajados              		3
-Prestamo                     		0
-Sueldo base                  		350
-
-	>> Ingreso
-Sueldo Ganado              		350.00
-Valor HE 100%                		8.75
-Valor HE 50%                 		2.19
-
-             		Total Ingreso  360.94
-
-	>> Egreso
-Aporte IESS                  		34.11
-Prestamo                     		0.00
-
-                        Total Egreso  34.11
-
-_________________________________________________
-
- Total del Empleado  Javier	326.83
-
------------------------------------------------------
-
-
-
------------------------------------------------------
-
-Apellido y nombre          		Sosa Javier
-cedula                       		1721400693
-
-	>> Informativo
-Numero de horas Extras 100%		3
-Numero de horas Extras 50%   		1
-Dias trabajados              		3
-Prestamo                     		0
-Sueldo base                  		350
-
-	>> Ingreso
-Sueldo Ganado              		350.00
-Valor HE 100%                		8.75
-Valor HE 50%                 		2.19
-
-             		Total Ingreso  360.94
-
-	>> Egreso
-Aporte IESS                  		34.11
-Prestamo                     		0.00
-
-                        Total Egreso  34.11
-
-_________________________________________________
-
- Total del Empleado  Javier	326.83
+ Total del Empleado  marley	128.63
 
 -----------------------------------------------------
 

@@ -7,7 +7,6 @@
  ***********************************************************************/
  ///SIRVE
 #include "Lista.h"
-#include "Letra.cpp"
 #include "Archivos.cpp"
 using namespace std;
 Lista::Lista(){
@@ -25,6 +24,78 @@ void Lista::insertar(informacion *obj){
 	}
 	this->actual=nuevo;
 }
+void Lista::Cargar(){
+	ifstream archivo;
+	string apellido,nombre;
+	int horas100,horas50,diasTrabajados,prestamo,sueldoBase,id;
+	float vhoras100,vhoras50,totalIngreso,IESS,vprestamoMensual,totalEgresos,totalEntrega;
+	
+	archivo.open("Rol_PagoAux.txt",ios::in);
+	if(archivo.fail()){
+		cout<<"No se puede abrir el archivo";
+		
+	}
+	while (!archivo.eof()){
+		informacion *obj=new informacion("Morales","Jeimy",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
+	
+		archivo>>apellido>>nombre>>id>>totalEntrega>>horas100>>horas50>>diasTrabajados>>prestamo>>sueldoBase>>vhoras100>>vhoras50>>totalIngreso>>IESS>>vprestamoMensual>>totalEgresos;
+	//	archivo1<<apellido<<nombre<<id<<totalEntrega<<horas100<<horas50<<diasTrabajados<<prestamo<<sueldoBase<<vhoras100<<vhoras50<<<totalIngreso<<IESS<<vprestamoMensual <<totalEgresos<<"\n";
+
+		obj->setApellido(apellido);
+		obj->setNombre(nombre);
+		obj->setId(id);
+		obj->setHoras100(horas100);
+		obj->setHoras50(horas50);
+		obj->setDiasTrabajados(diasTrabajados);
+		obj->setPrestamo(prestamo);
+		obj->setSueldoBase(sueldoBase);
+		obj->setVhoras100(vhoras100);
+		obj->setVhoras50(vhoras50);
+		obj->setIESS(IESS);
+		obj->setVprestamoMensual(vprestamoMensual);
+		obj->setTotalEntrega(totalEntrega);
+		obj->setTotalIngreso(totalIngreso);
+		obj->setTotalEgreso(totalEgresos);
+		Nodo *nuevo=new Nodo(obj);
+		if (!archivo.eof()){
+			
+			if (listaVacia()){
+			this->primero=nuevo;
+		}
+		else{
+			this->actual->siguiente=nuevo;
+		}
+			this->actual=nuevo;
+		}
+	}
+	archivo.close();
+	}
+
+string Lista::toString(){
+	stringstream s;
+	Nodo *p=this-> primero;
+	p->obtenerInformacion()->actualizar();
+	while (p!=NULL){
+		s<<p->obtenerInformacion()->toString()<<endl;
+		p=p->siguiente;
+	}
+	return s.str();
+}
+string Lista::cifras(informacion *obj){
+	int n, i=0, cifra[10];
+	n = obj->getId();
+	while(n>0){
+		cifra[i] = n%10;
+		n = n/10;
+		i++;
+	}
+//	if(n==0){
+	//	return str_cpy("0",to_string(cifra[i-1]));
+//	}else
+		return to_string(cifra[i-1]*10+cifra[i-2]);
+}
+
+
 bool Lista::buscar(string elementoBuscar){
 	bool afirmar=false;
 	Nodo *actual;
@@ -54,6 +125,7 @@ bool Lista::buscar(string elementoBuscar){
 	
 	
 }
+
 void Lista::provincias(){
 	if(buscar("01")==true)
 	{
@@ -176,76 +248,6 @@ void Lista::provincias(){
 		cout<<"\n";	
 	}
 }
-string Lista::cifras(informacion *obj){
-	int n, i=0, cifra[10];
-	n = obj->getId();
-	while(n>0){
-		cifra[i] = n%10;
-		n = n/10;
-		i++;
-	}
-//	if(n==0){
-	//	return str_cpy("0",to_string(cifra[i-1]));
-//	}else
-		return to_string(cifra[i-1]*10+cifra[i-2]);
-}
-void Lista::Cargar(){
-	ifstream archivo;
-	string apellido,nombre;
-	int horas100,horas50,diasTrabajados,prestamo,sueldoBase, id;
-	float vhoras100,vhoras50,totalIngreso,IESS,vprestamoMensual,totalEgresos,totalEntrega;
-	
-	archivo.open("Rol_PagoAux.txt",ios::in);
-	if(archivo.fail()){
-		cout<<"No se puede abrir el archivo";
-		
-	}
-	while (!archivo.eof()){
-		informacion *obj=new informacion("Morales","Jeimy",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-	
-		archivo>>apellido>>nombre>>id>>totalEntrega>>horas100>>horas50>>diasTrabajados>>prestamo>>sueldoBase>>vhoras100>>vhoras50>>totalIngreso>>IESS>>vprestamoMensual>>totalEgresos;
-	//	archivo1<<apellido<<nombre<<id<<totalEntrega<<horas100<<horas50<<diasTrabajados<<prestamo<<sueldoBase<<vhoras100<<vhoras50<<<totalIngreso<<IESS<<vprestamoMensual <<totalEgresos<<"\n";
-
-		obj->setApellido(apellido);
-		obj->setNombre(nombre);
-		obj->setId(id);
-		obj->setHoras100(horas100);
-		obj->setHoras50(horas50);
-		obj->setDiasTrabajados(diasTrabajados);
-		obj->setPrestamo(prestamo);
-		obj->setSueldoBase(sueldoBase);
-		obj->setVhoras100(vhoras100);
-		obj->setVhoras50(vhoras50);
-		obj->setIESS(IESS);
-		obj->setVprestamoMensual(vprestamoMensual);
-		obj->setTotalEntrega(totalEntrega);
-		obj->setTotalIngreso(totalIngreso);
-		obj->setTotalEgreso(totalEgresos);
-		Nodo *nuevo=new Nodo(obj);
-		if (!archivo.eof()){
-			
-			if (listaVacia()){
-			this->primero=nuevo;
-		}
-		else{
-			this->actual->siguiente=nuevo;
-		}
-			this->actual=nuevo;
-		}
-	}
-	archivo.close();
-	}
-
-string Lista::toString(){
-	stringstream s;
-	Nodo *p=this-> primero;
-	p->obtenerInformacion()->actualizar();
-	while (p!=NULL){
-		s<<p->obtenerInformacion()->toString()<<endl;
-		p=p->siguiente;
-	}
-	return s.str();
-}
 /*
 int Lista::buscarProvincia(char* cedula){
 	
@@ -263,8 +265,13 @@ int Lista::buscarProvincia(char* cedula){
 		actual=actual->siguiente;	
 	}
 	return cont;	
+<<<<<<< HEAD
 }*/
 /*
+=======
+}
+
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 void Lista::contarProvincia(){
 	string auxP;
 	int i=0, valor;
@@ -284,9 +291,15 @@ void Lista::contarProvincia(){
 	}
 	
 		
+<<<<<<< HEAD
 }*/
 
 
+=======
+}
+*/
+
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 bool Lista::buscarObj(int cedula){
 	bool afirmar=false;
 	Nodo *actual =this->primero;
@@ -312,6 +325,10 @@ bool Lista::buscarObj(int cedula){
 
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
@@ -358,6 +375,9 @@ bool Lista::eliminarApell(string elemento){
 			delete aux_borrar;
 		}
 }
+
+
+
 void Lista::buscarApellido(string apellido){
 	//
 	bool afirmar=false;
@@ -438,6 +458,7 @@ void Lista::buscarElemento(int pos){
 	}
 	
 }
+<<<<<<< HEAD
 bool Lista::buscar(string elementoBuscar){
 	bool afirmar=false;
 	Nodo *actual;
@@ -467,6 +488,10 @@ bool Lista::buscar(string elementoBuscar){
 	
 	
 }
+=======
+
+
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 /*
 void Lista::eliminar(int cedula){
 	bool afirmar=false;

@@ -2,18 +2,21 @@
  * UFA-ESPE
  * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
  * Modificacion: Miercoles, 30 de nombiebre de 2022 21:17:59
- * Purpose: ROL DE PAGO
+ * Purpose: Correccion del Examen
  *Nivel: Tercero           NRC:7999
+ *
  ***********************************************************************/
 
 
 #include <ctime>
 #include <stdlib.h>
 #include "Lista.cpp"
+#include <clocale>
 ///SIRVE
 using namespace std;
 
 int main(int arg, char** argv){
+	 setlocale(LC_CTYPE,"Spanish");
 	int h100,h50,num,opc,cantidad;
 	bool confirmar;
 	char datoEntero[10], respuesta,datoCaracter[10];
@@ -22,13 +25,7 @@ int main(int arg, char** argv){
 	Lista *lis=new Lista();
 	informacion *obj= new informacion("--","--","--",0,0,0,0,0,0,0,0,0,0,0,0);
 	lis->Cargar();
-	do{
-		
-/*		informacion *obj1= new informacion("Marley","Morales",1754146678,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-		informacion *obj2= new informacion("Camilo","ORRICO",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-		informacion *obj3= new informacion("Julian","MACAS",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-		informacion *obj= new informacion("Jualiana","Morales",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-*/		
+	do{		
 		informacion *obj;
 		system("cls");
         cout << "-----------------------MENU-----------------------" << endl
