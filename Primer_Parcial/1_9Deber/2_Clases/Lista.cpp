@@ -169,7 +169,23 @@ int Lista::maximoDivisor(Lista lis){
 	}
 	return mcd;
 }	
-
-Lista Lista::copiarLista(Lista  lis){
-	
+void Lista::ordenarMetodoBurbuja()
+{
+	Nodo *nNodo =this->primero;
+	Nodo *aux= this->primero;
+	int numAux;
+	while( nNodo!=NULL){
+		aux= nNodo->siguiente;
+		while (aux != NULL){
+			if( nNodo->getValor() > aux->getValor()){
+				numAux= aux->valor;
+				aux->setValor(nNodo->getValor());
+				nNodo->setValor(numAux);
+			}
+			this->mostrarLista();
+			cout<<endl;
+			aux= aux->siguiente;
+		}
+		nNodo=nNodo->siguiente;	
+	}
 }

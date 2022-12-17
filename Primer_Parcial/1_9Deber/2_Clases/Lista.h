@@ -27,5 +27,6 @@ class Lista{
 		void buscarElemento(int pos);
 		int minimoMultiplo(Lista lis);
 		int maximoDivisor(Lista lis);
+		void ordenarMetodoBurbuja();
 		Lista copiarLista(Lista  lis);		
 };

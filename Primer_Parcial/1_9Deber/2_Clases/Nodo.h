@@ -16,5 +16,12 @@ class Nodo{
 			this->valor=val;
 			this->siguiente=sig;
 		}
+		void setValor(int newValor)
+		{
+			valor = newValor;
+		}
+		int getValor(){	
+		return valor;
+		}
 	friend class Lista;
 };

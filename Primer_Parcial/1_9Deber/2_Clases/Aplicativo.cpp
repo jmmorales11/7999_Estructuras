@@ -22,6 +22,7 @@ int main() {
         cout << "\t[4]  Buscar elemento" << endl;
         cout << "\t[5]  Ingresar los elementos por la cola" << endl;
         cout << "\t[6]  Mostrar los elementos por la cola" << endl;
+        cout << "\t[7]  ordenar Metodo Burbuja" << endl;
         cout << "\t[0]  Salir" << endl;
         cout << " " << endl;
         str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
@@ -30,14 +31,9 @@ int main() {
 		switch(opc)
 		{
 			case 1:
-				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cantidad de datos que desea introducir:  "));
-				cantidad=funcion_atoi(datoEntero,strlen(datoEntero));
-				do{
 					str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el numero que esea introducir a la lista: "));
 					num=funcion_atoi(datoEntero,strlen(datoEntero));
 					lst.insertar(num);
-					contador++;
-				}while (contador<cantidad);
 				cout<<endl;
 				system("PAUSE");
 				break;
@@ -82,6 +78,13 @@ int main() {
 			case 6:
 				lst.mostrarLista();
 				lst.imprimirCola(lst,cantidad);
+				cout<<endl;
+				system("PAUSE");
+				break;
+			case 7:
+				lst.mostrarLista();
+				cout<<endl;
+				lst.ordenarMetodoBurbuja();
 				cout<<endl;
 				system("PAUSE");
 				break;
