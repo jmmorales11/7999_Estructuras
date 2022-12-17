@@ -21,16 +21,28 @@ void Datos1::setNombre(string newNombre)
 }
 
 
-int Datos1::getId(void)
+string Datos1::getApellido(void)
+{
+   return apellido;
+}
+
+
+void Datos1::setApellido(string newApellido)
+{
+   apellido = newApellido;
+}
+
+string Datos1::getId(void)
 {
    return id;
 }
 
 
-void Datos1::setId(int newId)
+void Datos1::setId(string newId)
 {
    id = newId;
 }
+
 
 
 float Datos1::getSueldo(void)
@@ -93,9 +105,10 @@ void Datos1::setPrestamo(float newPrestamo)
 }
 
 
-Datos1::Datos1(string nom, float ID, int suel, int diasT, int h100, int h50, float pres)
+Datos1::Datos1(string nom,string apell, string ID, int suel, int diasT, int h100, int h50, float pres)
 {
    this->nombre=nom;
+   this->apellido=apell;
    this->sueldo=suel;
    this->id=ID;
    this->diasTrabajados=diasT;

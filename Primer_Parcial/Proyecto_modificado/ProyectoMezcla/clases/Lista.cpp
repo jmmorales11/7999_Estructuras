@@ -265,8 +265,13 @@ int Lista::buscarProvincia(char* cedula){
 		actual=actual->siguiente;	
 	}
 	return cont;	
+<<<<<<< HEAD
+}*/
+/*
+=======
 }
 
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 void Lista::contarProvincia(){
 	string auxP;
 	int i=0, valor;
@@ -286,9 +291,15 @@ void Lista::contarProvincia(){
 	}
 	
 		
+<<<<<<< HEAD
+}*/
+
+
+=======
 }
 */
 
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 bool Lista::buscarObj(int cedula){
 	bool afirmar=false;
 	Nodo *actual =this->primero;
@@ -314,7 +325,10 @@ bool Lista::buscarObj(int cedula){
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 void Lista::eliminar(int elemento){
 	//if (!=NULL){
 		Nodo *aux_borrar;
@@ -444,8 +458,40 @@ void Lista::buscarElemento(int pos){
 	}
 	
 }
+<<<<<<< HEAD
+bool Lista::buscar(string elementoBuscar){
+	bool afirmar=false;
+	Nodo *actual;
+	actual = this->primero;
+	int cont=0, veces=0;
+	while(actual !=NULL){
+		cont++;
+		if(cifras(actual->obtenerInformacion())==elementoBuscar){
+			afirmar=true;
+			veces++;
+		}
+		actual=actual->siguiente;
+		
+	}
+	if(afirmar==true){
+		if(veces==1){
+			cout<<"Se encontro "<<veces<<" una persona de ";
+			return true;	
+		}else{
+			cout<<"Se encontro "<<veces<<" personas de ";
+			return true;	
+		}	
+	}
+	else {
+		return false;
+	}
+	
+	
+}
+=======
 
 
+>>>>>>> 5072f18ae6dd6455b3cac66dc7f585e33340495c
 /*
 void Lista::eliminar(int cedula){
 	bool afirmar=false;

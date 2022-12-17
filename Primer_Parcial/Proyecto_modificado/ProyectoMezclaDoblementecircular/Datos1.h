@@ -15,8 +15,10 @@ class Datos1
 public:
    string getNombre(void);
    void setNombre(string newNombre);
-   int getId(void);
-   void setId(int newId);
+   string getApellido(void);
+   void setApellido(string newApellido);
+   string getId(void);
+   void setId(string newId);
    float getSueldo(void);
    void setSueldo(float newSueldo);
    int getDiasTrabajados(void);
@@ -27,7 +29,7 @@ public:
    void setHoras50(int newHoras50);
    float getPrestamo(void);
    void setPrestamo(float newPrestamo);
-   Datos1(string nom, float ID, int suel, int diasT, int h100, int h50, float pres);
+   Datos1(string nom,string apell, string ID, int suel, int diasT, int h100, int h50, float pres);
  	Datos1();
    ~Datos1();
    Datos1 ingresarDatos(Datos1 *obj);
@@ -35,7 +37,8 @@ public:
 protected:
 private:
    std::string nombre;
-   int id;
+   std::string apellido;
+   std::string id;
    float sueldo;
    int diasTrabajados;
    int horas100;

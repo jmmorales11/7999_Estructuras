@@ -20,13 +20,25 @@ void Pila::push(int dato){
 }
 void Pila::pop()
 {	
+	
 	if(this->ultimo==NULL){
 		cout<<"No hay objetos \n";
 	}
 	else{
-		Nodo *aux = this->ultimo->siguiente;
-		delete this->ultimo;
-		//aux=this->ultimo ;
+		Nodo *aux = this->ultimo;
+		delete aux;
+		aux=this->ultimo->siguiente;
 	}
 }
+<<<<<<< HEAD
 	
+=======
+
+void Pila::mostrar(){
+	Nodo *tmp=this->ultimo;
+	while(tmp!=NULL){
+		cout<<tmp->valor<<"\t";
+		tmp=tmp->siguiente;
+	}
+}
+>>>>>>> 27d8a2f61d214e97374a29b2f00c562f3e7910a4
