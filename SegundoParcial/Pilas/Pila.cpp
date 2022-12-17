@@ -29,4 +29,4 @@ void Pila::pop()
 		//aux=this->ultimo ;
 	}
 }
-
+	
