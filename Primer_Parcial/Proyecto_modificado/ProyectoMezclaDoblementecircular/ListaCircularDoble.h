@@ -9,6 +9,7 @@
 #include "Nodo.h"
 #include <iostream>
 using namespace std;
+using namespace std;
 class ListaCircularDoble{
 	private:
 		Nodo *primero;
@@ -19,13 +20,13 @@ class ListaCircularDoble{
 	public:
 		ListaCircularDoble();
 		void insertar(informacion *obj);
-		bool buscarObj(int cedula);//encontrar primera ocurrencia
+		bool buscarObj(string cedula);//encontrar primera ocurrencia
 		void eliminar(int elemento);
 		void eliminarApellido(string elementoBuscar);
 		string toString();	
 		void mostrarLista();
 		void buscar(string elementoBuscar);//encontrar primera ocurrencia
-		bool buscarObj(string cedula);
+		//bool buscarObj(string cedula);
 		void eliminarApellidos(char elemento);
 		void eliminar(string elemento);
 		void imprimirCola(ListaCircularDoble lis,int tam);
@@ -34,11 +35,11 @@ class ListaCircularDoble{
 		int minimoMultiplo(ListaCircularDoble lis);
 		int maximoDivisor(ListaCircularDoble lis);
 		ListaCircularDoble copiarListaCircularDoble(ListaCircularDoble  lis);
-		string toString();	
+		//string toString();	
 		bool eliminarApell(string elemento);
 		void apellidosEliminar(string elemento);
 		void buscarApellido(string apellido);
 		void Cargar();
-		int buscarProvincia(char* cedula);
+		int buscarProvincia(string cedula);
 		void contarProvincia();	
 };

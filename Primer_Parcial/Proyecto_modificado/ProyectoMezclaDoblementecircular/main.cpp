@@ -2,30 +2,30 @@
  * UFA-ESPE
  * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
  * Modificacion: Miercoles, 30 de nombiebre de 2022 21:17:59
- * Purpose: ROL DE PAGO
+ * Purpose: Correccion del Examen
  *Nivel: Tercero           NRC:7999
+ *
  ***********************************************************************/
 
-#include <iostream>
+
 #include <ctime>
 #include <stdlib.h>
 #include "ListaCircularDoble.cpp"
+#include <clocale>
 ///SIRVE
 using namespace std;
 
 int main(int arg, char** argv){
-	int cedula,h100,h50,num,opc,cont=1;
+	 setlocale(LC_CTYPE,"Spanish");
+	int h100,h50,num,opc,cantidad;
 	bool confirmar;
-	char datoEntero[10];
-	string apellido;
+	char datoEntero[10], respuesta,datoCaracter[10];
+	string cedula,a,aux;
 
 	ListaCircularDoble *lis=new ListaCircularDoble();
-	informacion *obj;
-	do{
-		/*informacion *obj1= new informacion("Morales",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-		informacion *obj2= new informacion("Orrico",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-		informacion *obj3= new informacion("Morales",1754146676,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,2,12.0,12.0,12.01);
-		*/
+	informacion *obj= new informacion("--","--","--",0,0,0,0,0,0,0,0,0,0,0,0);
+	lis->Cargar();
+	do{		
 		informacion *obj;
 		system("cls");
         cout << "-----------------------MENU-----------------------" << endl
@@ -86,8 +86,11 @@ int main(int arg, char** argv){
 			case 3:
 				cout<<lis->toString()<<endl;
 				system("PAUSE");
+				
 				break;
+			
 			case 4:
+
 				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cedula a buscar:  "));
 				cedula=funcion_atoi(datoEntero,strlen(datoEntero));
 				cout<<endl;
@@ -129,11 +132,6 @@ int main(int arg, char** argv){
             	exit(0);
 				break;
 		}
-	}while(opc != 1 || opc != 2||opc != 3||opc != 4||opc != 5 ||opc != 6 ||opc != 7||opc != 8|| opc != 0);
+	}while(opc!= 1 || opc != 2||opc != 3||opc != 4||opc != 5||opc != 6 ||opc != 7||opc != 8||opc != 0 );
 	return 0;
-	
-	
-	
-	
-
 }

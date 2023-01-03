@@ -7,7 +7,7 @@ int main()
     // gm is Graphics mode which is a computer display
     // mode that generates image using pixels.
     // DETECT is a macro defined in "graphics.h" header file
-    int gd = DETECT, gm;
+    int gd = DETECT, gm, x1, x2, y1, y2;
   
     // initgraph initializes the graphics system
     // by loading a graphics driver from disk

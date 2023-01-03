@@ -10,6 +10,7 @@
 #include <string.h>
 #include <conio.h>
 #include <cstring>
+#include <sstream>
 using namespace std;
 
 int exponente(int base, int exponent);
@@ -22,9 +23,159 @@ char *str_cpy(char *cadena1 ,char *cadena2);//copia la cadena dos en la cadena u
 char *ingresocaracteres(char *msj);
 char *ingresoflotantes(char const *msj);
 char *ingresarDatosEnterosId(char const *msj);
-int ingresarCedula(char cedula[11]);
+char* ingresarCedula(char cedula[11]);
 bool extraer(char cedula[]);
 void borrar(char a[]);
+void provincias (int cod);
+char* numeros(int num);
+string num_string(int entero);
+char *letraPrimera(string str);
+
+
+char *letraPrimera(string str){
+	static char codigo[2];
+		codigo[0]=str.at(0);
+		codigo[1]=str.at(1);
+	return codigo;
+}
+void provincias(int cod){
+	if(cod==1)cout<<" Azuay"<<endl;
+	if(cod==2)cout<<" Bolivar"<<endl;
+	if(cod==3)cout<<" Cañar"<<endl;
+	if(cod==4)cout<<" Carchi"<<endl;
+	if(cod==5)cout<<" Cotopaxi"<<endl;
+	if(cod==6)cout<<" Chimborazo"<<endl;
+	if(cod==7)cout<<" El Oro"<<endl;
+	if(cod==8)cout<<" Esmeraldas"<<endl;
+	if(cod==9)cout<<" Guayas"<<endl;
+	if(cod==10)cout<<" Imbabura"<<endl;
+	if(cod==11)cout<<" Loja"<<endl;
+	if(cod==12)cout<<" Los Rios"<<endl;
+	if(cod==13)cout<<" Manabi"<<endl;
+	if(cod==14)cout<<" Morona Santiago"<<endl;
+	if(cod==15)cout<<" Napo"<<endl;
+	if(cod==16)cout<<" Pastaza"<<endl;
+	if(cod==17)cout<<" Pichincha"<<endl;
+	if(cod==18)cout<<" Tungurahua"<<endl;
+	if(cod==19)cout<<" Zamora Chinchipe"<<endl;
+	if(cod==20)cout<<" Galapagos"<<endl;
+	if(cod==21)cout<<" Sucumbios"<<endl;
+	if(cod==22)cout<<" Orellana"<<endl;
+	if(cod==23)cout<<" Santo Domingo de los Tsachilas"<<endl;
+	if(cod==24)cout<<" Santa Elena"<<endl;
+}
+
+char* numeros(int num){
+	static char numero[2];
+	if(num==0) {
+		numero[0]='0';
+		numero[1]='0';
+	}
+	if(num==1) {
+		numero[0]='0';
+		numero[1]='1';
+	}
+	if(num==2) {
+		numero[0]='0';
+		numero[1]='2';
+	}
+	if(num==3) {
+		numero[0]='0';
+		numero[1]='3';
+	}
+	if(num==4) {
+		numero[0]='0';
+		numero[1]='4';
+	}
+	if(num==5) {
+		numero[0]='0';
+		numero[1]='5';
+	}if(num==6) {
+		numero[0]='0';
+		numero[1]='6';
+	}
+	if(num==7) {
+		numero[0]='0';
+		numero[1]='7';
+	}
+	if(num==8) {
+		numero[0]='0';
+		numero[1]='8';
+	}
+	if(num==9) {
+		numero[0]='0';
+		numero[1]='9';
+	}
+	if(num==10) {
+		numero[0]='1';
+		numero[1]='0';
+	}
+	if(num==11) {
+		numero[0]='1';
+		numero[1]='1';
+	}
+	if(num==12) {
+		numero[0]='1';
+		numero[1]='2';
+	}
+	if(num==13) {
+		numero[0]='1';
+		numero[1]='3';
+	}
+	if(num==14) {
+		numero[0]='1';
+		numero[1]='4';
+	}
+	if(num==15) {
+		numero[0]='1';
+		numero[1]='5';
+	}
+	if(num==16) {
+		numero[0]='1';
+		numero[1]='6';
+	}
+	if(num==17) {
+		numero[0]='1';
+		numero[1]='7';
+	}
+	if(num==18) {
+		numero[0]='1';
+		numero[1]='8';
+	}
+	if(num==19) {
+		numero[0]='1';
+		numero[1]='9';
+	}if(num==20) {
+		numero[0]='2';
+		numero[1]='0';
+	}if(num==21) {
+		numero[0]='2';
+		numero[1]='1';
+	}
+	if(num==22) {
+		numero[0]='2';
+		numero[1]='2';
+	}
+	if(num==23) {
+		numero[0]='2';
+		numero[1]='3';
+	}
+	if(num==24) {
+		numero[0]='2';
+		numero[1]='4';
+	}
+	return numero;
+}
+
+
+string num_string(int entero)
+{
+    string numeroComoCadena = "";
+    stringstream ss;
+    ss << entero;
+    ss >> numeroComoCadena;
+    return numeroComoCadena;
+}
 
 void borrar(char a[]){
 	for(int i=0; i<11;i++){
@@ -36,8 +187,11 @@ void borrar(char a[]){
 bool extraer(char cedula[]){
 	int v[10], num, limite, vec[10], suma, ultimo, ultimon;
 	limite = strlen(cedula);
-	if (limite==10)
-	{
+	if (limite!=10){
+		cout<<"Cedula No valida";
+	}
+	
+	if (limite ==10){
 		for (int i=0;i<10;i++)
 		{
 			num = cedula[i]-48;
@@ -45,6 +199,7 @@ bool extraer(char cedula[]){
     	}
     	
 	}
+	
 	if (v[0] == 1 || v[0] == 2){
 		if (v[2] > 0 && v[2] < 6 ){
 	
@@ -55,8 +210,7 @@ bool extraer(char cedula[]){
 			}
 		
 			for (int i=1; i<9; i+=2){
-				vec[i] = v[i];
-				
+				vec[i] = v[i];	
 			}
 			
 			suma= 0;
@@ -90,16 +244,15 @@ bool extraer(char cedula[]){
 			
 		}   
 		
-		else
-			cout << "\nCedula incorrecta";  
-			return false;	
+		else {
+			cout << "\nCedula incorrecta";
+		}
+   	}
 	
-   }
-    return false;
-
+	return false;
 }
 
-int ingresarCedula(char cedula[11]){
+char* ingresarCedula(char cedula[11]){
 	int longitud;
 	bool confirmar;
 	do{
@@ -111,7 +264,7 @@ int ingresarCedula(char cedula[11]){
 	} while(longitud!=10);
 	}while(confirmar !=true);
 	
-	return funcion_atoi(cedula,strlen(cedula));	
+	return cedula;	
 }
 //Funcion pow
 int exponente(int base, int exponent){
