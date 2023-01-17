@@ -24,13 +24,10 @@ int main() {
 		switch(opc)
 		{
 			case 1:
-				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cantidad de datos que desea introducir:  "));
-				cantidad=funcion_atoi(datoEntero,strlen(datoEntero));
 				do{
 					str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el numero que esea introducir a la lista: "));
 					num=funcion_atoi(datoEntero,strlen(datoEntero));
 					pila.push(num);
-					contador++;
 				}while (contador<cantidad);
 				cout<<endl;
 				system("PAUSE");

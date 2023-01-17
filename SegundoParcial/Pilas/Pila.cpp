@@ -30,9 +30,7 @@ void Pila::pop()
 		aux=this->ultimo->siguiente;
 	}
 }
-<<<<<<< HEAD
-	
-=======
+
 
 void Pila::mostrar(){
 	Nodo *tmp=this->ultimo;
@@ -41,4 +39,4 @@ void Pila::mostrar(){
 		tmp=tmp->siguiente;
 	}
 }
->>>>>>> 27d8a2f61d214e97374a29b2f00c562f3e7910a4
+
