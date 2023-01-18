@@ -39,3 +39,7 @@ void Pila::mostrar(){
 		tmp=tmp->siguiente;
 	}
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 52418595ebd169506f053bf31acac561cd876abf

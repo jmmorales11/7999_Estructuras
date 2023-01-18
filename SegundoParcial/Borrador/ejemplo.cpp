@@ -1,29 +1,22 @@
+#include <cstdlib>
 #include <iostream>
-#include <functional>
-#include <vector>
 
-// Define el TDA para el número complejo
-struct ComplexNumber {
-  float real;
-  float imaginary;
-};
-// Define la función lambda que suma dos números complejos
-  auto sum_complex = [](const ComplexNumber& x, const ComplexNumber& y) {
-    return ComplexNumber{x.real + y.real, x.imaginary + y.imaginary};
-  };
+using namespace std;
+
 int main() {
-  
+  // Declara un arreglo de tama�o 10
+  int arr[10];
 
-  // Define un vector de números complejos
-  std::vector<ComplexNumber> complex_numbers{{1, 2}, {3, 4}, {5, 6}};
-
-  // Usa la función lambda para sumar todos los números complejos en el vector
-  ComplexNumber result{0, 0};
-  for (const auto& n : complex_numbers) {
-    result = sum_complex(result, n);
+  // Utiliza un ciclo for para asignar valores aleatorios a cada elemento del arreglo
+  for (int i = 0; i < 10; i++) {
+    arr[i] = rand() % 10 + 1;
   }
 
-  std::cout << result.real << " + " << result.imaginary << "i" << std::endl;  // Output: 9 + 12i
+  // Imprime el contenido del arreglo
+  for (int i = 0; i < 10; i++) {
+    cout << arr[i] << " ";
+  }
 
   return 0;
 }
+
