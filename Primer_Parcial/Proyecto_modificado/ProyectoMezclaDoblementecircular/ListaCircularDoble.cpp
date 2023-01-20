@@ -1,6 +1,14 @@
 
 #include "ListaCircularDoble.h"
+<<<<<<< HEAD
 #include <fstream> 
+=======
+#include "Archivos.cpp"
+#include <iostream>
+
+
+using namespace std;
+>>>>>>> 01a1815bfcb806ba297f86730bdf92f4f0711ec7
 using namespace std;
 
 void ListaCircularDoble::insertar(informacion *obj){
@@ -82,22 +90,23 @@ string ListaCircularDoble::toString(){
 	return s.str();
 }
 
-int ListaCircularDoble::buscarProvincia(char* cedula){
+int ListaCircularDoble::buscarProvincia(string codigo){
 	
 	char* auxcedula;
 	Nodo *actual =this->primero;
-	int cont=0, veces=0;
+	int cont=0;
+	string numero;
 	do{
-		auxcedula=letraPrimera(actual->obtenerInformacion()->getId());
-		auxcedula=letraPrimera(auxcedula);
-		cout<<auxcedula<<endl;
-		if(auxcedula==cedula){
-			cout<<"Cedularepetida"<< cont;	
+		
+		numero=letraPrimera(actual->obtenerInformacion()->getId());
+		cout<<"Objeto  "<<numero<<endl;
+		cout<<"Codigo "<<codigo<<endl;
+		if(numero==codigo){
 			cont++;
 		}
-		actual=actual->siguiente;	
-	}while(actual !=this->primero );
-	return cont;	
+		actual=actual->siguiente;
+	}while(actual != this->primero);
+    return cont;	
 }
 
 void ListaCircularDoble::contarProvincia(){
@@ -122,7 +131,7 @@ void ListaCircularDoble::contarProvincia(){
 }
 
 
-bool ListaCircularDoble::buscarObj(int cedula){
+bool ListaCircularDoble::buscarObj(string cedula){
 	bool afirmar=false;
 	Nodo *actual =this->primero;
 	int cont=0, veces=0;
@@ -181,8 +190,8 @@ bool ListaCircularDoble::eliminarApell(string elemento){
 		}while (aux_borrar !=this->primero && aux_borrar->obtenerInformacion()->getApellido() ==elemento);
 		//No existe el elemento
 		if(aux_borrar==NULL){
-			return false;
 			cout<<"\nEl elemento no ha sido encontrado"<<endl;
+			return false;
 		}else if (anterior==NULL){
 
 			primero=primero->siguiente;
@@ -207,7 +216,7 @@ void ListaCircularDoble::buscarApellido(string apellido){
 			break;
 		}
 		actual=actual->siguiente;	
-	}while(actual!=this->primero )
+	}while(actual!=this->primero );
 
 	if(afirmar==true){
 		printf("Persona encontrada\n");	

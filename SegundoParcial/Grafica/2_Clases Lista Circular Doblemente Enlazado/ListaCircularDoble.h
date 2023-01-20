@@ -23,6 +23,11 @@ class ListaCircularDoble{
 		void buscar(int elementoBuscar);//encontrar primera ocurrencia
 		void eliminar(int elemento);
 		int maximoDivisor(ListaCircularDoble lis);
+<<<<<<< HEAD
+		int minimoMultiplo(ListaCircularDoble lis);	
+		void ordenarMetodoBurbuja();
+=======
 		int minimoMultiplo(ListaCircularDoble lis);
 		void ordenarMetodoBurbuja();	
+>>>>>>> 52418595ebd169506f053bf31acac561cd876abf
 };

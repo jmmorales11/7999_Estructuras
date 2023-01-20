@@ -4,13 +4,14 @@
 #include <string.h>
 using namespace std;
 int main(){
-	initwindow(1000, 1000);
-	settextstyle(7,HORIZ_DIR,6);
-	outtextxy(350,1,"Arbol radix");
-	int opc;
-	char datoCaracter[20], datoEntero[10];
-	string palabra;
 	ArbolRadix r;
+	char datoCaracter[20], datoEntero[10];
+	int ancho, altura, opc;
+	r.tamPantalla(ancho, altura);
+	initwindow(ancho, altura);
+	settextstyle(7,HORIZ_DIR,6);
+	outtextxy((ancho/3)+80,1,"Arbol radix");
+	string palabra;
 	do{
 		system("cls");
 		cout << "-----------------------MENU-----------------------" << endl
@@ -38,13 +39,20 @@ int main(){
 				system("PAUSE");
 				break;
 			case 3:
-				str_cpy(datoCaracter,ingresocaracteres("\nIngrese una palabra a buscar: "));
-				r.buscar(datoCaracter);
+				cout<<"Ingrese una palabra a buscar: "<<endl;
+				cin>>palabra;
+				if(r.buscar(palabra)==true){
+					cout<<"Se encontro la palabra"<<endl;
+				}else{
+					cout<<"No se encontro la palabra"<<endl;
+				}
+				
 				system("PAUSE");
 				break;
 			case 4:
-				str_cpy(datoCaracter,ingresocaracteres("\nIngrese una palabra a eliminar: "));
-				r.eliminar(r.raiz, datoCaracter, 0);
+				cout<<"Ingrese una palabra a eliminar: "<<endl;
+				cin>>palabra;
+				r.eliminar(r.raiz, palabra, 0);
 				system("PAUSE");
 				break;
 			case 5:

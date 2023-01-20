@@ -19,6 +19,8 @@ class Nodo{
 			this->siguiente=sig;
 			this->anterior=ant;
 		}
+<<<<<<< HEAD
+=======
 		void setValor(int newValor)
 		{
 			valor = newValor;
@@ -26,5 +28,6 @@ class Nodo{
 		int getValor(){	
 		return valor;
 		}
+>>>>>>> 52418595ebd169506f053bf31acac561cd876abf
 	friend class ListaCircularDoble;
 };

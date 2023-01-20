@@ -28,10 +28,21 @@ int main() {
 		switch(opc)
 		{
 			case 1:
+<<<<<<< HEAD
+				str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese la cantidad de datos que desea introducir:  "));
+				cantidad=funcion_atoi(datoEntero,strlen(datoEntero));
+				do{
+					str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el numero que esea introducir a la lista: "));
+					num=funcion_atoi(datoEntero,strlen(datoEntero));
+					lst.insertar(num);
+					contador++;
+				}while (contador<cantidad);
+=======
 				
 					str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese el numero que esea introducir a la lista: "));
 					num=funcion_atoi(datoEntero,strlen(datoEntero));
 					lst.insertar(num);
+>>>>>>> 52418595ebd169506f053bf31acac561cd876abf
 				cout<<endl;
 				system("PAUSE");
 				break;
@@ -61,6 +72,13 @@ int main() {
 				system("PAUSE");
 				break;
 			case 5:
+<<<<<<< HEAD
+				lst.mostrarLista();
+				cout<<endl;
+				lst.ordenarMetodoBurbuja();
+				cout<<endl;
+				system("PAUSE");
+=======
 				cout<<endl;
 				lst.mostrarLista();
 				cout<<endl;
@@ -70,6 +88,7 @@ int main() {
 				lst.buscar(num);
 				system("PAUSE");
 				break;
+>>>>>>> 52418595ebd169506f053bf31acac561cd876abf
 			case 0:
 				system("cls");
             	cout << "Gracias por utilizar este programa." << endl;

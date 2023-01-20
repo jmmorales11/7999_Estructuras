@@ -140,6 +140,15 @@ void ListaCircularDoble::ordenarMetodoBurbuja()
 	Nodo *nNodo =this->primero;
 	Nodo *aux= this->primero;
 	int numAux;
+<<<<<<< HEAD
+	do{
+		aux= nNodo->siguiente;
+		do{
+			if( nNodo->valor > aux->valor){
+				numAux= aux->valor;
+				aux->valor=nNodo->valor;
+				nNodo->valor=numAux;
+=======
 	{
 		aux= nNodo->siguiente;
 		{
@@ -147,11 +156,18 @@ void ListaCircularDoble::ordenarMetodoBurbuja()
 				numAux= aux->valor;
 				aux->setValor(nNodo->getValor());
 				nNodo->setValor(numAux);
+>>>>>>> 52418595ebd169506f053bf31acac561cd876abf
 			}
 			this->mostrarLista();
 			cout<<endl;
 			aux= aux->siguiente;
+<<<<<<< HEAD
+		}while (aux != this->primero);
+		nNodo=nNodo->siguiente;	
+	}while( nNodo!=this->primero);
+=======
 		}while (aux !=this->primero);
 		nNodo=nNodo->siguiente;	
 	}while (nNodo !=this->primero);
+>>>>>>> 52418595ebd169506f053bf31acac561cd876abf
 }
