@@ -13,4 +13,5 @@ class ArbolRadix {
     bool eliminar(Nodo* nodo, string palabra, int nivel);
     void NI(Nodo* nodo, int nivel);
     void recorrer(Nodo *nodo, int x, int y);
+    void tamPantalla(int& ancho, int& altura);
 };

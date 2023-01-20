@@ -3,6 +3,7 @@
 #include <graphics.h>
 #include <unordered_map>
 #include <string>
+#include <Windows.h>
 using namespace std;
 ArbolRadix::ArbolRadix(){ 
 	raiz = new Nodo(); 
@@ -101,9 +102,12 @@ void ArbolRadix::recorrer(Nodo *nodo, int x, int y){
 			settextstyle(0,HORIZ_DIR,3);
 			outtextxy(x-15,y-5,num1);
 			circle( x, y,25);
-			line(x+20,y+10,x+80,y+30);
 			delay(1000);
 			recorrer(hijo.second, x + 45, y + 45);		
 	}
 
+}
+void ArbolRadix::tamPantalla(int& ancho, int& altura){
+	ancho = GetSystemMetrics(SM_CXSCREEN);
+    altura = GetSystemMetrics(SM_CYSCREEN);
 }
