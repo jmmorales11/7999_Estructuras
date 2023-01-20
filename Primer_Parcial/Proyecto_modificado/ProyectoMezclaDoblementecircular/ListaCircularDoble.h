@@ -34,7 +34,6 @@ class ListaCircularDoble{
 		int minimoMultiplo(ListaCircularDoble lis);
 		int maximoDivisor(ListaCircularDoble lis);
 		ListaCircularDoble copiarListaCircularDoble(ListaCircularDoble  lis);
-		string toString();	
 		bool eliminarApell(string elemento);
 		void apellidosEliminar(string elemento);
 		void buscarApellido(string apellido);
