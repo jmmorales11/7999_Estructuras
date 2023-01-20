@@ -3,6 +3,7 @@
 #include <graphics.h>
 #include <unordered_map>
 #include <string>
+#include <Windows.h>
 using namespace std;
 ArbolRadix::ArbolRadix(){ 
 	raiz = new Nodo(); 
@@ -14,7 +15,12 @@ void ArbolRadix::insertar(string palabra) {
       if (actual->hijos.find(c) == actual->hijos.end()) {
         actual->hijos[c] = new Nodo();
       }
-      actual = actual->hijos[c];
+      //actual = actual->hijos[c];
+      auto it = actual->hijos.find(c);
+		if (it == actual->hijos.end()) {
+		    it = actual->hijos.emplace(c, new Nodo()).first;
+		}
+	actual = it->second;
     }
     actual->finalDePalabra = true;
 }
@@ -25,7 +31,11 @@ bool ArbolRadix::buscar(string palabra) {
       if (actual->hijos.find(c) == actual->hijos.end()) {
         return false;
       }
-      actual = actual->hijos[c];
+      auto it = actual->hijos.find(c);
+		if (it == actual->hijos.end()) {
+		    it = actual->hijos.emplace(c, new Nodo()).first;
+		}
+	actual = it->second;
     }
     return actual->finalDePalabra;
 }
@@ -38,22 +48,6 @@ bool ArbolRadix::buscar(string palabra) {
 
         }
     }
-void ArbolRadix::imprimir2() {
-    imprimir(raiz, "");
-}
-    
-void ArbolRadix::imprimir3(Nodo* nodo, string prefijo, int nivel) {
-        if (nodo->finalDePalabra) {
-            cout << prefijo << endl;
-        }
-        for (auto hijo : nodo->hijos) {
-        	for (int i = 0; i < nivel; i++) {
-            	std::cout << " ";
-        	}
-        cout << "|--" << hijo.first << endl;
-        imprimir3(hijo.second, prefijo + hijo.first, nivel + 2);
-        }
-}
     
 bool ArbolRadix::eliminar(Nodo* nodo, string palabra, int nivel) {
     if (nodo == nullptr) {
@@ -99,21 +93,6 @@ void ArbolRadix::NI(Nodo* nodo, int nivel) {
         cout<<nivel<<endl;
     
 }
- void ArbolRadix::dibujarCirculos(Nodo* nodo, int x, int y, string prefijo,int nivel  ){
-	char num2[10]; 
-	sprintf(num2,"%c", nodo->hijos.begin()->first);
-	settextstyle(0,HORIZ_DIR,3);
-	outtextxy(x-15,y-5,num2);
-	circle( x, y,25);
-	int	x2 = 45;
-	int y2 = 45;
-	for(auto hijo : nodo->hijos){
-		cout<<"bucle"<<endl;
-		delay(1000);
-		dibujarCirculos(hijo.second,x + x2, y + y2, prefijo + hijo.first  , nivel + 1);
-		x2+=45;
-	}
-}
 
 void ArbolRadix::recorrer(Nodo *nodo, int x, int y){
 	for(auto hijo : nodo->hijos){
@@ -123,9 +102,12 @@ void ArbolRadix::recorrer(Nodo *nodo, int x, int y){
 			settextstyle(0,HORIZ_DIR,3);
 			outtextxy(x-15,y-5,num1);
 			circle( x, y,25);
-			line(x+20,y+10,x+80,y+30);
 			delay(1000);
-			recorrer(hijo.second,x+45, y+45);		
+			recorrer(hijo.second, x + 45, y + 45);		
 	}
 
+}
+void ArbolRadix::tamPantalla(int& ancho, int& altura){
+	ancho = GetSystemMetrics(SM_CXSCREEN);
+    altura = GetSystemMetrics(SM_CYSCREEN);
 }
