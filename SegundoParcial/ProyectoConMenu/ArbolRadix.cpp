@@ -3,6 +3,8 @@
 #include <graphics.h>
 #include <unordered_map>
 #include <string>
+#include <stdio.h>
+#include <math.h>
 #include <Windows.h>
 using namespace std;
 ArbolRadix::ArbolRadix(){ 
@@ -95,16 +97,26 @@ void ArbolRadix::NI(Nodo* nodo, int nivel) {
     
 }
 
+<<<<<<< HEAD
+void ArbolRadix::recorrer(Nodo *nodo, int x, int y, int nivel){
+	int i = 0;
+	for(auto hijo : nodo->hijos){
+=======
 void ArbolRadix::recorrer(Nodo *nodo, int x, int y){
 	for(auto hijo : nodo->getHijos()){
+>>>>>>> c96351eb68ca25f81b7c02ec97fd06ebea510e9e
 		char num1[10]; 
 			x+=60;
 			sprintf(num1,"%c", hijo.first);
 			settextstyle(0,HORIZ_DIR,3);
-			outtextxy(x-15,y-5,num1);
+			outtextxy(x,y,num1);
 			circle( x, y,25);
 			delay(1000);
-			recorrer(hijo.second, x + 45, y + 45);		
+			int x2 = (anch/(pow(2, nivel + 1)));
+			int y2 = (altu/(pow(2, nivel + 1)));
+		
+			recorrer(hijo.second, x + (i*x2), y + y2, nivel+1);
+			i++;		
 	}
 
 }

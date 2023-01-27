@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 /***********************************************************************
  * UFA-ESPE
  * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
@@ -5,6 +7,7 @@
  * Purpose: Arbol Radix
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
+>>>>>>> c96351eb68ca25f81b7c02ec97fd06ebea510e9e
 #include "ArbolRadix.h" 
 #include <iostream>
 #include <graphics.h>
@@ -111,10 +114,16 @@ void ArbolRadix::recorrer(Nodo *nodo, int x, int y){
 			settextstyle(0,HORIZ_DIR,3);
 			outtextxy(x-15,y-5,num1);
 			circle( x, y,R);
+<<<<<<< HEAD
+			line(x+20,y+10,x+80,y+30);
+			delay(1000);
+			recorrer(hijo.second, x + D, y + D);		
+=======
 			delay(1000);
 			line(x+20,y+10,x+80,y+30);	
 			recorrer(hijo.second, x + D, y + D);
 				
+>>>>>>> c96351eb68ca25f81b7c02ec97fd06ebea510e9e
 	}
 }
 void ArbolRadix::tamPantalla(int& ancho, int& altura){

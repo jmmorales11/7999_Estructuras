@@ -14,6 +14,7 @@ int main(){
 	string palabra;
 	do{
 		system("cls");
+		
 		cout << "-----------------------MENU-----------------------" << endl
              << endl; 
         cout << "\t[1]  Ingresar " << endl;
@@ -56,7 +57,8 @@ int main(){
 				system("PAUSE");
 				break;
 			case 5:
-				r.recorrer(r.raiz, 100,100);
+				cleardevice();
+				r.recorrer(r.raiz, 100,100, 0);
 				system("PAUSE");
 				break;
 			case 0:

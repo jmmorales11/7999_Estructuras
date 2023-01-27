@@ -1,8 +1,13 @@
 /***********************************************************************
  * UFA-ESPE
  * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+<<<<<<< HEAD
+ * Modificacion: Martes, 08 de nombre de 2022 21:17:59
+ * Purpose: Areas de las figuras
+=======
  * Modificacion:Viernes, 20 de Enero de 2023 
  * Purpose: Arbol Radix
+>>>>>>> c96351eb68ca25f81b7c02ec97fd06ebea510e9e
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
 #include <iostream>
