@@ -10,42 +10,42 @@ ArbolRadix::ArbolRadix(){
 }
 
 void ArbolRadix::insertar(string palabra) {
-    Nodo* actual = raiz;
-    for (char c : palabra) {
-      if (actual->hijos.find(c) == actual->hijos.end()) {
-        actual->hijos[c] = new Nodo();
+    Nodo* actual = this->raiz;
+    for (char c : actual->getPalabra()) {
+      if (actual->getHijos().find(c) == actual->getHijos().end()) {
+        actual->getHijos()[c] = new Nodo();
+        
       }
       //actual = actual->hijos[c];
-      auto it = actual->hijos.find(c);
-		if (it == actual->hijos.end()) {
-		    it = actual->hijos.emplace(c, new Nodo()).first;
+      auto it = actual->getHijos().find(c);
+		if (it == actual->getHijos().end()) {
+		    it = actual->getHijos().emplace(c, new Nodo()).first;
 		}
 	actual = it->second;
     }
-    actual->finalDePalabra = true;
+    actual->setFinalPalabra(true);
 }
 
 bool ArbolRadix::buscar(string palabra) {
     Nodo* actual = raiz;
     for (char c : palabra) {
-      if (actual->hijos.find(c) == actual->hijos.end()) {
+      if (actual->getHijos().find(c) == actual->getHijos().end()) {
         return false;
       }
-      auto it = actual->hijos.find(c);
-		if (it == actual->hijos.end()) {
-		    it = actual->hijos.emplace(c, new Nodo()).first;
+      auto it = actual->getHijos().find(c);
+		if (it == actual->getHijos().end()) {
+		    it = actual->getHijos().emplace(c, new Nodo()).first;
 		}
 	actual = it->second;
     }
-    return actual->finalDePalabra;
+    return actual->getFinalPalabra();
 }
   void ArbolRadix::imprimir(Nodo* nodo,string prefijo) {
-        if (nodo->finalDePalabra) {
+        if (nodo->getFinalPalabra()) {
             cout << prefijo <<endl;
         }
-        for (auto hijo : nodo->hijos) {
+        for (auto hijo : nodo->getHijos()) {
             imprimir(hijo.second, prefijo+hijo.first);
-
         }
     }
     
@@ -53,28 +53,29 @@ bool ArbolRadix::eliminar(Nodo* nodo, string palabra, int nivel) {
     if (nodo == nullptr) {
         return false;
     }
-    if (nivel == palabra.length()) {
-        if (!nodo->finalDePalabra) {
+    if (nivel == nodo->getPalabra().length()) {
+        if (!nodo->getFinalPalabra()) {
             return false;
         }
-        nodo->finalDePalabra = false;
-        return nodo->hijos.empty();
+        nodo->setFinalPalabra(false);
+        return nodo->getHijos().empty();
     }
 	char c = palabra[nivel];
-    auto hijo = nodo->hijos.find(c);
-    if (hijo == nodo->hijos.end()) {
+    auto hijo = nodo->getHijos().find(c);
+    if (hijo == nodo->getHijos().end()) {
         return false;
-    }
-    bool remover = eliminar(hijo->second, palabra, nivel + 1);
+}
+
+bool remover = eliminar(hijo->second, palabra, nivel + 1);
     if (remover) {
-        nodo->hijos.erase(hijo);
-        return nodo->hijos.empty() && !nodo->finalDePalabra;
+        nodo->getHijos().erase(hijo);
+        return nodo->getHijos().empty() && !nodo->getFinalPalabra();
     }
     return false;
-    }
+}
 void ArbolRadix::imprimirDife(Nodo* nodo, string prefijo, int nivel) {
         
-        for (auto hijo : nodo->hijos) {
+        for (auto hijo : nodo->getHijos()) {
         	for (int i = 0; i < nivel; i++) {
             	cout<<"    ";
         	}
@@ -84,7 +85,7 @@ void ArbolRadix::imprimirDife(Nodo* nodo, string prefijo, int nivel) {
 }
 void ArbolRadix::NI(Nodo* nodo, int nivel) {
         
-        for (auto hijo : nodo->hijos) {
+        for (auto hijo : nodo->getHijos()) {
         	for (int i = 0; i < nivel; i++) {
             	cout<<"";
         	}
@@ -95,7 +96,7 @@ void ArbolRadix::NI(Nodo* nodo, int nivel) {
 }
 
 void ArbolRadix::recorrer(Nodo *nodo, int x, int y){
-	for(auto hijo : nodo->hijos){
+	for(auto hijo : nodo->getHijos()){
 		char num1[10]; 
 			x+=60;
 			sprintf(num1,"%c", hijo.first);
