@@ -1,15 +1,9 @@
 #include <iostream>
-using namespace std;
-#include <iostream>
-#include <Windows.h>
-
-
-
-#include <iostream>
 #include <stdlib.h>
 #include <fstream>
 #include <string.h>
 #include "Matriz.cpp"
+#include <Windows.h>
 #define MAX 8
 using namespace std;
 void lectura();

@@ -69,7 +69,6 @@ void Matriz<T>::ingresarMatriz(T **matriz, T filas, T columnas)
 			str_cpy(datoEntero,pchar);
 			*(*(matriz+i)+j)=funcion_atoi(datoEntero,strlen(datoEntero));
 			}
-
 		}
 	}
 	archivo.close();
