@@ -6,7 +6,7 @@
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
 
-#include "Nodo.h"
+#include "Nodo1.h"
 #include <iostream>
 using namespace std;
 class Lista{

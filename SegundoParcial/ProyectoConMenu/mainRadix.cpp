@@ -10,7 +10,7 @@ int main(){
 	r.tamPantalla(ancho, altura);
 	initwindow(ancho, altura);
 	settextstyle(7,HORIZ_DIR,6);
-	outtextxy((ancho/3)+80,1,"Arbol radix");
+
 	string palabra;
 	do{
 		system("cls");

@@ -5,10 +5,10 @@
  * Purpose: Listas, realizar el buscar, eliminar, inserta cola, mostrar cola
  *Nivel: Tercero           NRC:7999
  ***********************************************************************/
-#pragma once
+
 #include <time.h>
 class Nodo{
-	private:
+	public:
 		int valor;
 		Nodo *siguiente;
 		Nodo *anterior;

@@ -1,4 +1,4 @@
-#include "Nodo.h"
+#include "Nodo.cpp"
 
 class ArbolRadix {
 	public:

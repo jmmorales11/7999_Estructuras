@@ -1,6 +1,7 @@
 /***********************************************************************
  * UFA-ESPE
  * Autores:  Jeimy Marley Morales Sosa & Camilo Andres Orrico Emme 
+<<<<<<< HEAD
  * Modificacion: Jueves, 19 de Enero de 2023 21:17:59
  * Purpose: Grafico del Arbol Radix
  *Nivel: Tercero           NRC:7999
@@ -15,6 +16,12 @@
  * @copyright Copyright (c) 2023
  * 
  */
+=======
+ * Modificacion:Viernes, 19 de Enero de 2023 
+ * Purpose: Arbol Radix
+ *Nivel: Tercero           NRC:7999
+ ***********************************************************************/
+>>>>>>> c96351eb68ca25f81b7c02ec97fd06ebea510e9e
 #include "ArbolRadix.cpp"
 #include "validar.h"
 #include <conio.h>
