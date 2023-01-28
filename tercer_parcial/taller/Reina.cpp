@@ -6,6 +6,7 @@
  ***********************************************************************/
 
 #include "Reina.h"
+#include <fstream>
 using namespace std;
 ////////////////////////////////////////////////////////////////////////
 // Name:       Reina::getValidar__()
@@ -55,29 +56,7 @@ void Reina::setTablero(char **newTablero)
    tablero= newTablero;
 }
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Reina::getArchivo()
-// Purpose:    Implementation of Reina::getArchivo()
-// Return:     bool
-////////////////////////////////////////////////////////////////////////
 
-fstream Reina::getArchivo(void)
-{
-   return archivo;
-}
-
-////////////////////////////////////////////////////////////////////////
-// Name:       Reina::setArchivo(bool newArchivo)
-// Purpose:    Implementation of Reina::setArchivo()
-// Parameters:
-// - newArchivo
-// Return:     void
-////////////////////////////////////////////////////////////////////////
-
-void Reina::setArchivo(fstream newArchivo)
-{
-   archivo = newArchivo;
-}
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Reina::getContador()
