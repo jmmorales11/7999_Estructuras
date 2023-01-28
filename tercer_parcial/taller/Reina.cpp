@@ -6,16 +6,16 @@
  ***********************************************************************/
 
 #include "Reina.h"
-
+using namespace std;
 ////////////////////////////////////////////////////////////////////////
 // Name:       Reina::getValidar__()
 // Purpose:    Implementation of Reina::getValidar__()
 // Return:     bool
 ////////////////////////////////////////////////////////////////////////
 
-bool Reina::getValidar__(void)
+bool** Reina::getValidar(void)
 {
-   return validar__;
+   return validar;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -26,9 +26,9 @@ bool Reina::getValidar__(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Reina::setValidar__(bool newValidar__)
+void Reina::setValidar(bool **newValidar)
 {
-   validar__ = newValidar__;
+   validar = newValidar;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -37,9 +37,9 @@ void Reina::setValidar__(bool newValidar__)
 // Return:     char
 ////////////////////////////////////////////////////////////////////////
 
-char Reina::getTablero__(void)
+char** Reina::getTablero(void)
 {
-   return tablero__;
+   return tablero;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -50,9 +50,9 @@ char Reina::getTablero__(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Reina::setTablero__(char newTablero__)
+void Reina::setTablero(char **newTablero)
 {
-   tablero__ = newTablero__;
+   tablero= newTablero;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -61,7 +61,7 @@ void Reina::setTablero__(char newTablero__)
 // Return:     bool
 ////////////////////////////////////////////////////////////////////////
 
-bool Reina::getArchivo(void)
+fstream Reina::getArchivo(void)
 {
    return archivo;
 }
@@ -74,7 +74,7 @@ bool Reina::getArchivo(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Reina::setArchivo(bool newArchivo)
+void Reina::setArchivo(fstream newArchivo)
 {
    archivo = newArchivo;
 }
@@ -137,7 +137,7 @@ void Reina::setN(int newN)
 
 Reina::Reina(int n1)
 {
-   // TODO : implement
+   this->n=n1;
 }
 
 ////////////////////////////////////////////////////////////////////////

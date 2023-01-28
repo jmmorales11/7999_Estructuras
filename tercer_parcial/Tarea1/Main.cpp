@@ -18,7 +18,7 @@ int main(){
 	}
 	do{
 		system("color 3F");
-		cout<<"*************Tablero de ajedres**********"<<endl;
+		cout<<"*************Tablero de ajedrez**********"<<endl;
 		cout<<"\t[1]tablero"<<endl;
 		cout<<"\t[2] tablero y numeros"<<endl;
 		cout<<"\t[0] salir"<<endl;

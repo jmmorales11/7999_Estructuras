@@ -7,16 +7,17 @@
 
 #if !defined(__tablero_Reina_h)
 #define __tablero_Reina_h
-
+#include <fstream>
+using namespace std;
 class Reina
 {
 public:
-   bool getValidar__(void);
-   void setValidar__(bool newValidar__);
-   char getTablero__(void);
-   void setTablero__(char newTablero__);
-   bool getArchivo(void);
-   void setArchivo(bool newArchivo);
+   bool** getValidar(void);
+   void setValidar(bool **newValidar);
+   char** getTablero(void);
+   void setTablero(char **newTablero);
+   fstream getArchivo(void);
+   void setArchivo(fstream newArchivo);
    int getContador(void);
    void setContador(int newContador);
    int getN(void);
@@ -26,9 +27,9 @@ public:
 
 protected:
 private:
-   bool validar__;
-   char tablero__;
-   bool archivo;
+   bool **validar;
+   char **tablero;
+   fstream archivo;
    int contador;
    int n;
 
