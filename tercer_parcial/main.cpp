@@ -1,3 +1,4 @@
+
 /*
 Craer ,modelo.h
 geter  seter y cosntructor
@@ -142,3 +143,16 @@ int main(int argc, char** argv) {
 	cout<<"Se creo el archivo txt"<<endl;
 	return 0;
 }
+
+
+
+class Reina{
+    private:
+        int n;
+    public:
+        void setN(int n){
+            this->n = n;
+        }
+        //...
+};
+

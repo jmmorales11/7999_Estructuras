@@ -13,7 +13,15 @@ using namespace std;
 // Purpose:    Implementation of Reina::getValidar__()
 // Return:     bool
 ////////////////////////////////////////////////////////////////////////
-
+Reina::Reina(int n1)
+{
+   this->n=n1;
+   
+}
+Reina::Reina()
+{
+   
+}
 bool** Reina::getValidar(void)
 {
    return validar;
@@ -55,8 +63,6 @@ void Reina::setTablero(char **newTablero)
 {
    tablero= newTablero;
 }
-
-
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Reina::getContador()
@@ -114,10 +120,6 @@ void Reina::setN(int newN)
 // Return:     
 ////////////////////////////////////////////////////////////////////////
 
-Reina::Reina(int n1)
-{
-   this->n=n1;
-}
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Reina::~Reina()
@@ -129,3 +131,4 @@ Reina::~Reina()
 {
    // TODO : implement
 }
+
