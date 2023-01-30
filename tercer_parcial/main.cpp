@@ -53,6 +53,7 @@ class Reina{
 		aux2=y;
 		aux1=0;
 		while(aux1<n){//vertical
+		
 			*(*(validar+aux1)+aux2)=true;
 			aux1++;
 		}
@@ -145,14 +146,4 @@ int main(int argc, char** argv) {
 }
 
 
-
-class Reina{
-    private:
-        int n;
-    public:
-        void setN(int n){
-            this->n = n;
-        }
-        //...
-};
 

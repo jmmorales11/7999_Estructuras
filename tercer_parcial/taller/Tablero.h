@@ -7,7 +7,7 @@
 
 #if !defined(__tablero_Tablero_h)
 #define __tablero_Tablero_h
-#include "Reina.cpp"
+
 class Tablero
 {
 public:

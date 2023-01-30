@@ -23,10 +23,9 @@ public:
    int getN(void);
    void setN(int newN);
    Reina(int n1);
-   Reina();
    ~Reina();
 
-protected:
+public:
 
    bool **validar;
    char **tablero;

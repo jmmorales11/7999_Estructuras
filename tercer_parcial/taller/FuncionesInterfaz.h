@@ -1,14 +1,18 @@
 #include "Tablero.h"
 #include <iostream>
 #include <fstream>
-#include "Tablero.h"
+#include "Reina.cpp"
 using namespace std;
 class FuncionesInterfaz:public Tablero{
 	
 	public:
 	fstream archivo;
 	Reina *reina;
-	FuncionesInterfaz(Reina reina);
+	FuncionesInterfaz(Reina *rei){
+		this->reina=rei;
+		this->encerarTablero();
+		this->crearArchivo();
+	}
 	void encerarTablero(void);
    	void crearArchivo(void);
    	void bloquear(int x, int y);

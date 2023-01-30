@@ -1,0 +1,163 @@
+solucion5*5
+
+solucion N 1
+R * * * * 
+* R * * * 
+* * R * * 
+* * * R * 
+* * * * R 
+
+solucion N 2
+R * * * * 
+* R * * * 
+* * * * R 
+* * R * * 
+* * * R * 
+
+solucion N 3
+R * * * * 
+* R * * * 
+* * * R * 
+* * * * R 
+* * R * * 
+
+solucion N 4
+R * * * * 
+* * * R * 
+* R * * * 
+* * R * * 
+* * * * R 
+
+solucion N 5
+R * * * * 
+* * * R * 
+* R * * * 
+* * * * R 
+* * R * * 
+
+solucion N 6
+R * * * * 
+* * R * * 
+* * * R * 
+* R * * * 
+* * * * R 
+
+solucion N 7
+R * * * * 
+* * R * * 
+* * * * R 
+* R * * * 
+* * * R * 
+
+solucion N 8
+* * R * * 
+R * * * * 
+* R * * * 
+* * * R * 
+* * * * R 
+
+solucion N 9
+* * * * R 
+R * * * * 
+* R * * * 
+* * R * * 
+* * * R * 
+
+solucion N 10
+* * R * * 
+R * * * * 
+* * * R * 
+* R * * * 
+* * * * R 
+
+solucion N 11
+* * R * * 
+R * * * * 
+* * * * R 
+* R * * * 
+* * * R * 
+
+solucion N 12
+* * * R * 
+R * * * * 
+* * R * * 
+* * * * R 
+* R * * * 
+
+solucion N 13
+* R * * * 
+* * R * * 
+R * * * * 
+* * * R * 
+* * * * R 
+
+solucion N 14
+* R * * * 
+* * * R * 
+R * * * * 
+* * R * * 
+* * * * R 
+
+solucion N 15
+* R * * * 
+* * * R * 
+R * * * * 
+* * * * R 
+* * R * * 
+
+solucion N 16
+* * * R * 
+* * * * R 
+R * * * * 
+* R * * * 
+* * R * * 
+
+solucion N 17
+* * * * R 
+* * R * * 
+R * * * * 
+* * * R * 
+* R * * * 
+
+solucion N 18
+* R * * * 
+* * * * R 
+* * R * * 
+R * * * * 
+* * * R * 
+
+solucion N 19
+* * * * R 
+* R * * * 
+* * * R * 
+R * * * * 
+* * R * * 
+
+solucion N 20
+* * R * * 
+* * * R * 
+* * * * R 
+R * * * * 
+* R * * * 
+
+solucion N 21
+* R * * * 
+* * R * * 
+* * * R * 
+* * * * R 
+R * * * * 
+
+solucion N 22
+* * * R * 
+* R * * * 
+* * * * R 
+* * R * * 
+R * * * * 
+
+solucion N 23
+* * R * * 
+* * * * R 
+* R * * * 
+* * * R * 
+R * * * * 
+

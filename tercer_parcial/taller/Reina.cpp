@@ -7,6 +7,7 @@
 
 #include "Reina.h"
 #include <fstream>
+
 using namespace std;
 ////////////////////////////////////////////////////////////////////////
 // Name:       Reina::getValidar__()
@@ -15,13 +16,13 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////
 Reina::Reina(int n1)
 {
-   this->n=n1;
+   	this->n=n1;
+	this->validar=new bool *[n];
+	this->tablero=new char *[n];
+	
    
 }
-Reina::Reina()
-{
-   
-}
+
 bool** Reina::getValidar(void)
 {
    return validar;
