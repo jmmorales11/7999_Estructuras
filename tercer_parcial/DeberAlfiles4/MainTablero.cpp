@@ -27,9 +27,9 @@ int main(int argc, char** argv) {
         cout << "\t[2]  Alfiles " << endl;
         cout << "\t[3]  Prueba " << endl;
         cout << "\t[0]  Salir " << endl;
-        str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
-        opcion = funcion_atoi(datoEntero,strlen(datoEntero));
-        //cin>>opcion;
+        //str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+        //opcion = funcion_atoi(datoEntero,strlen(datoEntero));
+        cin>>opcion;
 		cout<<"\n";
 		fila=0;
 		columna=0;
