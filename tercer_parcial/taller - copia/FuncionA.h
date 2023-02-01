@@ -70,5 +70,6 @@ class FuncionA:public Tablero{
 	 */
     void solucionReinas(void);
 	
-		
+	void solucionAlfilA(int i, int j);
+	
 };

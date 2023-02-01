@@ -42,6 +42,12 @@ void FuncionA::bloquear(int x, int y){
 		aux1--;
 		aux2--;
 	}
+	while(aux1>=0 && aux2<MAX){
+		*(*(this->alfil->validar+aux1)+aux2)=true;
+		aux1++;
+		aux2++;
+		//cout<<"  diagonal "<<aux1<<" "<<aux2<<endl;
+	}
 	aux2=y;
 	aux1=x;
 	while(aux1<MAX && aux2>0){
@@ -50,11 +56,14 @@ void FuncionA::bloquear(int x, int y){
 	}
 	aux1--;
 	aux2++;
+	
 	while(aux1>=0 && aux2<MAX){
 		*(*(this->alfil->validar+aux1)+aux2)=true;
 		aux1--;
 		aux2++;
+	//	cout<<aux1<<" "<<aux2<<endl;
 	}
+	
 	}
 	void FuncionA::mostrar(){
 		this->alfil->contador++;
@@ -69,7 +78,9 @@ void FuncionA::bloquear(int x, int y){
 				else{
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15|0);
 				}
-				
+				if(	*(*(this->alfil->validar+i)+j)==true){
+					*(*(this->alfil->tablero +i)+j)='A';
+				}
 				this->archivo<<*(*(this->alfil->tablero+i)+j)<<" ";
 				cout<<*(*(this->alfil->tablero+i)+j)<<" ";
 			}
@@ -116,5 +127,11 @@ void FuncionA::bloquear(int x, int y){
 			solucion(i,j,1);
 		}
 	}
+		archivo.close();	
+	}
+	
+	
+	void FuncionA::solucionAlfilA(int i, int j){
+			solucion(i,j,1);
 		archivo.close();	
 	}
