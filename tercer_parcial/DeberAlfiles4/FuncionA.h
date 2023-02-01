@@ -69,10 +69,38 @@ class FuncionA:public Tablero{
 	 * 
 	 */
     void solucionReinas(void);
+	/**
+	 * @brief Funcion bloquear alfiles
+	 * 
+	 */
 	void bloquearAlfiles(int, int);
+	/**
+	 * @brief Funcion solucion alfil A
+	 * 
+	 * @param i 
+	 * @param j 
+	 */
 	void solucionAlfilA(int i, int j);
+	/**
+	 * @brief Funcion Solucion Alfiles
+	 * 
+	 */
 	void solucionAlfiles(int, int, int);
+	/**
+	 * @brief Funcion dibujar tablero
+	 * 
+	 */
 	void cuadrado();
+	/**
+	 * @brief Funcion mostrar alfil
+	 * 
+	 */
 	void mostrarAlfil(void);
+	/**
+	 * @brief Funcion circulo
+	 * 
+	 * @param fila 
+	 * @param columna 
+	 */
 	void circulo(int fila, int columna);
 };
