@@ -32,13 +32,16 @@ void CuboMagico::setCuadrado(int** newCuadrado)
 }
 
 ////////////////////////////////////////////////////////////////////////
-// Name:       CuboMagico::CuboMagico()
+// Name:       CuboMagico::CuboMagico(int** a)
 // Purpose:    Implementation of CuboMagico::CuboMagico()
+// Parameters:
+// - a
 // Return:     
 ////////////////////////////////////////////////////////////////////////
 
-CuboMagico::CuboMagico()
+CuboMagico::CuboMagico(int** a)
 {
+   // TODO : implement
 }
 
 ////////////////////////////////////////////////////////////////////////
