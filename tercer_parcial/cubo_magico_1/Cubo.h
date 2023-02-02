@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  Cubo.h
  * Author:  camilo
- * Modified: miércoles, 1 de febrero de 2023 18:10:39
+ * Modified: miÃ©rcoles, 1 de febrero de 2023 18:10:39
  * Purpose: Declaration of the class Cubo
  ***********************************************************************/
 
@@ -11,8 +11,8 @@
 class Cubo
 {
 public:
-   virtual int llenar(int a, int b)=0;
-   virtual int mostrar(int a, int b)=0;
+   virtual void llenar(int a, int b, int c)=0;
+   virtual void mostrar(int a, int b)=0;
 
 protected:
 private:
