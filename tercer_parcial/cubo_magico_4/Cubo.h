@@ -13,6 +13,7 @@ class Cubo
 public:
    virtual void llenar(int a, int c, int d)=0;
    virtual void mostrar(int a, int b)=0;
+   virtual void suma(int a, int b, int c)=0;
 
 protected:
 private:

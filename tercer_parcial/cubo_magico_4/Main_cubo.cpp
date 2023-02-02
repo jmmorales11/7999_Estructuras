@@ -23,7 +23,6 @@ int main(){
         		system("cls");
         		str_cpy(datoEntero,ingresarDatosEnteros("\nIngresa la dimension de la matriz: "));
        			dimension = funcion_atoi(datoEntero,strlen(datoEntero));
-       			num=2*dimension-1;
        			str_cpy(datoEntero,ingresarDatosEnteros("\nIngresa el numero inicial: "));
        			numero = funcion_atoi(datoEntero,strlen(datoEntero));
        			str_cpy(datoEntero,ingresarDatosEnteros("\nIngresa el patron: "));
@@ -34,6 +33,11 @@ int main(){
 				}
 				cubo= new CuboMagico(cuadrado);
 				obj= new FuncionesCubo(cubo);
+				obj->llenar1(dimension,numero,patron);
+				obj->mostrar1(dimension);
+				cout<<"AAAAAAAAAAAAAAAAAA"<<endl;
+				num=2*dimension-1;
+				obj->suma(dimension, numero,patron);
 				obj->llenar(num, numero, patron);
 				obj->mostrar((2*dimension-1),(2*dimension-1));
         		system("PAUSE");
