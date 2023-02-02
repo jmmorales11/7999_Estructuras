@@ -3,16 +3,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <conio.h>
-using namespace std;
-
-void FuncionesCubo::llenar(int num, int patron, int dim){
-	
+void FuncionesCubo::llenar(int num, int pat, int dim){
 	for (int i = 0; i < dim; i++) {
         for (int j = 0; j < dim; j++) {
             *(*(this->cubo->getCuadrado()+i)+j) = num;
-            num = num+patron;
+            num = num+pat;
         }
-    }
+    }	
 }
 void FuncionesCubo::mostrar(int a, int b){
 	system("cls");

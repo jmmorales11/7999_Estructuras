@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  CuboMagico.cpp
  * Author:  Jeimy
- * Modified: miÃ©rcoles, 1 de febrero de 2023 18:19:30
+ * Modified: miércoles, 1 de febrero de 2023 18:19:30
  * Purpose: Implementation of the class CuboMagico
  ***********************************************************************/
 
