@@ -13,7 +13,7 @@ class CuboMagico
 public:
    int** getCuadrado(void);
    void setCuadrado(int** newCuadrado);
-   CuboMagico();
+   CuboMagico(int** a);
    ~CuboMagico();
 
 protected:
