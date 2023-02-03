@@ -6,7 +6,7 @@
  		FuncionesCubo(CuboMagico *cub){
  			this->cubo=cub;
 		 }
-		void mostrar(int, int);
+		void mostrar(int);
 		void llenar(int, int, int);
 		void suma(int, int, int);
 		void mostrar1(int);

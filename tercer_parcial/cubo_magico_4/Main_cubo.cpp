@@ -49,7 +49,7 @@ int main(){
 					num=2*dimension-1;
 					obj->suma(dimension, numero,patron);
 					obj->llenar(num, numero, patron);
-					obj->mostrar((2*dimension-1),(2*dimension-1));
+					obj->mostrar((2*dimension-1));
 				}else{
 					cout<<endl;
 					cout<<"Dimension no permitida"<<endl;
