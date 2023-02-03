@@ -41,7 +41,7 @@ void CuboMagico::setCuadrado(int** newCuadrado)
 
 CuboMagico::CuboMagico(int** a)
 {
-   // TODO : implement
+   this->cuadrado=a;
 }
 
 ////////////////////////////////////////////////////////////////////////

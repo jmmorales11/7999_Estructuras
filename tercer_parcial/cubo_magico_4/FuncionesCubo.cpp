@@ -89,18 +89,56 @@ void FuncionesCubo::llenar1(int dimension, int p, int patron){
 	}	
 }
 void FuncionesCubo::mostrar1(int dimension){
-	int x=0,t=0,s=0,a=0;
-	a=(2*dimension-1);
+	int x=0,t=0,s=0,a;
+	a=2*dimension-1;
 	x=(a-1)/2;
 	t=((a+1)/2);
 	s=(a-x-1)/2;
-	cout<<endl;
 	for(int g=0;g<a;g++){
-		cout<<"\t";
+		printf("\n\t");
 		for(int h=0;h<a;h++){	
 			if(h>=(x-s)&&h<=(x+s)&&g<=(x+s)&&g>=(x-s)){
-				cout<<*(*(this->cubo->getCuadrado()+g)+h)<<"\t";	
+				printf("\t%d",*(*(this->cubo->getCuadrado()+g)+h));	
 			}
+		}
+	}
+}
+
+
+
+void FuncionesCubo::llenar2(int dimension, int p, int patron){
+	for (int i=0;i<dimension;i++){
+		
+		for(int j=0 ; j<dimension;j++){
+			*(*(this->cubo->getCuadrado()+i)+j)=p;
+			p+=patron;
+		}
+	}
+	int p1=0, pf=dimension-1, aux=0;
+	for (int i=0;i<dimension/2;i++){
+		for(int j=0;j<dimension;j++){
+			for (int k=0;k<dimension;k++){
+				if (j==pf&& k==pf){
+					aux=*(*(this->cubo->getCuadrado()+p1)+p1);
+					*(*(this->cubo->getCuadrado()+p1)+p1)=*(*(this->cubo->getCuadrado()+j)+k);
+					*(*(this->cubo->getCuadrado()+j)+k)=aux;
+				}
+				if (j==p1&& k==pf){
+					aux=*(*(this->cubo->getCuadrado()+p1)+pf);
+					*(*(this->cubo->getCuadrado()+p1)+pf)=*(*(this->cubo->getCuadrado()+pf)+p1);
+					*(*(this->cubo->getCuadrado()+pf)+p1)=aux;
+				}
+			}
+		}
+		p1+=1;
+		pf-=1;
+	}
+}
+void FuncionesCubo::mostrar2(int dimension){
+	for (int i=0;i<dimension;i++){
+		cout<<"\t";
+		for(int j=0; j<dimension;j++){
+			cout<<*(*(this->cubo->getCuadrado()+i)+j)<<"\t";
 		}
 		cout<<endl;
 	}

@@ -3,13 +3,47 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <conio.h>
-void FuncionesCubo::llenar(int num, int pat, int dim){
-	for (int i = 0; i < dim; i++) {
-        for (int j = 0; j < dim; j++) {
-            *(*(this->cubo->getCuadrado()+i)+j) = num;
-            num = num+pat;
-        }
-    }	
+using namespace std;
+void FuncionesCubo::llenar(int a, int b){
+	cout<<"\n Aqui  "<<a<<"  :  "<<b<<endl;	
+	int x=0,t=0,s=0,d=0,p=4,k=0,j=0;
+	x=(b-1)/2;
+	t=((a+1)/2);
+	s=(a-x-1)/2;
+	d=x;
+	cout<<"\nX  "<<x<<endl;
+	cout<<"t  "<<t<<endl;
+	cout<<"s  "<<s<<endl;
+	cout<<"d  "<<d<<endl;
+	system("pause");
+	for(int g=0;g<((a+1)/2);g++){
+		cout<<((a+1)/2)<<"nose"<<endl;
+		j=g;
+		k=g;
+		for(int i=x;i>=j;i--){
+			*(*(this->cubo->getCuadrado()+i)+k)=p;
+			if(k<(d-s)){
+				*(*(this->cubo->getCuadrado()+i)+(k+t))=p;
+			}
+			if(k>(d+s)){
+				*(*(this->cubo->getCuadrado()+i)+(k-t))=p;
+			}
+			if(i>(d+s)){
+				*(*(this->cubo->getCuadrado()+(i-t))+k)=p;
+			}
+			if(i<(d-s)){
+				*(*(this->cubo->getCuadrado()+(i+t))+k)=p;
+			}
+			k++;
+			p+=4;
+			cout<<"\n2\nX  "<<x<<endl;
+				cout<<"t  "<<t<<endl;
+				cout<<"s  "<<s<<endl;
+				cout<<"d  "<<d<<endl;
+				system("pause");
+		}
+		x++;
+	}
 }
 void FuncionesCubo::mostrar(int a, int b){
 	system("cls");
