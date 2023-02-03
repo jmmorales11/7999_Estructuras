@@ -9,6 +9,7 @@ int main(){
 	CuboMagico *cubo;
 	FuncionesCubo *obj;
 	char datoEntero[10];
+	
 	do{
 		system("cls");
 		cout << "-----------------------MENU-----------------------" << endl
@@ -27,13 +28,16 @@ int main(){
        			num = funcion_atoi(datoEntero,strlen(datoEntero));
        			str_cpy(datoEntero,ingresarDatosEnteros("\nIngresa el patron: "));
        			patron = funcion_atoi(datoEntero,strlen(datoEntero));
-       			cuadrado=(int**)calloc(num,sizeof(int*));
+       			cout<<endl;
+				cuadrado=(int**)calloc(num,sizeof(int*));
 				for(int i=0;i<(2*dimension-1);i++){
 					*(cuadrado+i)=(int *)calloc((2*dimension-1),sizeof(int));
 				}
 				cubo= new CuboMagico(cuadrado);
 				obj= new FuncionesCubo(cubo);
-				obj->llenar(num, patron, dimension);
+				num=2*dimension-1;
+				cout<<num<<endl;
+				obj->llenar(num, num);
 				obj->mostrar((2*dimension-1),(2*dimension-1));
         		system("PAUSE");
         		break;

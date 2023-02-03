@@ -11,7 +11,7 @@
 class Cubo
 {
 public:
-   virtual void llenar(int a, int b, int c)=0;
+   virtual void llenar(int a, int b)=0;
    virtual void mostrar(int a, int b)=0;
 
 protected:

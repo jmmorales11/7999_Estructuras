@@ -28,18 +28,33 @@ int main(){
        			str_cpy(datoEntero,ingresarDatosEnteros("\nIngresa el patron: "));
        			patron = funcion_atoi(datoEntero,strlen(datoEntero));
        			cuadrado=(int**)calloc(num,sizeof(int*));
-				for(int i=0;i<(2*dimension-1);i++){
-					*(cuadrado+i)=(int *)calloc((2*dimension-1),sizeof(int));
+       			if(dimension==4){
+       				for(int i=0;i<(dimension);i++){
+					*(cuadrado+i)=(int *)calloc((dimension),sizeof(int));
+					}
+					cubo= new CuboMagico(cuadrado);
+					obj= new FuncionesCubo(cubo);
+					obj->suma(dimension, numero,patron);
+					obj->llenar2(dimension,numero,patron);
+					obj->mostrar2(dimension);
+				   }if(dimension%2!=0){
+				   
+					for(int i=0;i<(2*dimension-1);i++){
+						*(cuadrado+i)=(int *)calloc((2*dimension-1),sizeof(int));
+					}
+					cubo= new CuboMagico(cuadrado);
+					obj= new FuncionesCubo(cubo);
+					obj->llenar1(dimension,numero,patron);
+					obj->mostrar1(dimension);
+					num=2*dimension-1;
+					obj->suma(dimension, numero,patron);
+					obj->llenar(num, numero, patron);
+					obj->mostrar((2*dimension-1),(2*dimension-1));
+				}else{
+					cout<<endl;
+					cout<<"Dimension no permitida"<<endl;
 				}
-				cubo= new CuboMagico(cuadrado);
-				obj= new FuncionesCubo(cubo);
-				obj->llenar1(dimension,numero,patron);
-				obj->mostrar1(dimension);
-				cout<<"AAAAAAAAAAAAAAAAAA"<<endl;
-				num=2*dimension-1;
-				obj->suma(dimension, numero,patron);
-				obj->llenar(num, numero, patron);
-				obj->mostrar((2*dimension-1),(2*dimension-1));
+				
         		system("PAUSE");
         		break;
         	case 0:
