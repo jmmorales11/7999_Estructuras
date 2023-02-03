@@ -44,13 +44,10 @@ int main(){
 					}
 					cubo= new CuboMagico(cuadrado);
 					obj= new FuncionesCubo(cubo);
-					obj->llenar1(dimension,numero,patron);
-					obj->mostrar1(dimension);
-					num=2*dimension-1;
 					obj->suma(dimension, numero,patron);
-					obj->llenar(num, numero, patron);
-					obj->mostrar((2*dimension-1));
-				}else{
+					obj->llenar1(dimension,numero,patron);
+					obj->mostrar1(dimension);	
+					}else{
 					cout<<endl;
 					cout<<"Dimension no permitida"<<endl;
 				}
