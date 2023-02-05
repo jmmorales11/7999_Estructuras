@@ -1,6 +1,6 @@
 #include "FuncionesInterfaz.h"
 #include <windows.h>
-
+#include <graphics.h>
 void FuncionesInterfaz::encerarTablero(void){
 	for(int i=0;i<this->reina->n;i++){
 		this->reina->validar[i]=new bool[this->reina->n];
@@ -31,7 +31,7 @@ void FuncionesInterfaz::bloquear(int x, int y){
 	}
 	aux2=0;
 	aux1=x;
-	while(aux2<this->reina->n){
+	while(aux2<this->reina->n){//horizontal
 	//	cout<<"while2 "<<endl;
 		*(*(this->reina->validar+aux1)+aux2)=true;
 		aux2++;
@@ -42,21 +42,28 @@ void FuncionesInterfaz::bloquear(int x, int y){
 		aux1--;
 		aux2--;
 	}
-	aux2=y;
-	aux1=x;
-	while(aux1<this->reina->n && aux2>0){
-		aux1++;
-		aux2--;
-	}
-	aux1--;
-	aux2++;
-	while(aux1>=0 && aux2<this->reina->n){
-		*(*(this->reina->validar+aux1)+aux2)=true;
-		aux1--;
-		aux2++;
-	}
+	
+	while (aux1 < this->reina->n && aux2 < this->reina->n) { //FALTABA
+        *(*(this->reina->validar+aux1)+aux2)=true; //FALTABA
+        aux1++; //FALTABA
+        aux2++; //FALTABA
+    	}
+		aux2=y;
+		aux1=x;
+		while(aux1<this->reina->n && aux2>0){
+			aux1++;
+			aux2--;
+		}
+		if (x + y >= this->reina->n) { //FALTABA
+            aux1--;
+            aux2++;
+        } //FALTABA
+        while(aux1>=0 && aux2<this->reina->n){
+			*(*(this->reina->validar+aux1)+aux2)=true;
+			aux1--;
+			aux2++;
+		}
 }
-
 void FuncionesInterfaz::mostrar(void){
 
 	this->reina->contador++;
@@ -71,6 +78,9 @@ void FuncionesInterfaz::mostrar(void){
 				else{
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15|0);
 				}
+				if (*(*(this->reina->tablero+i)+j)=='R'){
+					dibujoReina(i,j);
+				}
 			this->archivo<<*(*(this->reina->tablero+i)+j)<<" ";
 			cout<<*(*(this->reina->tablero+i)+j)<<" ";
 		}
@@ -79,6 +89,7 @@ void FuncionesInterfaz::mostrar(void){
 	}
 	this->archivo<<endl;
 	cout<<endl;
+	system("pause");
 }
 
 void FuncionesInterfaz::quitarRelleno(int x, int y){
@@ -117,3 +128,31 @@ void FuncionesInterfaz::solucionReinas(void){
 	}
 	archivo.close();
 }
+
+
+void FuncionesInterfaz::dibujoReina(int fila, int columna){
+	int x=250;
+	int y=150;
+	int x1=301;
+	int y1=200;
+	int aux2=50;
+	int aux3=50;
+	for(int i=0;i<this->reina->n;i++){
+		for(int j=0;j<this->reina->n;j++){
+			if(i==fila &&j==columna){
+			readimagefile("reina.jpg",x,y,x1,y1);
+		//	setfillstyle(SOLID_FILL, 6);
+		//  fillellipse(x,y, 5, 10);
+		//  fillellipse(x,y+aux, 10, 15);
+		//  bar(x1,y+aux1,x1+aux,y1);
+		   }
+		   	x+=aux2;
+		   	x1+=aux2;
+		}
+		x=251;
+		x1=301;
+		y+=aux3;
+		y1+=aux3;
+	}
+
+	}

@@ -1,14 +1,23 @@
+/***********************************************************************
+ * Module:  CuboMagico.cpp
+ * Author:  Jeimy Morales y Orrico Camilo
+ * Modified: miércoles, 1 de febrero de 2023 18:19:30
+ * Purpose: Implementation of the class CuboMagico
+ ***********************************************************************/
 #include "FuncionesInterfaz.cpp"
 #include "FuncionA.cpp"
 #include "validar.h"
 #include <conio.h>
 #include <string.h>
 #include <graphics.h>
+#include <math.h>
+#include <conio.h>
 int main(int argc, char** argv) {
 	int gd = DETECT;
 	int gm;
 	//initgraph(&gd, &gm,"C:\TC\8GI");
 	initwindow(1150,700); 
+	
 	int numero,nume;
 	int opcion, n;
 	char datoEntero[10];
@@ -17,6 +26,9 @@ int main(int argc, char** argv) {
 	Alfil *alfil;
 	FuncionA *obj1;
 	int fila, columna;
+//	readimagefile("reina.jpg",250,150,301,200);
+//	readimagefile("alfil.jpg",350,150,401,200);
+	system("pause");
 	do{
 		obj1->cuadrado();
 		system("color 0F");
@@ -35,8 +47,10 @@ int main(int argc, char** argv) {
 		columna=0;
         switch(opcion){
         	case 1:
-        		str_cpy(datoEntero,ingresarDatosEnteros("\n\tIngrese el numero de Reinas "));
-        		n = funcion_atoi(datoEntero,strlen(datoEntero));
+        		cout<<"\n\tIngrese el numero de Reinas "<<endl;
+        		cin>>n;
+        	/*	str_cpy(datoEntero,ingresarDatosEnteros("\n\tIngrese el numero de Reinas "));
+        		n = funcion_atoi(datoEntero,strlen(datoEntero));*/
         		rei = new Reina(n);
         		obj= new FuncionesInterfaz(rei);
         		obj->solucionReinas();

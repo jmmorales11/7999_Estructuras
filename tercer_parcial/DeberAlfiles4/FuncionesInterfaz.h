@@ -70,6 +70,6 @@ class FuncionesInterfaz:public Tablero{
 	 * 
 	 */
     void solucionReinas(void);
-	
+	void dibujoReina(int fila, int columna);
 		
 };

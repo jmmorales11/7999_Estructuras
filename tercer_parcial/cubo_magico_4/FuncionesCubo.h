@@ -44,16 +44,7 @@
 		 * 
 		 */
 		void suma(int, int, int);
-		/**
-		 * @brief Funcion mostrar
-		 * 
-		 */
-		void mostrar1(int);
-		/**
-		 * @brief Funcion llenar cuadrado
-		 * 
-		 */
-		void llenar1(int, int, int);
+	
 		/**
 		 * @brief Funcion mostrar
 		 * 
@@ -64,4 +55,6 @@
 		 * 
 		 */
 		void llenar2(int, int, int);
+		void dibujar(int);
+		void dibujarNum(int dim, int fila, int columna, int num);
  };

@@ -1,3 +1,10 @@
+/***********************************************************************
+ * Module:  CuboMagico.cpp
+ * Author:  Jeimy Morales y Orrico Camilo
+ * Modified: miércoles, 1 de febrero de 2023 18:19:30
+ * Purpose: Implementation of the class CuboMagico
+ ***********************************************************************/
+
 #include "FuncionA.h"
 #include <windows.h>
 #include <graphics.h>
@@ -218,7 +225,7 @@ void FuncionA::bloquearAlfiles(int x, int y){
 	}
 
 	}
-	 void FuncionA::circulo(int fila, int columna){
+/*	 void FuncionA::circulo1(int fila, int columna){
 	int x=275;
 	int y=172;
 	int radio=20;
@@ -234,6 +241,31 @@ void FuncionA::bloquearAlfiles(int x, int y){
 		}
 		x=275;
 		y+=51;
+	}
+	*/
+	void FuncionA::circulo(int fila, int columna){
+	int x=250;
+	int y=150;
+	int x1=301;
+	int y1=200;
+	int aux2=50;
+	int aux3=50;
+	for(int i=0;i<MAX;i++){
+		for(int j=0;j<MAX;j++){
+			if(i==fila &&j==columna){
+			readimagefile("alfil.jpg",x,y,x1,y1);
+		//	setfillstyle(SOLID_FILL, 6);
+		//  fillellipse(x,y, 5, 10);
+		//  fillellipse(x,y+aux, 10, 15);
+		//  bar(x1,y+aux1,x1+aux,y1);
+		   }
+		   	x+=aux2;
+		   	x1+=aux2;
+		}
+		x=251;
+		x1=301;
+		y+=aux3;
+		y1+=aux3;
 	}
 
 	}
