@@ -1,6 +1,7 @@
 solucion4*4
 
 solucion N 1
+<<<<<<< HEAD
 R * * * * * * * 
 * * * R * * * * 
 * R * * * * * * 
@@ -3439,4 +3440,10 @@ solucion N 344
 * R * * * * * * 
 * * * R * * * * 
 R * * * * * * * 
+=======
+* * R * 
+R * * * 
+* * * R 
+* R * * 
+>>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
 

@@ -37,6 +37,8 @@ public:
     * @param a 
     */
    virtual void mostrar(int a)=0;
+   virtual void llenar2(int, int, int)=0;
+   	virtual void mostrar2(int)=0;
    /**
     * @brief Funcion suma
     * 
