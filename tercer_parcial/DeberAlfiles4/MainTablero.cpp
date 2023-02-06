@@ -35,9 +35,10 @@ int main(int argc, char** argv) {
 		columna=0;
         switch(opcion){
         	case 1:
-        		str_cpy(datoEntero,ingresarDatosEnteros("\n\tIngrese el numero de Reinas "));
-        		n = funcion_atoi(datoEntero,strlen(datoEntero));
-        		rei = new Reina(n);
+        		//str_cpy(datoEntero,ingresarDatosEnteros("\n\tIngrese el numero de Reinas "));
+        		//n = funcion_atoi(datoEntero,strlen(datoEntero));
+        		cin>>n;
+				rei = new Reina(n);
         		obj= new FuncionesInterfaz(rei);
         		obj->solucionReinas();
         		cout<<"Se creo el archivo txt"<<endl;

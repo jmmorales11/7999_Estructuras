@@ -12,6 +12,7 @@
 #include <iostream>
 #include <fstream>
 #include "Reina.cpp"
+#define DIMENSION 8
 using namespace std;
 class FuncionesInterfaz:public Tablero{
 	
