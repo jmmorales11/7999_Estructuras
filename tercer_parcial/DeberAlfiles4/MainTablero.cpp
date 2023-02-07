@@ -47,11 +47,18 @@ int main(int argc, char** argv) {
 		columna=0;
         switch(opcion){
         	case 1:
+<<<<<<< HEAD
+        		//str_cpy(datoEntero,ingresarDatosEnteros("\n\tIngrese el numero de Reinas "));
+        		//n = funcion_atoi(datoEntero,strlen(datoEntero));
+        		cin>>n;
+				rei = new Reina(n);
+=======
         		cout<<"\n\tIngrese el numero de Reinas "<<endl;
         		cin>>n;
         	/*	str_cpy(datoEntero,ingresarDatosEnteros("\n\tIngrese el numero de Reinas "));
         		n = funcion_atoi(datoEntero,strlen(datoEntero));*/
         		rei = new Reina(n);
+>>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
         		obj= new FuncionesInterfaz(rei);
         		obj->solucionReinas();
         		cout<<"Se creo el archivo txt"<<endl;

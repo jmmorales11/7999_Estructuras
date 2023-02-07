@@ -2,10 +2,10 @@
 #include <windows.h>
 #include <graphics.h>
 void FuncionesInterfaz::encerarTablero(void){
-	for(int i=0;i<this->reina->n;i++){
+	for(int i=0;i<DIMENSION;i++){
 		this->reina->validar[i]=new bool[this->reina->n];
 		this->reina->tablero[i]=new char[this->reina->n];
-		for(int j=0;j<this->reina->n;j++){
+		for(int j=0;j<DIMENSION;j++){
 			*(*(this->reina->validar+i)+j)=false;
 			*(*(this->reina->tablero+i)+j)='*';
 		}
@@ -20,19 +20,21 @@ void FuncionesInterfaz::crearArchivo(void){
 }
 
 void FuncionesInterfaz::bloquear(int x, int y){
-//	cout<<"Bloquear"<<endl;
 	int aux1,aux2;
 	aux2=y;
 	aux1=0;
-	while(aux1<this->reina->n){//vertical
-	//	cout<<"while "<<endl;
+	while(aux1<DIMENSION){//vertical
 		*(*(this->reina->validar+aux1)+aux2)=true;
 		aux1++;
 	}
 	aux2=0;
 	aux1=x;
+<<<<<<< HEAD
+	while(aux2<DIMENSION){//horizontal
+=======
 	while(aux2<this->reina->n){//horizontal
 	//	cout<<"while2 "<<endl;
+>>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
 		*(*(this->reina->validar+aux1)+aux2)=true;
 		aux2++;
 	}
@@ -43,13 +45,28 @@ void FuncionesInterfaz::bloquear(int x, int y){
 		aux2--;
 	}
 	
+<<<<<<< HEAD
+	while (aux1 < DIMENSION && aux2 < DIMENSION) { //FALTABA
+=======
 	while (aux1 < this->reina->n && aux2 < this->reina->n) { //FALTABA
+>>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
         *(*(this->reina->validar+aux1)+aux2)=true; //FALTABA
         aux1++; //FALTABA
         aux2++; //FALTABA
     	}
 		aux2=y;
 		aux1=x;
+<<<<<<< HEAD
+		while(aux1<DIMENSION && aux2>0){
+			aux1++;
+			aux2--;
+		}
+		if (x + y >= DIMENSION) { //FALTABA
+            aux1--;
+            aux2++;
+        } //FALTABA
+        while(aux1>=0 && aux2<DIMENSION){
+=======
 		while(aux1<this->reina->n && aux2>0){
 			aux1++;
 			aux2--;
@@ -59,6 +76,7 @@ void FuncionesInterfaz::bloquear(int x, int y){
             aux2++;
         } //FALTABA
         while(aux1>=0 && aux2<this->reina->n){
+>>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
 			*(*(this->reina->validar+aux1)+aux2)=true;
 			aux1--;
 			aux2++;
@@ -70,8 +88,8 @@ void FuncionesInterfaz::mostrar(void){
 	this->archivo<<"solucion N "<<this->reina->contador<<endl;
 	cout<<"solucion N "<<this->reina->contador<<endl;
 	cout<<endl;
-	for(int i=0;i<this->reina->n;i++){
-		for(int j=0;j<this->reina->n;j++){
+	for(int i=0;i<DIMENSION;i++){
+		for(int j=0;j<DIMENSION;j++){
 			if((i+j)%2==0){
 					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0| BACKGROUND_INTENSITY);
 				}
@@ -94,13 +112,13 @@ void FuncionesInterfaz::mostrar(void){
 
 void FuncionesInterfaz::quitarRelleno(int x, int y){
 	*(*(this->reina->tablero +x)+y)='*';
-	for(int i=0;i<this->reina->n;i++){
-		for(int j=0;j<this->reina->n;j++){
+	for(int i=0;i<DIMENSION;i++){
+		for(int j=0;j<DIMENSION;j++){
 			*(*(this->reina->validar +i)+j)=false;
 		}
 			}
-	for(int i=0;i<this->reina->n;i++){
-		for(int j=0;j<this->reina->n;j++){
+	for(int i=0;i<DIMENSION;i++){
+		for(int j=0;j<DIMENSION;j++){
 			if(*(*(this->reina->tablero  +i)+j)=='R')
 			bloquear(i,j);
 		}	
@@ -113,7 +131,7 @@ void FuncionesInterfaz::solucion(int x, int y, int n1){
 	if(n1==this->reina->n){
 		mostrar();
 	}else{
-		for(int i=0;i<this->reina->n ;i++){
+		for(int i=0;i<DIMENSION ;i++){
 			if(*(*(this->reina->validar +i )+ y+1)==false){
 				solucion(i,y+1,n1+1);
 			}
@@ -123,7 +141,7 @@ void FuncionesInterfaz::solucion(int x, int y, int n1){
 }
 
 void FuncionesInterfaz::solucionReinas(void){
-	for(int i=0;i<this->reina->n ;i++){
+	for(int i=0;i<DIMENSION ;i++){
 		solucion(i,0,1);
 	}
 	archivo.close();
