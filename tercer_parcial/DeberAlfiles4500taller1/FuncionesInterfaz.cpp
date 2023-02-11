@@ -370,8 +370,8 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 	    double a = 20;
 	    for (x = 0; x <= 101; x++)
 	    {
-	        y = 515 - a * pow(2, x / 25.0);
-	        putpixel(x+800, y, CYAN);
+	        y = 465 - a * pow(2, x / 25.0);
+	        putpixel(x+850, y, CYAN);
 	    }
 	}
 	void dibujarBigOExponecialAzul(){
@@ -379,8 +379,8 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 	    double c = 0.5;
 	    for (x2 = 0; x2 <= 232; x2++)
 	    {
-	        y2 = 500 - c * pow(2, x2 / 25.0);
-	        putpixel(x2+800, y2, BLUE);
+	        y2 = 450 - c * pow(2, x2 / 25.0);
+	        putpixel(x2+850, y2, BLUE);
 	    }
 	}
 	void dibujarBigOExponecialNaranja(){
@@ -388,7 +388,7 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 	    double b = 15;
 	    for (x1 = 0; x1 <= 111; x1++)
 	    {
-	        y1 = 514 - b * pow(2, x1 / 25.0);
-	        putpixel(x1+800, y1, 6);
+	        y1 = 464 - b * pow(2, x1 / 25.0);
+	        putpixel(x1+850, y1, 6);
 	    }
 	}
