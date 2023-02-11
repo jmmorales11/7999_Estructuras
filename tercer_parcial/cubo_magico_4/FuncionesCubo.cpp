@@ -1,4 +1,11 @@
-#include "FuncionesCubo.h"
+/***********************************************************************
+ * Module:  CuboMagico.cpp
+ * Author:  Jeimy Morales y Orrico Camilo
+ * Modified: martes 7 de febrero de 2023 18:19:30
+ * Purpose: Implementation of the class CuboMagico
+ ***********************************************************************/
+ 
+ #include "FuncionesCubo.h"
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
@@ -135,13 +142,16 @@ void FuncionesCubo::dibujar(int dim){
 		int y=151;
 		int x1=301;
 		int y1=201;
+		
 		char vecS[10];
 		for(int i=0;i<dim;i++){
 			rectangle(x,y,x1,y1);
 			for(int j=0;j<dim;j++){
+				//setfillstyle(SOLID_FILL, 2);
+				//bar(x,y,x1,y1);
+				setcolor(5);
 				rectangle(x,y,x1,y1);
-			//	sprintf(vecS, "%d",*(*(this->cubo->getCuadrado()+i)+j));
-			//	outtextxy(x,y, vecS);
+
 				x+=51;
 				x1+=51;
 				
@@ -152,13 +162,14 @@ void FuncionesCubo::dibujar(int dim){
 		y+=51;
 		y1+=51;
 	}
+	setcolor(3);
+	settextstyle(11,HORIZ_DIR,1);
 }
 
 
 void FuncionesCubo::dibujarNum(int dim, int fila, int columna, int num){
 		int x=260;
 		int y=160;
-		settextstyle(3,HORIZ_DIR,2);
 		char vecS[5];
 		for(int i=0;i<dim;i++){
 			for(int j=0;j<dim;j++){

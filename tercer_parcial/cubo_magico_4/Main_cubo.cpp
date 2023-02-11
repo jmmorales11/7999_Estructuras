@@ -1,8 +1,9 @@
-/*********************************************
-Jeimy Morales
-Camilo Orrico
-
-**********************************************/
+/***********************************************************************
+ * Module:  CuboMagico.cpp
+ * Author:  Jeimy Morales y Orrico Camilo
+ * Modified: martes, 7 de febrero de 2023 18:19:30
+ * Purpose: Implementation of the class CuboMagico
+ ***********************************************************************/
 
 
 
@@ -22,9 +23,12 @@ int main(){
 	char datoEntero[10];
 	CuboMagico *cubo;
 	FuncionesCubo *obj;
-
+	setcolor(7);
+	settextstyle(3,HORIZ_DIR,6);
+	outtextxy(220,100,"Cuadrado Magico");
+	readimagefile("cuadro.jpg",200,200,800,500);
+	setcolor(15);
 	do{
-		
 		system("cls");
 		cout << "-----------------------MENU-----------------------" << endl
              << endl; 
@@ -51,7 +55,8 @@ int main(){
        			str_cpy(datoEntero,ingresarDatosEnteros("\nIngresa el patron: "));
        			patron = funcion_atoi(datoEntero,strlen(datoEntero));
        			
-       		*/	obj->dibujar(dimension);	
+       		*/	cleardevice();
+			   obj->dibujar(dimension);	
 			   cuadrado=(int**)calloc(num,sizeof(int*));
        			if(dimension==4){
        				for(int i=0;i<(dimension);i++){

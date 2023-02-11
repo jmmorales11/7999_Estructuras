@@ -29,12 +29,12 @@ void FuncionesInterfaz::bloquear(int x, int y){
 	}
 	aux2=0;
 	aux1=x;
-<<<<<<< HEAD
+
 	while(aux2<DIMENSION){//horizontal
-=======
+
 	while(aux2<this->reina->n){//horizontal
 	//	cout<<"while2 "<<endl;
->>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
+
 		*(*(this->reina->validar+aux1)+aux2)=true;
 		aux2++;
 	}
@@ -45,18 +45,18 @@ void FuncionesInterfaz::bloquear(int x, int y){
 		aux2--;
 	}
 	
-<<<<<<< HEAD
+
 	while (aux1 < DIMENSION && aux2 < DIMENSION) { //FALTABA
-=======
+
 	while (aux1 < this->reina->n && aux2 < this->reina->n) { //FALTABA
->>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
+
         *(*(this->reina->validar+aux1)+aux2)=true; //FALTABA
         aux1++; //FALTABA
         aux2++; //FALTABA
     	}
 		aux2=y;
 		aux1=x;
-<<<<<<< HEAD
+
 		while(aux1<DIMENSION && aux2>0){
 			aux1++;
 			aux2--;
@@ -66,7 +66,7 @@ void FuncionesInterfaz::bloquear(int x, int y){
             aux2++;
         } //FALTABA
         while(aux1>=0 && aux2<DIMENSION){
-=======
+
 		while(aux1<this->reina->n && aux2>0){
 			aux1++;
 			aux2--;
@@ -76,7 +76,7 @@ void FuncionesInterfaz::bloquear(int x, int y){
             aux2++;
         } //FALTABA
         while(aux1>=0 && aux2<this->reina->n){
->>>>>>> 8b9bfd205ed73effd04ef1ae801ce07d31fffdaf
+
 			*(*(this->reina->validar+aux1)+aux2)=true;
 			aux1--;
 			aux2++;
