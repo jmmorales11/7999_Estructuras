@@ -1,6 +1,7 @@
 #include "FuncionesInterfaz.h"
 #include <windows.h>
 #include <graphics.h>
+#include <math.h>
 void FuncionesInterfaz::encerarTablero(void){
 	for(int i=0;i<DIMENSION;i++){
 		this->reina->validar[i]=new bool[DIMENSION];
@@ -363,4 +364,31 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 		y1+=aux3;
 	}
 
+	}
+	void dibujarBigOExponecialCeleste(){
+		int x, y;
+	    double a = 20;
+	    for (x = 0; x <= 101; x++)
+	    {
+	        y = 515 - a * pow(2, x / 25.0);
+	        putpixel(x+800, y, CYAN);
+	    }
+	}
+	void dibujarBigOExponecialAzul(){
+		int x2, y2;
+	    double c = 0.5;
+	    for (x2 = 0; x2 <= 232; x2++)
+	    {
+	        y2 = 500 - c * pow(2, x2 / 25.0);
+	        putpixel(x2+800, y2, BLUE);
+	    }
+	}
+	void dibujarBigOExponecialNaranja(){
+		int x1, y1;
+	    double b = 15;
+	    for (x1 = 0; x1 <= 111; x1++)
+	    {
+	        y1 = 514 - b * pow(2, x1 / 25.0);
+	        putpixel(x1+800, y1, 6);
+	    }
 	}

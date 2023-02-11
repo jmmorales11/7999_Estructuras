@@ -82,4 +82,7 @@ class FuncionesInterfaz:public Tablero{
 	void mostrarCaballo();
 	void BolquearCaballo(int x, int y);
 	void dibujocaballo(int fila, int columna);
+	void dibujarBigOExponecialCeleste();
+	void dibujarBigOExponecialAzul();
+	void dibujarBigOExponecialNaranja();
 };
