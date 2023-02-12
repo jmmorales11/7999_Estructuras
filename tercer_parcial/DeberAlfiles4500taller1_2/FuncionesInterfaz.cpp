@@ -135,7 +135,7 @@ void FuncionesInterfaz::mostrar(void){
 }
 
 void FuncionesInterfaz::mostrarReina(void){
-
+	dibujarBigOExponecialAzul();
 	this->reina->contador++;
 	this->archivo<<"solucion N "<<this->reina->contador<<endl;
 	cout<<"solucion N "<<this->reina->contador<<endl;
@@ -223,6 +223,7 @@ void FuncionesInterfaz::dibujoReina(int fila, int columna){
 	int y1=200;
 	int aux2=50;
 	int aux3=50;
+	
 	for(int i=0;i<DIMENSION;i++){
 		for(int j=0;j<DIMENSION;j++){
 			if(i==fila &&j==columna){
@@ -385,12 +386,16 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 		line(850,400,1100,400);
 	}
 	void FuncionesInterfaz::LineaRoja(){
+		settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
 		setcolor(4);
-		outtextxy(1090,380,"O(log n )");
-		line(850,399,1100,398);
+		outtextxy(1100,373,"O(log n )");
+		line(850,399,1100,396);
 	}
 	void FuncionesInterfaz::LineaA(){
-		
+		settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
+		setcolor(3);
+		outtextxy(1100,390,"O(n!)");
+		line(850,399,1100,398);
 	}
 	
 	void FuncionesInterfaz::graficarBigHoraSuperLineal(){
@@ -440,4 +445,22 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 	        y1 = 414 - b * pow(2, x1 / 13.0);
 	        putpixel(x1+850, y1, 6);
 	    }
+	}
+	void FuncionesInterfaz::presentacio(){
+		ejes();
+		LineaRoja();
+		LineaA();
+		graficarBigTiempoLineal();
+		graficarBigHoraSuperLineal();
+		dibujarBigOExponecialCeleste();
+		dibujarBigOExponecialAzul();
+		dibujarBigOExponecialNaranja();
+		settextstyle(7,HORIZ_DIR,2);
+		outtextxy(200,650,"Morales Sosa Jeimy Marley");
+		outtextxy(200,650,"Orrico Emme Camilo Andres");
+		outtextxy(200,650,"Paucar Suquillo Jorge Sebastian");
+		outtextxy(200,650,"Pozo Analuisa Steven Jefferson");
+		outtextxy(200,650,"Imbaquinga Guaña Jose Ricardo");
+		outtextxy(200,650,"Jairo Smith Quilumbaquin Lanchimba");
+		outtextxy(200,650,"Morales Jeimy");
 	}

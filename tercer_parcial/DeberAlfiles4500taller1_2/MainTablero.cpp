@@ -28,16 +28,19 @@ int main(int argc, char** argv) {
 	FuncionA *obj1;
 	int fila, columna;
 		
-	obj->ejes();
+	/*obj->ejes();
 	obj->graficarBigHoraSuperLineal();
 	obj->graficarBigTiempoLineal();
 	obj->dibujarBigOExponecialAzul();
 	obj->dibujarBigOExponecialCeleste();
 	obj->dibujarBigOExponecialNaranja();
 	obj->LineaRoja();
-	system("pause");
+	*/
+	
 	do{
-		obj1->cuadrado();
+		obj->presentacio();
+		system("pause");
+	
 		system("color 0F");
 		system("cls");
 		cout << "-----------------------MENU-----------------------" << endl
@@ -54,6 +57,9 @@ int main(int argc, char** argv) {
 		cout<<"\n";
 		fila=0;
 		columna=0;
+		cleardevice();
+		obj1->cuadrado();
+		obj->ejes();
         switch(opcion){
         	case 1:
         		cout<<"\n\tIngrese el numero de Reinas "<<endl;

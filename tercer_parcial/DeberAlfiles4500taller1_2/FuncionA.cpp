@@ -204,8 +204,8 @@ void FuncionA::bloquearAlfiles(int x, int y){
 		outtextxy(220,1,"Tablero ajedrez");
 		setcolor(15);
 		settextstyle(7,HORIZ_DIR,2);
-		outtextxy(200,650,"Morales Jeimy");
-		outtextxy(550,650,"Orrico Camilo");
+//		outtextxy(200,650,"Morales Jeimy");
+//		outtextxy(550,650,"Orrico Camilo");
 		//outtextxy(100,30,"Orrico Camilo");
 		rectangle(199,100,709,609);
 		setfillstyle(SOLID_FILL, 13);

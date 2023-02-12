@@ -90,4 +90,5 @@ class FuncionesInterfaz:public Tablero{
 	void dibujarBigOExponecialCeleste();
 	void dibujarBigOExponecialAzul();
 	void dibujarBigOExponecialNaranja();
+	void presentacio();
 };
