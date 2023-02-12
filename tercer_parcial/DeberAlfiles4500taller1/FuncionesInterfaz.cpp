@@ -1,6 +1,7 @@
 #include "FuncionesInterfaz.h"
 #include <windows.h>
 #include <graphics.h>
+#include <math.h>
 void FuncionesInterfaz::encerarTablero(void){
 	for(int i=0;i<DIMENSION;i++){
 		this->reina->validar[i]=new bool[DIMENSION];
@@ -364,10 +365,11 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 	}
 
 	}
+
 	
 	void FuncionesInterfaz::ejes(){
 		settextstyle(3,0,1);
-		outtextxy(890,435,"Elementos");
+	/*	outtextxy(890,435,"Elementos");
 		settextstyle(3,1,1);
 		outtextxy(800,180,"O");
 		outtextxy(800,200,"p");
@@ -379,7 +381,7 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 		outtextxy(800,320,"o");
 		outtextxy(800,340,"n");
 		outtextxy(800,360,"e");
-		outtextxy(800,380,"s");
+		outtextxy(800,380,"s");*/
 		line(850,400,850,150);
 		line(850,400,1100,400);
 	}
@@ -412,3 +414,31 @@ void FuncionesInterfaz::graficarBigTiempoLineal(){
 	setcolor(YELLOW);
 	outtextxy(1100,350,"O(n)");
 }
+	void dibujarBigOExponecialCeleste(){
+		int x, y;
+	    double a = 20;
+	    for (x = 0; x <= 101; x++)
+	    {
+	        y = 465 - a * pow(2, x / 25.0);
+	        putpixel(x+850, y, CYAN);
+	    }
+	}
+	void dibujarBigOExponecialAzul(){
+		int x2, y2;
+	    double c = 0.5;
+	    for (x2 = 0; x2 <= 232; x2++)
+	    {
+	        y2 = 450 - c * pow(2, x2 / 25.0);
+	        putpixel(x2+850, y2, BLUE);
+	    }
+	}
+	void dibujarBigOExponecialNaranja(){
+		int x1, y1;
+	    double b = 15;
+	    for (x1 = 0; x1 <= 111; x1++)
+	    {
+	        y1 = 464 - b * pow(2, x1 / 25.0);
+	        putpixel(x1+850, y1, 6);
+	    }
+	}
+

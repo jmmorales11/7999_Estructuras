@@ -87,4 +87,7 @@ class FuncionesInterfaz:public Tablero{
 	void LineaA();
 	void graficarBigTiempoLineal();
 	void graficarBigHoraSuperLineal();
+	void dibujarBigOExponecialCeleste();
+	void dibujarBigOExponecialAzul();
+	void dibujarBigOExponecialNaranja();
 };

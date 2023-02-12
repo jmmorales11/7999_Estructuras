@@ -28,32 +28,9 @@ int main(int argc, char** argv) {
 	FuncionA *obj1;
 	int fila, columna;
 	
-/*	
-	line(850,400,850,150);
-	line(850,400,1100,400);
-//	line(85,60,90,50);
-//	line(95,60,90,50);
-//	line(585,405,590,410);
-//	line(585,415,590,410);
-	
-	settextstyle(3,0,1);
-	outtextxy(890,435,"Elementos");
-	settextstyle(3,1,1);
-	outtextxy(800,180,"O");
-	outtextxy(800,200,"p");
-	outtextxy(800,220,"e");
-	outtextxy(800,240,"r");
-	outtextxy(800,260,"a");
-	outtextxy(800,280,"c");
-	outtextxy(800,300,"i");
-	outtextxy(800,320,"o");
-	outtextxy(800,340,"n");
-	outtextxy(800,360,"e");
-	outtextxy(800,380,"s");
-	setcolor(4);
-	outtextxy(1090,380,"O(log n )");
-	line(850,399,1100,398);
-*/	
+	obj->dibujarBigOExponecialAzul();
+	obj->dibujarBigOExponecialCeleste();
+	obj->dibujarBigOExponecialNaranja();
 	obj->ejes();
 	obj->graficarBigHoraSuperLineal();
 	obj->graficarBigTiempoLineal();
