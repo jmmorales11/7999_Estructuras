@@ -5,8 +5,7 @@
  * Purpose: Declaration of the class funcion
  ***********************************************************************/
 
-#if !defined(__Hexadecimal&Decimal_funcion_h)
-#define __Hexadecimal&Decimal_funcion_h
+
 
 class funcion
 {
@@ -18,5 +17,3 @@ protected:
 private:
 
 };
-
-#endif

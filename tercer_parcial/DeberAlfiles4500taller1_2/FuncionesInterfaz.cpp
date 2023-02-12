@@ -422,6 +422,8 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 	        y = 415 - a * pow(2, x / 10.0);
 	        putpixel(x+850, y, CYAN);
 	    }
+	    setcolor(CYAN);
+		outtextxy(838,120,"O(n!)");
 	}
 	void FuncionesInterfaz::dibujarBigOExponecialAzul(){
 		int x2, y2;
@@ -431,6 +433,8 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 	        y2 = 400 - c * pow(2, x2 / 20.0);
 	        putpixel(x2+850, y2, BLUE);
 	    }
+	    setcolor(BLUE);
+		outtextxy(970,150,"O(n^2)");
 	}
 	void FuncionesInterfaz::dibujarBigOExponecialNaranja(){
 		int x1, y1;
@@ -440,4 +444,6 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 	        y1 = 414 - b * pow(2, x1 / 13.0);
 	        putpixel(x1+850, y1, 6);
 	    }
+	    setcolor(6);
+		outtextxy(888,125,"O(2^n)");
 	}
