@@ -15,8 +15,8 @@ class ListaDoble {
 		//Constructor
 		ListaDoble();
 		//metodos de orden de la lista
-   		void insertarPorCabeza(string *objP);
-   		void insertarPorCola(string *objP);
+   		void insertarPorCabeza(string objP);
+   		void insertarPorCola(string objP);
     	void eliminarPorCabeza();
     	void eliminarPorCola();
 		void mostrarPorCabeza();

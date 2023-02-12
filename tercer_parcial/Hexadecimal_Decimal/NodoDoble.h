@@ -11,19 +11,18 @@ GITHUB: Grupo-1-Estructura-de-datos-7999
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
-#include "Hex_Dec.cpp"
-#pragma once
+
 using namespace std;
 class NodoDoble{
 	private:
-		string *obj;
+		string obj;
 		NodoDoble *siguiente;
 		NodoDoble *anterior;
 	public:
-		NodoDoble(string * , NodoDoble*,NodoDoble*);
+		NodoDoble(string , NodoDoble*,NodoDoble*);
 		NodoDoble();	
-	    string* getObjeto(void);
-    	void setObjP(string *newObj);
+	    string getObjeto(void);
+    	void setObjP(string newObj);
     	NodoDoble *getSiguiente();
     	void setSiguiente(NodoDoble *);
     	NodoDoble *getAnterior();

@@ -17,7 +17,7 @@ using namespace std;
  * @param ant puntero al nodo anterior
  */
 
-NodoDoble::NodoDoble(string *objPP, NodoDoble *sig, NodoDoble *ant)
+NodoDoble::NodoDoble(string objPP, NodoDoble *sig, NodoDoble *ant)
 {
 	this->obj=objPP;	
 	this->siguiente=sig;
@@ -39,7 +39,7 @@ NodoDoble::NodoDoble()
  * @return El objeto de la clase Empleado.
  */
 
-string* NodoDoble::getObjeto(){
+string NodoDoble::getObjeto(){
 	return obj;
 }
 
@@ -49,7 +49,7 @@ string* NodoDoble::getObjeto(){
  * @param newObjEmpleado es un puntero a un objeto de tipo Empleado
  */
 
-void NodoDoble::setObjP(string *newObjP)
+void NodoDoble::setObjP(string newObjP)
 {
 	obj = newObjP;
 }

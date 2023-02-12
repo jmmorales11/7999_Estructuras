@@ -91,7 +91,7 @@ int ListaDoble<T>::getNumNodos() {
  * @param empleado es un objeto de la clase Empleado
  */
 template <typename T>
-void ListaDoble<T>::insertarPorCabeza(string *objP)
+void ListaDoble<T>::insertarPorCabeza(string objP)
 {
 
   	
@@ -119,7 +119,7 @@ void ListaDoble<T>::insertarPorCabeza(string *objP)
  * @param empleado es un objeto de la clase Empleado
  */
 template <typename T>
-void ListaDoble<T>::insertarPorCola(string *objP)
+void ListaDoble<T>::insertarPorCola(string objP)
 {	cout<<"COLA"<<endl; 
 	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
 	if(getListaVacia())
@@ -144,9 +144,9 @@ void ListaDoble<T>::insertarPorCola(string *objP)
  * 
  * @param empleado es un objeto de la clase Empleado
  */
- 
+ /*
 template <typename T>
-void ListaDoble<T>::insertarEntre(string *objP){
+void ListaDoble<T>::insertarEntre(string objP){
 		  
 	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
 	char posC[10], datoEntero[10];
@@ -196,7 +196,7 @@ void ListaDoble<T>::insertarEntre(string *objP){
 	}
 
 }
-  
+  */
 /**
  * Elimina el primer nodo de la lista.
  */

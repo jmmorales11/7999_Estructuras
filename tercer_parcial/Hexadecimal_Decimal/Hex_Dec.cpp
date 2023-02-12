@@ -40,21 +40,21 @@ Hex_Dec::~Hex_Dec()
 void Hex_Dec::lisHex(void)
 {
    ListaDoble<string> *lis = new ListaDoble<string>();
-   lis->insertarPorCola('0');
-   lis->insertarPorCola('1');
-   lis->insertarPorCola('2');
-   lis->insertarPorCola('3');
-   lis->insertarPorCola('4');
-   lis->insertarPorCola('5');
-   lis->insertarPorCola('6');
-   lis->insertarPorCola('7');
-   lis->insertarPorCola('8');
-   lis->insertarPorCola('9');
-   lis->insertarPorCola('A');
-   lis->insertarPorCola('B');
-   lis->insertarPorCola('C');
-   lis->insertarPorCola('D');
-   lis->insertarPorCola('E');
-   lis->insertarPorCola('F');
+   lis->insertarPorCola("0");
+   lis->insertarPorCola("1");
+   lis->insertarPorCola("2");
+   lis->insertarPorCola("3");
+   lis->insertarPorCola("4");
+   lis->insertarPorCola("5");
+   lis->insertarPorCola("6");
+   lis->insertarPorCola("7");
+   lis->insertarPorCola("8");
+   lis->insertarPorCola("9");
+   lis->insertarPorCola("A");
+   lis->insertarPorCola("B");
+   lis->insertarPorCola("C");
+   lis->insertarPorCola("D");
+   lis->insertarPorCola("E");
+   lis->insertarPorCola("F");
    lis->mostrarPorCabeza();
 }
