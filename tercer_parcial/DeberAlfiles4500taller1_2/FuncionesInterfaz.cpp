@@ -18,6 +18,7 @@ void FuncionesInterfaz::crearArchivo(void){
 	this->archivo.open("exaustivo.txt",fstream::out);
 	this->archivo<<"solucion"<<DIMENSION<<"*"<<DIMENSION<<endl<<endl;
 	this->reina->contador=0;
+	LineaA();
 }
 
 void FuncionesInterfaz::bloquear(int x, int y){
@@ -209,6 +210,7 @@ void FuncionesInterfaz::solucionRB(int x, int y, int n1){
 			cout<<"SolucionRB"<<endl;
 			mostrarReina();
 		}
+		
 }
 
 void FuncionesInterfaz::solucionReinasB(int i, int j){
@@ -313,7 +315,7 @@ void FuncionesInterfaz::dibujoReina(int fila, int columna){
 }
 
 void FuncionesInterfaz::BolquearCaballo(int x, int y){
-
+	graficarBigTiempoLineal();
 	*(*(this->reina->validar+x)+y)=true;
 	//abajo
 	if(x<6){
@@ -394,7 +396,7 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 	void FuncionesInterfaz::LineaA(){
 		settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
 		setcolor(3);
-		outtextxy(1100,390,"O(n!)");
+		outtextxy(1100,390,"O(1)");
 		line(850,399,1100,398);
 	}
 	
@@ -420,6 +422,7 @@ void FuncionesInterfaz::graficarBigTiempoLineal(){
 }
 
 void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
+	settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
 		int x, y;
 	    double a = 20;
 	    for (x = 0; x <= 38; x++)
@@ -427,8 +430,11 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 	        y = 415 - a * pow(2, x / 10.0);
 	        putpixel(x+850, y, CYAN);
 	    }
+	    setcolor(CYAN);
+		outtextxy(838,120,"O(n!)");
 	}
 	void FuncionesInterfaz::dibujarBigOExponecialAzul(){
+		settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
 		int x2, y2;
 	    double c = 8;
 	    for (x2 = 0; x2 <=100; x2++)
@@ -436,15 +442,20 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 	        y2 = 400 - c * pow(2, x2 / 20.0);
 	        putpixel(x2+850, y2, BLUE);
 	    }
+	    setcolor(BLUE);
+		outtextxy(970,150,"O(n^2)");
 	}
 	void FuncionesInterfaz::dibujarBigOExponecialNaranja(){
+		settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
 		int x1, y1;
 	    double b = 15;
 	    for (x1 = 0; x1 <= 54; x1++)
 	    {
 	        y1 = 414 - b * pow(2, x1 / 13.0);
 	        putpixel(x1+850, y1, 6);
-	    }
+	    }setcolor(6);
+		outtextxy(888,125,"O(2^n)");
+
 	}
 	void FuncionesInterfaz::presentacio(){
 		ejes();
@@ -455,12 +466,17 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 		dibujarBigOExponecialCeleste();
 		dibujarBigOExponecialAzul();
 		dibujarBigOExponecialNaranja();
-		settextstyle(7,HORIZ_DIR,2);
-		outtextxy(200,650,"Morales Sosa Jeimy Marley");
-		outtextxy(200,650,"Orrico Emme Camilo Andres");
-		outtextxy(200,650,"Paucar Suquillo Jorge Sebastian");
-		outtextxy(200,650,"Pozo Analuisa Steven Jefferson");
-		outtextxy(200,650,"Imbaquinga Guaña Jose Ricardo");
-		outtextxy(200,650,"Jairo Smith Quilumbaquin Lanchimba");
-		outtextxy(200,650,"Morales Jeimy");
+		setcolor(3);
+		settextstyle(3,HORIZ_DIR,6);
+		outtextxy(250,20,"Aritmetica de la notacion O");
+		readimagefile("BIGO.jpg",100,150,600,400);
+		setcolor(15);
+		settextstyle(3,HORIZ_DIR,1);
+/*
+		outtextxy(100,500,"Imbaquinga Jose ");
+		outtextxy(100,525,"Jairo Quilumbaquin");
+		outtextxy(100,750,"   ");
+		
+  */
+
 	}

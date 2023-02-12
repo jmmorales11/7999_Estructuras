@@ -16,7 +16,7 @@
 int main(int argc, char** argv) {
 	int gd = DETECT;
 	int gm;
-	initgraph(&gd, &gm,"C:\TC\8GI");
+	//initgraph(&gd, &gm,"C:\TC\8GI");
 	initwindow(1250,700); 
 	
 	int numero,nume;
@@ -27,20 +27,9 @@ int main(int argc, char** argv) {
 	Alfil *alfil;
 	FuncionA *obj1;
 	int fila, columna;
-		
-	/*obj->ejes();
-	obj->graficarBigHoraSuperLineal();
-	obj->graficarBigTiempoLineal();
-	obj->dibujarBigOExponecialAzul();
-	obj->dibujarBigOExponecialCeleste();
-	obj->dibujarBigOExponecialNaranja();
-	obj->LineaRoja();
-	*/
 	
 	do{
 		obj->presentacio();
-		system("pause");
-	
 		system("color 0F");
 		system("cls");
 		cout << "-----------------------MENU-----------------------" << endl

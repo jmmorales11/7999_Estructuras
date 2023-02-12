@@ -5,10 +5,9 @@
  * Purpose: Declaration of the class Hex_Dec
  ***********************************************************************/
 
-#if !defined(__Hexadecimal&Decimal_Hex_Dec_h)
-#define __Hexadecimal&Decimal_Hex_Dec_h
 
-#include <funcion.h>
+
+#include "funcion.h"
 
 class Hex_Dec : public funcion
 {
@@ -30,4 +29,3 @@ private:
 
 };
 
-#endif
