@@ -283,7 +283,7 @@ void FuncionesInterfaz::dibujoReina(int fila, int columna){
 	}
 	
 	void FuncionesInterfaz::mostrarCaballo(void){
-
+	
 	this->reina->contador++;
 	this->archivo<<"solucion N "<<this->reina->contador<<endl;
 	cout<<endl;
@@ -364,3 +364,51 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 	}
 
 	}
+	
+	void FuncionesInterfaz::ejes(){
+		settextstyle(3,0,1);
+		outtextxy(890,435,"Elementos");
+		settextstyle(3,1,1);
+		outtextxy(800,180,"O");
+		outtextxy(800,200,"p");
+		outtextxy(800,220,"e");
+		outtextxy(800,240,"r");
+		outtextxy(800,260,"a");
+		outtextxy(800,280,"c");
+		outtextxy(800,300,"i");
+		outtextxy(800,320,"o");
+		outtextxy(800,340,"n");
+		outtextxy(800,360,"e");
+		outtextxy(800,380,"s");
+		line(850,400,850,150);
+		line(850,400,1100,400);
+	}
+	void FuncionesInterfaz::LineaRoja(){
+		setcolor(4);
+		outtextxy(1090,380,"O(log n )");
+		line(850,399,1100,398);
+	}
+	void FuncionesInterfaz::LineaA(){
+		
+	}
+	
+	void FuncionesInterfaz::graficarBigHoraSuperLineal(){
+	setcolor(GREEN);
+	line(850,400,1100,150);
+	settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
+	setcolor(WHITE);
+//	outtextxy(950,200,nombreFuncion);
+	settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
+	setcolor(YELLOW);
+	outtextxy(1100,150,"O(nlogn)");
+}
+void FuncionesInterfaz::graficarBigTiempoLineal(){
+	setcolor(MAGENTA);
+	line(850,400,1100,350);
+	settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
+	setcolor(WHITE);
+//	outtextxy(950,390,nombreFuncion);
+	settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
+	setcolor(YELLOW);
+	outtextxy(1100,350,"O(n)");
+}
