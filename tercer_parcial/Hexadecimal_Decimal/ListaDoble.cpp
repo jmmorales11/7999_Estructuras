@@ -96,9 +96,7 @@ void ListaDoble<T>::insertarPorCabeza(string objP)
 
   	
 	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
-	cout<<"\nInsertado  "<<getListaVacia()<<"LISTA"<<endl;
-	if(getListaVacia()){
-	cout<<"vacia"<<endl;	
+	if(getListaVacia()){	
 	nuevoNody->setSiguiente(this->primero);
 	setPrimero(nuevoNody);
 	setActual(nuevoNody);
@@ -120,7 +118,7 @@ void ListaDoble<T>::insertarPorCabeza(string objP)
  */
 template <typename T>
 void ListaDoble<T>::insertarPorCola(string objP)
-{	cout<<"COLA"<<endl; 
+{	 
 	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
 	if(getListaVacia())
 	{
