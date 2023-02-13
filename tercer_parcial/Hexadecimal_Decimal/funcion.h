@@ -12,7 +12,7 @@ class funcion
 public:
    virtual int Transformar(void)=0;
    virtual int tamano(void)=0;
-
+   virtual void lisHex(void)=0;
 protected:
 private:
 

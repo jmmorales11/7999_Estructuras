@@ -8,7 +8,7 @@
 #include <string>
 #pragma once
 using namespace std;
-class Hex_Dec : public funcion
+class Hex_Dec
 {
 public:
    string getHex(void);
@@ -17,7 +17,7 @@ public:
    void setDec(int newDec);
    Hex_Dec();
    ~Hex_Dec();
-   void lisHex(void);
+//   void lisHex(void);
 
 protected:
 private:

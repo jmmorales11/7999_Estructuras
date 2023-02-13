@@ -6,7 +6,6 @@
  ***********************************************************************/
 
 #include "Hex_Dec.h"
-#include "ListaDoble.cpp"
 using namespace std;
 string Hex_Dec::getHex(void)
 {
@@ -37,7 +36,7 @@ Hex_Dec::~Hex_Dec()
    // TODO : implement
 }
 
-void Hex_Dec::lisHex(void)
+/*void Hex_Dec::lisHex(void)
 {
    ListaDoble<string> *lis = new ListaDoble<string>();
    lis->insertarPorCola("0");
@@ -57,4 +56,4 @@ void Hex_Dec::lisHex(void)
    lis->insertarPorCola("E");
    lis->insertarPorCola("F");
    lis->mostrarPorCabeza();
-}
+}*/

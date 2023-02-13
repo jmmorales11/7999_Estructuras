@@ -26,7 +26,6 @@ ListaDoble<T>::ListaDoble()
 template <typename T>
 bool ListaDoble<T>::getListaVacia()
 {
-	cout<<"Vacia"<<endl;
 	return (this->primero==NULL);
 }
  
@@ -96,13 +95,17 @@ void ListaDoble<T>::insertarPorCabeza(string objP)
 
   	
 	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b1b099cb223429a314c55e892e7664fc1ef3244
 	if(getListaVacia()){	
 	nuevoNody->setSiguiente(this->primero);
 	setPrimero(nuevoNody);
 	setActual(nuevoNody);
 	this->numNodos++;
 	}else{
-		cout<<"llna"<<endl;
+	
 	nuevoNody->setSiguiente(this->primero);
 	this->primero->setAnterior(nuevoNody);
 	setPrimero(nuevoNody);
@@ -118,7 +121,11 @@ void ListaDoble<T>::insertarPorCabeza(string objP)
  */
 template <typename T>
 void ListaDoble<T>::insertarPorCola(string objP)
+<<<<<<< HEAD
 {	 
+=======
+{	
+>>>>>>> 3b1b099cb223429a314c55e892e7664fc1ef3244
 	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
 	if(getListaVacia())
 	{
