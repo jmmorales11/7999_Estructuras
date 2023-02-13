@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Hex_Dec.cpp"
+#include "FuncionesHexa_Dec.cpp"
 int main(){
-	Hex_Dec *Obj;
-	Obj->lisHex();
+	FuncionesHexa_Dec *Obj= new FuncionesHexa_Dec();
+	Obj->Transformar();
 }

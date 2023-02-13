@@ -2,6 +2,8 @@
 #include <windows.h>
 #include <graphics.h>
 #include <math.h>
+
+
 void FuncionesInterfaz::encerarTablero(void){
 	for(int i=0;i<DIMENSION;i++){
 		this->reina->validar[i]=new bool[DIMENSION];
@@ -180,6 +182,7 @@ void FuncionesInterfaz::quitarRelleno(int x, int y){
 }
 
 void FuncionesInterfaz::solucion(int x, int y, int n1){
+	graficarBigHoraSuperLineal();
 	*(*(this->reina->tablero +x)+y)='R';
 	bloquear(x,y);
 	if(n1==this->reina->n){
@@ -204,6 +207,7 @@ void FuncionesInterfaz::solucionReinas(void){
 }
 
 void FuncionesInterfaz::solucionRB(int x, int y, int n1){
+	graficarBigTiempoLineal();
 	*(*(this->reina->tablero +x)+y)='R';
 		bloquearR(x,y);
 		if(n1==this->reina->n){
@@ -279,6 +283,7 @@ void FuncionesInterfaz::dibujoReina(int fila, int columna){
 	}
 	
 	void FuncionesInterfaz::caballoS(int x ,int y, int n1){
+		graficarBigTiempoLineal();
 		*(*(this->reina->tablero +x)+y)='C';
 		BolquearCaballo(x,y);
 		if(n1==this->reina->n){
@@ -287,7 +292,7 @@ void FuncionesInterfaz::dibujoReina(int fila, int columna){
 	}
 	
 	void FuncionesInterfaz::mostrarCaballo(void){
-	
+	dibujarBigOExponecialAzul();
 	this->reina->contador++;
 	this->archivo<<"solucion N "<<this->reina->contador<<endl;
 	cout<<endl;
@@ -370,6 +375,7 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 	}
 	
 	void FuncionesInterfaz::ejes(){
+		setcolor(15);
 		settextstyle(3,0,1);
 		outtextxy(890,435,"Elementos");
 		settextstyle(3,1,1);
@@ -387,7 +393,7 @@ void FuncionesInterfaz::dibujocaballo(int fila, int columna){
 		line(850,400,850,150);
 		line(850,400,1100,400);
 	}
-	void FuncionesInterfaz::LineaRoja(){
+  	void FuncionesInterfaz::LineaRoja(){
 		settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
 		setcolor(4);
 		outtextxy(1100,373,"O(log n )");
@@ -457,6 +463,8 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 		outtextxy(888,125,"O(2^n)");
 
 	}
+
+
 	void FuncionesInterfaz::presentacio(){
 		ejes();
 		LineaRoja();
@@ -472,11 +480,11 @@ void FuncionesInterfaz::dibujarBigOExponecialCeleste(){
 		readimagefile("BIGO.jpg",100,150,600,400);
 		setcolor(15);
 		settextstyle(3,HORIZ_DIR,1);
-/*
+	/*
 		outtextxy(100,500,"Imbaquinga Jose ");
 		outtextxy(100,525,"Jairo Quilumbaquin");
 		outtextxy(100,750,"   ");
 		
-  */
+  	*/
 
 	}

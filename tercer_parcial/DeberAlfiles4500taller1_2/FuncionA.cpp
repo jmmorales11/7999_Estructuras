@@ -8,8 +8,9 @@
 #include "FuncionA.h"
 #include <windows.h>
 #include <graphics.h>
-
+#include "lineas.h"
 void FuncionA::encerarTablero(){
+		dibujarBigOExponecialAzul();
 	for(int i=0;i<MAX;i++){
 		this->alfil->validar[i]=new bool[MAX];
 		this->alfil->tablero[i]=new char[MAX];
@@ -20,6 +21,7 @@ void FuncionA::encerarTablero(){
 	}	
 }
 void FuncionA::crearArchivo(){
+	LineaA();
 	cout<<"Archivo"<<endl;
 	this->archivo.open("exaustivoAlfiles.txt",fstream::out);
 	this->archivo<<"solucion"<<this->alfil->n<<"*"<<this->alfil->n<<endl<<endl;
@@ -29,7 +31,7 @@ void FuncionA::crearArchivo(){
 
 void FuncionA::bloquearAlfiles(int x, int y){
 	int aux1,aux2;
-
+	dibujarBigOExponecialAzul();
 	aux2=y;//diagonal
 	aux1=x;
 	while(aux1>0&&aux2>0){
@@ -64,6 +66,7 @@ void FuncionA::bloquearAlfiles(int x, int y){
 	
 	}
 	void FuncionA::mostrarAlfil(){
+		dibujarBigOExponecialAzul();
 		this->alfil->contador++;
 		this->archivo<<"solucion N "<<this->alfil->contador <<endl;
 		cout<<"solucion N "<<this->alfil->contador <<endl;
@@ -92,6 +95,7 @@ void FuncionA::bloquearAlfiles(int x, int y){
 	}
 
 	void FuncionA::quitarRelleno(int x, int y){
+		dibujarBigOExponecialAzul();
 		*(*(this->alfil->tablero +x)+y)='*';
 		for(int i=0;i<MAX;i++){
 			for(int j=0;j<MAX;j++){
@@ -108,6 +112,7 @@ void FuncionA::bloquearAlfiles(int x, int y){
 
 	
 	void FuncionA::solucionAlfiles(int x, int y, int n1){
+		graficarBigTiempoLineal();
 		*(*(this->alfil->tablero +x)+y)='A';
 		bloquearAlfiles(x,y);
 		if(n1==this->alfil->n){
@@ -115,6 +120,8 @@ void FuncionA::bloquearAlfiles(int x, int y){
 		}
 	}
 	void FuncionA::solucionReinas(){
+		dibujarBigOExponecialAzul();
+		dibujarBigOExponecialAzul();
 		for(int i=0;i<MAX;i++){
 		for(int j=0;j<MAX;j++){
 			solucion(i,j,1);
@@ -123,6 +130,7 @@ void FuncionA::bloquearAlfiles(int x, int y){
 		archivo.close();	
 	}
 	void FuncionA::solucion(int x, int y, int n1){
+		graficarBigHoraSuperLineal();
 		*(*(this->alfil->tablero +x)+y)='A';
 		bloquear(x,y);
 		if(n1==this->alfil->n){
@@ -137,7 +145,7 @@ void FuncionA::bloquearAlfiles(int x, int y){
 		quitarRelleno(x,y);
 	}
 	void FuncionA::bloquear(int x, int y){
-		
+	dibujarBigOExponecialAzul();	
 	int aux1,aux2;
 	aux2=y;//diagonal
 	aux1=x;
