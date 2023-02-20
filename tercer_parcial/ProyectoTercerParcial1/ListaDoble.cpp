@@ -254,17 +254,14 @@ void ListaDoble<T>::eliminarEntre(int pos){
 
 	if(getListaVacia())
 	{
-		printf("\nNo se puede eliminar debido a que la lista esta vacia");
-				
+		printf("\nNo se puede eliminar debido a que la lista esta vacia");		
 	}
 	else
 	{
-
 		int i=1;
 		NodoDoble<T> *aux=this->primero;
 		while(aux)
-		{
-			
+		{	
 			if(pos==1){
 		     eliminarPorCabeza();
 			break;
@@ -287,15 +284,36 @@ void ListaDoble<T>::eliminarEntre(int pos){
 				aux=NULL;
 				numNodos--;
 				break;
-				
 			}
 			aux=aux->getSiguiente();
-			
 			i++;	
 		}
 	}
 }
-  
+
+template <typename T>
+void ListaDoble<T>::repetidos(){
+	NodoDoble<T> *aux=this->primero;
+	NodoDoble<T> *aux1;
+	int cont=0;
+	int con1=1;
+	while(aux!=NULL){
+		cont=con1;
+		aux1=aux->getSiguiente();
+		
+		while(aux1!=NULL){
+			cont+=1;
+			if(aux->getObjeto()==aux1->getObjeto()){
+				this->eliminarEntre(cont);
+				cont-=1;
+			}
+			aux1=aux1->getSiguiente();
+		}
+		con1+=1;
+		aux=aux->getSiguiente();
+	}
+}
+ 
 /**
  * Es una función que imprime la información de los empleados en la lista
  */
@@ -353,6 +371,46 @@ T ListaDoble<T>::buscarPosicion(int posicion){
 	}
 	return actual->getObjeto();
 }
+
+template <typename T>
+void ListaDoble<T>::eliminarPorValor(T obj){
+	bool afirmar=false;
+	NodoDoble<T> *aux;
+	aux = this->primero;
+	NodoDoble<T> *antes;
+	antes =  NULL;
+	int cont=0;
+	if(getListaVacia())
+	{
+		cout<<"\nNo se puede eliminar elementos de una lista sin objetos."<<endl;
+	}
+	else
+	{
+		while(aux !=NULL&&afirmar!= true){
+			cont++;
+			if(aux->getObjeto()==obj){
+				//cout<<"\nEl elemento "<<obj<<" Si se encuentra en la lista en la posicion: "<<cont<<endl;
+				if(aux==this->primero){
+					this->primero = this->primero->getSiguiente();
+					this->primero->setAnterior(NULL) ;
+				}else if(aux==this->actual){
+					
+					this->actual->setSiguiente(NULL);
+					this->actual = antes;
+				}else{
+					antes->setSiguiente(aux->getSiguiente());
+					aux->getSiguiente()->setAnterior(antes);
+				}
+				//cout<<"\nElemento eliminado\n";
+				afirmar = true;
+			}
+			antes=aux;
+			aux=aux->getSiguiente();
+		}
+	
+}
+}
+
 /*
 template <typename T>
 void ListaDoble<T>::ordenamientoBurbuja(){
