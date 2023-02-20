@@ -25,24 +25,27 @@ int main(){
 	*/
 
 	//COMPLEMENTO
-/*	Operaciones<string> *op;
+/*	//Operaciones<string> *op;
 	ListaDoble<string> *obj= new ListaDoble<string>();
 	obj->insertarPorCola("b");
-	obj->insertarPorCola("a");
+	obj->insertarPorCola("i");
 	obj->insertarPorCola("b");
 	obj->insertarPorCola("c");
 	obj->insertarPorCola("y");
 	obj->insertarPorCola("e");
 	obj->insertarPorCola("a");
-	ListaDoble<string> *obj1= new ListaDoble<string>();
-	obj1->insertarPorCola("e");
-	obj1->insertarPorCola("a");
+	obj->eliminarPorValor("a");
+	obj->mostrarPorCabeza();
+//	ListaDoble<string> *obj1= new ListaDoble<string>();
+//	obj1->insertarPorCola("e");
+//	obj1->insertarPorCola("a");
 //	obj1->insertarPorCola("y");
-	ListaDoble<string> *obj2= new ListaDoble<string>();
-	obj2->insertarPorCola("i");
-	obj2->insertarPorCola("c");
-	op->complemento(obj2,obj1,obj);*/
-
+//	ListaDoble<string> *obj2= new ListaDoble<string>();
+//	obj2->insertarPorCola("e");
+//	obj2->insertarPorCola("a");
+//	op->complemento(obj2,obj1,obj);*/
+	
+//DIFERNCIA
 	Operaciones<string> *op;
 	ListaDoble<string> *obj= new ListaDoble<string>();
 	obj->insertarPorCola("b");
@@ -52,6 +55,7 @@ int main(){
 	obj->insertarPorCola("y");
 	obj->insertarPorCola("e");
 	obj->insertarPorCola("a");
+	obj->insertarPorCola("y");
 	ListaDoble<string> *obj1= new ListaDoble<string>();
 	obj1->insertarPorCola("e");
 	obj1->insertarPorCola("a");

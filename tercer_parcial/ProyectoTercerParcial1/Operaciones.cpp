@@ -77,12 +77,16 @@ template <typename T>
 void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
 	lista1->repetidos();
 	lista2->repetidos();
-	NodoDoble<T> *aux=lista1->getPrimero();
+	NodoDoble<T> *aux=lista2->getPrimero();
 	NodoDoble<T> *aux1;
+	lista1->mostrarPorCabeza();
 	while(aux!=NULL){
-		aux1=lista2->getPrimero();
+
+		aux1=lista1->getPrimero();
 		while(aux1!=NULL){
+			cout<<aux->getObjeto()<<aux1->getObjeto()<<endl;
 			if(aux->getObjeto()==aux1->getObjeto()){
+				cout<<"ELIMINAR"<<aux->getObjeto()<<aux1->getObjeto()<<endl;
 				lista1->eliminarPorValor(aux->getObjeto());
 			}
 			aux1 = aux1->getSiguiente();

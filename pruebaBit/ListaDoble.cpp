@@ -1,6 +1,6 @@
 /*************************
 UFA - ESPE
-AUTORES: Camilo Orrico, Jeimy Morales
+AUTORES: Matías Padrón,Sebastian Torres, Cristhopher Villamarin, Paola Moncayo, Camilo Orrico, Jeimy Morales, Ariel Guevara
 FECHA DE CREACIÓN: 20/12/2022
 FECHA DE MODIFICACIÓN: 2/01/2023
 Grupo1-Métodos de búsqueda 
@@ -8,6 +8,10 @@ GITHUB: Grupo-1-Estructura-de-datos-7999
  *************************/
 #include "ListaDoble.h"
 #include "validar.h"
+#include <string>
+#include <algorithm>
+
+#include <iostream>
 #pragma once
 using namespace std;
 
@@ -36,7 +40,7 @@ bool ListaDoble<T>::getListaVacia()
  * @param first El primer nodo de la lista.
  */
 template <typename T>
-void ListaDoble<T>::setPrimero(NodoDoble<T> *first)
+void ListaDoble<T>::setPrimero(NodoDoble *first)
 {
 	primero = first;
 }
@@ -47,7 +51,7 @@ void ListaDoble<T>::setPrimero(NodoDoble<T> *first)
  * @param now El nodo que se establecerá como el nodo real.
  */
 template <typename T>
-void ListaDoble<T>::setActual(NodoDoble<T> *now)
+void ListaDoble<T>::setActual(NodoDoble *now)
 {
 	actual = now;
 }
@@ -58,7 +62,7 @@ void ListaDoble<T>::setActual(NodoDoble<T> *now)
  * @return El primer nodo de la lista.
  */
 template <typename T>
-NodoDoble<T> *ListaDoble<T>::getPrimero()
+NodoDoble *ListaDoble<T>::getPrimero()
 {
 	return primero;
 }
@@ -69,7 +73,7 @@ NodoDoble<T> *ListaDoble<T>::getPrimero()
  * @return El nodo real.
  */
 template <typename T>
-NodoDoble<T> *ListaDoble<T>::getActual()
+NodoDoble *ListaDoble<T>::getActual()
 {
 	return actual;
 }
@@ -91,11 +95,11 @@ int ListaDoble<T>::getNumNodos() {
  * @param empleado es un objeto de la clase Empleado
  */
 template <typename T>
-void ListaDoble<T>::insertarPorCabeza(T objP)
+void ListaDoble<T>::insertarPorCabeza(string objP)
 {
 
   	
-	NodoDoble<T> *nuevoNody=new NodoDoble<T>(objP,NULL,NULL);
+	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
 
 	if(getListaVacia()){	
 	nuevoNody->setSiguiente(this->primero);
@@ -118,9 +122,9 @@ void ListaDoble<T>::insertarPorCabeza(T objP)
  * @param empleado es un objeto de la clase Empleado
  */
 template <typename T>
-void ListaDoble<T>::insertarPorCola(T objP)
+void ListaDoble<T>::insertarPorCola(string objP)
 {	
-	NodoDoble<T> *nuevoNody=new NodoDoble<T>(objP,NULL,NULL);
+	NodoDoble *nuevoNody=new NodoDoble(objP,NULL,NULL);
 	if(getListaVacia())
 	{
 		setPrimero(nuevoNody);
@@ -207,7 +211,7 @@ void ListaDoble<T>::eliminarPorCabeza(){
 	}
 	else
 	{
-		NodoDoble<T> *nodoAuxiliar = this->primero->getSiguiente();
+		NodoDoble *nodoAuxiliar = this->primero->getSiguiente();
 		
 		primero=NULL;
 		this->numNodos--;
@@ -229,8 +233,8 @@ void ListaDoble<T>::eliminarPorCola(){
 	else if(numNodos==1){
 		eliminarPorCabeza();
 		}else{
-		NodoDoble<T> *nodoAuxiliar = this->primero;
-		NodoDoble<T> *nodoAnterior = NULL; 
+		NodoDoble *nodoAuxiliar = this->primero;
+		NodoDoble *nodoAnterior = NULL; 
 		while(nodoAuxiliar->getSiguiente()!=NULL)
         {
 				nodoAnterior=nodoAuxiliar;
@@ -254,14 +258,17 @@ void ListaDoble<T>::eliminarEntre(int pos){
 
 	if(getListaVacia())
 	{
-		printf("\nNo se puede eliminar debido a que la lista esta vacia");		
+		printf("\nNo se puede eliminar debido a que la lista esta vacia");
+				
 	}
 	else
 	{
+
 		int i=1;
-		NodoDoble<T> *aux=this->primero;
+		NodoDoble *aux=this->primero;
 		while(aux)
-		{	
+		{
+			
 			if(pos==1){
 		     eliminarPorCabeza();
 			break;
@@ -284,36 +291,15 @@ void ListaDoble<T>::eliminarEntre(int pos){
 				aux=NULL;
 				numNodos--;
 				break;
+				
 			}
 			aux=aux->getSiguiente();
+			
 			i++;	
 		}
 	}
 }
-
-template <typename T>
-void ListaDoble<T>::repetidos(){
-	NodoDoble<T> *aux=this->primero;
-	NodoDoble<T> *aux1;
-	int cont=0;
-	int con1=1;
-	while(aux!=NULL){
-		cont=con1;
-		aux1=aux->getSiguiente();
-		
-		while(aux1!=NULL){
-			cont+=1;
-			if(aux->getObjeto()==aux1->getObjeto()){
-				this->eliminarEntre(cont);
-				cont-=1;
-			}
-			aux1=aux1->getSiguiente();
-		}
-		con1+=1;
-		aux=aux->getSiguiente();
-	}
-}
- 
+  
 /**
  * Es una función que imprime la información de los empleados en la lista
  */
@@ -321,7 +307,7 @@ template <typename T>
 void ListaDoble<T>::mostrarPorCabeza()
 {
 	int i=0;
- 	NodoDoble<T> *aux=this->primero;
+ 	NodoDoble *aux=this->primero;
   	while(aux){
   		cout<<"\n[ "<<i<<" ]:["<<aux->getObjeto()<<"]"<<endl ;
   		aux=aux->getSiguiente();
@@ -334,7 +320,7 @@ template <typename T>
 T ListaDoble<T>::getPos(T objT){
 	
 		int i=1;
-		NodoDoble<T> *aux=this->primero;		
+		NodoDoble *aux=this->primero;		
 		while(aux)		
 		{
 			
@@ -350,8 +336,8 @@ T ListaDoble<T>::getPos(T objT){
 return 0;
 }
 template <typename T>
-int ListaDoble<T>::buscar(T hexa){
-	NodoDoble<T> *aux;
+int ListaDoble<T>::buscar(string hexa){
+	NodoDoble *aux;
 	aux = this->primero;
 	int i=0;
 	while(aux != NULL && aux->getObjeto() !=hexa){
@@ -361,9 +347,9 @@ int ListaDoble<T>::buscar(T hexa){
 	return i;
 }
 template <typename T>
-T ListaDoble<T>::buscarPosicion(int posicion){
+string ListaDoble<T>::buscarPosicion(int posicion){
 	int contador=1;
-	NodoDoble<T> *actual;
+	NodoDoble *actual;
 	actual = this->primero;
 	while(actual != NULL && contador<posicion){
 		actual = actual->getSiguiente();
@@ -371,45 +357,37 @@ T ListaDoble<T>::buscarPosicion(int posicion){
 	}
 	return actual->getObjeto();
 }
-
 template <typename T>
-void ListaDoble<T>::eliminarPorValor(T obj){
-	bool afirmar=false;
-	NodoDoble<T> *aux;
-	aux = this->primero;
-	NodoDoble<T> *antes;
-	antes =  NULL;
-	int cont=0;
-	if(getListaVacia())
-	{
-		cout<<"\nNo se puede eliminar elementos de una lista sin objetos."<<endl;
-	}
-	else
-	{
-		while(aux !=NULL&&afirmar!= true){
-			cont++;
-			if(aux->getObjeto()==obj){
-				//cout<<"\nEl elemento "<<obj<<" Si se encuentra en la lista en la posicion: "<<cont<<endl;
-				if(aux==this->primero){
-					this->primero = this->primero->getSiguiente();
-					this->primero->setAnterior(NULL) ;
-				}else if(aux==this->actual){
-					this->actual->setSiguiente(NULL);
-					this->actual = antes;
-				}else{
-					antes->setSiguiente(aux->getSiguiente());
-					aux->getSiguiente()->setAnterior(antes);
-				}if(aux->getSiguiente()==NULL){
-					this->actual->setSiguiente(NULL);
+void ListaDoble<T>::bit( int clave){
+	string nombre;
+	string aux;
+	string aux1;
+	NodoDoble *actual;
+	actual = this->primero;
+	while (actual !=NULL){
+		nombre= actual->getObjeto();
+		aux="";
+		for(int i =0; i<actual->getObjeto().length();i++){
+			
+			transform(nombre.begin(), nombre.end(), nombre.begin(), [](char const &c) {
+                    return std::toupper(c);
+                });
+                aux1=nombre[i];
+                for (auto c: aux1){
+                	if(isalpha(c)){
+                		c+=clave;
+                		if (c>'Z') c-=26;
+                		if(c<'A') c+=26;
+					}
+					aux+=c;
 				}
-				afirmar = true;
-			}
-			antes=aux;
-			aux=aux->getSiguiente();
 		}
+		actual->setObjP(aux);
+		actual= actual->getSiguiente();
+	}
 	
 }
-}
+
 
 /*
 template <typename T>
