@@ -5,29 +5,34 @@
 
 
 void FuncionesInterfaz::encerarTablero(void){
-	for(int i=0;i<DIMENSION;i++){
-		this->reina->validar[i]=new bool[DIMENSION];
-		this->reina->tablero[i]=new char[DIMENSION];
-		for(int j=0;j<DIMENSION;j++){
-			*(*(this->reina->validar+i)+j)=false;
-			*(*(this->reina->tablero+i)+j)='*';
+	dibujarBigOExponecialAzul();
+	for(int i=0;i<DIMENSION;i++){//O(n)
+		this->reina->validar[i]=new bool[DIMENSION];//O(1)
+		this->reina->tablero[i]=new char[DIMENSION];//O(1)
+		for(int j=0;j<DIMENSION;j++){//O(n)
+			*(*(this->reina->validar+i)+j)=false;//O(1)
+			*(*(this->reina->tablero+i)+j)='*';//O(1)
 		}
 	}
+	//O(n)*(0(1)+0(1))*O(n)*(0(1)+O(1))=O(n^2)
 }
 
 
 void FuncionesInterfaz::crearArchivo(void){
-	this->archivo.open("exaustivo.txt",fstream::out);
-	this->archivo<<"solucion"<<DIMENSION<<"*"<<DIMENSION<<endl<<endl;
-	this->reina->contador=0;
+	LineaA();
+	this->archivo.open("exaustivo.txt",fstream::out); //0(1)
+	this->archivo<<"solucion"<<DIMENSION<<"*"<<DIMENSION<<endl<<endl;//0(1)
+	this->reina->contador=0;//O(1)
+	//O(1)+O(1)+O(1)=O(1)
 	LineaA();
 }
 
 void FuncionesInterfaz::bloquear(int x, int y){
+	graficarBigTiempoLineal();
 	int aux1,aux2;
-	aux2=y;
+	aux2=y;//O(1)
 	aux1=0;
-	while(aux1<DIMENSION){//vertical
+	while(aux1<DIMENSION){//vertical//O(n)
 		*(*(this->reina->validar+aux1)+aux2)=true;
 		aux1++;
 	}
@@ -51,15 +56,15 @@ void FuncionesInterfaz::bloquear(int x, int y){
     	}
 		aux2=y;
 		aux1=x;
-		while(aux1<DIMENSION && aux2>0){
+		while(aux1<DIMENSION && aux2>0){//O(n)
 			aux1++;
 			aux2--;
 		}
-		if (x + y >= DIMENSION) { //FALTABA
+		if (x + y >= DIMENSION) { //FALTABA  //O(n)
             aux1--;
             aux2++;
-        } //FALTABA
-        while(aux1>=0 && aux2<DIMENSION){
+        } //FALTABA    
+        while(aux1>=0 && aux2<DIMENSION){//O(n)
 			*(*(this->reina->validar+aux1)+aux2)=true;
 			aux1--;
 			aux2++;
@@ -67,6 +72,7 @@ void FuncionesInterfaz::bloquear(int x, int y){
 }
 
 void FuncionesInterfaz::bloquearR(int x, int y){
+	graficarBigTiempoLineal();
 	int aux1,aux2;
 	aux2=y;
 	aux1=0;
@@ -111,7 +117,7 @@ void FuncionesInterfaz::bloquearR(int x, int y){
 }
 
 void FuncionesInterfaz::mostrar(void){
-
+	dibujarBigOExponecialAzul();
 	this->reina->contador++;
 	this->archivo<<"solucion N "<<this->reina->contador<<endl;
 	cout<<"solucion N "<<this->reina->contador<<endl;
@@ -135,6 +141,7 @@ void FuncionesInterfaz::mostrar(void){
 	}
 	this->archivo<<endl;
 	cout<<endl;
+	
 }
 
 void FuncionesInterfaz::mostrarReina(void){
@@ -182,39 +189,42 @@ void FuncionesInterfaz::quitarRelleno(int x, int y){
 }
 
 void FuncionesInterfaz::solucion(int x, int y, int n1){
-	graficarBigHoraSuperLineal();
-	*(*(this->reina->tablero +x)+y)='R';
+//	graficarBigHoraSuperLineal();
+	dibujarBigOExponecialNaranja();
+	*(*(this->reina->tablero +x)+y)='R';//O(1)
 	bloquear(x,y);
-	if(n1==this->reina->n){
+	if(n1==this->reina->n){//O(n)
 		mostrar();
-	}else{
-		for(int i=0;i<this->reina->n ;i++){
+	}else{//O(nlogn)
+		for(int i=0;i<this->reina->n ;i++){//O(n)
 			if(*(*(this->reina->validar +i )+ y+1)==false){
-				solucion(i,y+1,n1+1);
+				solucion(i,y+1,n1+1);//O(2^n)
 			}
 		}
 	}
 	quitarRelleno(x,y);	
+	//O(1)+O(n)+O(nlogn)+O(n)+O(2n^n)= 
 }
 
 void FuncionesInterfaz::solucionReinas(void){
-	for(int i=2;i<DIMENSION ;i++){
-		for(int j=0;j<DIMENSION;j++){
+	for(int i=2;i<DIMENSION ;i++){//O(n)
+		for(int j=0;j<DIMENSION;j++){//O(n)
 			solucion(i,j,1);
 		}
 	}
 	archivo.close();
+	//O(n)*O(n)=O(n^2)
 }
 
 void FuncionesInterfaz::solucionRB(int x, int y, int n1){
 	graficarBigTiempoLineal();
-	*(*(this->reina->tablero +x)+y)='R';
+	*(*(this->reina->tablero +x)+y)='R';//O(1)
 		bloquearR(x,y);
-		if(n1==this->reina->n){
-			cout<<"SolucionRB"<<endl;
+		if(n1==this->reina->n){//O(n)
+			cout<<"SolucionRB"<<endl;//O(1)
 			mostrarReina();
 		}
-		
+	//O(1)+O(n)*O(1)=O(n)
 }
 
 void FuncionesInterfaz::solucionReinasB(int i, int j){
@@ -321,30 +331,30 @@ void FuncionesInterfaz::dibujoReina(int fila, int columna){
 
 void FuncionesInterfaz::BolquearCaballo(int x, int y){
 	graficarBigTiempoLineal();
-	*(*(this->reina->validar+x)+y)=true;
+	*(*(this->reina->validar+x)+y)=true;//O(1)
 	//abajo
-	if(x<6){
-		*(*(this->reina->validar+x+2)+y+1)=true;
-		*(*(this->reina->validar+x+2)+y-1)=true;
+	if(x<6){//O(n)
+		*(*(this->reina->validar+x+2)+y+1)=true;//O(1)
+		*(*(this->reina->validar+x+2)+y-1)=true;//O(1)
 	}
-	if (x>1){
+	if (x>1){//O(n)
 		//Arriba
-	*(*(this->reina->validar+x-2)+y-1)=true;  
-	*(*(this->reina->validar+x-2)+y+1)=true;
+	*(*(this->reina->validar+x-2)+y-1)=true;  //O(1)
+	*(*(this->reina->validar+x-2)+y+1)=true;//O(1)
 	}
 	
-	if (y>1){
+	if (y>1){//O(n)
 		//IZQUIERDO
-		*(*(this->reina->validar+x-1)+y-2)=true;
-		*(*(this->reina->validar+x+1)+y-2)=true;
+		*(*(this->reina->validar+x-1)+y-2)=true;//O(1)
+		*(*(this->reina->validar+x+1)+y-2)=true;//O(1)
 	}
 	
-	if(y<6){
+	if(y<6){//O(n)
 		//Drecha
-		*(*(this->reina->validar+x+1)+y+2)=true;
-		*(*(this->reina->validar+x-1)+y+2)=true;
+		*(*(this->reina->validar+x+1)+y+2)=true;//O(1)
+		*(*(this->reina->validar+x-1)+y+2)=true;//O(1)
 	}
-	
+	//O(n)(O(1)+O(1))+O(n)(O(1)+O(1))+O(n)(O(1)+O(1))+O(n)(O(1)+O(1))=O(n)
 }
 
 void FuncionesInterfaz::dibujocaballo(int fila, int columna){
