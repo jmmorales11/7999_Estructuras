@@ -36,7 +36,7 @@ void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,L
 		}
 		aux = aux->getSiguiente();
 	}
-	lista3->mostrarPorCabeza();
+//	lista3->mostrarPorCabeza();
 }
 
 template <typename T> 
@@ -58,7 +58,7 @@ void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,Li
 			aux1=aux1->getSiguiente();
 		}	
 	}
-	lista3->mostrarPorCabeza();
+//	lista3->mostrarPorCabeza();
 	
 }
 
@@ -106,10 +106,27 @@ void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
 		}
 		aux = aux->getSiguiente();
 	}
-	lista1->mostrarPorCabeza();
+//	lista1->mostrarPorCabeza();
 }
 
 template <typename T> 
 void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
-	
+	lista1->repetidos();
+	lista2->repetidos();
+	ListaDoble<string> *obj= new ListaDoble<string>();
+	interseccion(lista1,lista2,obj);
+	uniones(lista1,lista2,lista3);
+	NodoDoble<T> *aux=obj->getPrimero();
+	NodoDoble<T> *aux1=lista3->getPrimero();
+	while(aux!=NULL){
+		aux1=lista3->getPrimero();
+		while(aux1!=NULL){
+			if(aux->getObjeto()==aux1->getObjeto()){
+				lista3->eliminarPorValor(aux->getObjeto());
+			}
+			aux1=aux1->getSiguiente();
+		}
+		aux=aux->getSiguiente();				
+	}
+//	lista3->mostrarPorCabeza();
 }

@@ -46,7 +46,7 @@ int main(){
 //	op->complemento(obj2,obj1,obj);*/
 	
 //DIFERNCIA
-	Operaciones<string> *op;
+/*	Operaciones<string> *op;
 	ListaDoble<string> *obj= new ListaDoble<string>();
 	obj->insertarPorCola("b");
 	obj->insertarPorCola("a");
@@ -61,5 +61,38 @@ int main(){
 	obj1->insertarPorCola("a");
 	ListaDoble<string> *obj2= new ListaDoble<string>();
 	op->interseccion(obj,obj1,obj2);
+	*/
+/*	Operaciones<string> *op;
+	ListaDoble<string> *obj= new ListaDoble<string>();
+	obj->insertarPorCola("b");
+	obj->insertarPorCola("a");
+	obj->insertarPorCola("b");
+	obj->insertarPorCola("c");
+	obj->insertarPorCola("y");
+	obj->insertarPorCola("e");
+	obj->insertarPorCola("a");
+	obj->insertarPorCola("y");
+	ListaDoble<string> *obj1= new ListaDoble<string>();
+	obj1->insertarPorCola("i");
+	obj1->insertarPorCola("a");
+	ListaDoble<string> *obj2= new ListaDoble<string>();
+	op->interseccion(obj,obj1,obj2);
+	*/
+/*	
+	Operaciones<string> *op;
+	ListaDoble<string> *obj= new ListaDoble<string>();
+	obj->insertarPorCola("b");
+	obj->insertarPorCola("a");
+	obj->insertarPorCola("b");
+	obj->insertarPorCola("c");
+	obj->insertarPorCola("y");
+	obj->insertarPorCola("e");
+	obj->insertarPorCola("a");
+	obj->insertarPorCola("y");
+	ListaDoble<string> *obj1= new ListaDoble<string>();
+	obj1->insertarPorCola("e");
+	obj1->insertarPorCola("a");
+	ListaDoble<string> *obj2= new ListaDoble<string>();
+	op->diferenciaSimetrica(obj,obj1,obj2);*/
 	return 0;
 }
