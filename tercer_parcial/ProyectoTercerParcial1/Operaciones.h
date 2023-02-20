@@ -8,9 +8,9 @@ public:
    void uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
    void interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
    void complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
-   void diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
+   void diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2);
    void diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
-
+   bool comparar(ListaDoble<T> *lista1, ListaDoble<T> *lista2);
 protected:
 private:
 	

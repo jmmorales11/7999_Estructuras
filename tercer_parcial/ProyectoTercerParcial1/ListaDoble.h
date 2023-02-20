@@ -16,6 +16,7 @@ class ListaDoble {
 		ListaDoble();
 		//metodos de orden de la lista
    		void insertarPorCabeza(T objP);
+   		void repetidos();
    		void insertarPorCola(T objP);
     	void eliminarPorCabeza();
     	void eliminarPorCola();
@@ -23,6 +24,7 @@ class ListaDoble {
 		bool getListaVacia();
 		void insertarEntre(T objP);
 		void eliminarEntre(int pos); 
+		void eliminarPorValor(T obj);
 		T getPos(T objT);
 	//	void ordenamientoBurbuja();
 		void setPrimero(NodoDoble<T>*);
