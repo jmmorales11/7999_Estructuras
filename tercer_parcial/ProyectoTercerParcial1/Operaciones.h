@@ -1,13 +1,19 @@
-class Operaciones
+#include "Conjuntos.h"
+#include "ListaDoble.cpp"
+template <typename T> 
+class Operaciones: public Conjuntos
 {
 public:
-   virtual void uniones()=0;
-   virtual void interseccion()=0;
-   virtual void complemento()=0;
-   virtual void diferencia()=0;
-   virtual void diferenciaSimetrica()=0;
+	Operaciones();
+   void uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
+   void interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
+   void complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
+   void diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
+   void diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
 
 protected:
 private:
+	
+	
 
 };
