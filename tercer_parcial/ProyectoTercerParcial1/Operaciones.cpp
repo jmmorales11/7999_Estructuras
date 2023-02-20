@@ -23,7 +23,20 @@ void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaD
 
 template <typename T> 
 void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
-	
+	lista1->repetidos();
+	lista2->repetidos();
+	NodoDoble<T> *aux=lista1->getPrimero();
+	while(aux!=NULL){
+		NodoDoble<T> *aux1=lista2->getPrimero();
+		while(aux1!=NULL){
+			if(aux->getObjeto()==aux1->getObjeto()){
+				lista3->insertarPorCola(aux->getObjeto());
+			}
+			aux1 = aux1->getSiguiente();
+		}
+		aux = aux->getSiguiente();
+	}
+	lista3->mostrarPorCabeza();
 }
 
 template <typename T> 

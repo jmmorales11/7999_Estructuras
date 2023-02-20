@@ -59,6 +59,7 @@ int main(){
 	ListaDoble<string> *obj1= new ListaDoble<string>();
 	obj1->insertarPorCola("e");
 	obj1->insertarPorCola("a");
-	op->diferencia(obj,obj1);
+	ListaDoble<string> *obj2= new ListaDoble<string>();
+	op->interseccion(obj,obj1,obj2);
 	return 0;
 }
