@@ -1,0 +1,34 @@
+¿Como se conocen a las operaciones de una pila?
+A) push y tirar;
+B) pop y eliminar;
+C) push y pop;
+D) empujar y insertar;
+ANSWER: C
+
+¿Que significa LIFO?
+A) Último en entrar, primero en salir;
+B) Primero en entrar, último en salir;
+C) Último en entrar, último en salir;
+D) Primero en entrar, primero en salir;
+ANSWER: A
+
+¿Que es una Pila?
+A) Es un tipo especial de lista abierta, la cual tiene 5 operaciones;
+B) Es un tipo especial de lista abierta, la cual tiene 2 operaciones;
+C) Es un tipo especial de lista abierta en la que sólo se pueden insertar nodos en uno de los extremos de la lista;
+D) Es un tipo de lista circular, la cual contiene el metodo push y pop;
+ANSWER: B
+
+Al insertar un elemto en la pila este se inserta:
+A) Al comienzo de la lista;
+B) Al final de la pila;
+C) Se ingresa la posicion en la que se desea insertar el elemento;
+D) Se inserta antes del ultimo elemento;
+ANSWER: B
+
+¿Para implementar una pila que se usa?
+A) Listas doblemente enlazadas ;
+B) Lista circular simple;
+C) Listas enlazadas simples;
+D) Lista circular doblemente enlazadas;
+ANSWER: D

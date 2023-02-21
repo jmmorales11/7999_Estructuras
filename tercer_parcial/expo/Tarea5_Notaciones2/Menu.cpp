@@ -79,7 +79,7 @@ void Menu::menuPrincipal(){
 							string *ecuacionPreFija =objPreFija.inAPre(ecuacion);
 							
 							cout<<"\nEcuacion en notacion prefija"<<endl;
-							for(int i=0;i<objPreFija.getPosi();i++)
+							for(int i=0;i<objPreFija.getPosi()+1;i++)
 							{
 							cout<<ecuacionPreFija[i];
 							}
@@ -92,10 +92,10 @@ void Menu::menuPrincipal(){
 						case 2:{
 							system("cls");
 							
-							
+							cout<<"\nInfija: "<<ecuacion<<endl;
 							string *ecuacionPosfija =objPosFija.inAPost(ecuacion);
 							cout<<"\nEcuacion en notacion posfija"<<endl;
-							for(int i=0;i<objPosFija.getPosi();i++)
+							for(int i=0;i<objPosFija.getPosi()+1;i++)
 							{
 							cout<<ecuacionPosfija[i];
 							}
