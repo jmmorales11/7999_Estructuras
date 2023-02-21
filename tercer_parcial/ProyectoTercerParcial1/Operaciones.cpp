@@ -87,9 +87,10 @@ bool Operaciones<T>::comparar(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
 	return val;
 }
 template <typename T> 
-void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
+void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, ListaDoble<T> *lista3){
 	lista1->repetidos();
 	lista2->repetidos();
+	lista3 = lista1;
 	NodoDoble<T> *aux=lista2->getPrimero();
 	NodoDoble<T> *aux1;
 	lista1->mostrarPorCabeza();
@@ -99,8 +100,8 @@ void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
 		while(aux1!=NULL){
 			cout<<aux->getObjeto()<<aux1->getObjeto()<<endl;
 			if(aux->getObjeto()==aux1->getObjeto()){
-				cout<<"ELIMINAR"<<aux->getObjeto()<<aux1->getObjeto()<<endl;
-				lista1->eliminarPorValor(aux->getObjeto());
+				cout<<"ELIMINAR: "<<aux->getObjeto()<<aux1->getObjeto()<<endl;
+				lista3->eliminarPorValor(aux->getObjeto());
 			}
 			aux1 = aux1->getSiguiente();
 		}
@@ -113,7 +114,7 @@ template <typename T>
 void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
 	lista1->repetidos();
 	lista2->repetidos();
-	ListaDoble<string> *obj= new ListaDoble<string>();
+	ListaDoble<T> *obj= new ListaDoble<T>();
 	interseccion(lista1,lista2,obj);
 	uniones(lista1,lista2,lista3);
 	NodoDoble<T> *aux=obj->getPrimero();
