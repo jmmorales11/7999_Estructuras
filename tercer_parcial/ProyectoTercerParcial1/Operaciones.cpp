@@ -90,10 +90,8 @@ template <typename T>
 void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, ListaDoble<T> *lista3){
 	lista1->repetidos();
 	lista2->repetidos();
-	lista3 = lista1;
 	NodoDoble<T> *aux=lista2->getPrimero();
 	NodoDoble<T> *aux1;
-	lista1->mostrarPorCabeza();
 	while(aux!=NULL){
 
 		aux1=lista1->getPrimero();
