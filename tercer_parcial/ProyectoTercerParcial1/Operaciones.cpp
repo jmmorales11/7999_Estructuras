@@ -7,14 +7,16 @@ Operaciones<T>::Operaciones(){
 
 template <typename T>
 void Operaciones<T>::mostrar(ListaDoble<T> *lista){
-	int x=50;
+	int x=190;
  	NodoDoble<T> *aux=lista->getPrimero();
   	while(aux){
   		cout<<" ["<<aux->getObjeto()<<"] " ;
   		letras(aux->getObjeto(),x, 550);
-  		x+=25;
+  		x+=34;
   		aux=aux->getSiguiente();
   	}
+  	
+  	outtextxy(x+25,550,"}");
 	cout<<endl;
 }
 
@@ -108,7 +110,6 @@ void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, Li
 	lista2->repetidos();
 	copiar(lista1,lista3);
 	NodoDoble<T> *aux2;
-	
 	NodoDoble<T> *aux=lista3->getPrimero();
 	while(aux!=NULL){
 		aux2=lista2->getPrimero();
@@ -124,12 +125,14 @@ void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, Li
 
 template <typename T> 
 void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
-	diferenciaSimetrica1();
+	
 	lista1->repetidos();
 	lista2->repetidos();
 	ListaDoble<T> *obj= new ListaDoble<T>();
 	interseccion(lista1,lista2,obj);
 	uniones(lista1,lista2,lista3);
+	cleardevice();
+	diferenciaSimetrica1();
 	NodoDoble<T> *aux=obj->getPrimero();
 	NodoDoble<T> *aux1=lista3->getPrimero();
 	while(aux!=NULL){
