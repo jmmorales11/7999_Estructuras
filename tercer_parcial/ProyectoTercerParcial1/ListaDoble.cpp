@@ -323,11 +323,11 @@ void ListaDoble<T>::mostrarPorCabeza()
 	int i=0;
  	NodoDoble<T> *aux=this->primero;
   	while(aux){
-  		cout<<"\n[ "<<i<<" ]:["<<aux->getObjeto()<<"]"<<endl ;
+  		cout<<" ["<<aux->getObjeto()<<"] " ;
   		aux=aux->getSiguiente();
   		i++;
   	}
-	
+	cout<<endl;
 }
 
 template <typename T>

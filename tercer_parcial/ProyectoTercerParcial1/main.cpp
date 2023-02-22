@@ -6,6 +6,10 @@
 using namespace std;
 
 int main(){
+	int gd = DETECT;
+	int gm;
+	//initgraph(&gd, &gm,"C:\TC\8GI");
+	initwindow(1100,700); 
 	int opc, opc1, opc2, opc3, entero, numeroVal;
 	char datoEntero[100], datoCaracter[100];
 	Operaciones<string> *op;
@@ -13,9 +17,9 @@ int main(){
 	ListaDoble<string> *lis;
 	ListaDoble<string> *lis1;
 	ListaDoble<string> *lis2;
-	ListaDoble<int> *lis3;
-	ListaDoble<int> *lis4;
-	ListaDoble<int> *lis5;
+	ListaDoble<string> *lis3;
+	ListaDoble<string> *lis4;
+	ListaDoble<string> *lis5;
 	bool repetir;
 	do{
 		system("cls");
@@ -45,11 +49,11 @@ int main(){
 					cout<<endl;
 					switch(opc1){
 						case 1:
-							lis3 = new ListaDoble<int>();
+							lis3 = new ListaDoble<string>();
 							do{
 								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto A: "));
 								entero=funcion_atoi(datoEntero,strlen(datoEntero));
-								lis3->insertarPorCola(entero);
+								lis3->insertarPorCola(datoEntero);
 									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
@@ -64,11 +68,11 @@ int main(){
 							system("pause");
 							break;
 						case 2:
-							lis4 = new ListaDoble<int>();
+							lis4 = new ListaDoble<string>();
 							do{
 								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero al conjunto B: "));
-								entero=funcion_atoi(datoEntero,strlen(datoEntero));
-								lis4->insertarPorCola(entero);
+								//entero=funcion_atoi(datoEntero,strlen(datoEntero));
+								lis4->insertarPorCola(datoEntero);
 								
 									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto B (1 = si/0 = no): "));
 									cout<<"\n";
@@ -84,11 +88,11 @@ int main(){
 							system("pause");
 							break;
 						case 3:
-							lis5 = new ListaDoble<int>();
+							lis5 = new ListaDoble<string>();
 							do{
 								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero al conjunto Universal: "));
-								entero=funcion_atoi(datoEntero,strlen(datoEntero));
-								lis5->insertarPorCola(entero);
+								//entero=funcion_atoi(datoEntero,strlen(datoEntero));
+								lis5->insertarPorCola(datoEntero);
 									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto Universal (1 = si/0 = no): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
@@ -122,7 +126,7 @@ int main(){
 										lis3->mostrarPorCabeza();
 										cout<<"Conjunto B "<<endl;
 										lis4->mostrarPorCabeza();
-										lis5 = new ListaDoble<int>();
+										lis5 = new ListaDoble<string>();
 										cout<<"Conjunto resultado "<<endl;
 										op1->uniones(lis3, lis4, lis5);
 										lis5->mostrarPorCabeza();	
@@ -137,7 +141,7 @@ int main(){
 										lis3->mostrarPorCabeza();
 										cout<<"Conjunto B "<<endl;
 										lis4->mostrarPorCabeza();
-										lis5 = new ListaDoble<int>();
+										lis5 = new ListaDoble<string>();
 										cout<<"Conjunto resultado "<<endl;
 										op1->interseccion(lis3, lis4, lis5);
 										lis5->mostrarPorCabeza();
@@ -179,7 +183,7 @@ int main(){
 													lis3->mostrarPorCabeza();
 													cout<<"Conjunto B "<<endl;
 													lis4->mostrarPorCabeza();
-													lis5 = new ListaDoble<int>();
+													lis5 = new ListaDoble<string>();
 													cout<<"Conjunto resultado "<<endl;
 													op1->diferencia(lis3, lis4, lis5);
 													cout<<"Conjunto A "<<endl;
@@ -193,7 +197,7 @@ int main(){
 													lis4->mostrarPorCabeza();
 													cout<<"Conjunto B "<<endl;
 													lis3->mostrarPorCabeza();
-													lis5 = new ListaDoble<int>();
+													lis5 = new ListaDoble<string>();
 													cout<<"Conjunto resultado "<<endl;
 													op1->diferencia(lis4, lis3, lis5);
 													cout<<"Conjunto A "<<endl;
@@ -216,7 +220,7 @@ int main(){
 										lis3->mostrarPorCabeza();
 										cout<<"Conjunto B"<<endl;
 										lis4->mostrarPorCabeza();
-										lis5 = new ListaDoble<int>();
+										lis5 = new ListaDoble<string>();
 										op1->diferenciaSimetrica(lis3, lis4, lis5);
 										cout<<"Conjunto resultado "<<endl;
 										lis5->mostrarPorCabeza();
