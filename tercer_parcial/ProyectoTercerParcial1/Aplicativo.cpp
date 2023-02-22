@@ -334,7 +334,7 @@ int main(){
 															lis2 = new ListaDoble<string>();
 															op->diferencia(lis, lis1, lis2);
 															cout<<"Conjunto resultante "<<endl;
-												
+															op->mostrar(lis2);
 															system("pause");
 															break;
 														case 2:
@@ -346,7 +346,7 @@ int main(){
 															lis2 = new ListaDoble<string>();
 															op->diferencia(lis1, lis, lis2);
 															cout<<"Conjunto resultante "<<endl;
-												
+															op->mostrar(lis2);
 															system("pause");
 															break;
 														case 0:
