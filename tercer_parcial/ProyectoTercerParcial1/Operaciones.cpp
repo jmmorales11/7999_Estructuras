@@ -90,22 +90,20 @@ template <typename T>
 void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, ListaDoble<T> *lista3){
 	lista1->repetidos();
 	lista2->repetidos();
-	NodoDoble<T> *aux=lista2->getPrimero();
-	NodoDoble<T> *aux1;
+	copiar(lista1,lista3);
+	NodoDoble<T> *aux2;
+	
+	NodoDoble<T> *aux=lista3->getPrimero();
 	while(aux!=NULL){
-
-		aux1=lista1->getPrimero();
-		while(aux1!=NULL){
-			cout<<aux->getObjeto()<<aux1->getObjeto()<<endl;
-			if(aux->getObjeto()==aux1->getObjeto()){
-				cout<<"ELIMINAR: "<<aux->getObjeto()<<aux1->getObjeto()<<endl;
+		aux2=lista2->getPrimero();
+		while(aux2!=NULL){
+			if(aux->getObjeto()==aux2->getObjeto()){
 				lista3->eliminarPorValor(aux->getObjeto());
 			}
-			aux1 = aux1->getSiguiente();
+			aux2 = aux2->getSiguiente();
 		}
 		aux = aux->getSiguiente();
 	}
-//	lista1->mostrarPorCabeza();
 }
 
 template <typename T> 
@@ -128,4 +126,13 @@ void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *l
 		aux=aux->getSiguiente();				
 	}
 //	lista3->mostrarPorCabeza();
+}
+template <typename T>
+ListaDoble<T> Operaciones<T>:: copiar(ListaDoble<T> *lis1,ListaDoble<T> *lis2){
+	NodoDoble<T> *aux = lis1->getPrimero();
+	while(aux!=NULL){
+		lis2->insertarPorCabeza(aux->getObjeto());
+		aux=aux->getSiguiente();
+	}
+	return *lis2;
 }

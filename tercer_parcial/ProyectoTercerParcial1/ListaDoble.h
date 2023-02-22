@@ -34,6 +34,7 @@ class ListaDoble {
 		int getNumNodos();
 		int buscar(T);
 		T buscarPosicion(int);
+		
 	private:
 		NodoDoble<T> *primero;
 		NodoDoble<T> *actual;
