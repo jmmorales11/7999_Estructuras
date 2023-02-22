@@ -58,7 +58,7 @@ void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,L
 
 template <typename T> 
 void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
-	complemento1();
+
 	NodoDoble<T> *aux=lista1->getPrimero();
 	NodoDoble<T> *aux1=lista3->getPrimero();
 	if (comparar(lista3,lista1)==true || comparar(lista3,lista2)==true){

@@ -3,12 +3,13 @@
 
 using namespace std;
 void uniones1();
-void complemento1();
+void complementoA();
 void diferenciaSimetrica1();
 void letras(string letra, int x, int y);
 void dibujarDiferenciaAB();
 void dibujarDiferenciaBA();
 void dibujarInterseccion();
+void complementoB();
 
 void dibujarInterseccion(){
 	setcolor(3);
@@ -99,7 +100,7 @@ void uniones1(){
 	settextstyle(1,0,4);
 	outtextxy(130,550,": {");
 }
-void complemento1(){
+void complementoA(){
 	setcolor(7);
 	settextstyle(6,0,6);
 	outtextxy(300,1,"Complemento");
@@ -121,6 +122,31 @@ void complemento1(){
 	settextstyle(1,0,4);
 	outtextxy(130,550,": {");
 }
+
+void complementoB(){
+	setcolor(7);
+	settextstyle(6,0,6);
+	outtextxy(300,1,"Complemento");
+	settextstyle(7,HORIZ_DIR,1);
+	setcolor(15);
+	outtextxy(200,650,"Morales Jeimy");
+	outtextxy(550,650,"Orrico Camilo");
+	setfillstyle(1, 7);
+	bar(200,100,800,500);
+	rectangle(200,100,800,500);
+	setcolor(15);
+	setfillstyle(1, 7);
+	fillellipse(385,300, 140, 140);
+	setfillstyle(1, 0);
+	fillellipse(575,300, 140, 140);
+	arc(385,300,270,90, 140);
+	
+	arc(575,300,90,270, 140);
+	readimagefile("COMB.jpg",50,540,125,600);
+	settextstyle(1,0,4);
+	outtextxy(130,550,": {");
+}
+
 void diferenciaSimetrica1(){
 	setcolor(7);
 	settextstyle(6,0,6);
@@ -151,7 +177,7 @@ int main(){
 	//initgraph(&gd, &gm,"C:\TC\8GI");
 	initwindow(1100,700); 
 
-	dibujarInterseccion();
+	complementoB();
 	letras("a", 190, 550);
 	
 	system("pause");return 0;

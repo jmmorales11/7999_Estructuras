@@ -29,6 +29,7 @@ int main(){
 		str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 		opc=funcion_atoi(datoEntero,strlen(datoEntero));
 		cout<<endl;
+		
 		switch(opc){
 			case 1:
 				lis = new ListaDoble<string>();
@@ -117,23 +118,59 @@ int main(){
 										cout<<"Conjunto B "<<endl;
 										lis1->mostrarPorCabeza();
 										lis2 = new ListaDoble<string>();
-										cout<<"Conjunto resultado "<<endl;
 										op->interseccion(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2);
 										system("pause");
 									break;
 									case 3:
-										cout<<"Conjunto A "<<endl;
-										lis->mostrarPorCabeza();
-										cout<<"Conjunto B "<<endl;
-										lis1->mostrarPorCabeza();
-										lis2 = new ListaDoble<string>();
-										cout<<"Conjunto resultado "<<endl;
-										op->complemento(lis, lis1, lis2);
-										cout<<"Conjunto resultado "<<endl;
-										op->mostrar(lis2);
-										system("pause");
+										do{
+											system("cls");
+									        cout << "-----------------------Diferencia-----------------------" << endl
+									             << endl; 
+									        cout << "\t[1]  Complemento de A" << endl;
+									        cout << "\t[2]  Complemento de B" << endl;
+											cout << "\t[0]  Regresar" << endl;
+											cout << " " << endl;
+											str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+											opc3=funcion_atoi(datoEntero,strlen(datoEntero));
+											cout<<endl;
+											switch(opc3){
+												case 1:
+													lis2 = new ListaDoble<string>();
+													op->uniones(lis, lis1, lis2);
+													cleardevice();
+													complementoA();
+													cout<<"Conjunto A "<<endl;
+													lis->mostrarPorCabeza();
+													cout<<"Conjunto B "<<endl;
+													lis1->mostrarPorCabeza();
+													cout<<"Conjunto resultado "<<endl;
+													op->complemento(lis, lis1, lis2);
+													op->mostrar(lis2);
+													system("pause");
+													break;
+												case 2:
+													lis2 = new ListaDoble<string>();
+													op->uniones(lis, lis1, lis2);
+													cleardevice();
+													complementoB();
+													cout<<"Conjunto A "<<endl;
+													lis->mostrarPorCabeza();
+													cout<<"Conjunto B "<<endl;
+													lis1->mostrarPorCabeza();
+													cout<<"Conjunto resultado "<<endl;
+													op->complemento(lis1, lis, lis2);
+													op->mostrar(lis2);
+													system("pause");
+													break;
+												case 0:
+													opc3 = 3;
+											}
+											if(opc3==3){
+												break;
+											}
+										}while(opc3!= 1 || opc3 != 2||opc3 != 0 );
 									break;
 									case 4:
 										do{
@@ -285,8 +322,7 @@ int main(){
 												lis2 = new ListaDoble<string>();
 												op->uniones(lis, lis1, lis2);
 												cout<<"Conjunto resultante "<<endl;
-												
-												lis2->mostrarPorCabeza();	
+												op->mostrar(lis2);	
 												system("pause");
 												break;
 											case 2:
@@ -297,21 +333,58 @@ int main(){
 												lis2 = new ListaDoble<string>();
 												op->interseccion(lis, lis1, lis2);
 												cout<<"Conjunto resultante "<<endl;
-												
-												lis2->mostrarPorCabeza();	
+												op->mostrar(lis2);
 												system("pause");
 												break;
 											case 3:
-												cout<<"Conjunto A "<<endl;
-												lis->mostrarPorCabeza();
-												cout<<"Conjunto B "<<endl;
-												lis1->mostrarPorCabeza();
-												op->complemento(lis, lis1, lis2);
-												cout<<"Conjunto resultante "<<endl;
-												
-												lis2->mostrarPorCabeza();	
-												system("pause");
+												do{
+											system("cls");
+									        cout << "-----------------------Diferencia-----------------------" << endl
+									             << endl; 
+									        cout << "\t[1]  Complemento de A" << endl;
+									        cout << "\t[2]  Complemento de B" << endl;
+											cout << "\t[0]  Regresar" << endl;
+											cout << " " << endl;
+											str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+											opc3=funcion_atoi(datoEntero,strlen(datoEntero));
+											cout<<endl;
+											switch(opc3){
+												case 1:
+													lis2 = new ListaDoble<string>();
+													op->uniones(lis, lis1, lis2);
+													cleardevice();
+													complementoA();
+													cout<<"Conjunto A "<<endl;
+													lis->mostrarPorCabeza();
+													cout<<"Conjunto B "<<endl;
+													lis1->mostrarPorCabeza();
+													cout<<"Conjunto resultado "<<endl;
+													op->complemento(lis, lis1, lis2);
+													op->mostrar(lis2);
+													system("pause");
+													break;
+												case 2:
+													lis2 = new ListaDoble<string>();
+													op->uniones(lis, lis1, lis2);
+													cleardevice();
+													complementoB();
+													cout<<"Conjunto A "<<endl;
+													lis->mostrarPorCabeza();
+													cout<<"Conjunto B "<<endl;
+													lis1->mostrarPorCabeza();
+													cout<<"Conjunto resultado "<<endl;
+													op->complemento(lis1, lis, lis2);
+													op->mostrar(lis2);
+													system("pause");
+													break;
+												case 0:
+													opc3 = 3;
+											}
+											if(opc3==3){
 												break;
+											}
+										}while(opc3!= 1 || opc3 != 2||opc3 != 0 );
+										break;
 											case 4:
 												do{
 													system("cls");
@@ -367,7 +440,7 @@ int main(){
 												lis2 = new ListaDoble<string>();
 												op->diferenciaSimetrica(lis, lis1, lis2);
 												cout<<"Conjunto resultante "<<endl;
-												lis2->mostrarPorCabeza();
+												op->mostrar(lis2);
 												system("pause");
 												break;
 											case 0:
