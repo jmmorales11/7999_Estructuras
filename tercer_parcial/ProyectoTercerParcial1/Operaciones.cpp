@@ -1,13 +1,27 @@
 #include "Operaciones.h"
-
+#include "maingrafica.cpp"
 template <typename T> 
 Operaciones<T>::Operaciones(){
 	
 }
 
+template <typename T>
+void Operaciones<T>::mostrar(ListaDoble<T> *lista){
+	int x=50;
+ 	NodoDoble<T> *aux=lista->getPrimero();
+  	while(aux){
+  		cout<<" ["<<aux->getObjeto()<<"] " ;
+  		letras(aux->getObjeto(),x, 550);
+  		x+=25;
+  		aux=aux->getSiguiente();
+  	}
+	cout<<endl;
+}
+
+
 template <typename T> 
 void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
-	
+	uniones1();
 	NodoDoble<T> *aux=lista1->getPrimero();
 	while(aux!=NULL){
 		lista3->insertarPorCola(aux->getObjeto());
@@ -23,6 +37,7 @@ void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaD
 
 template <typename T> 
 void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	dibujarInterseccion();
 	lista1->repetidos();
 	lista2->repetidos();
 	NodoDoble<T> *aux=lista1->getPrimero();
@@ -41,6 +56,7 @@ void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,L
 
 template <typename T> 
 void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	complemento1();
 	NodoDoble<T> *aux=lista1->getPrimero();
 	NodoDoble<T> *aux1=lista3->getPrimero();
 	if (comparar(lista3,lista1)==true || comparar(lista3,lista2)==true){
@@ -108,6 +124,7 @@ void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, Li
 
 template <typename T> 
 void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	diferenciaSimetrica1();
 	lista1->repetidos();
 	lista2->repetidos();
 	ListaDoble<T> *obj= new ListaDoble<T>();
