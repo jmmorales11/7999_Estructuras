@@ -12,6 +12,7 @@ public:
    void diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
    bool comparar(ListaDoble<T> *lista1, ListaDoble<T> *lista2);
    ListaDoble<T> copiar(ListaDoble<T> *l1,ListaDoble<T> *l2);
+
    void mostrar(ListaDoble<T> *lista);
 protected:
 private:
