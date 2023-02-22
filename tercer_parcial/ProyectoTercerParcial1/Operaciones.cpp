@@ -1,5 +1,11 @@
 #include "Operaciones.h"
 #include "maingrafica.cpp"
+#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <sys/time.h>
+
+using namespace std;
 template <typename T> 
 Operaciones<T>::Operaciones(){
 	
@@ -7,6 +13,9 @@ Operaciones<T>::Operaciones(){
 
 template <typename T>
 void Operaciones<T>::mostrar(ListaDoble<T> *lista){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	int x=50;
  	NodoDoble<T> *aux=lista->getPrimero();
   	while(aux){
@@ -16,6 +25,11 @@ void Operaciones<T>::mostrar(ListaDoble<T> *lista){
   		aux=aux->getSiguiente();
   	}
 	cout<<endl;
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 }
 
 
@@ -152,4 +166,10 @@ ListaDoble<T> Operaciones<T>:: copiar(ListaDoble<T> *lis1,ListaDoble<T> *lis2){
 		aux=aux->getSiguiente();
 	}
 	return *lis2;
+}
+template <typename T>
+long Operaciones<T>:: obtenerTiempo(){
+    struct timeval inicio;
+    gettimeofday(&inicio, NULL);
+    return inicio.tv_sec*1000000+inicio.tv_usec;
 }
