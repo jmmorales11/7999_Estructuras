@@ -83,6 +83,7 @@ int main(){
 							break;
 						case 3:
 							do{
+								cleardevice();
 								system("cls");
 						        cout << "-----------------------Operaciones-----------------------" << endl
 						             << endl; 
@@ -119,7 +120,7 @@ int main(){
 										cout<<"Conjunto resultado "<<endl;
 										op->interseccion(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
-										lis2->mostrarPorCabeza();
+										op->mostrar(lis2);
 										system("pause");
 									break;
 									case 3:
@@ -131,7 +132,7 @@ int main(){
 										cout<<"Conjunto resultado "<<endl;
 										op->complemento(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
-										lis2->mostrarPorCabeza();
+										op->mostrar(lis2);
 										system("pause");
 									break;
 									case 4:
@@ -184,7 +185,7 @@ int main(){
 										lis2 = new ListaDoble<string>();
 										op->diferenciaSimetrica(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
-										lis2->mostrarPorCabeza();
+										op->mostrar(lis2);
 										
 										system("pause");
 										break;
