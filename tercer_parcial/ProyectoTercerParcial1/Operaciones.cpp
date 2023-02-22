@@ -37,6 +37,7 @@ void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaD
 
 template <typename T> 
 void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	dibujarInterseccion();
 	lista1->repetidos();
 	lista2->repetidos();
 	NodoDoble<T> *aux=lista1->getPrimero();

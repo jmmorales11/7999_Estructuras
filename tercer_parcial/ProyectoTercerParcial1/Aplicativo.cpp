@@ -149,6 +149,7 @@ int main(){
 											cout<<endl;
 											switch(opc3){
 												case 1:
+													dibujarDiferenciaAB();
 													cout<<"Conjunto A "<<endl;
 													lis->mostrarPorCabeza();
 													cout<<"Conjunto B "<<endl;
@@ -159,6 +160,7 @@ int main(){
 													system("pause");
 													break;
 												case 2:
+													dibujarDiferenciaBA();
 													cout<<"Conjunto A "<<endl;
 													lis->mostrarPorCabeza();
 													cout<<"Conjunto B "<<endl;
@@ -322,6 +324,7 @@ int main(){
 													cout<<endl;
 													switch(opc3){
 														case 1:
+															dibujarDiferenciaAB();
 															cout<<"Conjunto A "<<endl;
 															lis->mostrarPorCabeza();
 															cout<<"Conjunto B "<<endl;
@@ -333,6 +336,7 @@ int main(){
 															system("pause");
 															break;
 														case 2:
+															dibujarDiferenciaBA();
 															cout<<"Conjunto A "<<endl;
 															lis->mostrarPorCabeza();
 															cout<<"Conjunto B "<<endl;
