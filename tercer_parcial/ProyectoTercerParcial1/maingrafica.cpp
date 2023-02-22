@@ -6,6 +6,71 @@ void uniones();
 void complemento();
 void diferenciaSimetrica();
 void letras(string letra, int x, int y);
+void dibujarDiferenciaAB();
+void dibujarDiferenciaBA();
+void dibujarInterseccion();
+
+void dibujarInterseccion(){
+	setcolor(3);
+	settextstyle(3,HORIZ_DIR,6);
+	outtextxy(400,1,"Interseccion");
+	settextstyle(7,HORIZ_DIR,1);
+	setcolor(15);
+	outtextxy(200,650,"Morales Jeimy");
+	outtextxy(550,650,"Orrico Camilo");
+	setfillstyle(1, 0);
+	bar(200,100,800,500);
+	rectangle(200,100,800,500);
+
+	setcolor(5);
+	setfillstyle(5, 0);
+	fillellipse(385,300, 140, 140);
+	setfillstyle(6, 0);
+	fillellipse(575,300, 140, 140);
+	readimagefile("interse.jpg",50,50,1000,600);
+}
+
+void dibujarDiferenciaAB(){
+	setcolor(3);
+	settextstyle(3,HORIZ_DIR,6);
+	outtextxy(400,1,"Diferencia");
+	settextstyle(7,HORIZ_DIR,1);
+	setcolor(15);
+	outtextxy(200,650,"Morales Jeimy");
+	outtextxy(550,650,"Orrico Camilo");
+	setfillstyle(1, 0);
+	bar(200,100,800,500);
+	rectangle(200,100,800,500);
+
+	setcolor(5);
+	setfillstyle(5, 6);
+	fillellipse(385,300, 140, 140);
+	setfillstyle(6, 0);
+	fillellipse(575,300, 140, 140);
+	arc(385,300,270,90, 140);
+}
+
+void dibujarDiferenciaBA(){
+	setcolor(3);
+	settextstyle(3,HORIZ_DIR,6);
+	outtextxy(400,1,"Conjuntos");
+	settextstyle(7,HORIZ_DIR,1);
+	setcolor(15);
+	outtextxy(200,650,"Morales Jeimy");
+	outtextxy(550,650,"Orrico Camilo");
+	setfillstyle(1, 0);
+	bar(200,100,800,500);
+	rectangle(200,100,800,500);
+
+	setcolor(5);
+	setfillstyle(6, 2);
+	fillellipse(575,300, 140, 140);
+	setfillstyle(5, 0);
+	fillellipse(385,300, 140, 140);
+	
+	arc(575,300,270,230, 140);
+	system("pause");
+}
 
 void uniones(){
 	setcolor(3);
