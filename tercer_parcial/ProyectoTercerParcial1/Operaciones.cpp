@@ -89,7 +89,6 @@ void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,Li
 	long inicio = obtenerTiempo();
 	double tiempoEnSegundos;
     long tiempoEnMicrosegundos;
-	complemento1();
 	NodoDoble<T> *aux=lista1->getPrimero();
 	NodoDoble<T> *aux1=lista3->getPrimero();
 	if (comparar(lista3,lista1)==true || comparar(lista3,lista2)==true){
