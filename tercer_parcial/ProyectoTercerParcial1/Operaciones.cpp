@@ -35,6 +35,9 @@ void Operaciones<T>::mostrar(ListaDoble<T> *lista){
 
 template <typename T> 
 void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	uniones1();
 	NodoDoble<T> *aux=lista1->getPrimero();
 	while(aux!=NULL){
@@ -47,10 +50,18 @@ void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaD
 		aux=aux->getSiguiente();
 	}
 	lista3->repetidos();
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 }
 
 template <typename T> 
 void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	dibujarInterseccion();
 	lista1->repetidos();
 	lista2->repetidos();
@@ -65,11 +76,19 @@ void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,L
 		}
 		aux = aux->getSiguiente();
 	}
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 //	lista3->mostrarPorCabeza();
 }
 
 template <typename T> 
 void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	complemento1();
 	NodoDoble<T> *aux=lista1->getPrimero();
 	NodoDoble<T> *aux1=lista3->getPrimero();
@@ -88,12 +107,20 @@ void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,Li
 			aux1=aux1->getSiguiente();
 		}	
 	}
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 //	lista3->mostrarPorCabeza();
 	
 }
 
 template <typename T> 
 bool Operaciones<T>::comparar(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	NodoDoble<T> *aux;
 	NodoDoble<T> *aux1=lista2->getPrimero();
 	bool val=false;
@@ -113,11 +140,19 @@ bool Operaciones<T>::comparar(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
 			break;
 		}
 		aux1=aux1->getSiguiente();
-	}	
+	}
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;	
 	return val;
 }
 template <typename T> 
 void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, ListaDoble<T> *lista3){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	lista1->repetidos();
 	lista2->repetidos();
 	copiar(lista1,lista3);
@@ -134,10 +169,18 @@ void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, Li
 		}
 		aux = aux->getSiguiente();
 	}
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 }
 
 template <typename T> 
 void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	diferenciaSimetrica1();
 	lista1->repetidos();
 	lista2->repetidos();
@@ -156,15 +199,28 @@ void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *l
 		}
 		aux=aux->getSiguiente();				
 	}
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 //	lista3->mostrarPorCabeza();
 }
 template <typename T>
 ListaDoble<T> Operaciones<T>:: copiar(ListaDoble<T> *lis1,ListaDoble<T> *lis2){
+	long inicio = obtenerTiempo();
+	double tiempoEnSegundos;
+    long tiempoEnMicrosegundos;
 	NodoDoble<T> *aux = lis1->getPrimero();
 	while(aux!=NULL){
 		lis2->insertarPorCabeza(aux->getObjeto());
 		aux=aux->getSiguiente();
 	}
+	long final = obtenerTiempo();
+	tiempoEnMicrosegundos = final - inicio;
+    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
+    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
+    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 	return *lis2;
 }
 template <typename T>
