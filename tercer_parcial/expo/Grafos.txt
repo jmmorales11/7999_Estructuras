@@ -1,0 +1,31 @@
+Grafos
+Cual es la definicion de grafos?
+A. Es una selección de objetos no vacíos llamados vértices y un conjunto de pares de vértices.
+B. Es una sola rotación.
+C. Es un tipo especial de árbol binario usado en informática.
+D. Representa una colección de datos ordenados.
+ANSWER A
+Un grafo esta conformado por:
+A. Pilas y colas.
+B. Arboles y busquedas.
+C. Vertices y aristas.
+D. Tallos y hojas.
+ANSWER C
+Cuales son los tipos de grafos?
+A. Ordenada y disruptiva
+B. Matriz y lineal
+C. Dirigida y no dirigida
+D. Estructurada y modular
+ANSWER C
+Cuales son las pricipales funciones de grafos:
+A. Busqueda Binaria y secuencial
+B. Insertar y eliminar vertices y aristas.
+C. Crear nodos y pilas. 
+D. Cambio en la notacion.
+ANSWER B
+Cual es una aplicacion de grafos?
+A. Grafo para obtener una programa para hacer pizzas.
+B. Grafo para encriptar una imagen.
+C. Grafo para hallar un grafico.
+D. Grafo para el Camino más Corto. 
+ANSWER D

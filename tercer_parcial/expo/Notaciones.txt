@@ -1,0 +1,31 @@
+Notaciones Infija-Prefija-Postfija
+Cual de las siguientes ecuaciones esta en notacion postfija
+A. 2 3 4 * + x =
+B. 2 + 3*2 = 3x
+C. = * + 2 3 4 x
+D. (2+3)*4 = x
+ANSWER A
+Cual de las siguientes ecuaciones esta en notacion Prefija
+A. 2 3 4 * + x =
+B. 2 + 3*2 = 3x
+C. = * + 2 3 4 x
+D. (2+3)*4 = x
+ANSWER C
+Cual de las siguientes ecuaciones esta en notacion Infija
+A. 2 3 4 * + x =
+B. 2 + 3*2 = 3x
+C. = * + 2 3 4 x
+D. = + 2 * 3 4 x
+ANSWER B
+Cual es la principal diferencia entre la notacion infija y postfija y prefija
+A. La notacion infija es entendida por maquinas y las otras dos por personas
+B. La notacion infija se expresa con los operadores al comienzo, la prefija al final y la postfija es normal
+C. La notacion infija es entendida por personas y las otras dos por computadoras
+D. Las tres son iguales
+ANSWER C
+En que tipo de estructura se puede usar en programacion
+A. En Arboles Radix
+B. En Grafos
+C. En Arrboles Binarios
+D. En Pilas
+ANSWER D
