@@ -11,6 +11,8 @@ void dibujarBigOExponecialNaranja();
 void ejes();
 void tiempo();
 void Caratula();
+using namespace std;
+void tiempo(long tiempo);
 ////
 	void Caratula(){
 		setcolor(3);
@@ -98,22 +100,27 @@ void dibujarBigOExponecialCeleste(){
 		settextstyle(3,0,1);
 		outtextxy(890,435,"Elementos");
 		settextstyle(3,1,1);
-		outtextxy(805,180,"O");
-		outtextxy(805,200,"p");
-		outtextxy(805,220,"e");
-		outtextxy(805,240,"r");
-		outtextxy(805,260,"a");
-		outtextxy(805,280,"c");
-		outtextxy(805,300,"i");
-		outtextxy(805,320,"o");
-		outtextxy(805,340,"n");
-		outtextxy(805,360,"e");
-		outtextxy(805,380,"s");
+		outtextxy(810,180,"O");
+		outtextxy(810,200,"p");
+		outtextxy(810,220,"e");
+		outtextxy(810,240,"r");
+		outtextxy(810,260,"a");
+		outtextxy(810,280,"c");
+		outtextxy(810,300,"i");
+		outtextxy(810,320,"o");
+		outtextxy(810,340,"n");
+		outtextxy(810,360,"e");
+		outtextxy(810,380,"s");
 		line(850,400,850,150);
 		line(850,400,1100,400);
 	}
 	
-	void tiempo(){
-		
-		outtextxy(890,435,"Elementos");
+	void tiempo(long tiempo){
+		string numStr = to_string(tiempo);
+		char buffer[100];
+		outtextxy(890,100,"Complejidad del Algoritmo");
+		strcpy(buffer,numStr.c_str());
+		outtextxy(890,460,"Tiempo del algortimo");
+		outtextxy(890,485,"Microsegundos");
+		outtextxy(890,510,buffer);
 	}

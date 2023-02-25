@@ -9,7 +9,7 @@ int main(){
 	int gd = DETECT;
 	int gm;
 //	initgraph(&gd, &gm,"C:\TC\8GI");
-	initwindow(1100,700); 
+	initwindow(1200,700); 
 	int opc, opc1, opc2, opc3, entero, numeroVal;
 	char datoEntero[100], datoCaracter[100];
 	string dato;
