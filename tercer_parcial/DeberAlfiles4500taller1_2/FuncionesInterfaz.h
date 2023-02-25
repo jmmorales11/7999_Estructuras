@@ -91,4 +91,7 @@ class FuncionesInterfaz:public Tablero{
 	void dibujarBigOExponecialAzul();
 	void dibujarBigOExponecialNaranja();
 	void presentacio();
+	void caballoP(int fila, int columna);
+	void solucionCP(int f, int c, int con);
+	
 };

@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <iostream>
 #include <sys/time.h>
-
+#include "lineas.h"
 using namespace std;
 template <typename T> 
 Operaciones<T>::Operaciones(){
@@ -13,10 +13,8 @@ Operaciones<T>::Operaciones(){
 
 template <typename T>
 void Operaciones<T>::mostrar(ListaDoble<T> *lista){
-	long inicio = obtenerTiempo();
-	double tiempoEnSegundos;
-    long tiempoEnMicrosegundos;
-	int x=50;
+
+	int x=190;
  	NodoDoble<T> *aux=lista->getPrimero();
   	while(aux){
   		cout<<" ["<<aux->getObjeto()<<"] " ;
@@ -25,11 +23,6 @@ void Operaciones<T>::mostrar(ListaDoble<T> *lista){
   		aux=aux->getSiguiente();
   	}
 	cout<<endl;
-	long final = obtenerTiempo();
-	tiempoEnMicrosegundos = final - inicio;
-    tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
-    cout<<"El tiempo de ejecucion en microsegundos es: "<<tiempoEnMicrosegundos<<endl<<endl;
-    cout<<"EL tiempo de ejecucion en segundos es: "<<tiempoEnSegundos<<endl<<endl;
 }
 
 
@@ -50,6 +43,8 @@ void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaD
 		aux=aux->getSiguiente();
 	}
 	lista3->repetidos();
+	graficarBigTiempoLineal();
+	ejes();
 	long final = obtenerTiempo();
 	tiempoEnMicrosegundos = final - inicio;
     tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
@@ -76,6 +71,9 @@ void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,L
 		}
 		aux = aux->getSiguiente();
 	}
+	ejes();
+	dibujarBigOExponecialAzul();
+	
 	long final = obtenerTiempo();
 	tiempoEnMicrosegundos = final - inicio;
     tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
@@ -106,6 +104,8 @@ void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,Li
 			aux1=aux1->getSiguiente();
 		}	
 	}
+	dibujarBigOExponecialAzul();
+	ejes();
 	long final = obtenerTiempo();
 	tiempoEnMicrosegundos = final - inicio;
     tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
@@ -140,6 +140,8 @@ bool Operaciones<T>::comparar(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
 		}
 		aux1=aux1->getSiguiente();
 	}
+	ejes();
+	dibujarBigOExponecialAzul();
 	long final = obtenerTiempo();
 	tiempoEnMicrosegundos = final - inicio;
     tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
@@ -180,12 +182,14 @@ void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *l
 	long inicio = obtenerTiempo();
 	double tiempoEnSegundos;
     long tiempoEnMicrosegundos;
-	diferenciaSimetrica1();
+	
 	lista1->repetidos();
 	lista2->repetidos();
 	ListaDoble<T> *obj= new ListaDoble<T>();
 	interseccion(lista1,lista2,obj);
 	uniones(lista1,lista2,lista3);
+	cleardevice();
+	diferenciaSimetrica1();
 	NodoDoble<T> *aux=obj->getPrimero();
 	NodoDoble<T> *aux1=lista3->getPrimero();
 	while(aux!=NULL){
@@ -198,6 +202,8 @@ void Operaciones<T>::diferenciaSimetrica(ListaDoble<T> *lista1, ListaDoble<T> *l
 		}
 		aux=aux->getSiguiente();				
 	}
+	ejes();
+	dibujarBigOExponecialAzul();
 	long final = obtenerTiempo();
 	tiempoEnMicrosegundos = final - inicio;
     tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
@@ -215,6 +221,9 @@ ListaDoble<T> Operaciones<T>:: copiar(ListaDoble<T> *lis1,ListaDoble<T> *lis2){
 		lis2->insertarPorCabeza(aux->getObjeto());
 		aux=aux->getSiguiente();
 	}
+
+	graficarBigTiempoLineal();
+	
 	long final = obtenerTiempo();
 	tiempoEnMicrosegundos = final - inicio;
     tiempoEnSegundos = tiempoEnMicrosegundos * pow(10, -6);
