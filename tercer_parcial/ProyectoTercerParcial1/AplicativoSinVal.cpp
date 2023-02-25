@@ -19,6 +19,7 @@ int main(){
 	ListaDoble<string> *lis1;
 	ListaDoble<string> *lis2;
 	bool repetir;
+	Caratula();
 	do{
 		system("cls");
         cout << "-----------------------MENU-----------------------" << endl

@@ -1,5 +1,6 @@
 #include <graphics.h>	
 #include <math.h>
+using namespace std;
 void LineaRoja();
 void LineaA();
 void graficarBigHoraSuperLineal();
@@ -9,7 +10,18 @@ void dibujarBigOExponecialAzul();
 void dibujarBigOExponecialNaranja();
 void ejes();
 void tiempo();
+void Caratula();
 ////
+	void Caratula(){
+		setcolor(3);
+		settextstyle(10,HORIZ_DIR,3);
+		outtextxy(350,30,"SISTEMAS DE CONJUNTOS");
+		settextstyle(7,HORIZ_DIR,1);
+		setcolor(15);
+		outtextxy(200,650,"Morales Jeimy");
+		outtextxy(550,650,"Orrico Camilo");
+		readimagefile("04_conjuntos.jpg",250,100,700,633);
+	}
 	void LineaRoja(){
 		settextstyle(DEFAULT_FONT,HORIZ_DIR,0);
 		setcolor(4);
