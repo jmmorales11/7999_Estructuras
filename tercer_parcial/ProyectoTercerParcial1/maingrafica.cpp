@@ -66,7 +66,6 @@ void dibujarDiferenciaBA(){
 	setfillstyle(1, 0);
 	bar(200,100,800,500);
 	rectangle(200,100,800,500);
-
 	setcolor(15);
 	setfillstyle(6, 2);
 	fillellipse(575,300, 140, 140);
@@ -88,14 +87,14 @@ void uniones1(){
 	outtextxy(200,650,"Morales Jeimy");
 	outtextxy(550,650,"Orrico Camilo");
 	setfillstyle(1, 0);
-	bar(200,100,800,500);
-	rectangle(200,100,800,500);
+	bar(200,100,750,450);
+	rectangle(200,100,750,450);
 	setcolor(15);
 	setfillstyle(1, 3);
-	fillellipse(385,300, 140, 140);
+	fillellipse(385,275, 140, 140);
 	setfillstyle(1, 3);
-	fillellipse(575,300, 140, 140);
-	arc(385,300,270,90, 140);
+	fillellipse(575,275, 140, 140);
+	arc(385,275,270,90, 140);
 	readimagefile("Union.jpg",50,535,130,590);
 	settextstyle(1,0,4);
 	outtextxy(130,550,": {");
@@ -164,7 +163,7 @@ void diferenciaSimetrica1(){
 
 
 void letras(string letra, int x, int y){
-	
+	setcolor(15);
 	char buffer[100];
 	settextstyle(1,0,2);
 	strcpy(buffer,letra.c_str());
