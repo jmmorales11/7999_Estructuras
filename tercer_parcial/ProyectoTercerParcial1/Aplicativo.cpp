@@ -125,6 +125,7 @@ int main(){
 									break;
 									case 3:
 										do{
+											cleardevice();
 											system("cls");
 									        cout << "-----------------------Diferencia-----------------------" << endl
 									             << endl; 
@@ -174,6 +175,7 @@ int main(){
 									break;
 									case 4:
 										do{
+											cleardevice();
 											system("cls");
 									        cout << "-----------------------Diferencia-----------------------" << endl
 									             << endl; 
@@ -338,53 +340,54 @@ int main(){
 												break;
 											case 3:
 												do{
-											system("cls");
-									        cout << "-----------------------Diferencia-----------------------" << endl
-									             << endl; 
-									        cout << "\t[1]  Complemento de A" << endl;
-									        cout << "\t[2]  Complemento de B" << endl;
-											cout << "\t[0]  Regresar" << endl;
-											cout << " " << endl;
-											str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
-											opc3=funcion_atoi(datoEntero,strlen(datoEntero));
-											cout<<endl;
-											switch(opc3){
-												case 1:
-													lis2 = new ListaDoble<string>();
-													op->uniones(lis, lis1, lis2);
-													cleardevice();
-													complementoA();
-													cout<<"Conjunto A "<<endl;
-													lis->mostrarPorCabeza();
-													cout<<"Conjunto B "<<endl;
-													lis1->mostrarPorCabeza();
-													cout<<"Conjunto resultado "<<endl;
-													op->complemento(lis, lis1, lis2);
-													op->mostrar(lis2);
-													system("pause");
+												cleardevice();
+												system("cls");
+										        cout << "-----------------------Diferencia-----------------------" << endl
+										             << endl; 
+										        cout << "\t[1]  Complemento de A" << endl;
+										        cout << "\t[2]  Complemento de B" << endl;
+												cout << "\t[0]  Regresar" << endl;
+												cout << " " << endl;
+												str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+												opc3=funcion_atoi(datoEntero,strlen(datoEntero));
+												cout<<endl;
+												switch(opc3){
+													case 1:
+														lis2 = new ListaDoble<string>();
+														op->uniones(lis, lis1, lis2);
+														cleardevice();
+														complementoA();
+														cout<<"Conjunto A "<<endl;
+														lis->mostrarPorCabeza();
+														cout<<"Conjunto B "<<endl;
+														lis1->mostrarPorCabeza();
+														cout<<"Conjunto resultado "<<endl;
+														op->complemento(lis, lis1, lis2);
+														op->mostrar(lis2);
+														system("pause");
+														break;
+													case 2:
+														lis2 = new ListaDoble<string>();
+														op->uniones(lis, lis1, lis2);
+														cleardevice();
+														complementoB();
+														cout<<"Conjunto A "<<endl;
+														lis->mostrarPorCabeza();
+														cout<<"Conjunto B "<<endl;
+														lis1->mostrarPorCabeza();
+														cout<<"Conjunto resultado "<<endl;
+														op->complemento(lis1, lis, lis2);
+														op->mostrar(lis2);
+														system("pause");
+														break;
+													case 0:
+														opc3 = 3;
+												}
+												if(opc3==3){
 													break;
-												case 2:
-													lis2 = new ListaDoble<string>();
-													op->uniones(lis, lis1, lis2);
-													cleardevice();
-													complementoB();
-													cout<<"Conjunto A "<<endl;
-													lis->mostrarPorCabeza();
-													cout<<"Conjunto B "<<endl;
-													lis1->mostrarPorCabeza();
-													cout<<"Conjunto resultado "<<endl;
-													op->complemento(lis1, lis, lis2);
-													op->mostrar(lis2);
-													system("pause");
-													break;
-												case 0:
-													opc3 = 3;
-											}
-											if(opc3==3){
-												break;
-											}
-										}while(opc3!= 1 || opc3 != 2||opc3 != 0 );
-										break;
+												}
+											}while(opc3!= 1 || opc3 != 2||opc3 != 0 );
+											break;
 											case 4:
 												do{
 													system("cls");

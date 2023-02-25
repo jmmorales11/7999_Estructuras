@@ -284,7 +284,56 @@ void FuncionesInterfaz::dibujoReina(int fila, int columna){
 		y1+=aux3;
 	}
 
+	}///////////////////////////777777
+	
+	void FuncionesInterfaz::caballoP(int fila, int columna){
+		*(*(this->reina->validar+fila)+columna)=true;
+		cout<<endl;
+		solucionCP(fila, columna, 1);
+		for(int i=0;i<DIMENSION;i++){
+			for(int j=0;j<DIMENSION;j++){
+				if((i+j)%2==0){
+						SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0| BACKGROUND_INTENSITY);
+					}
+					else{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15|0);
+					}
+					if(	*(*(this->reina->validar+i)+j)==true){
+					dibujocaballo(i,j);
+					*(*(this->reina->tablero+i)+j)='C';
+			}
+				this->archivo<<*(*(this->reina->tablero+i)+j)<<" ";
+				cout<<*(*(this->reina->tablero+i)+j)<<" ";
+			}
+			this->archivo<<endl;
+			cout<<endl;
+		}
+		this->archivo<<endl;
+		cout<<endl;	
 	}
+	
+	void FuncionesInterfaz::solucionCP(int f, int c, int cont){
+		if(f>=7){
+			cout<<"SALTOS ES  "<<cont<<endl;
+		}
+		if(c>=7){
+			system("pause");
+			cout<<f<<c<<"Salto "<<cont<<endl;
+			*(*(this->reina->validar+f+2)+c-1)=true;
+			solucionCP(f+2, c-1, cont+1);
+		}
+		if(f<7){
+			system("pause");
+			cout<<f<<c<<"Salto menor fila 8  "<<cont<<endl;
+			*(*(this->reina->validar+f+2)+(c+1))=true;
+			solucionCP(f+2, c+1, cont+1);
+		}
+		if (c<0){
+			*(*(this->reina->validar+f+2)+c+1)=true;
+			solucionCP(f+2, c+1, cont+1);
+		}
+	}
+
 	/////////////////////////////////////////
 	void FuncionesInterfaz::caballo(int fila, int columna){
 		caballoS(fila,columna,1);
