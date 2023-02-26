@@ -1,0 +1,57 @@
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\FuncionesCubo.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\FuncionesCubo.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\FuncionesCubo.exe" -m32 -g3 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32/libmingw32.a(lib32_libmingw32_a-crt0_c.o): in function `main':
+
+C:/crossdev/src/mingw-w64-v7-git20191109/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+Compilation results...
+--------
+- Errors: 1
+- Warnings: 0
+- Compilation Time: 1,11s
+
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\Main_cubo.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\Main_cubo.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\Main_cubo.exe" -m32 -g3 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+
+Compilation results...
+--------
+- Errors: 0
+- Warnings: 0
+- Output Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\Main_cubo.exe
+- Output Size: 2,44936180114746 MiB
+- Compilation Time: 0,81s
+
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\FuncionesCubo.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\FuncionesCubo.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\cubo_magico_4\FuncionesCubo.exe" -m32 -g3 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32/libmingw32.a(lib32_libmingw32_a-crt0_c.o): in function `main':
+
+C:/crossdev/src/mingw-w64-v7-git20191109/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+Compilation results...
+--------
+- Errors: 1
+- Warnings: 0
+- Compilation Time: 0,81s
