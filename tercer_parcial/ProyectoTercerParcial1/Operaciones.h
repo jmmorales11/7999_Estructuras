@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2023
  * 
  */
-#include "Conjuntos.h"
+
 #include "ListaDoble.cpp"
 template <typename T> 
 class Operaciones

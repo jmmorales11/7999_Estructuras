@@ -14,21 +14,18 @@
  * @copyright Copyright (c) 2023
  * 
  */
-#if !defined(__Conjuntos_Conjuntos_h)
-#define __Conjuntos_Conjuntos_h
+#include "ListaDoble.cpp"
 
 class Conjuntos
 {
 public:
-   virtual void uniones()=0;
-   virtual void interseccion()=0;
-   virtual void complemento()=0;
-   virtual void diferencia()=0;
-   virtual void diferenciaSimetrica()=0;
+	virtual void uniones(ListaDoble<string> *lista1, ListaDoble<string> *lista2,ListaDoble<string> *lista3)=0;
+    virtual void interseccion(ListaDoble<string> *lista1, ListaDoble<string> *lista2,ListaDoble<string> *lista3)=0;
+    virtual void complemento(ListaDoble<string> *lista1, ListaDoble<string> *lista2,ListaDoble<string> *lista3)=0;
+    virtual void diferencia(ListaDoble<string> *lista1, ListaDoble<string> *lista2, ListaDoble<string> *lista3=0);
+    virtual void diferenciaSimetrica(ListaDoble<string> *lista1, ListaDoble<string> *lista2,ListaDoble<string> *lista3)=0;
 
 protected:
 private:
 
 };
-
-#endif
