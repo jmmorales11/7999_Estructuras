@@ -19,6 +19,17 @@ ListaDoble<T>::ListaDoble()
 	this->numNodos=0;
 }
  
+template <typename T>
+int ListaDoble<T>::tam(){
+	int i=0;
+ 	NodoDoble<T> *aux=this->primero;
+  	while(aux){
+  		aux=aux->getSiguiente();
+  		i++;
+  	}
+  	return i;
+}
+ 
 /**
  * Devuelve verdadero si la lista está vacía, falso en caso contrario.
  * 

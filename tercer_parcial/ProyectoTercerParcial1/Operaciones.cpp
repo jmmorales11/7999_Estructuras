@@ -33,14 +33,13 @@ void  Operaciones<T>::dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x,
 	copiar(lista,lista3);
 	copiar(lista1,lista4);
 	interseccionSin(lista3,lista4,listaI);
+	cout<<"Inicia"<<endl;
+	if (lista3->getNumNodos() > listaI->getNumNodos() && lista4->getNumNodos() > listaI->getNumNodos()){
 	borrar(lista3,listaI);
 	borrar(lista4,listaI);
 	settextstyle(1,0,2);
 	int cont=0, f=x,c=y;
-//	if (lista3->getListaVacia()==false)
-//  	{
 	NodoDoble<T> *aux=lista3->getPrimero();
-	
 	
   	while(aux!=NULL){
   		if(cont%2==0){	
@@ -53,9 +52,6 @@ void  Operaciones<T>::dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x,
 
   		cont+=1;
   	}
-//  }
-//  	if (lista4->getListaVacia()==false)
-//  	{
   	cont=0;
   	int x1=x+210;
   	f=x1;
@@ -72,9 +68,6 @@ void  Operaciones<T>::dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x,
 
   		cont+=1;
   	}
-//  }
-// 	if (listaI->getListaVacia()==false)
-//  	{
   	settextstyle(1,0,1);
   	cont=0;
   	int x2=x+125;
@@ -91,22 +84,25 @@ void  Operaciones<T>::dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x,
   		f+=30;
   		cont+=1;
  	}
-//	}
 
+}
+cout<<"FIN"<<endl;
 }
 template <typename T>
 void  Operaciones<T>::borrar(ListaDoble<T> *lista,ListaDoble<T> *lista1){
 	NodoDoble<T> *aux=lista->getPrimero();//O(1)
 	NodoDoble<T> *aux1=lista1->getPrimero();//O(1)
-	while(aux!=NULL){//O(n)
-		aux1=lista1->getPrimero();//O(1)
-		while(aux1!=NULL){//O(n)
+	while(aux1!=NULL){//O(n)
+		aux=lista->getPrimero();//O(1)
+		while(aux!=NULL){//O(n)
 			if(aux->getObjeto()==aux1->getObjeto()){//O(n)
 				lista->eliminarPorValor(aux1->getObjeto());//O(1)
+				aux=aux->getAnterior();//O(1)
 			}
-			aux1=aux1->getSiguiente();//O(1)
+			
+			aux=aux->getSiguiente();//O(1)
 		}
-		aux=aux->getSiguiente();//O(1)			
+		aux1=aux1->getSiguiente();//O(1)			
 	}
 	
 }
@@ -175,22 +171,26 @@ template <typename T>
 void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
 	long inicio = obtenerTiempo();//O(1)
 	NodoDoble<T> *aux=lista1->getPrimero();//O(1)
-	NodoDoble<T> *aux1=lista3->getPrimero();//O(1)
+	NodoDoble<T> *aux1;//O(1)
+	int cont=0;
 	if (comparar(lista3,lista1)==true || comparar(lista3,lista2)==true){
 		cout<<"El conjunto A o B no estan dentro del conjutno universal"<<endl;
 	}else{//O(nlog(n))
-		cout<<"Conjunto "<<endl;
-		while(aux1!=NULL){//O(n)
-			aux=lista1->getPrimero();//O(1)
-			while (aux!=NULL){//O(n)
-				if(aux->getObjeto()==aux1->getObjeto()){//O(n)	
-					lista3->eliminarPorValor(aux1->getObjeto());//O(1)
+		while(aux!=NULL){
+			aux1=lista3->getPrimero();
+			cont=1;
+			while(aux1!=NULL){
+				if(aux->getObjeto()==aux1->getObjeto()){
+					lista3->eliminarEntre(cont);
+					cont-=1;
 				}
-				aux=aux->getSiguiente();//O(1)
+				aux1=aux1->getSiguiente();
+				cont+=1;
 			}
-			aux1=aux1->getSiguiente();//O(1)
+			aux=aux->getSiguiente();
 		}	
 	}
+	lista3->mostrarPorCabeza();
 	dibujarBigOExponecialAzul();
 	ejes();
 	long final = obtenerTiempo();//O(1)
@@ -228,6 +228,7 @@ bool Operaciones<T>::comparar(ListaDoble<T> *lista1, ListaDoble<T> *lista2){
 	//O(1)+O(1)+O(1)+O(1)+O(1)+O(n)*(O(1)+O(1))*O(n)*O(1)+O(1)*O(1))+O(1)=O(n^2)
 	return val;
 }
+
 template <typename T> 
 void Operaciones<T>::diferencia(ListaDoble<T> *lista1, ListaDoble<T> *lista2, ListaDoble<T> *lista3){
 	long inicio = obtenerTiempo();//O(1)

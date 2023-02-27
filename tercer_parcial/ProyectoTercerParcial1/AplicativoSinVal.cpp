@@ -8,6 +8,7 @@ using namespace std;
 int main(){
 	int gd = DETECT;
 	int gm;
+	
 //	initgraph(&gd, &gm,"C:\TC\8GI");
 	initwindow(1200,700); 
 
@@ -21,8 +22,7 @@ int main(){
 	bool repetir;
 	
 	int opc,opc1, opc2, opc3, entero, numeroVal;
-	Caratula();
-	
+	Caratula();	
 
 	do{
 		opc=10;
@@ -136,6 +136,7 @@ int main(){
 										op->uniones(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2,190,615);
+										
 										op->dibujar(lis,lis1,290,100);
 										system("pause");
 									break;
@@ -149,13 +150,14 @@ int main(){
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2,190,615);
 										op->dibujar(lis,lis1,290,100);
+										op->dibujar(lis,lis1,290,100);
 										system("pause");
 									break;
 									case 3:
 										do{
 											cleardevice();
 											system("cls");
-									        cout << "-----------------------Diferencia-----------------------" << endl
+									        cout << "-----------------------Complemento-----------------------" << endl
 									             << endl; 
 									        cout << "\t[1]  Complemento de A" << endl;
 									        cout << "\t[2]  Complemento de B" << endl;
@@ -176,6 +178,7 @@ int main(){
 													cout<<"Conjunto B "<<endl;
 													op->mostrar(lis1,190,555);
 													cout<<"Conjunto resultado "<<endl;
+													op->dibujar(lis,lis1,290,100);
 													op->complemento(lis, lis1, lis2);
 													op->mostrar(lis2,190,615);
 													system("pause");
@@ -192,6 +195,7 @@ int main(){
 													cout<<"Conjunto resultado "<<endl;
 													op->complemento(lis1, lis, lis2);
 													op->mostrar(lis2,190,615);
+													op->dibujar(lis,lis1,290,100);
 													system("pause");
 													break;
 												case 0:
@@ -227,6 +231,7 @@ int main(){
 													cout<<"Conjunto resultado "<<endl;
 													op->diferencia(lis, lis1, lis2);
 													op->mostrar(lis2,190,615);
+													op->dibujar(lis,lis1,290,100);
 													system("pause");
 													break;
 												case 2:
@@ -239,6 +244,7 @@ int main(){
 													cout<<"Conjunto resultado "<<endl;
 													op->diferencia(lis1, lis, lis2);
 													op->mostrar(lis2,190,615);
+													op->dibujar(lis,lis1,290,100);
 													system("pause");
 													break;
 												case 0:
@@ -260,6 +266,7 @@ int main(){
 										op->mostrar(lis1,190,555);
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2,190,615);
+										op->dibujar(lis,lis1,290,100);
 										system("pause");
 										break;
 									case 0:
@@ -376,6 +383,7 @@ int main(){
 										op->uniones(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2,190,615);
+								//		op->dibujar(lis,lis1,290,100);
 										system("pause");
 									break;
 									case 2:
@@ -387,6 +395,7 @@ int main(){
 										op->interseccion(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2,190,615);
+								//		op->dibujar(lis,lis1,290,100);
 										system("pause");
 									break;
 									case 3:
@@ -416,6 +425,7 @@ int main(){
 													cout<<"Conjunto resultado "<<endl;
 													op->complemento(lis, lis1, lis2);
 													op->mostrar(lis2,190,615);
+													op->dibujar(lis,lis1,290,100);
 													system("pause");
 													break;
 												case 2:
@@ -430,6 +440,7 @@ int main(){
 													cout<<"Conjunto resultado "<<endl;
 													op->complemento(lis1, lis, lis2);
 													op->mostrar(lis2,190,615);
+													op->dibujar(lis,lis1,290,100);
 													system("pause");
 													break;
 												case 0:
@@ -465,6 +476,7 @@ int main(){
 													cout<<"Conjunto resultado "<<endl;
 													op->diferencia(lis, lis1, lis2);
 													op->mostrar(lis2,190,615);
+													op->dibujar(lis,lis1,290,100);
 													system("pause");
 													break;
 												case 2:
@@ -477,6 +489,7 @@ int main(){
 													cout<<"Conjunto resultado "<<endl;
 													op->diferencia(lis1, lis, lis2);
 													op->mostrar(lis2,190,615);
+													op->dibujar(lis,lis1,290,100);
 													system("pause");
 													break;
 												case 0:
@@ -498,6 +511,7 @@ int main(){
 										op->mostrar(lis1,190,555);
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2,190,615);
+										op->dibujar(lis,lis1,290,100);
 										system("pause");
 										break;
 									case 0:
