@@ -136,7 +136,6 @@ int main(){
 										op->uniones(lis, lis1, lis2);
 										cout<<"Conjunto resultado "<<endl;
 										op->mostrar(lis2,190,615);
-										
 										op->dibujar(lis,lis1,290,100);
 										system("pause");
 									break;
