@@ -116,6 +116,7 @@ void dibujarBigOExponecialCeleste(){
 	}
 	
 	void tiempo(long tiempo){
+		setcolor(15);
 		string numStr = to_string(tiempo);
 		char buffer[100];
 		outtextxy(890,100,"Complejidad del Algoritmo");
@@ -124,3 +125,4 @@ void dibujarBigOExponecialCeleste(){
 		outtextxy(890,485,"Microsegundos");
 		outtextxy(890,510,buffer);
 	}
+	

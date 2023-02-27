@@ -84,10 +84,36 @@ public:
    /**
     * @brief Funcion mostrar
     * 
+    * @param lista
+    * @param x
+    * @param y
+    */
+   void mostrar(ListaDoble<T> *lista, int x, int y );
+   /**
+    * @brief Funcion dibujar
+    * 
+    * @param lista
+    * @param lista1
+    * @param x
+    * @param y
+    */
+   void dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x, int y);
+   /**
+    * @brief Funcion borrar
+    * 
+    * @param lista
+    * @param lista1
+    */
+   void borrar(ListaDoble<T> *lista,ListaDoble<T> *lista1);
+   /**
+    * @brief Funcion interseccion
+    * 
     * @param lista1
     * @param lista2
+    * @param lista3
     */
-   void mostrar(ListaDoble<T> *lista);
+   void interseccionSin(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3);
+
 protected:
 private:
 	
