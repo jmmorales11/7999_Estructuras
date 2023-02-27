@@ -61,7 +61,7 @@ int main(){
 								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto A: "));
 								dato=datoEntero;
 								lis->insertarPorCola(dato);
-									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
 									if(numeroVal==1){
@@ -79,7 +79,7 @@ int main(){
 								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto B: "));
 								dato=datoEntero;
 								lis1->insertarPorCola(dato);
-									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto B (1 = si): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
 									if(numeroVal==1){
@@ -293,7 +293,7 @@ int main(){
 								str_cpy(datoEntero,ingresocaracteres("\nIngrese un numero un conjunto A: "));
 								dato=datoEntero;
 								lis->insertarPorCola(dato);
-								str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+								str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
 									if(numeroVal==1){
@@ -311,7 +311,7 @@ int main(){
 								str_cpy(datoEntero,ingresocaracteres("\nIngrese un numero un conjunto B: "));
 								dato=datoEntero;
 								lis1->insertarPorCola(dato);	
-								str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+								str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto B (1 = si): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
 									if(numeroVal==1){

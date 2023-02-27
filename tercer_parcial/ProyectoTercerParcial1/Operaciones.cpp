@@ -33,7 +33,6 @@ void  Operaciones<T>::dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x,
 	copiar(lista,lista3);
 	copiar(lista1,lista4);
 	interseccionSin(lista3,lista4,listaI);
-	cout<<"Inicia"<<endl;
 	if (lista3->getNumNodos() > listaI->getNumNodos() && lista4->getNumNodos() > listaI->getNumNodos()){
 	borrar(lista3,listaI);
 	borrar(lista4,listaI);
@@ -86,7 +85,7 @@ void  Operaciones<T>::dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x,
  	}
 
 }
-cout<<"FIN"<<endl;
+
 }
 template <typename T>
 void  Operaciones<T>::borrar(ListaDoble<T> *lista,ListaDoble<T> *lista1){

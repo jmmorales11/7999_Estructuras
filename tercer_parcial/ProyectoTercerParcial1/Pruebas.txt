@@ -1,0 +1,857 @@
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.exe" -m32 -g3 -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:2:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarInterseccion()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:19:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   19 |  outtextxy(400,1,"Interseccion");
+      |                  ^~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:26:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   26 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaAB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:33:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   33 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:46:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   46 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaBA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:53:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   53 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:66:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   66 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void uniones1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:73:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |  outtextxy(400,1,"Union");
+      |                  ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:86:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:93:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   93 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:108:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:115:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  115 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:130:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  130 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void diferenciaSimetrica1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:137:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  137 |  outtextxy(150,1,"Diferencia Simetrica");
+      |                  ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:144:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  144 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void conjuntos()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:150:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  150 |  outtextxy(65,500,"A :  {");
+      |                   ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:151:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  151 |  outtextxy(65,550,"B :  { ");
+      |                   ^~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:152:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  152 |  outtextxy(220,125,"A");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:153:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  153 |  outtextxy(610,125,"B");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:154:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  154 |  outtextxy(110,125,"U");
+      |                    ^~~
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:7:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void Caratula()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:20:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   20 |   outtextxy(350,30,"SISTEMAS DE CONJUNTOS");
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:23:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   23 |   outtextxy(200,650,"Morales Jeimy");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:24:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   24 |   outtextxy(550,650,"Orrico Camilo");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaRoja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:30:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   30 |   outtextxy(1100,373,"O(log n )");
+      |                      ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:36:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   36 |   outtextxy(1100,390,"O(1)");
+      |                      ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigHoraSuperLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:48:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   48 |  outtextxy(1100,225,"O(nlogn)");
+      |                     ^~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigTiempoLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:58:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   58 |  outtextxy(1100,350,"O(n)");
+      |                     ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialCeleste()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:71:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   71 |   outtextxy(838,120,"O(n!)");
+      |                     ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialAzul()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:83:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   83 |   outtextxy(970,150,"O(n^2)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialNaranja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:94:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   94 |   outtextxy(888,125,"O(2^n)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void ejes()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:101:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  101 |   outtextxy(890,435,"Elementos");
+      |                     ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:103:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  103 |   outtextxy(810,180,"O");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:104:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  104 |   outtextxy(810,200,"p");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:105:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  105 |   outtextxy(810,220,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:106:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  106 |   outtextxy(810,240,"r");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:107:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  107 |   outtextxy(810,260,"a");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:108:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |   outtextxy(810,280,"c");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:109:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  109 |   outtextxy(810,300,"i");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:110:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  110 |   outtextxy(810,320,"o");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:111:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  111 |   outtextxy(810,340,"n");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:112:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  112 |   outtextxy(810,360,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:113:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  113 |   outtextxy(810,380,"s");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void tiempo(long int)':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:122:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  122 |   outtextxy(890,100,"Complejidad del Algoritmo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:124:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  124 |   outtextxy(890,460,"Tiempo del algortimo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:125:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  125 |   outtextxy(890,485,"Microsegundos");
+      |                     ^~~~~~~~~~~~~~~
+C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32/libmingw32.a(lib32_libmingw32_a-crt0_c.o): in function `main':
+C:/crossdev/src/mingw-w64-v7-git20191109/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+
+collect2.exe: error: ld returned 1 exit status
+
+Compilation results...
+--------
+- Errors: 1
+- Warnings: 44
+- Compilation Time: 3,38s
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.exe" -m32 -g3 -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:2:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarInterseccion()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:19:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   19 |  outtextxy(400,1,"Interseccion");
+      |                  ^~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:26:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   26 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaAB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:33:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   33 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:46:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   46 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaBA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:53:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   53 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:66:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   66 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void uniones1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:73:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |  outtextxy(400,1,"Union");
+      |                  ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:86:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:93:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   93 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:108:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:115:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  115 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:130:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  130 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void diferenciaSimetrica1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:137:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  137 |  outtextxy(150,1,"Diferencia Simetrica");
+      |                  ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:144:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  144 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void conjuntos()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:150:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  150 |  outtextxy(65,500,"A :  {");
+      |                   ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:151:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  151 |  outtextxy(65,550,"B :  { ");
+      |                   ^~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:152:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  152 |  outtextxy(220,125,"A");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:153:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  153 |  outtextxy(610,125,"B");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:154:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  154 |  outtextxy(110,125,"U");
+      |                    ^~~
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:7:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void Caratula()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:20:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   20 |   outtextxy(350,30,"SISTEMAS DE CONJUNTOS");
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:23:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   23 |   outtextxy(200,650,"Morales Jeimy");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:24:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   24 |   outtextxy(550,650,"Orrico Camilo");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaRoja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:30:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   30 |   outtextxy(1100,373,"O(log n )");
+      |                      ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:36:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   36 |   outtextxy(1100,390,"O(1)");
+      |                      ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigHoraSuperLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:48:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   48 |  outtextxy(1100,225,"O(nlogn)");
+      |                     ^~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigTiempoLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:58:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   58 |  outtextxy(1100,350,"O(n)");
+      |                     ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialCeleste()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:71:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   71 |   outtextxy(838,120,"O(n!)");
+      |                     ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialAzul()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:83:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   83 |   outtextxy(970,150,"O(n^2)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialNaranja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:94:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   94 |   outtextxy(888,125,"O(2^n)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void ejes()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:101:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  101 |   outtextxy(890,435,"Elementos");
+      |                     ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:103:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  103 |   outtextxy(810,180,"O");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:104:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  104 |   outtextxy(810,200,"p");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:105:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  105 |   outtextxy(810,220,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:106:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  106 |   outtextxy(810,240,"r");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:107:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  107 |   outtextxy(810,260,"a");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:108:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |   outtextxy(810,280,"c");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:109:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  109 |   outtextxy(810,300,"i");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:110:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  110 |   outtextxy(810,320,"o");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:111:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  111 |   outtextxy(810,340,"n");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:112:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  112 |   outtextxy(810,360,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:113:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  113 |   outtextxy(810,380,"s");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void tiempo(long int)':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:122:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  122 |   outtextxy(890,100,"Complejidad del Algoritmo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:124:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  124 |   outtextxy(890,460,"Tiempo del algortimo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:125:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  125 |   outtextxy(890,485,"Microsegundos");
+      |                     ^~~~~~~~~~~~~~~
+C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32/libmingw32.a(lib32_libmingw32_a-crt0_c.o): in function `main':
+
+C:/crossdev/src/mingw-w64-v7-git20191109/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+Compilation results...
+--------
+- Errors: 1
+- Warnings: 44
+- Compilation Time: 3,22s
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.exe" -m32 -g3 -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:2:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarInterseccion()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:19:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   19 |  outtextxy(400,1,"Interseccion");
+      |                  ^~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:26:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   26 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaAB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:33:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   33 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:46:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   46 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaBA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:53:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   53 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:66:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   66 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void uniones1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:73:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |  outtextxy(400,1,"Union");
+      |                  ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:86:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:93:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   93 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:108:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:115:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  115 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:130:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  130 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void diferenciaSimetrica1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:137:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  137 |  outtextxy(150,1,"Diferencia Simetrica");
+      |                  ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:144:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  144 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void conjuntos()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:150:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  150 |  outtextxy(65,500,"A :  {");
+      |                   ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:151:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  151 |  outtextxy(65,550,"B :  { ");
+      |                   ^~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:152:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  152 |  outtextxy(220,125,"A");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:153:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  153 |  outtextxy(610,125,"B");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:154:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  154 |  outtextxy(110,125,"U");
+      |                    ^~~
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:7:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void Caratula()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:20:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   20 |   outtextxy(350,30,"SISTEMAS DE CONJUNTOS");
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:23:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   23 |   outtextxy(200,650,"Morales Jeimy");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:24:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   24 |   outtextxy(550,650,"Orrico Camilo");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaRoja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:30:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   30 |   outtextxy(1100,373,"O(log n )");
+      |                      ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:36:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   36 |   outtextxy(1100,390,"O(1)");
+      |                      ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigHoraSuperLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:48:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   48 |  outtextxy(1100,225,"O(nlogn)");
+      |                     ^~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigTiempoLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:58:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   58 |  outtextxy(1100,350,"O(n)");
+      |                     ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialCeleste()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:71:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   71 |   outtextxy(838,120,"O(n!)");
+      |                     ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialAzul()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:83:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   83 |   outtextxy(970,150,"O(n^2)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialNaranja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:94:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   94 |   outtextxy(888,125,"O(2^n)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void ejes()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:101:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  101 |   outtextxy(890,435,"Elementos");
+      |                     ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:103:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  103 |   outtextxy(810,180,"O");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:104:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  104 |   outtextxy(810,200,"p");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:105:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  105 |   outtextxy(810,220,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:106:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  106 |   outtextxy(810,240,"r");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:107:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  107 |   outtextxy(810,260,"a");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:108:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |   outtextxy(810,280,"c");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:109:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  109 |   outtextxy(810,300,"i");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:110:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  110 |   outtextxy(810,320,"o");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:111:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  111 |   outtextxy(810,340,"n");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:112:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  112 |   outtextxy(810,360,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:113:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  113 |   outtextxy(810,380,"s");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void tiempo(long int)':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:122:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  122 |   outtextxy(890,100,"Complejidad del Algoritmo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:124:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  124 |   outtextxy(890,460,"Tiempo del algortimo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:125:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  125 |   outtextxy(890,485,"Microsegundos");
+      |                     ^~~~~~~~~~~~~~~
+C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32/libmingw32.a(lib32_libmingw32_a-crt0_c.o): in function `main':
+
+C:/crossdev/src/mingw-w64-v7-git20191109/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+Compilation results...
+--------
+- Errors: 1
+- Warnings: 44
+- Compilation Time: 3,27s
+
+
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.exe" -m32 -g3 -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:2:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarInterseccion()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:19:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   19 |  outtextxy(400,1,"Interseccion");
+      |                  ^~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:26:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   26 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaAB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:33:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   33 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:46:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   46 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaBA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:53:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   53 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:66:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   66 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void uniones1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:73:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |  outtextxy(400,1,"Union");
+      |                  ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:86:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:93:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   93 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:108:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:115:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  115 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:130:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  130 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void diferenciaSimetrica1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:137:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  137 |  outtextxy(150,1,"Diferencia Simetrica");
+      |                  ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:144:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  144 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void conjuntos()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:150:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  150 |  outtextxy(65,500,"A :  {");
+      |                   ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:151:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  151 |  outtextxy(65,550,"B :  { ");
+      |                   ^~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:152:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  152 |  outtextxy(220,125,"A");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:153:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  153 |  outtextxy(610,125,"B");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:154:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  154 |  outtextxy(110,125,"U");
+      |                    ^~~
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:7:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void Caratula()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:20:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   20 |   outtextxy(350,30,"SISTEMAS DE CONJUNTOS");
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:23:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   23 |   outtextxy(200,650,"Morales Jeimy");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:24:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   24 |   outtextxy(550,650,"Orrico Camilo");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaRoja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:30:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   30 |   outtextxy(1100,373,"O(log n )");
+      |                      ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:36:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   36 |   outtextxy(1100,390,"O(1)");
+      |                      ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigHoraSuperLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:48:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   48 |  outtextxy(1100,225,"O(nlogn)");
+      |                     ^~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigTiempoLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:58:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   58 |  outtextxy(1100,350,"O(n)");
+      |                     ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialCeleste()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:71:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   71 |   outtextxy(838,120,"O(n!)");
+      |                     ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialAzul()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:83:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   83 |   outtextxy(970,150,"O(n^2)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialNaranja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:94:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   94 |   outtextxy(888,125,"O(2^n)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void ejes()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:101:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  101 |   outtextxy(890,435,"Elementos");
+      |                     ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:103:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  103 |   outtextxy(810,180,"O");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:104:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  104 |   outtextxy(810,200,"p");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:105:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  105 |   outtextxy(810,220,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:106:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  106 |   outtextxy(810,240,"r");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:107:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  107 |   outtextxy(810,260,"a");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:108:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |   outtextxy(810,280,"c");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:109:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  109 |   outtextxy(810,300,"i");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:110:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  110 |   outtextxy(810,320,"o");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:111:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  111 |   outtextxy(810,340,"n");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:112:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  112 |   outtextxy(810,360,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:113:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  113 |   outtextxy(810,380,"s");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void tiempo(long int)':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:122:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  122 |   outtextxy(890,100,"Complejidad del Algoritmo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:124:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  124 |   outtextxy(890,460,"Tiempo del algortimo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:125:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  125 |   outtextxy(890,485,"Microsegundos");
+      |                     ^~~~~~~~~~~~~~~
+C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32/libmingw32.a(lib32_libmingw32_a-crt0_c.o): in function `main':
+
+C:/crossdev/src/mingw-w64-v7-git20191109/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+Compilation results...
+--------
+- Errors: 1
+- Warnings: 44
+- Compilation Time: 3,31s
+Compiling single file...
+--------
+- Filename: C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp
+- Compiler Name: TDM-GCC 9.2.0 32-bit Release
+
+Processing C++ source file...
+--------
+- C++ Compiler: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\bin\g++.exe
+- Command: g++.exe "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp" -o "C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.exe" -m32 -g3 -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include" -I"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\lib\gcc\x86_64-w64-mingw32\9.2.0\include\c++" -L"C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32" -static-libgcc -m32 -g3
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:2:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarInterseccion()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:19:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   19 |  outtextxy(400,1,"Interseccion");
+      |                  ^~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:26:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   26 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaAB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:33:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   33 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:46:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   46 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void dibujarDiferenciaBA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:53:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   53 |  outtextxy(400,1,"Diferencia");
+      |                  ^~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:66:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   66 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void uniones1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:73:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   73 |  outtextxy(400,1,"Union");
+      |                  ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:86:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   86 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:93:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   93 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:108:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void complementoB()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:115:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  115 |  outtextxy(300,1,"Complemento");
+      |                  ^~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:130:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  130 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void diferenciaSimetrica1()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:137:18: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  137 |  outtextxy(150,1,"Diferencia Simetrica");
+      |                  ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:144:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  144 |  outtextxy(130,610,": {");
+      |                    ^~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp: In function 'void conjuntos()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:150:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  150 |  outtextxy(65,500,"A :  {");
+      |                   ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:151:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  151 |  outtextxy(65,550,"B :  { ");
+      |                   ^~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:152:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  152 |  outtextxy(220,125,"A");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:153:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  153 |  outtextxy(610,125,"B");
+      |                    ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\maingrafica.cpp:154:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  154 |  outtextxy(110,125,"U");
+      |                    ^~~
+In file included from C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\Operaciones.cpp:7:
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void Caratula()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:20:20: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   20 |   outtextxy(350,30,"SISTEMAS DE CONJUNTOS");
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:23:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   23 |   outtextxy(200,650,"Morales Jeimy");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:24:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   24 |   outtextxy(550,650,"Orrico Camilo");
+      |                     ^~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaRoja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:30:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   30 |   outtextxy(1100,373,"O(log n )");
+      |                      ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void LineaA()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:36:22: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   36 |   outtextxy(1100,390,"O(1)");
+      |                      ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigHoraSuperLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:48:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   48 |  outtextxy(1100,225,"O(nlogn)");
+      |                     ^~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void graficarBigTiempoLineal()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:58:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   58 |  outtextxy(1100,350,"O(n)");
+      |                     ^~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialCeleste()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:71:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   71 |   outtextxy(838,120,"O(n!)");
+      |                     ^~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialAzul()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:83:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   83 |   outtextxy(970,150,"O(n^2)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void dibujarBigOExponecialNaranja()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:94:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   94 |   outtextxy(888,125,"O(2^n)");
+      |                     ^~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void ejes()':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:101:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  101 |   outtextxy(890,435,"Elementos");
+      |                     ^~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:103:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  103 |   outtextxy(810,180,"O");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:104:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  104 |   outtextxy(810,200,"p");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:105:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  105 |   outtextxy(810,220,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:106:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  106 |   outtextxy(810,240,"r");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:107:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  107 |   outtextxy(810,260,"a");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:108:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  108 |   outtextxy(810,280,"c");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:109:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  109 |   outtextxy(810,300,"i");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:110:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  110 |   outtextxy(810,320,"o");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:111:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  111 |   outtextxy(810,340,"n");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:112:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  112 |   outtextxy(810,360,"e");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:113:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  113 |   outtextxy(810,380,"s");
+      |                     ^~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h: In function 'void tiempo(long int)':
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:122:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  122 |   outtextxy(890,100,"Complejidad del Algoritmo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:124:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  124 |   outtextxy(890,460,"Tiempo del algortimo");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Jeimy\OneDrive\Documentos\Tercer_Semestre\Estructuras1\1_REPOSITORIO\7999_Estructuras\tercer_parcial\ProyectoTercerParcial1\lineas.h:125:21: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  125 |   outtextxy(890,485,"Microsegundos");
+      |                     ^~~~~~~~~~~~~~~
+C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/9.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Program Files (x86)\Embarcadero\Dev-Cpp\TDM-GCC-64\x86_64-w64-mingw32\lib32/libmingw32.a(lib32_libmingw32_a-crt0_c.o): in function `main':
+
+C:/crossdev/src/mingw-w64-v7-git20191109/mingw-w64-crt/crt/crt0_c.c:18: undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+Compilation results...
+--------
+- Errors: 1
+- Warnings: 44
+- Compilation Time: 3,22s
