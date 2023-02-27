@@ -35,12 +35,9 @@ int main(){
         cout << "\t[1]  Ingresar Numeros" << endl;
         cout << "\t[2]  Ingresar Letras" << endl;
 		cout << "\t[0]  Salir" << endl;
-		cout << "Selecciona " << endl;
-	/*	str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+		str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 		opc=funcion_atoi(datoEntero,strlen(datoEntero));
 		cout<<endl;
-		*/
-		cin>>opc;
 		switch(opc){
 			case 1:	
 				lis = new ListaDoble<string>();
@@ -55,23 +52,18 @@ int main(){
 					cout << "\t[3]  Operaciones" << endl;
 					cout << "\t[0]  Regresar" << endl;
 					cout << " " << endl;
-					/*str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+					str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 					opc1=funcion_atoi(datoEntero,strlen(datoEntero));
-					cout<<endl;*/
-					cin>>opc1;
+					cout<<endl;
 					switch(opc1){
 						case 1:
 							do{
-								cout<<"Ingrese un numero un conjunto A:"<<endl;
-								cin>>dato;
-								/*str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto A: "));
-								*/
+								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto A: "));
+								dato=datoEntero;
 								lis->insertarPorCola(dato);
-								cout<<"Desea ingresar otro numero al conjunto A (1 = si/0 = no): "<<endl;
-								/*	str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
 									cout<<"\n";
-									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));*/
-									cin>>numeroVal;
+									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
 									if(numeroVal==1){
 										repetir=true;
 									}
@@ -84,16 +76,12 @@ int main(){
 							break;
 						case 2:
 							do{
-								cout<<"Ingrese un numero un conjunto B:"<<endl;
-								cin>>dato;/*
-								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto B: "));*/
+								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto B: "));
+								dato=datoEntero;
 								lis1->insertarPorCola(dato);
-								cout<<"Desea ingresar otro numero al conjunto A (1 = si/0 = no): "<<endl;
-								/*	str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+									str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
-									*/
-									cin>>numeroVal;
 									if(numeroVal==1){
 										repetir=true;
 									}
@@ -120,11 +108,9 @@ int main(){
 								cout << "\t[4]  Diferencia" << endl;
 								cout << "\t[5]  Diferencia simetrica" << endl;
 								cout << "\t[0]  Regresar" << endl;
-								cout << "Selecciona: " << endl;
-								/*str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+								str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 								opc2=funcion_atoi(datoEntero,strlen(datoEntero));
-								cout<<endl;*/
-								cin>>opc2;
+								cout<<endl;
 								switch(opc2){
 									case 1:
 										cout<<"Conjunto A "<<endl;
@@ -162,10 +148,9 @@ int main(){
 									        cout << "\t[2]  Complemento de B" << endl;
 											cout << "\t[0]  Regresar" << endl;
 											cout << " " << endl;
-											/*str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+											str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 											opc3=funcion_atoi(datoEntero,strlen(datoEntero));
-											cout<<endl;*/
-											cin>>opc3;
+											cout<<endl;
 											switch(opc3){
 												case 1:
 													lis2 = new ListaDoble<string>();
@@ -214,11 +199,9 @@ int main(){
 									        cout << "\t[1]  A - B" << endl;
 									        cout << "\t[2]  B - A" << endl;
 											cout << "\t[0]  Regresar" << endl;
-											cout << "Selecciona  ";/*
 											str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 											opc3=funcion_atoi(datoEntero,strlen(datoEntero));
-											cout<<endl;*/
-											cin>>opc3;
+											cout<<endl;
 											switch(opc3){
 												case 1:
 													dibujarDiferenciaAB();
@@ -301,23 +284,18 @@ int main(){
 					cout << "\t[3]  Operaciones" << endl;
 					cout << "\t[0]  Regresar" << endl;
 					cout << " " << endl;
-					/*str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+					str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 					opc1=funcion_atoi(datoEntero,strlen(datoEntero));
-					cout<<endl;*/
-					cin>>opc1;
+					cout<<endl;
 					switch(opc1){
 						case 1:
 							do{
-								cout<<"Ingrese un numero un conjunto A:"<<endl;
-								cin>>dato;
-								/*str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto A: "));
-								*/
+								str_cpy(datoEntero,ingresocaracteres("\nIngrese un numero un conjunto A: "));
+								dato=datoEntero;
 								lis->insertarPorCola(dato);
-								cout<<"Desea ingresar otro numero al conjunto A (1 = si/0 = no): "<<endl;
-								/*	str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+								str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
 									cout<<"\n";
-									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));*/
-									cin>>numeroVal;
+									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
 									if(numeroVal==1){
 										repetir=true;
 									}
@@ -330,16 +308,12 @@ int main(){
 							break;
 						case 2:
 							do{
-								cout<<"Ingrese un numero un conjunto B:"<<endl;
-								cin>>dato;/*
-								str_cpy(datoEntero,ingresarDatosEnteros("\nIngrese un numero un conjunto B: "));*/
-								lis1->insertarPorCola(dato);
-								cout<<"Desea ingresar otro numero al conjunto A (1 = si/0 = no): "<<endl;
-								/*	str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
+								str_cpy(datoEntero,ingresocaracteres("\nIngrese un numero un conjunto B: "));
+								dato=datoEntero;
+								lis1->insertarPorCola(dato);	
+								str_cpy(datoEntero,ingresarDatosEnteros("\nDesea ingresar otro numero al conjunto A (1 = si/0 = no): "));
 									cout<<"\n";
 									numeroVal=funcion_atoi(datoEntero,strlen(datoEntero));
-									*/
-									cin>>numeroVal;
 									if(numeroVal==1){
 										repetir=true;
 									}
@@ -366,11 +340,9 @@ int main(){
 								cout << "\t[4]  Diferencia" << endl;
 								cout << "\t[5]  Diferencia simetrica" << endl;
 								cout << "\t[0]  Regresar" << endl;
-								cout << "Selecciona: " << endl;
-								/*str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+								str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 								opc2=funcion_atoi(datoEntero,strlen(datoEntero));
-								cout<<endl;*/
-								cin>>opc2;
+								cout<<endl;
 								switch(opc2){
 									case 1:
 										cout<<"Conjunto A "<<endl;
@@ -407,10 +379,9 @@ int main(){
 									        cout << "\t[2]  Complemento de B" << endl;
 											cout << "\t[0]  Regresar" << endl;
 											cout << " " << endl;
-											/*str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
+											str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 											opc3=funcion_atoi(datoEntero,strlen(datoEntero));
-											cout<<endl;*/
-											cin>>opc3;
+											cout<<endl;
 											switch(opc3){
 												case 1:
 													lis2 = new ListaDoble<string>();
@@ -459,11 +430,9 @@ int main(){
 									        cout << "\t[1]  A - B" << endl;
 									        cout << "\t[2]  B - A" << endl;
 											cout << "\t[0]  Regresar" << endl;
-											cout << "Selecciona  ";/*
 											str_cpy(datoEntero,ingresarDatosEnteros("\nSelecciona: "));
 											opc3=funcion_atoi(datoEntero,strlen(datoEntero));
-											cout<<endl;*/
-											cin>>opc3;
+											cout<<endl;
 											switch(opc3){
 												case 1:
 													dibujarDiferenciaAB();
