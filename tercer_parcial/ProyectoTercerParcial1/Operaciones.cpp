@@ -12,20 +12,104 @@ Operaciones<T>::Operaciones(){
 }
 
 template <typename T>
-void Operaciones<T>::mostrar(ListaDoble<T> *lista){
+void Operaciones<T>::mostrar(ListaDoble<T> *lista, int x, int y ){
 	graficarBigTiempoLineal();
-	int x=190;//O(1)
  	NodoDoble<T> *aux=lista->getPrimero();//O(1)
   	while(aux){//O(n)
   		cout<<" ["<<aux->getObjeto()<<"] " ;//O(1)
-  		letras(aux->getObjeto(),x, 550);
-  		x+=25;//O(1)
+  		letras(aux->getObjeto(),x, y);
+  		x+=40;//O(1)
   		aux=aux->getSiguiente();//O(1)
   	}
 	cout<<endl;//O(1)
-	//O(1)+O(1)+O(n)+O(1)+O(1)+O(1)=O(n)
+	//O(1)+O(1)+O(n)*(O(1)+O(1))+O(1)=O(n)
 }
 
+template <typename T>
+void  Operaciones<T>::dibujar(ListaDoble<T> *lista,ListaDoble<T> *lista1, int x, int y){
+	ListaDoble<string> *lista3= new ListaDoble<string>() ;
+	ListaDoble<string> *lista4= new ListaDoble<string>();
+	ListaDoble<string> *listaI= new ListaDoble<string>();
+	copiar(lista,lista3);
+	copiar(lista1,lista4);
+	interseccionSin(lista3,lista4,listaI);
+	borrar(lista3,listaI);
+	borrar(lista4,listaI);
+	settextstyle(1,0,2);
+	int cont=0, f=x,c=y;
+//	if (lista3->getListaVacia()==false)
+//  	{
+	NodoDoble<T> *aux=lista3->getPrimero();
+	
+	
+  	while(aux!=NULL){
+  		if(cont%2==0){	
+  			c+=50;
+  			f=x;
+		  }
+		letras(aux->getObjeto(),f, c);
+  		aux=aux->getSiguiente();
+  		f+=50;
+
+  		cont+=1;
+  	}
+//  }
+//  	if (lista4->getListaVacia()==false)
+//  	{
+  	cont=0;
+  	int x1=x+210;
+  	f=x1;
+  	c=y;
+  	NodoDoble<T> *aux1=lista4->getPrimero();
+  	while(aux1!=NULL){
+  		if(cont%2==0){	
+  			c+=50;
+  			f=x1;
+		  }
+		letras(aux1->getObjeto(),f, c);
+  		aux1=aux1->getSiguiente();
+  		f+=50;
+
+  		cont+=1;
+  	}
+//  }
+// 	if (listaI->getListaVacia()==false)
+//  	{
+  	settextstyle(1,0,1);
+  	cont=0;
+  	int x2=x+125;
+  	f=x2;
+  	c=y+75;
+  	NodoDoble<T> *aux2=listaI->getPrimero();
+  	while(aux2!=NULL){
+  		if(cont%2==0){	
+  			c+=30;
+  			f=x2;
+		  }
+		letras(aux2->getObjeto(),f, c);
+  		aux2=aux2->getSiguiente();
+  		f+=30;
+  		cont+=1;
+ 	}
+//	}
+
+}
+template <typename T>
+void  Operaciones<T>::borrar(ListaDoble<T> *lista,ListaDoble<T> *lista1){
+	NodoDoble<T> *aux=lista->getPrimero();//O(1)
+	NodoDoble<T> *aux1=lista1->getPrimero();//O(1)
+	while(aux!=NULL){//O(n)
+		aux1=lista1->getPrimero();//O(1)
+		while(aux1!=NULL){//O(n)
+			if(aux->getObjeto()==aux1->getObjeto()){//O(n)
+				lista->eliminarPorValor(aux1->getObjeto());//O(1)
+			}
+			aux1=aux1->getSiguiente();//O(1)
+		}
+		aux=aux->getSiguiente();//O(1)			
+	}
+	
+}
 
 template <typename T> 
 void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
@@ -47,7 +131,7 @@ void Operaciones<T>::uniones(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaD
 	ejes();
 	long final = obtenerTiempo();//O(1)
 	tiempo( final - inicio);//O(1)
-	//O(1)+O(1)+O(1)+O(n)+O(1)+O(1)+O(1)+O(n)+O(1)+O(1)=O(n)
+	//O(1)+O(1)+O(1)+O(n)*(O(1)+O(1))+O(1)+O(n)*(O(1)+O(1))=O(n)
 }
 
 template <typename T> 
@@ -73,7 +157,20 @@ void Operaciones<T>::interseccion(ListaDoble<T> *lista1, ListaDoble<T> *lista2,L
 	tiempo( final - inicio);
 	//O(1)+O(1)+O(n)*O(1)*O(n)*O(1)*O(1)+O(1)=O(n^2)
 }
-
+template <typename T> 
+void Operaciones<T>::interseccionSin(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
+	NodoDoble<T> *aux=lista1->getPrimero();//O(1)
+	while(aux!=NULL){//O(n)
+		NodoDoble<T> *aux1=lista2->getPrimero();//O(1)
+		while(aux1!=NULL){//O(n)
+			if(aux->getObjeto()==aux1->getObjeto()){//O(n)
+				lista3->insertarPorCola(aux->getObjeto());//O(1)
+			}
+			aux1 = aux1->getSiguiente();//O(1)
+		}
+		aux = aux->getSiguiente();//O(1)
+	}
+}
 template <typename T> 
 void Operaciones<T>::complemento(ListaDoble<T> *lista1, ListaDoble<T> *lista2,ListaDoble<T> *lista3){
 	long inicio = obtenerTiempo();//O(1)
@@ -199,6 +296,7 @@ ListaDoble<T> Operaciones<T>:: copiar(ListaDoble<T> *lis1,ListaDoble<T> *lis2){
 }
 template <typename T>
 long Operaciones<T>:: obtenerTiempo(){
+	LineaA();
     struct timeval inicio;//O(1)
     gettimeofday(&inicio, NULL);//O(1)
     return inicio.tv_sec*1000000+inicio.tv_usec;//O(1)
